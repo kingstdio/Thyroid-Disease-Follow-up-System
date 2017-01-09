@@ -100,12 +100,6 @@
     <Compile Include="UC_retrieve.Designer.cs">
       <DependentUpon>UC_retrieve.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_riskFactors.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_riskFactors.Designer.cs">
-      <DependentUpon>UC_riskFactors.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_surgeryHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_retrieve.resx">
       <DependentUpon>UC_retrieve.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_riskFactors.resx">
-      <DependentUpon>UC_riskFactors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_surgeryHistory.resx">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>

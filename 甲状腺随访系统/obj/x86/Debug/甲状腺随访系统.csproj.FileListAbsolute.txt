@@ -97,6 +97,5 @@ E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_patientIn
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_postOperative.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_recurrencecs.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_retrieve.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_riskFactors.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_surgeryHistory.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csproj.GenerateResource.Cache
