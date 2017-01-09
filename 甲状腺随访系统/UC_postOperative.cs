@@ -26,5 +26,10 @@ namespace 甲状腺随访系统
 
         }
 
+        private void sideNavPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

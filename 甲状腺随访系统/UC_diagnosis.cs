@@ -18,15 +18,20 @@ namespace 甲状腺随访系统
 
  
 
-        private void switch_laryngoscope_ValueChanged(object sender, EventArgs e)
+
+        private void labelX33_Click(object sender, EventArgs e)
         {
-            if (switch_laryngoscope.Value)
-            {
-                cbe_op.Enabled = false;
-            }
-            else {
-                cbe_op.Enabled = true;
-            }
+
+        }
+
+        private void comboBoxEx2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void switchButton1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
 

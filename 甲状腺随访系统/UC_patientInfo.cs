@@ -71,5 +71,10 @@ namespace 甲状腺随访系统
 
         }
 
+        private void labelX41_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
