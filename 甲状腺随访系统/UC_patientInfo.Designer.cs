@@ -95,7 +95,6 @@
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_TIA = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.bt_saveRisk = new DevComponents.DotNetBar.ButtonX();
             this.sideNavPanel5 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_ = new DevComponents.DotNetBar.LabelX();
@@ -116,24 +115,23 @@
             this.labelX32 = new DevComponents.DotNetBar.LabelX();
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel4 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX33 = new DevComponents.DotNetBar.LabelX();
-            this.doubleInput14 = new DevComponents.Editors.DoubleInput();
-            this.labelX35 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.doubleInput11 = new DevComponents.Editors.DoubleInput();
-            this.doubleInput9 = new DevComponents.Editors.DoubleInput();
-            this.labelX25 = new DevComponents.DotNetBar.LabelX();
-            this.labelX24 = new DevComponents.DotNetBar.LabelX();
-            this.labelX23 = new DevComponents.DotNetBar.LabelX();
-            this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.doubleInput8 = new DevComponents.Editors.DoubleInput();
-            this.labelX26 = new DevComponents.DotNetBar.LabelX();
-            this.doubleInput12 = new DevComponents.Editors.DoubleInput();
-            this.labelX29 = new DevComponents.DotNetBar.LabelX();
-            this.labelX30 = new DevComponents.DotNetBar.LabelX();
-            this.labelX31 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.sni_menu = new DevComponents.DotNetBar.Controls.SideNavItem();
+            this.separator1 = new DevComponents.DotNetBar.Separator();
+            this.sideNavItem5 = new DevComponents.DotNetBar.Controls.SideNavItem();
+            this.separator3 = new DevComponents.DotNetBar.Separator();
+            this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
+            this.separator4 = new DevComponents.DotNetBar.Separator();
+            this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
+            this.separator5 = new DevComponents.DotNetBar.Separator();
+            this.sideNavItem3 = new DevComponents.DotNetBar.Controls.SideNavItem();
+            this.separator6 = new DevComponents.DotNetBar.Separator();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.line7 = new DevComponents.DotNetBar.Controls.Line();
+            this.line9 = new DevComponents.DotNetBar.Controls.Line();
+            this.line10 = new DevComponents.DotNetBar.Controls.Line();
+            this.line11 = new DevComponents.DotNetBar.Controls.Line();
+            this.line12 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX52 = new DevComponents.DotNetBar.LabelX();
             this.doubleInput6 = new DevComponents.Editors.DoubleInput();
             this.labelX19 = new DevComponents.DotNetBar.LabelX();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
@@ -152,16 +150,24 @@
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
-            this.sni_menu = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.separator1 = new DevComponents.DotNetBar.Separator();
-            this.sideNavItem5 = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.separator3 = new DevComponents.DotNetBar.Separator();
-            this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.separator4 = new DevComponents.DotNetBar.Separator();
-            this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.separator5 = new DevComponents.DotNetBar.Separator();
-            this.sideNavItem3 = new DevComponents.DotNetBar.Controls.SideNavItem();
-            this.separator6 = new DevComponents.DotNetBar.Separator();
+            this.doubleInput11 = new DevComponents.Editors.DoubleInput();
+            this.doubleInput9 = new DevComponents.Editors.DoubleInput();
+            this.labelX25 = new DevComponents.DotNetBar.LabelX();
+            this.labelX24 = new DevComponents.DotNetBar.LabelX();
+            this.labelX23 = new DevComponents.DotNetBar.LabelX();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.doubleInput8 = new DevComponents.Editors.DoubleInput();
+            this.labelX26 = new DevComponents.DotNetBar.LabelX();
+            this.doubleInput12 = new DevComponents.Editors.DoubleInput();
+            this.labelX29 = new DevComponents.DotNetBar.LabelX();
+            this.labelX30 = new DevComponents.DotNetBar.LabelX();
+            this.labelX31 = new DevComponents.DotNetBar.LabelX();
+            this.labelX38 = new DevComponents.DotNetBar.LabelX();
+            this.labelX39 = new DevComponents.DotNetBar.LabelX();
+            this.line13 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX33 = new DevComponents.DotNetBar.LabelX();
+            this.doubleInput14 = new DevComponents.Editors.DoubleInput();
+            this.labelX35 = new DevComponents.DotNetBar.LabelX();
             this.snav_patientInfo.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_age)).BeginInit();
@@ -173,20 +179,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dti_height)).BeginInit();
             this.sideNavPanel5.SuspendLayout();
             this.sideNavPanel4.SuspendLayout();
-            this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput14)).BeginInit();
-            this.groupPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput12)).BeginInit();
-            this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput14)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX9
@@ -204,12 +207,12 @@
             // 
             // snav_patientInfo
             // 
-            this.snav_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.snav_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel1);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
             this.snav_patientInfo.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sni_menu,
             this.separator1,
@@ -265,6 +268,7 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1276, 529);
             this.sideNavPanel1.TabIndex = 47;
+            this.sideNavPanel1.Visible = false;
             // 
             // dti_age
             // 
@@ -542,9 +546,9 @@
             // 
             // tb_patientPhone3
             // 
-            this.tb_patientPhone3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_patientPhone3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -560,9 +564,9 @@
             // 
             // tb_patientPhone2
             // 
-            this.tb_patientPhone2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_patientPhone2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -578,9 +582,9 @@
             // 
             // tb_idNumber
             // 
-            this.tb_idNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_idNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -596,9 +600,9 @@
             // 
             // tb_patientAddress
             // 
-            this.tb_patientAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_patientAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -614,9 +618,9 @@
             // 
             // tb_patientName
             // 
-            this.tb_patientName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_patientName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -825,11 +829,10 @@
             this.sideNavPanel3.Controls.Add(this.textBoxX2);
             this.sideNavPanel3.Controls.Add(this.textBoxX3);
             this.sideNavPanel3.Controls.Add(this.tb_TIA);
-            this.sideNavPanel3.Controls.Add(this.bt_saveRisk);
             this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel3.Location = new System.Drawing.Point(148, 38);
+            this.sideNavPanel3.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1260, 527);
+            this.sideNavPanel3.Size = new System.Drawing.Size(1276, 529);
             this.sideNavPanel3.TabIndex = 13;
             this.sideNavPanel3.Visible = false;
             // 
@@ -1290,17 +1293,6 @@
             this.tb_TIA.Size = new System.Drawing.Size(230, 26);
             this.tb_TIA.TabIndex = 16;
             // 
-            // bt_saveRisk
-            // 
-            this.bt_saveRisk.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_saveRisk.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_saveRisk.Location = new System.Drawing.Point(366, 439);
-            this.bt_saveRisk.Name = "bt_saveRisk";
-            this.bt_saveRisk.Size = new System.Drawing.Size(553, 42);
-            this.bt_saveRisk.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_saveRisk.TabIndex = 0;
-            this.bt_saveRisk.Text = "保存信息";
-            // 
             // sideNavPanel5
             // 
             this.sideNavPanel5.BackColor = System.Drawing.SystemColors.Control;
@@ -1323,9 +1315,9 @@
             this.sideNavPanel5.Controls.Add(this.labelX32);
             this.sideNavPanel5.Controls.Add(this.labelX27);
             this.sideNavPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel5.Location = new System.Drawing.Point(148, 38);
+            this.sideNavPanel5.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel5.Name = "sideNavPanel5";
-            this.sideNavPanel5.Size = new System.Drawing.Size(1260, 527);
+            this.sideNavPanel5.Size = new System.Drawing.Size(1276, 529);
             this.sideNavPanel5.TabIndex = 21;
             this.sideNavPanel5.Visible = false;
             // 
@@ -1596,652 +1588,54 @@
             // 
             // sideNavPanel4
             // 
-            this.sideNavPanel4.Controls.Add(this.groupPanel3);
-            this.sideNavPanel4.Controls.Add(this.groupPanel2);
-            this.sideNavPanel4.Controls.Add(this.groupPanel1);
+            this.sideNavPanel4.Controls.Add(this.labelX33);
+            this.sideNavPanel4.Controls.Add(this.doubleInput14);
+            this.sideNavPanel4.Controls.Add(this.labelX35);
+            this.sideNavPanel4.Controls.Add(this.line13);
+            this.sideNavPanel4.Controls.Add(this.doubleInput11);
+            this.sideNavPanel4.Controls.Add(this.doubleInput9);
+            this.sideNavPanel4.Controls.Add(this.labelX25);
+            this.sideNavPanel4.Controls.Add(this.labelX24);
+            this.sideNavPanel4.Controls.Add(this.labelX23);
+            this.sideNavPanel4.Controls.Add(this.labelX22);
+            this.sideNavPanel4.Controls.Add(this.doubleInput8);
+            this.sideNavPanel4.Controls.Add(this.labelX26);
+            this.sideNavPanel4.Controls.Add(this.doubleInput12);
+            this.sideNavPanel4.Controls.Add(this.labelX29);
+            this.sideNavPanel4.Controls.Add(this.labelX30);
+            this.sideNavPanel4.Controls.Add(this.labelX31);
+            this.sideNavPanel4.Controls.Add(this.doubleInput6);
+            this.sideNavPanel4.Controls.Add(this.labelX19);
+            this.sideNavPanel4.Controls.Add(this.labelX16);
+            this.sideNavPanel4.Controls.Add(this.doubleInput3);
+            this.sideNavPanel4.Controls.Add(this.labelX21);
+            this.sideNavPanel4.Controls.Add(this.labelX18);
+            this.sideNavPanel4.Controls.Add(this.doubleInput2);
+            this.sideNavPanel4.Controls.Add(this.labelX14);
+            this.sideNavPanel4.Controls.Add(this.doubleInput5);
+            this.sideNavPanel4.Controls.Add(this.doubleInput4);
+            this.sideNavPanel4.Controls.Add(this.doubleInput1);
+            this.sideNavPanel4.Controls.Add(this.labelX20);
+            this.sideNavPanel4.Controls.Add(this.labelX10);
+            this.sideNavPanel4.Controls.Add(this.labelX11);
+            this.sideNavPanel4.Controls.Add(this.labelX13);
+            this.sideNavPanel4.Controls.Add(this.labelX12);
+            this.sideNavPanel4.Controls.Add(this.labelX17);
+            this.sideNavPanel4.Controls.Add(this.labelX15);
+            this.sideNavPanel4.Controls.Add(this.line6);
+            this.sideNavPanel4.Controls.Add(this.line7);
+            this.sideNavPanel4.Controls.Add(this.line9);
+            this.sideNavPanel4.Controls.Add(this.line10);
+            this.sideNavPanel4.Controls.Add(this.line11);
+            this.sideNavPanel4.Controls.Add(this.line12);
+            this.sideNavPanel4.Controls.Add(this.labelX39);
+            this.sideNavPanel4.Controls.Add(this.labelX38);
+            this.sideNavPanel4.Controls.Add(this.labelX52);
             this.sideNavPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel4.Location = new System.Drawing.Point(148, 38);
+            this.sideNavPanel4.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel4.Name = "sideNavPanel4";
-            this.sideNavPanel4.Size = new System.Drawing.Size(1260, 527);
+            this.sideNavPanel4.Size = new System.Drawing.Size(1276, 529);
             this.sideNavPanel4.TabIndex = 17;
-            this.sideNavPanel4.Visible = false;
-            // 
-            // groupPanel3
-            // 
-            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.labelX33);
-            this.groupPanel3.Controls.Add(this.doubleInput14);
-            this.groupPanel3.Controls.Add(this.labelX35);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Location = new System.Drawing.Point(856, 216);
-            this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(350, 159);
-            // 
-            // 
-            // 
-            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 3;
-            this.groupPanel3.Text = "血糖";
-            // 
-            // labelX33
-            // 
-            this.labelX33.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX33.Location = new System.Drawing.Point(247, 46);
-            this.labelX33.Name = "labelX33";
-            this.labelX33.Size = new System.Drawing.Size(91, 23);
-            this.labelX33.TabIndex = 1;
-            this.labelX33.Text = "（mmol/L）";
-            // 
-            // doubleInput14
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput14.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput14.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput14.Increment = 1D;
-            this.doubleInput14.Location = new System.Drawing.Point(91, 44);
-            this.doubleInput14.Name = "doubleInput14";
-            this.doubleInput14.ShowUpDown = true;
-            this.doubleInput14.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput14.TabIndex = 2;
-            // 
-            // labelX35
-            // 
-            this.labelX35.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX35.Location = new System.Drawing.Point(31, 46);
-            this.labelX35.Name = "labelX35";
-            this.labelX35.Size = new System.Drawing.Size(75, 23);
-            this.labelX35.TabIndex = 1;
-            this.labelX35.Text = "血糖：";
-            // 
-            // groupPanel2
-            // 
-            this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.doubleInput11);
-            this.groupPanel2.Controls.Add(this.doubleInput9);
-            this.groupPanel2.Controls.Add(this.labelX25);
-            this.groupPanel2.Controls.Add(this.labelX24);
-            this.groupPanel2.Controls.Add(this.labelX23);
-            this.groupPanel2.Controls.Add(this.labelX22);
-            this.groupPanel2.Controls.Add(this.doubleInput8);
-            this.groupPanel2.Controls.Add(this.labelX26);
-            this.groupPanel2.Controls.Add(this.doubleInput12);
-            this.groupPanel2.Controls.Add(this.labelX29);
-            this.groupPanel2.Controls.Add(this.labelX30);
-            this.groupPanel2.Controls.Add(this.labelX31);
-            this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel2.Location = new System.Drawing.Point(49, 216);
-            this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(791, 159);
-            // 
-            // 
-            // 
-            this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel2.Style.BackColorGradientAngle = 90;
-            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderBottomWidth = 1;
-            this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderLeftWidth = 1;
-            this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderRightWidth = 1;
-            this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderTopWidth = 1;
-            this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel2.TabIndex = 3;
-            this.groupPanel2.Text = "血脂";
-            // 
-            // doubleInput11
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput11.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput11.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput11.Increment = 1D;
-            this.doubleInput11.Location = new System.Drawing.Point(106, 75);
-            this.doubleInput11.Name = "doubleInput11";
-            this.doubleInput11.ShowUpDown = true;
-            this.doubleInput11.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput11.TabIndex = 2;
-            // 
-            // doubleInput9
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput9.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput9.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput9.Increment = 1D;
-            this.doubleInput9.Location = new System.Drawing.Point(527, 30);
-            this.doubleInput9.Name = "doubleInput9";
-            this.doubleInput9.ShowUpDown = true;
-            this.doubleInput9.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput9.TabIndex = 2;
-            // 
-            // labelX25
-            // 
-            this.labelX25.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX25.Location = new System.Drawing.Point(252, 77);
-            this.labelX25.Name = "labelX25";
-            this.labelX25.Size = new System.Drawing.Size(91, 23);
-            this.labelX25.TabIndex = 1;
-            this.labelX25.Text = "（mmol/L）";
-            // 
-            // labelX24
-            // 
-            this.labelX24.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX24.Location = new System.Drawing.Point(683, 77);
-            this.labelX24.Name = "labelX24";
-            this.labelX24.Size = new System.Drawing.Size(91, 23);
-            this.labelX24.TabIndex = 1;
-            this.labelX24.Text = "（mmol/L）";
-            // 
-            // labelX23
-            // 
-            this.labelX23.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX23.Location = new System.Drawing.Point(683, 32);
-            this.labelX23.Name = "labelX23";
-            this.labelX23.Size = new System.Drawing.Size(91, 23);
-            this.labelX23.TabIndex = 1;
-            this.labelX23.Text = "（mmol/L）";
-            // 
-            // labelX22
-            // 
-            this.labelX22.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX22.Location = new System.Drawing.Point(252, 32);
-            this.labelX22.Name = "labelX22";
-            this.labelX22.Size = new System.Drawing.Size(91, 23);
-            this.labelX22.TabIndex = 1;
-            this.labelX22.Text = "（mmol/L）";
-            // 
-            // doubleInput8
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput8.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput8.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput8.Increment = 1D;
-            this.doubleInput8.Location = new System.Drawing.Point(527, 75);
-            this.doubleInput8.Name = "doubleInput8";
-            this.doubleInput8.ShowUpDown = true;
-            this.doubleInput8.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput8.TabIndex = 2;
-            // 
-            // labelX26
-            // 
-            this.labelX26.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX26.Location = new System.Drawing.Point(404, 32);
-            this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(128, 23);
-            this.labelX26.TabIndex = 1;
-            this.labelX26.Text = "低密度脂蛋白：";
-            // 
-            // doubleInput12
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput12.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput12.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput12.Increment = 1D;
-            this.doubleInput12.Location = new System.Drawing.Point(105, 30);
-            this.doubleInput12.Name = "doubleInput12";
-            this.doubleInput12.ShowUpDown = true;
-            this.doubleInput12.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput12.TabIndex = 2;
-            // 
-            // labelX29
-            // 
-            this.labelX29.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX29.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX29.Location = new System.Drawing.Point(29, 32);
-            this.labelX29.Name = "labelX29";
-            this.labelX29.Size = new System.Drawing.Size(75, 23);
-            this.labelX29.TabIndex = 1;
-            this.labelX29.Text = "胆固醇：";
-            // 
-            // labelX30
-            // 
-            this.labelX30.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX30.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX30.Location = new System.Drawing.Point(404, 77);
-            this.labelX30.Name = "labelX30";
-            this.labelX30.Size = new System.Drawing.Size(129, 23);
-            this.labelX30.TabIndex = 1;
-            this.labelX30.Text = "高密度脂蛋白：";
-            // 
-            // labelX31
-            // 
-            this.labelX31.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX31.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX31.Location = new System.Drawing.Point(9, 77);
-            this.labelX31.Name = "labelX31";
-            this.labelX31.Size = new System.Drawing.Size(113, 23);
-            this.labelX31.TabIndex = 1;
-            this.labelX31.Text = "甘油三酯：";
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.doubleInput6);
-            this.groupPanel1.Controls.Add(this.labelX19);
-            this.groupPanel1.Controls.Add(this.labelX16);
-            this.groupPanel1.Controls.Add(this.doubleInput3);
-            this.groupPanel1.Controls.Add(this.labelX21);
-            this.groupPanel1.Controls.Add(this.labelX18);
-            this.groupPanel1.Controls.Add(this.doubleInput2);
-            this.groupPanel1.Controls.Add(this.labelX14);
-            this.groupPanel1.Controls.Add(this.doubleInput5);
-            this.groupPanel1.Controls.Add(this.doubleInput4);
-            this.groupPanel1.Controls.Add(this.doubleInput1);
-            this.groupPanel1.Controls.Add(this.labelX20);
-            this.groupPanel1.Controls.Add(this.labelX10);
-            this.groupPanel1.Controls.Add(this.labelX11);
-            this.groupPanel1.Controls.Add(this.labelX13);
-            this.groupPanel1.Controls.Add(this.labelX12);
-            this.groupPanel1.Controls.Add(this.labelX17);
-            this.groupPanel1.Controls.Add(this.labelX15);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Location = new System.Drawing.Point(49, 27);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1157, 159);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 3;
-            this.groupPanel1.Text = "雌激素";
-            // 
-            // doubleInput6
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput6.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput6.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput6.Increment = 1D;
-            this.doubleInput6.Location = new System.Drawing.Point(859, 78);
-            this.doubleInput6.Name = "doubleInput6";
-            this.doubleInput6.ShowUpDown = true;
-            this.doubleInput6.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput6.TabIndex = 2;
-            // 
-            // labelX19
-            // 
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX19.Location = new System.Drawing.Point(278, 31);
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(91, 23);
-            this.labelX19.TabIndex = 1;
-            this.labelX19.Text = "（uIu/ml）";
-            // 
-            // labelX16
-            // 
-            this.labelX16.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX16.Location = new System.Drawing.Point(745, 80);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(134, 23);
-            this.labelX16.TabIndex = 1;
-            this.labelX16.Text = "促卵泡刺激素：";
-            // 
-            // doubleInput3
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput3.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput3.Increment = 1D;
-            this.doubleInput3.Location = new System.Drawing.Point(859, 29);
-            this.doubleInput3.Name = "doubleInput3";
-            this.doubleInput3.ShowUpDown = true;
-            this.doubleInput3.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput3.TabIndex = 2;
-            // 
-            // labelX21
-            // 
-            this.labelX21.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX21.Location = new System.Drawing.Point(1005, 80);
-            this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(88, 23);
-            this.labelX21.TabIndex = 1;
-            this.labelX21.Text = "（mIu/ml）";
-            // 
-            // labelX18
-            // 
-            this.labelX18.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX18.Location = new System.Drawing.Point(632, 80);
-            this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(88, 23);
-            this.labelX18.TabIndex = 1;
-            this.labelX18.Text = "（mIu/ml）";
-            // 
-            // doubleInput2
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput2.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput2.Increment = 1D;
-            this.doubleInput2.Location = new System.Drawing.Point(486, 29);
-            this.doubleInput2.Name = "doubleInput2";
-            this.doubleInput2.ShowUpDown = true;
-            this.doubleInput2.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput2.TabIndex = 2;
-            // 
-            // labelX14
-            // 
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX14.Location = new System.Drawing.Point(72, 80);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(59, 23);
-            this.labelX14.TabIndex = 1;
-            this.labelX14.Text = "睾酮：";
-            // 
-            // doubleInput5
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput5.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput5.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput5.Increment = 1D;
-            this.doubleInput5.Location = new System.Drawing.Point(486, 78);
-            this.doubleInput5.Name = "doubleInput5";
-            this.doubleInput5.ShowUpDown = true;
-            this.doubleInput5.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput5.TabIndex = 2;
-            // 
-            // doubleInput4
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput4.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput4.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput4.Increment = 1D;
-            this.doubleInput4.Location = new System.Drawing.Point(132, 78);
-            this.doubleInput4.Name = "doubleInput4";
-            this.doubleInput4.ShowUpDown = true;
-            this.doubleInput4.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput4.TabIndex = 2;
-            // 
-            // doubleInput1
-            // 
-            // 
-            // 
-            // 
-            this.doubleInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.doubleInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.doubleInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.doubleInput1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.doubleInput1.Increment = 1D;
-            this.doubleInput1.Location = new System.Drawing.Point(132, 29);
-            this.doubleInput1.Name = "doubleInput1";
-            this.doubleInput1.ShowUpDown = true;
-            this.doubleInput1.Size = new System.Drawing.Size(140, 26);
-            this.doubleInput1.TabIndex = 2;
-            // 
-            // labelX20
-            // 
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX20.Location = new System.Drawing.Point(278, 80);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(96, 23);
-            this.labelX20.TabIndex = 1;
-            this.labelX20.Text = "（nmo/L）";
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX10.Location = new System.Drawing.Point(1007, 31);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(96, 23);
-            this.labelX10.TabIndex = 1;
-            this.labelX10.Text = "（nmo/L）";
-            // 
-            // labelX11
-            // 
-            this.labelX11.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX11.Location = new System.Drawing.Point(56, 31);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(75, 23);
-            this.labelX11.TabIndex = 1;
-            this.labelX11.Text = "泌乳素：";
-            // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX13.Location = new System.Drawing.Point(804, 31);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(75, 23);
-            this.labelX13.TabIndex = 1;
-            this.labelX13.Text = "孕酮：";
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX12.Location = new System.Drawing.Point(416, 31);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(75, 23);
-            this.labelX12.TabIndex = 1;
-            this.labelX12.Text = "雌二醇：";
-            // 
-            // labelX17
-            // 
-            this.labelX17.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX17.Location = new System.Drawing.Point(632, 31);
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(97, 23);
-            this.labelX17.TabIndex = 1;
-            this.labelX17.Text = "( Pmo/L )";
-            // 
-            // labelX15
-            // 
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX15.Location = new System.Drawing.Point(386, 80);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(113, 23);
-            this.labelX15.TabIndex = 1;
-            this.labelX15.Text = "促黄体激素：";
             // 
             // sni_menu
             // 
@@ -2262,7 +1656,6 @@
             // 
             // sideNavItem5
             // 
-            this.sideNavItem5.Checked = true;
             this.sideNavItem5.Name = "sideNavItem5";
             this.sideNavItem5.Panel = this.sideNavPanel1;
             this.sideNavItem5.Symbol = "";
@@ -2298,6 +1691,7 @@
             // 
             // sideNavItem2
             // 
+            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel4;
             this.sideNavItem2.Symbol = "57345";
@@ -2332,6 +1726,619 @@
             this.separator6.Padding.Top = 2;
             this.separator6.SeparatorOrientation = DevComponents.DotNetBar.eDesignMarkerOrientation.Vertical;
             // 
+            // line6
+            // 
+            this.line6.BackColor = System.Drawing.Color.Transparent;
+            this.line6.ForeColor = System.Drawing.Color.White;
+            this.line6.Location = new System.Drawing.Point(1192, 53);
+            this.line6.Name = "line6";
+            this.line6.Size = new System.Drawing.Size(1, 408);
+            this.line6.TabIndex = 138;
+            this.line6.Text = "line1";
+            this.line6.VerticalLine = true;
+            // 
+            // line7
+            // 
+            this.line7.BackColor = System.Drawing.Color.Transparent;
+            this.line7.ForeColor = System.Drawing.Color.White;
+            this.line7.Location = new System.Drawing.Point(228, 53);
+            this.line7.Name = "line7";
+            this.line7.Size = new System.Drawing.Size(1, 408);
+            this.line7.TabIndex = 136;
+            this.line7.Text = "line1";
+            this.line7.VerticalLine = true;
+            // 
+            // line9
+            // 
+            this.line9.BackColor = System.Drawing.Color.Transparent;
+            this.line9.ForeColor = System.Drawing.Color.White;
+            this.line9.Location = new System.Drawing.Point(84, 53);
+            this.line9.Name = "line9";
+            this.line9.Size = new System.Drawing.Size(1, 408);
+            this.line9.TabIndex = 137;
+            this.line9.Text = "line1";
+            this.line9.VerticalLine = true;
+            // 
+            // line10
+            // 
+            this.line10.BackColor = System.Drawing.Color.Transparent;
+            this.line10.ForeColor = System.Drawing.Color.White;
+            this.line10.Location = new System.Drawing.Point(85, 460);
+            this.line10.Name = "line10";
+            this.line10.Size = new System.Drawing.Size(1108, 1);
+            this.line10.TabIndex = 135;
+            this.line10.Text = "line1";
+            // 
+            // line11
+            // 
+            this.line11.BackColor = System.Drawing.Color.Transparent;
+            this.line11.ForeColor = System.Drawing.Color.White;
+            this.line11.Location = new System.Drawing.Point(85, 233);
+            this.line11.Name = "line11";
+            this.line11.Size = new System.Drawing.Size(1108, 1);
+            this.line11.TabIndex = 133;
+            this.line11.Text = "line1";
+            // 
+            // line12
+            // 
+            this.line12.BackColor = System.Drawing.Color.Transparent;
+            this.line12.ForeColor = System.Drawing.Color.White;
+            this.line12.Location = new System.Drawing.Point(85, 53);
+            this.line12.Name = "line12";
+            this.line12.Size = new System.Drawing.Size(1108, 1);
+            this.line12.TabIndex = 134;
+            this.line12.Text = "line12";
+            // 
+            // labelX52
+            // 
+            this.labelX52.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX52.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX52.Location = new System.Drawing.Point(84, 141);
+            this.labelX52.Name = "labelX52";
+            this.labelX52.Size = new System.Drawing.Size(145, 23);
+            this.labelX52.TabIndex = 131;
+            this.labelX52.Text = "雌激素";
+            this.labelX52.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // doubleInput6
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput6.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput6.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput6.Increment = 1D;
+            this.doubleInput6.Location = new System.Drawing.Point(778, 184);
+            this.doubleInput6.Name = "doubleInput6";
+            this.doubleInput6.ShowUpDown = true;
+            this.doubleInput6.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput6.TabIndex = 151;
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX19.Location = new System.Drawing.Point(523, 84);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(91, 23);
+            this.labelX19.TabIndex = 147;
+            this.labelX19.Text = "（uIu/ml）";
+            // 
+            // labelX16
+            // 
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX16.Location = new System.Drawing.Point(641, 186);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(134, 23);
+            this.labelX16.TabIndex = 146;
+            this.labelX16.Text = "促卵泡刺激素：";
+            this.labelX16.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // doubleInput3
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput3.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput3.Increment = 1D;
+            this.doubleInput3.Location = new System.Drawing.Point(377, 183);
+            this.doubleInput3.Name = "doubleInput3";
+            this.doubleInput3.ShowUpDown = true;
+            this.doubleInput3.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput3.TabIndex = 153;
+            // 
+            // labelX21
+            // 
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX21.Location = new System.Drawing.Point(924, 186);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(88, 23);
+            this.labelX21.TabIndex = 150;
+            this.labelX21.Text = "（mIu/ml）";
+            // 
+            // labelX18
+            // 
+            this.labelX18.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX18.Location = new System.Drawing.Point(922, 133);
+            this.labelX18.Name = "labelX18";
+            this.labelX18.Size = new System.Drawing.Size(88, 23);
+            this.labelX18.TabIndex = 149;
+            this.labelX18.Text = "（mIu/ml）";
+            // 
+            // doubleInput2
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput2.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput2.Increment = 1D;
+            this.doubleInput2.Location = new System.Drawing.Point(778, 82);
+            this.doubleInput2.Name = "doubleInput2";
+            this.doubleInput2.ShowUpDown = true;
+            this.doubleInput2.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput2.TabIndex = 152;
+            // 
+            // labelX14
+            // 
+            this.labelX14.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX14.Location = new System.Drawing.Point(271, 133);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(105, 23);
+            this.labelX14.TabIndex = 141;
+            this.labelX14.Text = "睾酮：";
+            this.labelX14.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // doubleInput5
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput5.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput5.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput5.Increment = 1D;
+            this.doubleInput5.Location = new System.Drawing.Point(778, 131);
+            this.doubleInput5.Name = "doubleInput5";
+            this.doubleInput5.ShowUpDown = true;
+            this.doubleInput5.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput5.TabIndex = 154;
+            // 
+            // doubleInput4
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput4.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput4.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput4.Increment = 1D;
+            this.doubleInput4.Location = new System.Drawing.Point(377, 131);
+            this.doubleInput4.Name = "doubleInput4";
+            this.doubleInput4.ShowUpDown = true;
+            this.doubleInput4.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput4.TabIndex = 156;
+            // 
+            // doubleInput1
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput1.Increment = 1D;
+            this.doubleInput1.Location = new System.Drawing.Point(377, 82);
+            this.doubleInput1.Name = "doubleInput1";
+            this.doubleInput1.ShowUpDown = true;
+            this.doubleInput1.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput1.TabIndex = 155;
+            // 
+            // labelX20
+            // 
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX20.Location = new System.Drawing.Point(523, 133);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(96, 23);
+            this.labelX20.TabIndex = 143;
+            this.labelX20.Text = "（nmo/L）";
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX10.Location = new System.Drawing.Point(525, 185);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(96, 23);
+            this.labelX10.TabIndex = 142;
+            this.labelX10.Text = "（nmo/L）";
+            // 
+            // labelX11
+            // 
+            this.labelX11.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX11.Location = new System.Drawing.Point(271, 84);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.Size = new System.Drawing.Size(105, 23);
+            this.labelX11.TabIndex = 144;
+            this.labelX11.Text = "泌乳素：";
+            this.labelX11.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX13.Location = new System.Drawing.Point(271, 185);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(105, 23);
+            this.labelX13.TabIndex = 139;
+            this.labelX13.Text = "孕酮：";
+            this.labelX13.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX12.Location = new System.Drawing.Point(641, 84);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(134, 23);
+            this.labelX12.TabIndex = 140;
+            this.labelX12.Text = "雌二醇：";
+            this.labelX12.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX17
+            // 
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX17.Location = new System.Drawing.Point(922, 84);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(97, 23);
+            this.labelX17.TabIndex = 145;
+            this.labelX17.Text = "( Pmo/L )";
+            // 
+            // labelX15
+            // 
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX15.Location = new System.Drawing.Point(641, 133);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(134, 23);
+            this.labelX15.TabIndex = 148;
+            this.labelX15.Text = "促黄体激素：";
+            this.labelX15.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // doubleInput11
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput11.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput11.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput11.Increment = 1D;
+            this.doubleInput11.Location = new System.Drawing.Point(378, 304);
+            this.doubleInput11.Name = "doubleInput11";
+            this.doubleInput11.ShowUpDown = true;
+            this.doubleInput11.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput11.TabIndex = 165;
+            // 
+            // doubleInput9
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput9.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput9.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput9.Increment = 1D;
+            this.doubleInput9.Location = new System.Drawing.Point(778, 259);
+            this.doubleInput9.Name = "doubleInput9";
+            this.doubleInput9.ShowUpDown = true;
+            this.doubleInput9.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput9.TabIndex = 166;
+            // 
+            // labelX25
+            // 
+            this.labelX25.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX25.Location = new System.Drawing.Point(524, 306);
+            this.labelX25.Name = "labelX25";
+            this.labelX25.Size = new System.Drawing.Size(91, 23);
+            this.labelX25.TabIndex = 162;
+            this.labelX25.Text = "（mmol/L）";
+            // 
+            // labelX24
+            // 
+            this.labelX24.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX24.Location = new System.Drawing.Point(924, 306);
+            this.labelX24.Name = "labelX24";
+            this.labelX24.Size = new System.Drawing.Size(91, 23);
+            this.labelX24.TabIndex = 164;
+            this.labelX24.Text = "（mmol/L）";
+            // 
+            // labelX23
+            // 
+            this.labelX23.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX23.Location = new System.Drawing.Point(924, 261);
+            this.labelX23.Name = "labelX23";
+            this.labelX23.Size = new System.Drawing.Size(91, 23);
+            this.labelX23.TabIndex = 161;
+            this.labelX23.Text = "（mmol/L）";
+            // 
+            // labelX22
+            // 
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX22.Location = new System.Drawing.Point(524, 261);
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Size = new System.Drawing.Size(91, 23);
+            this.labelX22.TabIndex = 163;
+            this.labelX22.Text = "（mmol/L）";
+            // 
+            // doubleInput8
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput8.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput8.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput8.Increment = 1D;
+            this.doubleInput8.Location = new System.Drawing.Point(778, 304);
+            this.doubleInput8.Name = "doubleInput8";
+            this.doubleInput8.ShowUpDown = true;
+            this.doubleInput8.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput8.TabIndex = 167;
+            // 
+            // labelX26
+            // 
+            this.labelX26.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX26.Location = new System.Drawing.Point(641, 261);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(134, 23);
+            this.labelX26.TabIndex = 157;
+            this.labelX26.Text = "低密度脂蛋白：";
+            this.labelX26.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // doubleInput12
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput12.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput12.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput12.Increment = 1D;
+            this.doubleInput12.Location = new System.Drawing.Point(377, 259);
+            this.doubleInput12.Name = "doubleInput12";
+            this.doubleInput12.ShowUpDown = true;
+            this.doubleInput12.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput12.TabIndex = 168;
+            // 
+            // labelX29
+            // 
+            this.labelX29.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX29.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX29.Location = new System.Drawing.Point(271, 261);
+            this.labelX29.Name = "labelX29";
+            this.labelX29.Size = new System.Drawing.Size(105, 23);
+            this.labelX29.TabIndex = 160;
+            this.labelX29.Text = "胆固醇：";
+            this.labelX29.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX30
+            // 
+            this.labelX30.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX30.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX30.Location = new System.Drawing.Point(641, 306);
+            this.labelX30.Name = "labelX30";
+            this.labelX30.Size = new System.Drawing.Size(134, 23);
+            this.labelX30.TabIndex = 159;
+            this.labelX30.Text = "高密度脂蛋白：";
+            this.labelX30.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX31
+            // 
+            this.labelX31.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX31.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX31.Location = new System.Drawing.Point(271, 306);
+            this.labelX31.Name = "labelX31";
+            this.labelX31.Size = new System.Drawing.Size(105, 23);
+            this.labelX31.TabIndex = 158;
+            this.labelX31.Text = "甘油三酯：";
+            this.labelX31.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX38
+            // 
+            this.labelX38.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX38.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX38.Location = new System.Drawing.Point(83, 293);
+            this.labelX38.Name = "labelX38";
+            this.labelX38.Size = new System.Drawing.Size(145, 23);
+            this.labelX38.TabIndex = 131;
+            this.labelX38.Text = "血脂";
+            this.labelX38.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX39
+            // 
+            this.labelX39.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX39.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX39.Location = new System.Drawing.Point(85, 407);
+            this.labelX39.Name = "labelX39";
+            this.labelX39.Size = new System.Drawing.Size(145, 23);
+            this.labelX39.TabIndex = 131;
+            this.labelX39.Text = "血糖";
+            this.labelX39.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // line13
+            // 
+            this.line13.BackColor = System.Drawing.Color.Transparent;
+            this.line13.ForeColor = System.Drawing.Color.White;
+            this.line13.Location = new System.Drawing.Point(85, 362);
+            this.line13.Name = "line13";
+            this.line13.Size = new System.Drawing.Size(1108, 1);
+            this.line13.TabIndex = 169;
+            this.line13.Text = "line1";
+            // 
+            // labelX33
+            // 
+            this.labelX33.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX33.Location = new System.Drawing.Point(533, 400);
+            this.labelX33.Name = "labelX33";
+            this.labelX33.Size = new System.Drawing.Size(91, 23);
+            this.labelX33.TabIndex = 171;
+            this.labelX33.Text = "（mmol/L）";
+            // 
+            // doubleInput14
+            // 
+            // 
+            // 
+            // 
+            this.doubleInput14.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.doubleInput14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.doubleInput14.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.doubleInput14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.doubleInput14.Increment = 1D;
+            this.doubleInput14.Location = new System.Drawing.Point(377, 398);
+            this.doubleInput14.Name = "doubleInput14";
+            this.doubleInput14.ShowUpDown = true;
+            this.doubleInput14.Size = new System.Drawing.Size(140, 26);
+            this.doubleInput14.TabIndex = 172;
+            // 
+            // labelX35
+            // 
+            this.labelX35.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX35.Location = new System.Drawing.Point(271, 400);
+            this.labelX35.Name = "labelX35";
+            this.labelX35.Size = new System.Drawing.Size(105, 23);
+            this.labelX35.TabIndex = 170;
+            this.labelX35.Text = "血糖：";
+            this.labelX35.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // UC_patientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2353,20 +2360,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dti_height)).EndInit();
             this.sideNavPanel5.ResumeLayout(false);
             this.sideNavPanel4.ResumeLayout(false);
-            this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput14)).EndInit();
-            this.groupPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doubleInput12)).EndInit();
-            this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doubleInput1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doubleInput14)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2389,7 +2393,6 @@
         private DevComponents.Editors.IntegerInput dti_height;
         private DevComponents.DotNetBar.LabelX lb_weight;
         private DevComponents.DotNetBar.LabelX lb_height;
-        private DevComponents.DotNetBar.ButtonX bt_saveRisk;
         private DevComponents.DotNetBar.LabelX lb_resident;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_AFM;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbe_resident;
@@ -2417,42 +2420,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.LabelX labelX19;
-        private DevComponents.Editors.DoubleInput doubleInput1;
-        private DevComponents.DotNetBar.LabelX labelX11;
-        private DevComponents.DotNetBar.LabelX labelX12;
-        private DevComponents.DotNetBar.LabelX labelX16;
-        private DevComponents.DotNetBar.LabelX labelX15;
-        private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.LabelX labelX13;
-        private DevComponents.DotNetBar.LabelX labelX18;
-        private DevComponents.DotNetBar.LabelX labelX17;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private DevComponents.Editors.DoubleInput doubleInput11;
-        private DevComponents.Editors.DoubleInput doubleInput9;
-        private DevComponents.DotNetBar.LabelX labelX25;
-        private DevComponents.DotNetBar.LabelX labelX24;
-        private DevComponents.DotNetBar.LabelX labelX23;
-        private DevComponents.DotNetBar.LabelX labelX22;
-        private DevComponents.Editors.DoubleInput doubleInput8;
-        private DevComponents.DotNetBar.LabelX labelX26;
-        private DevComponents.Editors.DoubleInput doubleInput12;
-        private DevComponents.DotNetBar.LabelX labelX29;
-        private DevComponents.DotNetBar.LabelX labelX30;
-        private DevComponents.DotNetBar.LabelX labelX31;
-        private DevComponents.Editors.DoubleInput doubleInput6;
-        private DevComponents.Editors.DoubleInput doubleInput3;
-        private DevComponents.DotNetBar.LabelX labelX21;
-        private DevComponents.Editors.DoubleInput doubleInput2;
-        private DevComponents.Editors.DoubleInput doubleInput5;
-        private DevComponents.Editors.DoubleInput doubleInput4;
-        private DevComponents.DotNetBar.LabelX labelX20;
-        private DevComponents.DotNetBar.LabelX labelX10;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.LabelX labelX33;
-        private DevComponents.Editors.DoubleInput doubleInput14;
-        private DevComponents.DotNetBar.LabelX labelX35;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton8;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton7;
         private DevComponents.DotNetBar.LabelX labelX36;
@@ -2507,5 +2474,48 @@
         private DevComponents.DotNetBar.Controls.TextBoxX tb_BMI;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
         private DevComponents.DotNetBar.LabelX lb_;
+        private DevComponents.DotNetBar.LabelX labelX33;
+        private DevComponents.Editors.DoubleInput doubleInput14;
+        private DevComponents.DotNetBar.LabelX labelX35;
+        private DevComponents.DotNetBar.Controls.Line line13;
+        private DevComponents.Editors.DoubleInput doubleInput11;
+        private DevComponents.Editors.DoubleInput doubleInput9;
+        private DevComponents.DotNetBar.LabelX labelX25;
+        private DevComponents.DotNetBar.LabelX labelX24;
+        private DevComponents.DotNetBar.LabelX labelX23;
+        private DevComponents.DotNetBar.LabelX labelX22;
+        private DevComponents.Editors.DoubleInput doubleInput8;
+        private DevComponents.DotNetBar.LabelX labelX26;
+        private DevComponents.Editors.DoubleInput doubleInput12;
+        private DevComponents.DotNetBar.LabelX labelX29;
+        private DevComponents.DotNetBar.LabelX labelX30;
+        private DevComponents.DotNetBar.LabelX labelX31;
+        private DevComponents.Editors.DoubleInput doubleInput6;
+        private DevComponents.DotNetBar.LabelX labelX19;
+        private DevComponents.DotNetBar.LabelX labelX16;
+        private DevComponents.Editors.DoubleInput doubleInput3;
+        private DevComponents.DotNetBar.LabelX labelX21;
+        private DevComponents.DotNetBar.LabelX labelX18;
+        private DevComponents.Editors.DoubleInput doubleInput2;
+        private DevComponents.DotNetBar.LabelX labelX14;
+        private DevComponents.Editors.DoubleInput doubleInput5;
+        private DevComponents.Editors.DoubleInput doubleInput4;
+        private DevComponents.Editors.DoubleInput doubleInput1;
+        private DevComponents.DotNetBar.LabelX labelX20;
+        private DevComponents.DotNetBar.LabelX labelX10;
+        private DevComponents.DotNetBar.LabelX labelX11;
+        private DevComponents.DotNetBar.LabelX labelX13;
+        private DevComponents.DotNetBar.LabelX labelX12;
+        private DevComponents.DotNetBar.LabelX labelX17;
+        private DevComponents.DotNetBar.LabelX labelX15;
+        private DevComponents.DotNetBar.Controls.Line line6;
+        private DevComponents.DotNetBar.Controls.Line line7;
+        private DevComponents.DotNetBar.Controls.Line line9;
+        private DevComponents.DotNetBar.Controls.Line line10;
+        private DevComponents.DotNetBar.Controls.Line line11;
+        private DevComponents.DotNetBar.Controls.Line line12;
+        private DevComponents.DotNetBar.LabelX labelX39;
+        private DevComponents.DotNetBar.LabelX labelX38;
+        private DevComponents.DotNetBar.LabelX labelX52;
     }
 }
