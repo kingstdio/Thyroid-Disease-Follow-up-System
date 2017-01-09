@@ -155,7 +155,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="model\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="data\ui\icon.ico" />
     <Content Include="data\ui\patientAdd.png" />

@@ -466,9 +466,9 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel4);
-            this.sideNav1.Controls.Add(this.sideNavPanel2);
             this.sideNav1.Controls.Add(this.sideNavPanel3);
+            this.sideNav1.Controls.Add(this.sideNavPanel2);
+            this.sideNav1.Controls.Add(this.sideNavPanel4);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Controls.Add(this.sideNavPanel5);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -530,10 +530,11 @@
             this.sideNavPanel4.Controls.Add(this.lb_others);
             this.sideNavPanel4.Controls.Add(this.lb_Ki);
             this.sideNavPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel4.Location = new System.Drawing.Point(132, 47);
+            this.sideNavPanel4.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel4.Name = "sideNavPanel4";
-            this.sideNavPanel4.Size = new System.Drawing.Size(1276, 520);
+            this.sideNavPanel4.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel4.TabIndex = 14;
+            this.sideNavPanel4.Visible = false;
             this.sideNavPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel4_Paint);
             // 
             // tb_other
@@ -548,7 +549,7 @@
             this.tb_other.Multiline = true;
             this.tb_other.Name = "tb_other";
             this.tb_other.PreventEnterBeep = true;
-            this.tb_other.Size = new System.Drawing.Size(703, 85);
+            this.tb_other.Size = new System.Drawing.Size(757, 85);
             this.tb_other.TabIndex = 153;
             // 
             // lb_other
@@ -570,9 +571,9 @@
             // 
             this.line10.BackColor = System.Drawing.Color.Transparent;
             this.line10.ForeColor = System.Drawing.SystemColors.Window;
-            this.line10.Location = new System.Drawing.Point(1162, 42);
+            this.line10.Location = new System.Drawing.Point(1169, 39);
             this.line10.Name = "line10";
-            this.line10.Size = new System.Drawing.Size(10, 426);
+            this.line10.Size = new System.Drawing.Size(1, 429);
             this.line10.TabIndex = 151;
             this.line10.Text = "line8";
             this.line10.VerticalLine = true;
@@ -581,9 +582,9 @@
             // 
             this.line9.BackColor = System.Drawing.Color.Transparent;
             this.line9.ForeColor = System.Drawing.SystemColors.Window;
-            this.line9.Location = new System.Drawing.Point(210, 42);
+            this.line9.Location = new System.Drawing.Point(210, 40);
             this.line9.Name = "line9";
-            this.line9.Size = new System.Drawing.Size(10, 426);
+            this.line9.Size = new System.Drawing.Size(1, 428);
             this.line9.TabIndex = 151;
             this.line9.Text = "line8";
             this.line9.VerticalLine = true;
@@ -592,9 +593,9 @@
             // 
             this.line8.BackColor = System.Drawing.Color.Transparent;
             this.line8.ForeColor = System.Drawing.SystemColors.Window;
-            this.line8.Location = new System.Drawing.Point(80, 39);
+            this.line8.Location = new System.Drawing.Point(88, 39);
             this.line8.Name = "line8";
-            this.line8.Size = new System.Drawing.Size(10, 429);
+            this.line8.Size = new System.Drawing.Size(1, 429);
             this.line8.TabIndex = 151;
             this.line8.Text = "line8";
             this.line8.VerticalLine = true;
@@ -604,7 +605,7 @@
             this.line6.BackColor = System.Drawing.Color.Transparent;
             this.line6.EndLineCapSize = new System.Drawing.Size(0, 0);
             this.line6.ForeColor = System.Drawing.SystemColors.Window;
-            this.line6.Location = new System.Drawing.Point(88, 461);
+            this.line6.Location = new System.Drawing.Point(88, 459);
             this.line6.Name = "line6";
             this.line6.Size = new System.Drawing.Size(1081, 17);
             this.line6.StartLineCapSize = new System.Drawing.Size(0, 0);
@@ -618,7 +619,7 @@
             this.line5.ForeColor = System.Drawing.SystemColors.Window;
             this.line5.Location = new System.Drawing.Point(88, 152);
             this.line5.Name = "line5";
-            this.line5.Size = new System.Drawing.Size(1084, 17);
+            this.line5.Size = new System.Drawing.Size(1081, 17);
             this.line5.StartLineCapSize = new System.Drawing.Size(0, 0);
             this.line5.TabIndex = 150;
             this.line5.Text = "line1";
@@ -630,7 +631,7 @@
             this.line4.ForeColor = System.Drawing.SystemColors.Window;
             this.line4.Location = new System.Drawing.Point(88, 85);
             this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(1084, 17);
+            this.line4.Size = new System.Drawing.Size(1081, 17);
             this.line4.StartLineCapSize = new System.Drawing.Size(0, 0);
             this.line4.TabIndex = 150;
             this.line4.Text = "line1";
@@ -640,7 +641,7 @@
             this.line3.BackColor = System.Drawing.Color.Transparent;
             this.line3.EndLineCapSize = new System.Drawing.Size(0, 0);
             this.line3.ForeColor = System.Drawing.SystemColors.Window;
-            this.line3.Location = new System.Drawing.Point(88, 32);
+            this.line3.Location = new System.Drawing.Point(88, 31);
             this.line3.Name = "line3";
             this.line3.Size = new System.Drawing.Size(1081, 17);
             this.line3.StartLineCapSize = new System.Drawing.Size(0, 0);
@@ -1524,9 +1525,9 @@
             this.sideNavPanel2.Controls.Add(this.lb_IIregionRight);
             this.sideNavPanel2.Controls.Add(this.lb_IregionRight);
             this.sideNavPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel2.Location = new System.Drawing.Point(148, 47);
+            this.sideNavPanel2.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel2.Name = "sideNavPanel2";
-            this.sideNavPanel2.Size = new System.Drawing.Size(1260, 520);
+            this.sideNavPanel2.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel2.TabIndex = 6;
             this.sideNavPanel2.Visible = false;
             // 
@@ -2835,11 +2836,10 @@
             this.sideNavPanel3.Controls.Add(this.labelX13);
             this.sideNavPanel3.Controls.Add(this.labelX12);
             this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel3.Location = new System.Drawing.Point(148, 47);
+            this.sideNavPanel3.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1260, 520);
+            this.sideNavPanel3.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel3.TabIndex = 10;
-            this.sideNavPanel3.Visible = false;
             // 
             // switchButton8
             // 
@@ -3674,9 +3674,9 @@
             this.sideNavPanel1.Controls.Add(this.labelX1);
             this.sideNavPanel1.Controls.Add(this.lb_surgeryType);
             this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(148, 47);
+            this.sideNavPanel1.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1260, 520);
+            this.sideNavPanel1.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel1.TabIndex = 2;
             this.sideNavPanel1.Visible = false;
             // 
@@ -4926,6 +4926,7 @@
             // 
             // sni_car
             // 
+            this.sni_car.Checked = true;
             this.sni_car.Name = "sni_car";
             this.sni_car.Panel = this.sideNavPanel3;
             this.sni_car.Symbol = "";
@@ -4960,7 +4961,6 @@
             // 
             // sni_IHC
             // 
-            this.sni_IHC.Checked = true;
             this.sni_IHC.Name = "sni_IHC";
             this.sni_IHC.Panel = this.sideNavPanel4;
             this.sni_IHC.Symbol = "";
