@@ -83,8 +83,10 @@
             // 
             // sideNav1
             // 
+            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sideNav1.Controls.Add(this.sideNavPanel1);
-            this.sideNav1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -92,7 +94,7 @@
             this.sideNav1.Location = new System.Drawing.Point(0, 0);
             this.sideNav1.Name = "sideNav1";
             this.sideNav1.Padding = new System.Windows.Forms.Padding(1);
-            this.sideNav1.Size = new System.Drawing.Size(1362, 668);
+            this.sideNav1.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "复发诊断";
             this.sideNav1.Click += new System.EventHandler(this.sideNav1_Click_1);
@@ -144,9 +146,9 @@
             this.sideNavPanel1.Controls.Add(this.lb_iconography);
             this.sideNavPanel1.Controls.Add(this.lb_tumour);
             this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(111, 38);
+            this.sideNavPanel1.Location = new System.Drawing.Point(96, 36);
             this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1246, 629);
+            this.sideNavPanel1.Size = new System.Drawing.Size(1315, 531);
             this.sideNavPanel1.TabIndex = 2;
             this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel1_Paint);
@@ -157,11 +159,11 @@
             // 
             // 
             this.switchButton2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton2.Location = new System.Drawing.Point(625, 327);
+            this.switchButton2.Location = new System.Drawing.Point(666, 281);
             this.switchButton2.Name = "switchButton2";
             this.switchButton2.OffText = "否";
             this.switchButton2.OnText = "是";
-            this.switchButton2.Size = new System.Drawing.Size(105, 26);
+            this.switchButton2.Size = new System.Drawing.Size(121, 26);
             this.switchButton2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton2.SwitchWidth = 50;
             this.switchButton2.TabIndex = 166;
@@ -174,7 +176,7 @@
             this.tb_lymphadenSize.Border.Class = "TextBoxBorder";
             this.tb_lymphadenSize.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_lymphadenSize.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_lymphadenSize.Location = new System.Drawing.Point(609, 493);
+            this.tb_lymphadenSize.Location = new System.Drawing.Point(666, 443);
             this.tb_lymphadenSize.Name = "tb_lymphadenSize";
             this.tb_lymphadenSize.PreventEnterBeep = true;
             this.tb_lymphadenSize.Size = new System.Drawing.Size(121, 26);
@@ -188,7 +190,7 @@
             this.tb_lymphadenLoc.Border.Class = "TextBoxBorder";
             this.tb_lymphadenLoc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_lymphadenLoc.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_lymphadenLoc.Location = new System.Drawing.Point(340, 490);
+            this.tb_lymphadenLoc.Location = new System.Drawing.Point(394, 440);
             this.tb_lymphadenLoc.Name = "tb_lymphadenLoc";
             this.tb_lymphadenLoc.PreventEnterBeep = true;
             this.tb_lymphadenLoc.Size = new System.Drawing.Size(121, 26);
@@ -202,7 +204,7 @@
             // 
             this.lb_lymphadenLoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_lymphadenLoc.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_lymphadenLoc.Location = new System.Drawing.Point(236, 493);
+            this.lb_lymphadenLoc.Location = new System.Drawing.Point(290, 443);
             this.lb_lymphadenLoc.Name = "lb_lymphadenLoc";
             this.lb_lymphadenLoc.Size = new System.Drawing.Size(93, 23);
             this.lb_lymphadenLoc.TabIndex = 162;
@@ -217,7 +219,7 @@
             // 
             this.lb_lymphadenSize.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_lymphadenSize.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_lymphadenSize.Location = new System.Drawing.Point(505, 493);
+            this.lb_lymphadenSize.Location = new System.Drawing.Point(559, 443);
             this.lb_lymphadenSize.Name = "lb_lymphadenSize";
             this.lb_lymphadenSize.Size = new System.Drawing.Size(93, 23);
             this.lb_lymphadenSize.TabIndex = 163;
@@ -232,11 +234,12 @@
             // 
             this.lb_lymphaden.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_lymphaden.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_lymphaden.Location = new System.Drawing.Point(60, 493);
+            this.lb_lymphaden.Location = new System.Drawing.Point(76, 440);
             this.lb_lymphaden.Name = "lb_lymphaden";
-            this.lb_lymphaden.Size = new System.Drawing.Size(79, 23);
+            this.lb_lymphaden.Size = new System.Drawing.Size(146, 23);
             this.lb_lymphaden.TabIndex = 161;
             this.lb_lymphaden.Text = "淋巴结";
+            this.lb_lymphaden.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // tb_size
             // 
@@ -246,7 +249,7 @@
             this.tb_size.Border.Class = "TextBoxBorder";
             this.tb_size.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_size.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_size.Location = new System.Drawing.Point(609, 419);
+            this.tb_size.Location = new System.Drawing.Point(666, 358);
             this.tb_size.Name = "tb_size";
             this.tb_size.PreventEnterBeep = true;
             this.tb_size.Size = new System.Drawing.Size(121, 26);
@@ -260,7 +263,7 @@
             this.tb_location.Border.Class = "TextBoxBorder";
             this.tb_location.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_location.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_location.Location = new System.Drawing.Point(340, 416);
+            this.tb_location.Location = new System.Drawing.Point(394, 355);
             this.tb_location.Name = "tb_location";
             this.tb_location.PreventEnterBeep = true;
             this.tb_location.Size = new System.Drawing.Size(121, 26);
@@ -274,7 +277,7 @@
             // 
             this.lb_location.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_location.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_location.Location = new System.Drawing.Point(236, 419);
+            this.lb_location.Location = new System.Drawing.Point(290, 358);
             this.lb_location.Name = "lb_location";
             this.lb_location.Size = new System.Drawing.Size(93, 23);
             this.lb_location.TabIndex = 157;
@@ -289,7 +292,7 @@
             // 
             this.lb_size.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_size.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_size.Location = new System.Drawing.Point(505, 419);
+            this.lb_size.Location = new System.Drawing.Point(559, 358);
             this.lb_size.Name = "lb_size";
             this.lb_size.Size = new System.Drawing.Size(93, 23);
             this.lb_size.TabIndex = 158;
@@ -300,9 +303,9 @@
             // 
             this.line1.BackColor = System.Drawing.Color.Transparent;
             this.line1.ForeColor = System.Drawing.Color.White;
-            this.line1.Location = new System.Drawing.Point(22, 534);
+            this.line1.Location = new System.Drawing.Point(74, 493);
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(1205, 13);
+            this.line1.Size = new System.Drawing.Size(1103, 1);
             this.line1.TabIndex = 156;
             this.line1.Text = "line1";
             // 
@@ -314,7 +317,7 @@
             this.tb_TGEluant.Border.Class = "TextBoxBorder";
             this.tb_TGEluant.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_TGEluant.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_TGEluant.Location = new System.Drawing.Point(937, 330);
+            this.tb_TGEluant.Location = new System.Drawing.Point(991, 284);
             this.tb_TGEluant.Name = "tb_TGEluant";
             this.tb_TGEluant.PreventEnterBeep = true;
             this.tb_TGEluant.Size = new System.Drawing.Size(121, 26);
@@ -328,7 +331,7 @@
             // 
             this.lb_TGEluant.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_TGEluant.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_TGEluant.Location = new System.Drawing.Point(833, 330);
+            this.lb_TGEluant.Location = new System.Drawing.Point(887, 284);
             this.lb_TGEluant.Name = "lb_TGEluant";
             this.lb_TGEluant.Size = new System.Drawing.Size(93, 23);
             this.lb_TGEluant.TabIndex = 154;
@@ -343,7 +346,7 @@
             this.tb_FNA.Border.Class = "TextBoxBorder";
             this.tb_FNA.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_FNA.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_FNA.Location = new System.Drawing.Point(340, 324);
+            this.tb_FNA.Location = new System.Drawing.Point(394, 278);
             this.tb_FNA.Name = "tb_FNA";
             this.tb_FNA.PreventEnterBeep = true;
             this.tb_FNA.Size = new System.Drawing.Size(121, 26);
@@ -357,7 +360,7 @@
             // 
             this.lb_FNA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_FNA.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_FNA.Location = new System.Drawing.Point(236, 327);
+            this.lb_FNA.Location = new System.Drawing.Point(290, 281);
             this.lb_FNA.Name = "lb_FNA";
             this.lb_FNA.Size = new System.Drawing.Size(93, 23);
             this.lb_FNA.TabIndex = 150;
@@ -372,7 +375,7 @@
             // 
             this.lb_Braf.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_Braf.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_Braf.Location = new System.Drawing.Point(505, 327);
+            this.lb_Braf.Location = new System.Drawing.Point(559, 281);
             this.lb_Braf.Name = "lb_Braf";
             this.lb_Braf.Size = new System.Drawing.Size(93, 23);
             this.lb_Braf.TabIndex = 151;
@@ -387,7 +390,7 @@
             this.tb_PET.Border.Class = "TextBoxBorder";
             this.tb_PET.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_PET.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_PET.Location = new System.Drawing.Point(609, 260);
+            this.tb_PET.Location = new System.Drawing.Point(666, 207);
             this.tb_PET.Name = "tb_PET";
             this.tb_PET.PreventEnterBeep = true;
             this.tb_PET.Size = new System.Drawing.Size(121, 26);
@@ -401,7 +404,7 @@
             this.tb_I131.Border.Class = "TextBoxBorder";
             this.tb_I131.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_I131.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_I131.Location = new System.Drawing.Point(342, 260);
+            this.tb_I131.Location = new System.Drawing.Point(394, 207);
             this.tb_I131.Name = "tb_I131";
             this.tb_I131.PreventEnterBeep = true;
             this.tb_I131.Size = new System.Drawing.Size(121, 26);
@@ -415,7 +418,7 @@
             this.tb_MRI.Border.Class = "TextBoxBorder";
             this.tb_MRI.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_MRI.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_MRI.Location = new System.Drawing.Point(609, 212);
+            this.tb_MRI.Location = new System.Drawing.Point(666, 159);
             this.tb_MRI.Name = "tb_MRI";
             this.tb_MRI.PreventEnterBeep = true;
             this.tb_MRI.Size = new System.Drawing.Size(121, 26);
@@ -429,7 +432,7 @@
             this.tb_CT.Border.Class = "TextBoxBorder";
             this.tb_CT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_CT.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_CT.Location = new System.Drawing.Point(340, 209);
+            this.tb_CT.Location = new System.Drawing.Point(394, 156);
             this.tb_CT.Name = "tb_CT";
             this.tb_CT.PreventEnterBeep = true;
             this.tb_CT.Size = new System.Drawing.Size(121, 26);
@@ -443,7 +446,7 @@
             // 
             this.lb_CT.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_CT.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_CT.Location = new System.Drawing.Point(236, 212);
+            this.lb_CT.Location = new System.Drawing.Point(290, 159);
             this.lb_CT.Name = "lb_CT";
             this.lb_CT.Size = new System.Drawing.Size(93, 23);
             this.lb_CT.TabIndex = 142;
@@ -458,7 +461,7 @@
             // 
             this.lb_MRI.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_MRI.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_MRI.Location = new System.Drawing.Point(505, 212);
+            this.lb_MRI.Location = new System.Drawing.Point(559, 159);
             this.lb_MRI.Name = "lb_MRI";
             this.lb_MRI.Size = new System.Drawing.Size(93, 23);
             this.lb_MRI.TabIndex = 143;
@@ -473,7 +476,7 @@
             // 
             this.tb_I.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_I.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_I.Location = new System.Drawing.Point(236, 263);
+            this.tb_I.Location = new System.Drawing.Point(290, 210);
             this.tb_I.Name = "tb_I";
             this.tb_I.Size = new System.Drawing.Size(93, 23);
             this.tb_I.TabIndex = 144;
@@ -488,7 +491,7 @@
             // 
             this.lb_PET.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_PET.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_PET.Location = new System.Drawing.Point(510, 263);
+            this.lb_PET.Location = new System.Drawing.Point(559, 210);
             this.lb_PET.Name = "lb_PET";
             this.lb_PET.Size = new System.Drawing.Size(93, 23);
             this.lb_PET.TabIndex = 145;
@@ -503,7 +506,7 @@
             this.tb_calcitonin.Border.Class = "TextBoxBorder";
             this.tb_calcitonin.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_calcitonin.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_calcitonin.Location = new System.Drawing.Point(609, 150);
+            this.tb_calcitonin.Location = new System.Drawing.Point(666, 97);
             this.tb_calcitonin.Name = "tb_calcitonin";
             this.tb_calcitonin.PreventEnterBeep = true;
             this.tb_calcitonin.Size = new System.Drawing.Size(121, 26);
@@ -517,7 +520,7 @@
             this.tb_CEA.Border.Class = "TextBoxBorder";
             this.tb_CEA.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_CEA.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_CEA.Location = new System.Drawing.Point(342, 150);
+            this.tb_CEA.Location = new System.Drawing.Point(394, 97);
             this.tb_CEA.Name = "tb_CEA";
             this.tb_CEA.PreventEnterBeep = true;
             this.tb_CEA.Size = new System.Drawing.Size(121, 26);
@@ -531,7 +534,7 @@
             this.tb_TGAB.Border.Class = "TextBoxBorder";
             this.tb_TGAB.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_TGAB.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_TGAB.Location = new System.Drawing.Point(609, 102);
+            this.tb_TGAB.Location = new System.Drawing.Point(666, 49);
             this.tb_TGAB.Name = "tb_TGAB";
             this.tb_TGAB.PreventEnterBeep = true;
             this.tb_TGAB.Size = new System.Drawing.Size(121, 26);
@@ -545,7 +548,7 @@
             this.tb_TG.Border.Class = "TextBoxBorder";
             this.tb_TG.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_TG.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_TG.Location = new System.Drawing.Point(340, 99);
+            this.tb_TG.Location = new System.Drawing.Point(394, 46);
             this.tb_TG.Name = "tb_TG";
             this.tb_TG.PreventEnterBeep = true;
             this.tb_TG.Size = new System.Drawing.Size(121, 26);
@@ -555,9 +558,9 @@
             // 
             this.line16.BackColor = System.Drawing.Color.Transparent;
             this.line16.ForeColor = System.Drawing.Color.White;
-            this.line16.Location = new System.Drawing.Point(1218, 77);
+            this.line16.Location = new System.Drawing.Point(1177, 24);
             this.line16.Name = "line16";
-            this.line16.Size = new System.Drawing.Size(10, 470);
+            this.line16.Size = new System.Drawing.Size(1, 470);
             this.line16.TabIndex = 134;
             this.line16.Text = "line1";
             this.line16.VerticalLine = true;
@@ -566,9 +569,9 @@
             // 
             this.line15.BackColor = System.Drawing.Color.Transparent;
             this.line15.ForeColor = System.Drawing.Color.White;
-            this.line15.Location = new System.Drawing.Point(172, 84);
+            this.line15.Location = new System.Drawing.Point(226, 24);
             this.line15.Name = "line15";
-            this.line15.Size = new System.Drawing.Size(10, 460);
+            this.line15.Size = new System.Drawing.Size(1, 470);
             this.line15.TabIndex = 135;
             this.line15.Text = "line1";
             this.line15.VerticalLine = true;
@@ -577,9 +580,9 @@
             // 
             this.line14.BackColor = System.Drawing.Color.Transparent;
             this.line14.ForeColor = System.Drawing.Color.White;
-            this.line14.Location = new System.Drawing.Point(19, 77);
+            this.line14.Location = new System.Drawing.Point(73, 24);
             this.line14.Name = "line14";
-            this.line14.Size = new System.Drawing.Size(10, 470);
+            this.line14.Size = new System.Drawing.Size(1, 470);
             this.line14.TabIndex = 133;
             this.line14.Text = "line1";
             this.line14.VerticalLine = true;
@@ -588,9 +591,9 @@
             // 
             this.line13.BackColor = System.Drawing.Color.Transparent;
             this.line13.ForeColor = System.Drawing.Color.White;
-            this.line13.Location = new System.Drawing.Point(19, 464);
+            this.line13.Location = new System.Drawing.Point(74, 402);
             this.line13.Name = "line13";
-            this.line13.Size = new System.Drawing.Size(1208, 10);
+            this.line13.Size = new System.Drawing.Size(1103, 10);
             this.line13.TabIndex = 132;
             this.line13.Text = "line13";
             // 
@@ -598,9 +601,9 @@
             // 
             this.line12.BackColor = System.Drawing.Color.Transparent;
             this.line12.ForeColor = System.Drawing.Color.White;
-            this.line12.Location = new System.Drawing.Point(20, 77);
+            this.line12.Location = new System.Drawing.Point(74, 19);
             this.line12.Name = "line12";
-            this.line12.Size = new System.Drawing.Size(1208, 1);
+            this.line12.Size = new System.Drawing.Size(1103, 10);
             this.line12.TabIndex = 130;
             this.line12.Text = "line11";
             // 
@@ -608,9 +611,9 @@
             // 
             this.line11.BackColor = System.Drawing.Color.Transparent;
             this.line11.ForeColor = System.Drawing.Color.White;
-            this.line11.Location = new System.Drawing.Point(20, 193);
+            this.line11.Location = new System.Drawing.Point(74, 131);
             this.line11.Name = "line11";
-            this.line11.Size = new System.Drawing.Size(1208, 1);
+            this.line11.Size = new System.Drawing.Size(1103, 10);
             this.line11.TabIndex = 131;
             this.line11.Text = "line11";
             // 
@@ -618,9 +621,9 @@
             // 
             this.line9.BackColor = System.Drawing.Color.Transparent;
             this.line9.ForeColor = System.Drawing.Color.White;
-            this.line9.Location = new System.Drawing.Point(20, 304);
+            this.line9.Location = new System.Drawing.Point(74, 242);
             this.line9.Name = "line9";
-            this.line9.Size = new System.Drawing.Size(1208, 1);
+            this.line9.Size = new System.Drawing.Size(1103, 10);
             this.line9.TabIndex = 129;
             this.line9.Text = "line9";
             // 
@@ -628,9 +631,9 @@
             // 
             this.line10.BackColor = System.Drawing.Color.Transparent;
             this.line10.ForeColor = System.Drawing.Color.White;
-            this.line10.Location = new System.Drawing.Point(19, 386);
+            this.line10.Location = new System.Drawing.Point(74, 324);
             this.line10.Name = "line10";
-            this.line10.Size = new System.Drawing.Size(1208, 1);
+            this.line10.Size = new System.Drawing.Size(1103, 10);
             this.line10.TabIndex = 128;
             this.line10.Text = "line10";
             // 
@@ -642,7 +645,7 @@
             // 
             this.lb_TG.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_TG.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_TG.Location = new System.Drawing.Point(236, 102);
+            this.lb_TG.Location = new System.Drawing.Point(290, 49);
             this.lb_TG.Name = "lb_TG";
             this.lb_TG.Size = new System.Drawing.Size(93, 23);
             this.lb_TG.TabIndex = 101;
@@ -657,7 +660,7 @@
             // 
             this.lb_TGAB.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_TGAB.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_TGAB.Location = new System.Drawing.Point(505, 102);
+            this.lb_TGAB.Location = new System.Drawing.Point(559, 49);
             this.lb_TGAB.Name = "lb_TGAB";
             this.lb_TGAB.Size = new System.Drawing.Size(93, 23);
             this.lb_TGAB.TabIndex = 102;
@@ -672,7 +675,7 @@
             // 
             this.lb_CEA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_CEA.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_CEA.Location = new System.Drawing.Point(236, 153);
+            this.lb_CEA.Location = new System.Drawing.Point(290, 100);
             this.lb_CEA.Name = "lb_CEA";
             this.lb_CEA.Size = new System.Drawing.Size(93, 23);
             this.lb_CEA.TabIndex = 104;
@@ -687,11 +690,11 @@
             // 
             this.lb_calcitonin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_calcitonin.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_calcitonin.Location = new System.Drawing.Point(510, 153);
+            this.lb_calcitonin.Location = new System.Drawing.Point(559, 100);
             this.lb_calcitonin.Name = "lb_calcitonin";
             this.lb_calcitonin.Size = new System.Drawing.Size(93, 23);
             this.lb_calcitonin.TabIndex = 107;
-            this.lb_calcitonin.Text = "降钙素：";
+            this.lb_calcitonin.Text = "降钙素:";
             this.lb_calcitonin.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_histopathology
@@ -702,11 +705,12 @@
             // 
             this.lb_histopathology.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_histopathology.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_histopathology.Location = new System.Drawing.Point(60, 327);
+            this.lb_histopathology.Location = new System.Drawing.Point(71, 274);
             this.lb_histopathology.Name = "lb_histopathology";
-            this.lb_histopathology.Size = new System.Drawing.Size(106, 23);
+            this.lb_histopathology.Size = new System.Drawing.Size(154, 23);
             this.lb_histopathology.TabIndex = 111;
             this.lb_histopathology.Text = "组织病理学";
+            this.lb_histopathology.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // lb_serology
             // 
@@ -716,11 +720,12 @@
             // 
             this.lb_serology.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_serology.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_serology.Location = new System.Drawing.Point(60, 124);
+            this.lb_serology.Location = new System.Drawing.Point(73, 71);
             this.lb_serology.Name = "lb_serology";
-            this.lb_serology.Size = new System.Drawing.Size(93, 23);
+            this.lb_serology.Size = new System.Drawing.Size(154, 23);
             this.lb_serology.TabIndex = 112;
             this.lb_serology.Text = "血清学指标";
+            this.lb_serology.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // lb_iconography
             // 
@@ -730,11 +735,12 @@
             // 
             this.lb_iconography.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_iconography.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_iconography.Location = new System.Drawing.Point(60, 239);
+            this.lb_iconography.Location = new System.Drawing.Point(73, 186);
             this.lb_iconography.Name = "lb_iconography";
-            this.lb_iconography.Size = new System.Drawing.Size(101, 23);
+            this.lb_iconography.Size = new System.Drawing.Size(154, 23);
             this.lb_iconography.TabIndex = 109;
             this.lb_iconography.Text = "影响学指标";
+            this.lb_iconography.TextAlignment = System.Drawing.StringAlignment.Center;
             this.lb_iconography.Click += new System.EventHandler(this.labelX5_Click);
             // 
             // lb_tumour
@@ -745,18 +751,19 @@
             // 
             this.lb_tumour.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_tumour.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_tumour.Location = new System.Drawing.Point(74, 416);
+            this.lb_tumour.Location = new System.Drawing.Point(73, 363);
             this.lb_tumour.Name = "lb_tumour";
-            this.lb_tumour.Size = new System.Drawing.Size(79, 23);
+            this.lb_tumour.Size = new System.Drawing.Size(154, 23);
             this.lb_tumour.TabIndex = 110;
             this.lb_tumour.Text = "肿瘤";
+            this.lb_tumour.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;
             this.sideNavItem1.Name = "sideNavItem1";
             this.sideNavItem1.Symbol = "";
-            this.sideNavItem1.Text = "Menu";
+            this.sideNavItem1.Text = "功能菜单";
             // 
             // separator1
             // 
@@ -773,7 +780,7 @@
             this.sni_recurrencecs.Checked = true;
             this.sni_recurrencecs.Name = "sni_recurrencecs";
             this.sni_recurrencecs.Panel = this.sideNavPanel1;
-            this.sni_recurrencecs.Symbol = "";
+            this.sni_recurrencecs.Symbol = "";
             this.sni_recurrencecs.Text = "复发检测";
             this.sni_recurrencecs.Click += new System.EventHandler(this.sni_recurrencecs_Click);
             // 
@@ -783,7 +790,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.sideNav1);
             this.Name = "UC_recurrencecs";
-            this.Size = new System.Drawing.Size(1365, 668);
+            this.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
             this.sideNavPanel1.ResumeLayout(false);

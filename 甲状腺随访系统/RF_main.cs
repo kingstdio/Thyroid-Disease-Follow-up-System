@@ -13,7 +13,6 @@ namespace 甲状腺随访系统
     {
 
         UC_patientInfo uC_patientInfo = new UC_patientInfo();
-        UC_riskFactors uC_riskFactors = new UC_riskFactors();
         UC_diagnosis uC_diagnosis = new UC_diagnosis();
         UC_surgeryHistory uC_surgeryHistory = new UC_surgeryHistory();
         UC_postOperative uC_postOperative = new UC_postOperative();
@@ -24,15 +23,20 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             panEX_main.Controls.Add(uC_patientInfo);
-            panEX_main.Controls.Add(uC_riskFactors);
             panEX_main.Controls.Add(uC_diagnosis);
             panEX_main.Controls.Add(uC_surgeryHistory);
             panEX_main.Controls.Add(uC_postOperative);
             panEX_main.Controls.Add(uC_followUp);
             panEX_main.Controls.Add(uC_recurrencecs);
 
+            uC_patientInfo.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_diagnosis.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_surgeryHistory.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_postOperative.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_followUp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_recurrencecs.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+
             //uC_patientInfo.Visible = true;
-            uC_riskFactors.Visible = false;
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
@@ -45,7 +49,6 @@ namespace 甲状腺随访系统
         private void bt_patientAdd_Click(object sender, EventArgs e)
         {
             
-            uC_riskFactors.Visible = false;
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
@@ -64,7 +67,6 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
-            uC_riskFactors.Visible = true;
             
         }
 
@@ -72,7 +74,6 @@ namespace 甲状腺随访系统
         private void bt_diagnosis_Click_1(object sender, EventArgs e)
         {
             uC_patientInfo.Visible = false;
-            uC_riskFactors.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
@@ -87,7 +88,6 @@ namespace 甲状腺随访系统
         {
             uC_patientInfo.Visible = false;
             uC_diagnosis.Visible = false;
-            uC_riskFactors.Visible = false;
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
@@ -99,7 +99,6 @@ namespace 甲状腺随访系统
         {
             uC_patientInfo.Visible = false;
             uC_diagnosis.Visible = false;
-            uC_riskFactors.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
@@ -110,7 +109,6 @@ namespace 甲状腺随访系统
         {
             uC_patientInfo.Visible = false;
             uC_diagnosis.Visible = false;
-            uC_riskFactors.Visible = false;
             uC_postOperative.Visible = false;
             uC_surgeryHistory.Visible = false;         
             uC_recurrencecs.Visible = false;         
@@ -121,7 +119,6 @@ namespace 甲状腺随访系统
         {
             uC_patientInfo.Visible = false;
             uC_diagnosis.Visible = false;
-            uC_riskFactors.Visible = false;
             uC_postOperative.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_followUp.Visible = false;
