@@ -21,5 +21,7 @@ namespace 甲状腺随访系统.model
         /// 患者身份证号
         /// </summary>
         public string idcard { get; set; }
+
+       
     }
 }
