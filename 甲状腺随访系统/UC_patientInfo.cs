@@ -76,5 +76,40 @@ namespace 甲状腺随访系统
 
         }
 
+        private void sideNavPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sideNavPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void doubleInput2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleInput5_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleInput6_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleInput9_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doubleInput8_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
