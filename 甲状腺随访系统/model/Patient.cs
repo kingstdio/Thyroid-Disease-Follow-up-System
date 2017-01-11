@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.model
 {
-    class Patient
+    public class Patient
     {
         /// <summary>
         /// 系统编号

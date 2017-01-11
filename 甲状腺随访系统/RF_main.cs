@@ -45,7 +45,7 @@ namespace 甲状腺随访系统
         }
 
 
-
+        #region 界面按钮操作
         private void bt_patientAdd_Click(object sender, EventArgs e)
         {
             
@@ -105,6 +105,9 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = true;
         }
 
+        /// <summary>
+        /// 界面追踪按钮
+        /// </summary>
         private void bt_followUp_Click(object sender, EventArgs e)
         {
             uC_patientInfo.Visible = false;
@@ -113,6 +116,9 @@ namespace 甲状腺随访系统
             uC_surgeryHistory.Visible = false;         
             uC_recurrencecs.Visible = false;         
             uC_followUp.Visible = true;
+
+            F_patientChoose fchoosePatient = new F_patientChoose();
+            fchoosePatient.ShowDialog();
         }
 
         private void bt_recurrencecs_Click(object sender, EventArgs e)
@@ -128,9 +134,9 @@ namespace 甲状腺随访系统
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            ToastNotification.Show(this,"1111",30000);
+            ToastNotification.Show(this,"系统数据保存成功");
         }
+        #endregion
 
-      
     }
 }

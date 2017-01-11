@@ -8,10 +8,11 @@ namespace 甲状腺随访系统
 {
     class SQLHELPER
     {
-        public static string connstr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
+        public static string connstr = Conf.conn;
         public SQLHELPER()
         {
-            connstr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
+            //connstr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
+            connstr = Conf.conn;
         }
 
         #region 数据库连接测试

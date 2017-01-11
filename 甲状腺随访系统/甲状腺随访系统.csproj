@@ -56,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conf.cs" />
+    <Compile Include="F_patientChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_patientChoose.Designer.cs">
+      <DependentUpon>F_patientChoose.cs</DependentUpon>
+    </Compile>
     <Compile Include="INIHelper.cs" />
     <Compile Include="model\BasicInfo.cs" />
     <Compile Include="model\FamilyHistory.cs" />
@@ -114,6 +120,9 @@
     <Compile Include="UC_surgeryHistory.Designer.cs">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="F_patientChoose.resx">
+      <DependentUpon>F_patientChoose.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RF_main.resx">
       <DependentUpon>RF_main.cs</DependentUpon>
     </EmbeddedResource>
