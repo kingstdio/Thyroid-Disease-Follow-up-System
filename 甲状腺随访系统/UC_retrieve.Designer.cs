@@ -32,7 +32,6 @@
             this.snav_patientInfo = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideNavPanel2 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.gpan_SC = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.bt_saveSC = new DevComponents.DotNetBar.ButtonX();
             this.tb_email2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_mobile4 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_mobile3 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -48,7 +47,6 @@
             this.lb_mobile4 = new DevComponents.DotNetBar.LabelX();
             this.lb_email2 = new DevComponents.DotNetBar.LabelX();
             this.gpan_FC = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.bt_saveFC = new DevComponents.DotNetBar.ButtonX();
             this.tb_email = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_mobile2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_mobile = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -147,9 +145,9 @@
             this.sideNavPanel2.Controls.Add(this.gpan_SC);
             this.sideNavPanel2.Controls.Add(this.gpan_FC);
             this.sideNavPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel2.Location = new System.Drawing.Point(136, 38);
+            this.sideNavPanel2.Location = new System.Drawing.Point(120, 36);
             this.sideNavPanel2.Name = "sideNavPanel2";
-            this.sideNavPanel2.Size = new System.Drawing.Size(1278, 635);
+            this.sideNavPanel2.Size = new System.Drawing.Size(1294, 637);
             this.sideNavPanel2.TabIndex = 6;
             // 
             // gpan_SC
@@ -157,7 +155,6 @@
             this.gpan_SC.BackColor = System.Drawing.Color.Transparent;
             this.gpan_SC.CanvasColor = System.Drawing.SystemColors.Control;
             this.gpan_SC.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.gpan_SC.Controls.Add(this.bt_saveSC);
             this.gpan_SC.Controls.Add(this.tb_email2);
             this.gpan_SC.Controls.Add(this.tb_mobile4);
             this.gpan_SC.Controls.Add(this.tb_mobile3);
@@ -175,7 +172,7 @@
             this.gpan_SC.DisabledBackColor = System.Drawing.Color.Empty;
             this.gpan_SC.Location = new System.Drawing.Point(651, 45);
             this.gpan_SC.Name = "gpan_SC";
-            this.gpan_SC.Size = new System.Drawing.Size(462, 493);
+            this.gpan_SC.Size = new System.Drawing.Size(462, 474);
             // 
             // 
             // 
@@ -207,17 +204,6 @@
             this.gpan_SC.TabIndex = 4;
             this.gpan_SC.Text = "备用联系人2";
             // 
-            // bt_saveSC
-            // 
-            this.bt_saveSC.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_saveSC.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_saveSC.Location = new System.Drawing.Point(19, 406);
-            this.bt_saveSC.Name = "bt_saveSC";
-            this.bt_saveSC.Size = new System.Drawing.Size(402, 42);
-            this.bt_saveSC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_saveSC.TabIndex = 7;
-            this.bt_saveSC.Text = "保存信息";
-            // 
             // tb_email2
             // 
             this.tb_email2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -230,11 +216,11 @@
             this.tb_email2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_email2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_email2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_email2.Location = new System.Drawing.Point(106, 356);
+            this.tb_email2.Location = new System.Drawing.Point(122, 351);
             this.tb_email2.Name = "tb_email2";
             this.tb_email2.PreventEnterBeep = true;
             this.tb_email2.Size = new System.Drawing.Size(289, 26);
-            this.tb_email2.TabIndex = 6;
+            this.tb_email2.TabIndex = 14;
             // 
             // tb_mobile4
             // 
@@ -248,11 +234,11 @@
             this.tb_mobile4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_mobile4.DisabledBackColor = System.Drawing.Color.White;
             this.tb_mobile4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_mobile4.Location = new System.Drawing.Point(106, 305);
+            this.tb_mobile4.Location = new System.Drawing.Point(122, 301);
             this.tb_mobile4.Name = "tb_mobile4";
             this.tb_mobile4.PreventEnterBeep = true;
             this.tb_mobile4.Size = new System.Drawing.Size(289, 26);
-            this.tb_mobile4.TabIndex = 5;
+            this.tb_mobile4.TabIndex = 13;
             // 
             // tb_mobile3
             // 
@@ -266,11 +252,11 @@
             this.tb_mobile3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_mobile3.DisabledBackColor = System.Drawing.Color.White;
             this.tb_mobile3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_mobile3.Location = new System.Drawing.Point(106, 249);
+            this.tb_mobile3.Location = new System.Drawing.Point(122, 251);
             this.tb_mobile3.Name = "tb_mobile3";
             this.tb_mobile3.PreventEnterBeep = true;
             this.tb_mobile3.Size = new System.Drawing.Size(289, 26);
-            this.tb_mobile3.TabIndex = 4;
+            this.tb_mobile3.TabIndex = 12;
             // 
             // tb_tel2
             // 
@@ -284,11 +270,11 @@
             this.tb_tel2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_tel2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_tel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_tel2.Location = new System.Drawing.Point(106, 196);
+            this.tb_tel2.Location = new System.Drawing.Point(122, 201);
             this.tb_tel2.Name = "tb_tel2";
             this.tb_tel2.PreventEnterBeep = true;
             this.tb_tel2.Size = new System.Drawing.Size(289, 26);
-            this.tb_tel2.TabIndex = 3;
+            this.tb_tel2.TabIndex = 11;
             // 
             // tb_rel2
             // 
@@ -302,11 +288,11 @@
             this.tb_rel2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_rel2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_rel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_rel2.Location = new System.Drawing.Point(106, 96);
+            this.tb_rel2.Location = new System.Drawing.Point(122, 101);
             this.tb_rel2.Name = "tb_rel2";
             this.tb_rel2.PreventEnterBeep = true;
             this.tb_rel2.Size = new System.Drawing.Size(289, 26);
-            this.tb_rel2.TabIndex = 2;
+            this.tb_rel2.TabIndex = 9;
             // 
             // tb_address2
             // 
@@ -320,11 +306,11 @@
             this.tb_address2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_address2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_address2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_address2.Location = new System.Drawing.Point(106, 148);
+            this.tb_address2.Location = new System.Drawing.Point(122, 151);
             this.tb_address2.Name = "tb_address2";
             this.tb_address2.PreventEnterBeep = true;
             this.tb_address2.Size = new System.Drawing.Size(289, 26);
-            this.tb_address2.TabIndex = 2;
+            this.tb_address2.TabIndex = 10;
             // 
             // tb_name2
             // 
@@ -338,11 +324,11 @@
             this.tb_name2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_name2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_name2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_name2.Location = new System.Drawing.Point(106, 52);
+            this.tb_name2.Location = new System.Drawing.Point(122, 51);
             this.tb_name2.Name = "tb_name2";
             this.tb_name2.PreventEnterBeep = true;
             this.tb_name2.Size = new System.Drawing.Size(289, 26);
-            this.tb_name2.TabIndex = 1;
+            this.tb_name2.TabIndex = 8;
             // 
             // lb_name2
             // 
@@ -357,6 +343,7 @@
             this.lb_name2.Size = new System.Drawing.Size(97, 23);
             this.lb_name2.TabIndex = 1;
             this.lb_name2.Text = "患者姓名：";
+            this.lb_name2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_rel2
             // 
@@ -366,11 +353,12 @@
             // 
             this.lb_rel2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_rel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_rel2.Location = new System.Drawing.Point(19, 99);
+            this.lb_rel2.Location = new System.Drawing.Point(19, 104);
             this.lb_rel2.Name = "lb_rel2";
             this.lb_rel2.Size = new System.Drawing.Size(97, 23);
             this.lb_rel2.TabIndex = 1;
             this.lb_rel2.Text = "关系：";
+            this.lb_rel2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_address2
             // 
@@ -380,11 +368,12 @@
             // 
             this.lb_address2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_address2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_address2.Location = new System.Drawing.Point(19, 148);
+            this.lb_address2.Location = new System.Drawing.Point(19, 154);
             this.lb_address2.Name = "lb_address2";
             this.lb_address2.Size = new System.Drawing.Size(97, 23);
             this.lb_address2.TabIndex = 1;
             this.lb_address2.Text = "居住地址：";
+            this.lb_address2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_tel2
             // 
@@ -394,11 +383,12 @@
             // 
             this.lb_tel2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_tel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_tel2.Location = new System.Drawing.Point(19, 196);
+            this.lb_tel2.Location = new System.Drawing.Point(19, 204);
             this.lb_tel2.Name = "lb_tel2";
             this.lb_tel2.Size = new System.Drawing.Size(97, 23);
             this.lb_tel2.TabIndex = 1;
             this.lb_tel2.Text = "联系电话：";
+            this.lb_tel2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_mobile3
             // 
@@ -408,11 +398,12 @@
             // 
             this.lb_mobile3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_mobile3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_mobile3.Location = new System.Drawing.Point(19, 249);
+            this.lb_mobile3.Location = new System.Drawing.Point(19, 254);
             this.lb_mobile3.Name = "lb_mobile3";
             this.lb_mobile3.Size = new System.Drawing.Size(97, 23);
             this.lb_mobile3.TabIndex = 1;
             this.lb_mobile3.Text = "移动电话：";
+            this.lb_mobile3.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_mobile4
             // 
@@ -422,11 +413,12 @@
             // 
             this.lb_mobile4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_mobile4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_mobile4.Location = new System.Drawing.Point(19, 305);
+            this.lb_mobile4.Location = new System.Drawing.Point(19, 304);
             this.lb_mobile4.Name = "lb_mobile4";
             this.lb_mobile4.Size = new System.Drawing.Size(97, 23);
             this.lb_mobile4.TabIndex = 1;
             this.lb_mobile4.Text = "备用电话：";
+            this.lb_mobile4.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_email2
             // 
@@ -436,18 +428,18 @@
             // 
             this.lb_email2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_email2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_email2.Location = new System.Drawing.Point(19, 356);
+            this.lb_email2.Location = new System.Drawing.Point(19, 354);
             this.lb_email2.Name = "lb_email2";
             this.lb_email2.Size = new System.Drawing.Size(97, 23);
             this.lb_email2.TabIndex = 1;
             this.lb_email2.Text = "电子邮箱：";
+            this.lb_email2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // gpan_FC
             // 
             this.gpan_FC.BackColor = System.Drawing.Color.Transparent;
             this.gpan_FC.CanvasColor = System.Drawing.SystemColors.Control;
             this.gpan_FC.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.gpan_FC.Controls.Add(this.bt_saveFC);
             this.gpan_FC.Controls.Add(this.tb_email);
             this.gpan_FC.Controls.Add(this.tb_mobile2);
             this.gpan_FC.Controls.Add(this.tb_mobile);
@@ -465,7 +457,7 @@
             this.gpan_FC.DisabledBackColor = System.Drawing.Color.Empty;
             this.gpan_FC.Location = new System.Drawing.Point(84, 45);
             this.gpan_FC.Name = "gpan_FC";
-            this.gpan_FC.Size = new System.Drawing.Size(462, 493);
+            this.gpan_FC.Size = new System.Drawing.Size(462, 474);
             // 
             // 
             // 
@@ -497,17 +489,6 @@
             this.gpan_FC.TabIndex = 3;
             this.gpan_FC.Text = "备用联系人1";
             // 
-            // bt_saveFC
-            // 
-            this.bt_saveFC.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_saveFC.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_saveFC.Location = new System.Drawing.Point(19, 406);
-            this.bt_saveFC.Name = "bt_saveFC";
-            this.bt_saveFC.Size = new System.Drawing.Size(402, 42);
-            this.bt_saveFC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_saveFC.TabIndex = 7;
-            this.bt_saveFC.Text = "保存信息";
-            // 
             // tb_email
             // 
             this.tb_email.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -520,11 +501,11 @@
             this.tb_email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_email.DisabledBackColor = System.Drawing.Color.White;
             this.tb_email.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_email.Location = new System.Drawing.Point(106, 356);
+            this.tb_email.Location = new System.Drawing.Point(122, 352);
             this.tb_email.Name = "tb_email";
             this.tb_email.PreventEnterBeep = true;
             this.tb_email.Size = new System.Drawing.Size(295, 26);
-            this.tb_email.TabIndex = 6;
+            this.tb_email.TabIndex = 7;
             // 
             // tb_mobile2
             // 
@@ -538,11 +519,11 @@
             this.tb_mobile2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_mobile2.DisabledBackColor = System.Drawing.Color.White;
             this.tb_mobile2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_mobile2.Location = new System.Drawing.Point(106, 305);
+            this.tb_mobile2.Location = new System.Drawing.Point(122, 302);
             this.tb_mobile2.Name = "tb_mobile2";
             this.tb_mobile2.PreventEnterBeep = true;
             this.tb_mobile2.Size = new System.Drawing.Size(295, 26);
-            this.tb_mobile2.TabIndex = 5;
+            this.tb_mobile2.TabIndex = 6;
             // 
             // tb_mobile
             // 
@@ -556,11 +537,11 @@
             this.tb_mobile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_mobile.DisabledBackColor = System.Drawing.Color.White;
             this.tb_mobile.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_mobile.Location = new System.Drawing.Point(106, 249);
+            this.tb_mobile.Location = new System.Drawing.Point(122, 252);
             this.tb_mobile.Name = "tb_mobile";
             this.tb_mobile.PreventEnterBeep = true;
             this.tb_mobile.Size = new System.Drawing.Size(295, 26);
-            this.tb_mobile.TabIndex = 4;
+            this.tb_mobile.TabIndex = 5;
             // 
             // tb_tel
             // 
@@ -574,11 +555,11 @@
             this.tb_tel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_tel.DisabledBackColor = System.Drawing.Color.White;
             this.tb_tel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_tel.Location = new System.Drawing.Point(106, 196);
+            this.tb_tel.Location = new System.Drawing.Point(122, 202);
             this.tb_tel.Name = "tb_tel";
             this.tb_tel.PreventEnterBeep = true;
             this.tb_tel.Size = new System.Drawing.Size(295, 26);
-            this.tb_tel.TabIndex = 3;
+            this.tb_tel.TabIndex = 4;
             // 
             // tb_rel
             // 
@@ -592,7 +573,7 @@
             this.tb_rel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_rel.DisabledBackColor = System.Drawing.Color.White;
             this.tb_rel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_rel.Location = new System.Drawing.Point(106, 96);
+            this.tb_rel.Location = new System.Drawing.Point(122, 102);
             this.tb_rel.Name = "tb_rel";
             this.tb_rel.PreventEnterBeep = true;
             this.tb_rel.Size = new System.Drawing.Size(295, 26);
@@ -610,11 +591,11 @@
             this.tb_address.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_address.DisabledBackColor = System.Drawing.Color.White;
             this.tb_address.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_address.Location = new System.Drawing.Point(106, 148);
+            this.tb_address.Location = new System.Drawing.Point(122, 152);
             this.tb_address.Name = "tb_address";
             this.tb_address.PreventEnterBeep = true;
             this.tb_address.Size = new System.Drawing.Size(295, 26);
-            this.tb_address.TabIndex = 2;
+            this.tb_address.TabIndex = 3;
             // 
             // tb_name
             // 
@@ -628,7 +609,7 @@
             this.tb_name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_name.DisabledBackColor = System.Drawing.Color.White;
             this.tb_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_name.Location = new System.Drawing.Point(106, 52);
+            this.tb_name.Location = new System.Drawing.Point(122, 52);
             this.tb_name.Name = "tb_name";
             this.tb_name.PreventEnterBeep = true;
             this.tb_name.Size = new System.Drawing.Size(295, 26);
@@ -647,6 +628,7 @@
             this.lb_name.Size = new System.Drawing.Size(97, 23);
             this.lb_name.TabIndex = 1;
             this.lb_name.Text = "患者姓名：";
+            this.lb_name.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_rel
             // 
@@ -661,6 +643,7 @@
             this.lb_rel.Size = new System.Drawing.Size(97, 23);
             this.lb_rel.TabIndex = 1;
             this.lb_rel.Text = "关系：";
+            this.lb_rel.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_address
             // 
@@ -675,6 +658,7 @@
             this.lb_address.Size = new System.Drawing.Size(97, 23);
             this.lb_address.TabIndex = 1;
             this.lb_address.Text = "居住地址：";
+            this.lb_address.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_tel
             // 
@@ -689,6 +673,7 @@
             this.lb_tel.Size = new System.Drawing.Size(97, 23);
             this.lb_tel.TabIndex = 1;
             this.lb_tel.Text = "联系电话：";
+            this.lb_tel.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_mobile
             // 
@@ -703,6 +688,7 @@
             this.lb_mobile.Size = new System.Drawing.Size(97, 23);
             this.lb_mobile.TabIndex = 1;
             this.lb_mobile.Text = "移动电话：";
+            this.lb_mobile.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_mobile2
             // 
@@ -717,6 +703,7 @@
             this.lb_mobile2.Size = new System.Drawing.Size(97, 23);
             this.lb_mobile2.TabIndex = 1;
             this.lb_mobile2.Text = "备用电话：";
+            this.lb_mobile2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_email
             // 
@@ -731,6 +718,7 @@
             this.lb_email.Size = new System.Drawing.Size(97, 23);
             this.lb_email.TabIndex = 1;
             this.lb_email.Text = "电子邮箱：";
+            this.lb_email.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // sideNavPanel1
             // 
@@ -738,9 +726,9 @@
             this.sideNavPanel1.Controls.Add(this.gpan_basicInfo);
             this.sideNavPanel1.Controls.Add(this.gpan_hospitalInfo);
             this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(136, 38);
+            this.sideNavPanel1.Location = new System.Drawing.Point(120, 36);
             this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1278, 635);
+            this.sideNavPanel1.Size = new System.Drawing.Size(1294, 637);
             this.sideNavPanel1.TabIndex = 2;
             this.sideNavPanel1.Visible = false;
             // 
@@ -1542,7 +1530,6 @@
         private DevComponents.DotNetBar.Controls.SideNav snav_patientInfo;
         private DevComponents.DotNetBar.Controls.SideNavPanel sideNavPanel2;
         private DevComponents.DotNetBar.Controls.GroupPanel gpan_SC;
-        private DevComponents.DotNetBar.ButtonX bt_saveSC;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_email2;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_mobile4;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_mobile3;
@@ -1558,7 +1545,6 @@
         private DevComponents.DotNetBar.LabelX lb_mobile4;
         private DevComponents.DotNetBar.LabelX lb_email2;
         private DevComponents.DotNetBar.Controls.GroupPanel gpan_FC;
-        private DevComponents.DotNetBar.ButtonX bt_saveFC;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_email;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_mobile2;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_mobile;

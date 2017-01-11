@@ -55,5 +55,10 @@ namespace 甲状腺随访系统
         {
 
         }
+
+        private void lb_MRI_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

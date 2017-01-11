@@ -186,7 +186,6 @@
             this.labelX26 = new DevComponents.DotNetBar.LabelX();
             this.lb_TSH = new DevComponents.DotNetBar.LabelX();
             this.line12 = new DevComponents.DotNetBar.Controls.Line();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.line14 = new DevComponents.DotNetBar.Controls.Line();
             this.line17 = new DevComponents.DotNetBar.Controls.Line();
             this.line18 = new DevComponents.DotNetBar.Controls.Line();
@@ -211,12 +210,12 @@
             // 
             // sideNav1
             // 
-            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel2);
-            this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.sideNav1.Controls.Add(this.sideNavPanel5);
+            this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Controls.Add(this.sideNavPanel2);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -274,6 +273,7 @@
             this.sideNavPanel2.Name = "sideNavPanel2";
             this.sideNavPanel2.Size = new System.Drawing.Size(1294, 531);
             this.sideNavPanel2.TabIndex = 46;
+            this.sideNavPanel2.Visible = false;
             // 
             // cbe_UC
             // 
@@ -291,7 +291,7 @@
             this.cbe_UC.Name = "cbe_UC";
             this.cbe_UC.Size = new System.Drawing.Size(101, 26);
             this.cbe_UC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_UC.TabIndex = 72;
+            this.cbe_UC.TabIndex = 5;
             // 
             // UC_yes
             // 
@@ -311,7 +311,7 @@
             // 
             this.lb_remark.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_remark.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_remark.Location = new System.Drawing.Point(878, 69);
+            this.lb_remark.Location = new System.Drawing.Point(880, 69);
             this.lb_remark.Name = "lb_remark";
             this.lb_remark.Size = new System.Drawing.Size(90, 23);
             this.lb_remark.TabIndex = 71;
@@ -325,11 +325,11 @@
             this.tb_remark.Border.Class = "TextBoxBorder";
             this.tb_remark.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_remark.Font = new System.Drawing.Font("宋体", 12F);
-            this.tb_remark.Location = new System.Drawing.Point(974, 66);
+            this.tb_remark.Location = new System.Drawing.Point(974, 69);
             this.tb_remark.Name = "tb_remark";
             this.tb_remark.PreventEnterBeep = true;
             this.tb_remark.Size = new System.Drawing.Size(191, 26);
-            this.tb_remark.TabIndex = 70;
+            this.tb_remark.TabIndex = 4;
             // 
             // cbe_laryngoscope
             // 
@@ -343,11 +343,11 @@
             this.laryngoscope_null,
             this.laryngoscope_normal,
             this.laryngoscope_unnormal});
-            this.cbe_laryngoscope.Location = new System.Drawing.Point(454, 417);
+            this.cbe_laryngoscope.Location = new System.Drawing.Point(454, 424);
             this.cbe_laryngoscope.Name = "cbe_laryngoscope";
             this.cbe_laryngoscope.Size = new System.Drawing.Size(101, 26);
             this.cbe_laryngoscope.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_laryngoscope.TabIndex = 69;
+            this.cbe_laryngoscope.TabIndex = 9;
             // 
             // laryngoscope_normal
             // 
@@ -376,9 +376,9 @@
             this.EIR_5});
             this.cbe_EIR.Location = new System.Drawing.Point(283, 206);
             this.cbe_EIR.Name = "cbe_EIR";
-            this.cbe_EIR.Size = new System.Drawing.Size(160, 26);
+            this.cbe_EIR.Size = new System.Drawing.Size(172, 26);
             this.cbe_EIR.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_EIR.TabIndex = 68;
+            this.cbe_EIR.TabIndex = 6;
             // 
             // EIR_1
             // 
@@ -413,7 +413,7 @@
             // 
             this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX33.Location = new System.Drawing.Point(107, 209);
+            this.labelX33.Location = new System.Drawing.Point(107, 206);
             this.labelX33.Name = "labelX33";
             this.labelX33.Size = new System.Drawing.Size(124, 23);
             this.labelX33.TabIndex = 67;
@@ -468,7 +468,7 @@
             this.switchButton3.Size = new System.Drawing.Size(96, 26);
             this.switchButton3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton3.SwitchWidth = 50;
-            this.switchButton3.TabIndex = 55;
+            this.switchButton3.TabIndex = 8;
             // 
             // switchButton2
             // 
@@ -483,7 +483,7 @@
             this.switchButton2.Size = new System.Drawing.Size(96, 26);
             this.switchButton2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton2.SwitchWidth = 50;
-            this.switchButton2.TabIndex = 53;
+            this.switchButton2.TabIndex = 7;
             // 
             // switchButton8
             // 
@@ -491,14 +491,14 @@
             // 
             // 
             this.switchButton8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton8.Location = new System.Drawing.Point(717, 66);
+            this.switchButton8.Location = new System.Drawing.Point(720, 69);
             this.switchButton8.Name = "switchButton8";
             this.switchButton8.OffText = "无";
             this.switchButton8.OnText = "有";
-            this.switchButton8.Size = new System.Drawing.Size(96, 26);
+            this.switchButton8.Size = new System.Drawing.Size(96, 23);
             this.switchButton8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switchButton8.SwitchWidth = 50;
-            this.switchButton8.TabIndex = 54;
+            this.switchButton8.TabIndex = 3;
             // 
             // cbe_op
             // 
@@ -514,11 +514,11 @@
             this.comboItem7,
             this.comboItem8,
             this.comboItem17});
-            this.cbe_op.Location = new System.Drawing.Point(665, 417);
+            this.cbe_op.Location = new System.Drawing.Point(673, 427);
             this.cbe_op.Name = "cbe_op";
             this.cbe_op.Size = new System.Drawing.Size(194, 26);
             this.cbe_op.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_op.TabIndex = 48;
+            this.cbe_op.TabIndex = 10;
             // 
             // comboItem6
             // 
@@ -551,11 +551,11 @@
             this.TI2_middle,
             this.TI2_middleBottom,
             this.TI2_bottom});
-            this.cbe_TI2.Location = new System.Drawing.Point(508, 66);
+            this.cbe_TI2.Location = new System.Drawing.Point(510, 69);
             this.cbe_TI2.Name = "cbe_TI2";
             this.cbe_TI2.Size = new System.Drawing.Size(118, 26);
             this.cbe_TI2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_TI2.TabIndex = 47;
+            this.cbe_TI2.TabIndex = 2;
             this.cbe_TI2.SelectedIndexChanged += new System.EventHandler(this.comboBoxEx2_SelectedIndexChanged);
             // 
             // TI2_top
@@ -596,11 +596,11 @@
             this.f,
             this.g,
             this.h});
-            this.cbe_TI.Location = new System.Drawing.Point(345, 66);
+            this.cbe_TI.Location = new System.Drawing.Point(345, 69);
             this.cbe_TI.Name = "cbe_TI";
             this.cbe_TI.Size = new System.Drawing.Size(118, 26);
             this.cbe_TI.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_TI.TabIndex = 49;
+            this.cbe_TI.TabIndex = 1;
             // 
             // a
             // 
@@ -713,7 +713,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX2.Location = new System.Drawing.Point(97, 423);
+            this.labelX2.Location = new System.Drawing.Point(91, 427);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(155, 23);
             this.labelX2.TabIndex = 40;
@@ -728,7 +728,7 @@
             // 
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX12.Location = new System.Drawing.Point(91, 329);
+            this.labelX12.Location = new System.Drawing.Point(91, 326);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(155, 23);
             this.labelX12.TabIndex = 38;
@@ -743,7 +743,7 @@
             // 
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX9.Location = new System.Drawing.Point(97, 141);
+            this.labelX9.Location = new System.Drawing.Point(97, 138);
             this.labelX9.Name = "labelX9";
             this.labelX9.Size = new System.Drawing.Size(155, 23);
             this.labelX9.TabIndex = 39;
@@ -758,7 +758,7 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX8.Location = new System.Drawing.Point(97, 77);
+            this.labelX8.Location = new System.Drawing.Point(97, 69);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(155, 23);
             this.labelX8.TabIndex = 36;
@@ -801,7 +801,7 @@
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX4.Location = new System.Drawing.Point(633, 69);
+            this.labelX4.Location = new System.Drawing.Point(632, 69);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(84, 23);
             this.labelX4.TabIndex = 33;
@@ -815,7 +815,7 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX3.Location = new System.Drawing.Point(473, 69);
+            this.labelX3.Location = new System.Drawing.Point(467, 69);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(39, 23);
             this.labelX3.TabIndex = 35;
@@ -829,7 +829,7 @@
             // 
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX14.Location = new System.Drawing.Point(603, 420);
+            this.labelX14.Location = new System.Drawing.Point(603, 427);
             this.labelX14.Name = "labelX14";
             this.labelX14.Size = new System.Drawing.Size(56, 23);
             this.labelX14.TabIndex = 37;
@@ -843,7 +843,7 @@
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX13.Location = new System.Drawing.Point(603, 329);
+            this.labelX13.Location = new System.Drawing.Point(603, 326);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(195, 23);
             this.labelX13.TabIndex = 44;
@@ -857,11 +857,12 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX1.Location = new System.Drawing.Point(354, 423);
+            this.labelX1.Location = new System.Drawing.Point(271, 424);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(89, 23);
+            this.labelX1.Size = new System.Drawing.Size(172, 23);
             this.labelX1.TabIndex = 43;
             this.labelX1.Text = "喉镜情况：";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX11
             // 
@@ -871,7 +872,7 @@
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX11.Location = new System.Drawing.Point(283, 329);
+            this.labelX11.Location = new System.Drawing.Point(283, 326);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(172, 23);
             this.labelX11.TabIndex = 46;
@@ -885,7 +886,7 @@
             // 
             this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX10.Location = new System.Drawing.Point(283, 141);
+            this.labelX10.Location = new System.Drawing.Point(283, 138);
             this.labelX10.Name = "labelX10";
             this.labelX10.Size = new System.Drawing.Size(172, 23);
             this.labelX10.TabIndex = 45;
@@ -945,7 +946,7 @@
             this.cbe_braf1.Name = "cbe_braf1";
             this.cbe_braf1.Size = new System.Drawing.Size(77, 26);
             this.cbe_braf1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_braf1.TabIndex = 79;
+            this.cbe_braf1.TabIndex = 9;
             // 
             // braf1_plus
             // 
@@ -973,7 +974,7 @@
             this.cbe_PAX8.Name = "cbe_PAX8";
             this.cbe_PAX8.Size = new System.Drawing.Size(77, 26);
             this.cbe_PAX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PAX8.TabIndex = 78;
+            this.cbe_PAX8.TabIndex = 7;
             // 
             // PAX8_plus
             // 
@@ -1001,7 +1002,7 @@
             this.cbe_TERT.Name = "cbe_TERT";
             this.cbe_TERT.Size = new System.Drawing.Size(77, 26);
             this.cbe_TERT.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_TERT.TabIndex = 77;
+            this.cbe_TERT.TabIndex = 4;
             // 
             // TERT_plus
             // 
@@ -1029,7 +1030,7 @@
             this.cbe_PTC3.Name = "cbe_PTC3";
             this.cbe_PTC3.Size = new System.Drawing.Size(77, 26);
             this.cbe_PTC3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PTC3.TabIndex = 76;
+            this.cbe_PTC3.TabIndex = 6;
             // 
             // PTC3_plus
             // 
@@ -1057,7 +1058,7 @@
             this.cbe_RAS.Name = "cbe_RAS";
             this.cbe_RAS.Size = new System.Drawing.Size(77, 26);
             this.cbe_RAS.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_RAS.TabIndex = 75;
+            this.cbe_RAS.TabIndex = 3;
             // 
             // RAS_plus
             // 
@@ -1085,7 +1086,7 @@
             this.cbe_PTC1.Name = "cbe_PTC1";
             this.cbe_PTC1.Size = new System.Drawing.Size(77, 26);
             this.cbe_PTC1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PTC1.TabIndex = 74;
+            this.cbe_PTC1.TabIndex = 5;
             // 
             // PTC1_plus
             // 
@@ -1113,7 +1114,7 @@
             this.cbe_braf.Name = "cbe_braf";
             this.cbe_braf.Size = new System.Drawing.Size(77, 26);
             this.cbe_braf.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_braf.TabIndex = 73;
+            this.cbe_braf.TabIndex = 2;
             // 
             // braf_plus
             // 
@@ -1151,7 +1152,7 @@
             this.doubleInput1.Name = "doubleInput1";
             this.doubleInput1.ShowUpDown = true;
             this.doubleInput1.Size = new System.Drawing.Size(278, 26);
-            this.doubleInput1.TabIndex = 70;
+            this.doubleInput1.TabIndex = 10;
             // 
             // labelX24
             // 
@@ -1193,7 +1194,7 @@
             this.tb_TGE.Name = "tb_TGE";
             this.tb_TGE.PreventEnterBeep = true;
             this.tb_TGE.Size = new System.Drawing.Size(616, 26);
-            this.tb_TGE.TabIndex = 67;
+            this.tb_TGE.TabIndex = 8;
             // 
             // lb_FNA
             // 
@@ -1241,7 +1242,7 @@
             this.cbe_bethesda.Name = "cbe_bethesda";
             this.cbe_bethesda.Size = new System.Drawing.Size(193, 26);
             this.cbe_bethesda.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_bethesda.TabIndex = 49;
+            this.cbe_bethesda.TabIndex = 1;
             // 
             // bethesda_I
             // 
@@ -1489,7 +1490,6 @@
             this.sideNavPanel5.Controls.Add(this.labelX26);
             this.sideNavPanel5.Controls.Add(this.lb_TSH);
             this.sideNavPanel5.Controls.Add(this.line12);
-            this.sideNavPanel5.Controls.Add(this.buttonX3);
             this.sideNavPanel5.Controls.Add(this.line14);
             this.sideNavPanel5.Controls.Add(this.line17);
             this.sideNavPanel5.Controls.Add(this.line18);
@@ -1502,7 +1502,6 @@
             this.sideNavPanel5.Name = "sideNavPanel5";
             this.sideNavPanel5.Size = new System.Drawing.Size(1294, 531);
             this.sideNavPanel5.TabIndex = 30;
-            this.sideNavPanel5.Visible = false;
             // 
             // tb_P
             // 
@@ -1516,7 +1515,7 @@
             this.tb_P.Name = "tb_P";
             this.tb_P.PreventEnterBeep = true;
             this.tb_P.Size = new System.Drawing.Size(169, 26);
-            this.tb_P.TabIndex = 123;
+            this.tb_P.TabIndex = 14;
             // 
             // tb_Ca
             // 
@@ -1530,7 +1529,7 @@
             this.tb_Ca.Name = "tb_Ca";
             this.tb_Ca.PreventEnterBeep = true;
             this.tb_Ca.Size = new System.Drawing.Size(169, 26);
-            this.tb_Ca.TabIndex = 121;
+            this.tb_Ca.TabIndex = 13;
             // 
             // tb_Cl
             // 
@@ -1544,7 +1543,7 @@
             this.tb_Cl.Name = "tb_Cl";
             this.tb_Cl.PreventEnterBeep = true;
             this.tb_Cl.Size = new System.Drawing.Size(169, 26);
-            this.tb_Cl.TabIndex = 120;
+            this.tb_Cl.TabIndex = 12;
             // 
             // tb_Na
             // 
@@ -1558,7 +1557,7 @@
             this.tb_Na.Name = "tb_Na";
             this.tb_Na.PreventEnterBeep = true;
             this.tb_Na.Size = new System.Drawing.Size(169, 26);
-            this.tb_Na.TabIndex = 119;
+            this.tb_Na.TabIndex = 11;
             // 
             // tb_K
             // 
@@ -1572,7 +1571,7 @@
             this.tb_K.Name = "tb_K";
             this.tb_K.PreventEnterBeep = true;
             this.tb_K.Size = new System.Drawing.Size(169, 26);
-            this.tb_K.TabIndex = 118;
+            this.tb_K.TabIndex = 10;
             // 
             // lb_P
             // 
@@ -1675,7 +1674,7 @@
             this.tb_PTA.Name = "tb_PTA";
             this.tb_PTA.PreventEnterBeep = true;
             this.tb_PTA.Size = new System.Drawing.Size(167, 26);
-            this.tb_PTA.TabIndex = 111;
+            this.tb_PTA.TabIndex = 9;
             // 
             // tb_TG
             // 
@@ -1689,7 +1688,7 @@
             this.tb_TG.Name = "tb_TG";
             this.tb_TG.PreventEnterBeep = true;
             this.tb_TG.Size = new System.Drawing.Size(167, 26);
-            this.tb_TG.TabIndex = 110;
+            this.tb_TG.TabIndex = 8;
             // 
             // textBoxX6
             // 
@@ -1703,7 +1702,7 @@
             this.textBoxX6.Name = "textBoxX6";
             this.textBoxX6.PreventEnterBeep = true;
             this.textBoxX6.Size = new System.Drawing.Size(167, 26);
-            this.textBoxX6.TabIndex = 109;
+            this.textBoxX6.TabIndex = 6;
             // 
             // tb_TPO
             // 
@@ -1717,7 +1716,7 @@
             this.tb_TPO.Name = "tb_TPO";
             this.tb_TPO.PreventEnterBeep = true;
             this.tb_TPO.Size = new System.Drawing.Size(167, 26);
-            this.tb_TPO.TabIndex = 108;
+            this.tb_TPO.TabIndex = 5;
             // 
             // textBoxX1
             // 
@@ -1731,7 +1730,7 @@
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.Size = new System.Drawing.Size(167, 26);
-            this.textBoxX1.TabIndex = 107;
+            this.textBoxX1.TabIndex = 7;
             // 
             // tb_ATG
             // 
@@ -1745,7 +1744,7 @@
             this.tb_ATG.Name = "tb_ATG";
             this.tb_ATG.PreventEnterBeep = true;
             this.tb_ATG.Size = new System.Drawing.Size(167, 26);
-            this.tb_ATG.TabIndex = 107;
+            this.tb_ATG.TabIndex = 4;
             // 
             // tb_FT4
             // 
@@ -1759,7 +1758,7 @@
             this.tb_FT4.Name = "tb_FT4";
             this.tb_FT4.PreventEnterBeep = true;
             this.tb_FT4.Size = new System.Drawing.Size(167, 26);
-            this.tb_FT4.TabIndex = 106;
+            this.tb_FT4.TabIndex = 3;
             // 
             // tb_FT3
             // 
@@ -1773,7 +1772,7 @@
             this.tb_FT3.Name = "tb_FT3";
             this.tb_FT3.PreventEnterBeep = true;
             this.tb_FT3.Size = new System.Drawing.Size(167, 26);
-            this.tb_FT3.TabIndex = 105;
+            this.tb_FT3.TabIndex = 2;
             // 
             // tb_TSH
             // 
@@ -1787,7 +1786,7 @@
             this.tb_TSH.Name = "tb_TSH";
             this.tb_TSH.PreventEnterBeep = true;
             this.tb_TSH.Size = new System.Drawing.Size(167, 26);
-            this.tb_TSH.TabIndex = 104;
+            this.tb_TSH.TabIndex = 1;
             // 
             // lb_PTA
             // 
@@ -1951,18 +1950,6 @@
             this.line12.Text = "line1";
             this.line12.VerticalLine = true;
             // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Font = new System.Drawing.Font("宋体", 12F);
-            this.buttonX3.Location = new System.Drawing.Point(101, 437);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(1084, 40);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 95;
-            this.buttonX3.Text = "保存信息";
-            // 
             // line14
             // 
             this.line14.BackColor = System.Drawing.Color.Transparent;
@@ -2071,7 +2058,6 @@
             // 
             // sideNavItem3
             // 
-            this.sideNavItem3.Checked = true;
             this.sideNavItem3.Name = "sideNavItem3";
             this.sideNavItem3.Panel = this.sideNavPanel2;
             this.sideNavItem3.Symbol = "";
@@ -2107,6 +2093,7 @@
             // 
             // sideNavItem6
             // 
+            this.sideNavItem6.Checked = true;
             this.sideNavItem6.Name = "sideNavItem6";
             this.sideNavItem6.Panel = this.sideNavPanel5;
             this.sideNavItem6.Symbol = "58274";
@@ -2204,7 +2191,6 @@
         private DevComponents.DotNetBar.LabelX lb_FT3;
         private DevComponents.DotNetBar.LabelX lb_TSH;
         private DevComponents.DotNetBar.Controls.Line line12;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.Controls.Line line14;
         private DevComponents.DotNetBar.Controls.Line line17;
         private DevComponents.DotNetBar.Controls.Line line18;
