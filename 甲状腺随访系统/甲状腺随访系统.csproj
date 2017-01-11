@@ -57,7 +57,12 @@
   <ItemGroup>
     <Compile Include="Conf.cs" />
     <Compile Include="INIHelper.cs" />
+    <Compile Include="model\BasicInfo.cs" />
+    <Compile Include="model\FamilyHistory.cs" />
+    <Compile Include="model\Imageology.cs" />
+    <Compile Include="model\NormalRiskFactors.cs" />
     <Compile Include="model\Patient.cs" />
+    <Compile Include="model\SpecialRiskFactors.cs" />
     <Compile Include="RF_main.cs">
       <SubType>Form</SubType>
     </Compile>
