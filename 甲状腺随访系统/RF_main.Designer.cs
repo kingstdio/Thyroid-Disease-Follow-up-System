@@ -54,26 +54,26 @@
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panEX_main = new DevComponents.DotNetBar.PanelEx();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_hosno = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_hosindate = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_phone = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_sex = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.tb_name = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -500,20 +500,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.textBoxX6);
+            this.panelEx1.Controls.Add(this.tb_hosno);
             this.panelEx1.Controls.Add(this.textBoxX10);
             this.panelEx1.Controls.Add(this.textBoxX8);
             this.panelEx1.Controls.Add(this.textBoxX9);
-            this.panelEx1.Controls.Add(this.textBoxX7);
+            this.panelEx1.Controls.Add(this.tb_hosindate);
             this.panelEx1.Controls.Add(this.textBoxX5);
-            this.panelEx1.Controls.Add(this.textBoxX3);
+            this.panelEx1.Controls.Add(this.tb_phone);
             this.panelEx1.Controls.Add(this.textBoxX2);
-            this.panelEx1.Controls.Add(this.textBoxX4);
+            this.panelEx1.Controls.Add(this.tb_sex);
             this.panelEx1.Controls.Add(this.labelX10);
             this.panelEx1.Controls.Add(this.labelX6);
             this.panelEx1.Controls.Add(this.labelX8);
             this.panelEx1.Controls.Add(this.labelX9);
-            this.panelEx1.Controls.Add(this.textBoxX1);
+            this.panelEx1.Controls.Add(this.tb_name);
             this.panelEx1.Controls.Add(this.labelX7);
             this.panelEx1.Controls.Add(this.labelX5);
             this.panelEx1.Controls.Add(this.labelX3);
@@ -533,250 +533,43 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
             // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX1.Location = new System.Drawing.Point(294, 20);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(90, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "姓名：";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX1.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX1.Location = new System.Drawing.Point(377, 18);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX1.TabIndex = 1;
-            this.textBoxX1.TabStop = false;
-            this.textBoxX1.Text = "欧阳伟民";
-            this.textBoxX1.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX2.Location = new System.Drawing.Point(294, 60);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(90, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "身份证号：";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX2.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX2.Location = new System.Drawing.Point(377, 58);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.ReadOnly = true;
-            this.textBoxX2.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX2.TabIndex = 1;
-            this.textBoxX2.TabStop = false;
-            this.textBoxX2.Text = "130722189705136653X";
-            this.textBoxX2.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX3.Location = new System.Drawing.Point(560, 20);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(90, 23);
-            this.labelX3.TabIndex = 0;
-            this.labelX3.Text = "联系电话：";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX3.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX3.Location = new System.Drawing.Point(643, 18);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.ReadOnly = true;
-            this.textBoxX3.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX3.TabIndex = 1;
-            this.textBoxX3.TabStop = false;
-            this.textBoxX3.Text = "13800138000";
-            this.textBoxX3.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // labelX4
-            // 
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX4.Location = new System.Drawing.Point(28, 59);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(90, 23);
-            this.labelX4.TabIndex = 0;
-            this.labelX4.Text = "性别：";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX4
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX4.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX4.Location = new System.Drawing.Point(111, 57);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.ReadOnly = true;
-            this.textBoxX4.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX4.TabIndex = 1;
-            this.textBoxX4.TabStop = false;
-            this.textBoxX4.Text = "男";
-            this.textBoxX4.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // labelX5
-            // 
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX5.Location = new System.Drawing.Point(560, 59);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(90, 23);
-            this.labelX5.TabIndex = 0;
-            this.labelX5.Text = "出生日期：";
-            this.labelX5.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX6
-            // 
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX6.Location = new System.Drawing.Point(28, 20);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(90, 23);
-            this.labelX6.TabIndex = 0;
-            this.labelX6.Text = "住院号：";
-            this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX5
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX5.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX5.Location = new System.Drawing.Point(643, 57);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.ReadOnly = true;
-            this.textBoxX5.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX5.TabIndex = 1;
-            this.textBoxX5.TabStop = false;
-            this.textBoxX5.Text = "2016-08-12";
-            this.textBoxX5.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // textBoxX6
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX6.Border.Class = "TextBoxBorder";
-            this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX6.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX6.Location = new System.Drawing.Point(111, 18);
-            this.textBoxX6.Name = "textBoxX6";
-            this.textBoxX6.PreventEnterBeep = true;
-            this.textBoxX6.ReadOnly = true;
-            this.textBoxX6.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX6.TabIndex = 1;
-            this.textBoxX6.TabStop = false;
-            this.textBoxX6.Text = "101845";
-            this.textBoxX6.WatermarkColor = System.Drawing.Color.Maroon;
-            // 
-            // labelX7
-            // 
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX7.Location = new System.Drawing.Point(826, 20);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(90, 23);
-            this.labelX7.TabIndex = 0;
-            this.labelX7.Text = "住院日期：";
-            this.labelX7.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX8
-            // 
-            // 
-            // 
-            // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX8.Location = new System.Drawing.Point(826, 58);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(90, 23);
-            this.labelX8.TabIndex = 0;
-            this.labelX8.Text = "出院日期：";
-            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // textBoxX7
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX7.Border.Class = "TextBoxBorder";
-            this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX7.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX7.Location = new System.Drawing.Point(909, 18);
-            this.textBoxX7.Name = "textBoxX7";
-            this.textBoxX7.PreventEnterBeep = true;
-            this.textBoxX7.ReadOnly = true;
-            this.textBoxX7.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX7.TabIndex = 1;
-            this.textBoxX7.TabStop = false;
-            this.textBoxX7.Text = "2016-07-21";
-            this.textBoxX7.WatermarkColor = System.Drawing.Color.Maroon;
+            // tb_hosno
+            // 
+            // 
+            // 
+            // 
+            this.tb_hosno.Border.Class = "TextBoxBorder";
+            this.tb_hosno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_hosno.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_hosno.Location = new System.Drawing.Point(111, 18);
+            this.tb_hosno.Name = "tb_hosno";
+            this.tb_hosno.PreventEnterBeep = true;
+            this.tb_hosno.ReadOnly = true;
+            this.tb_hosno.Size = new System.Drawing.Size(162, 26);
+            this.tb_hosno.TabIndex = 1;
+            this.tb_hosno.TabStop = false;
+            this.tb_hosno.Text = "101845";
+            this.tb_hosno.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // textBoxX10
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX10.Border.Class = "TextBoxBorder";
+            this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxX10.ForeColor = System.Drawing.Color.Maroon;
+            this.textBoxX10.Location = new System.Drawing.Point(1175, 56);
+            this.textBoxX10.Name = "textBoxX10";
+            this.textBoxX10.PreventEnterBeep = true;
+            this.textBoxX10.ReadOnly = true;
+            this.textBoxX10.Size = new System.Drawing.Size(162, 26);
+            this.textBoxX10.TabIndex = 1;
+            this.textBoxX10.TabStop = false;
+            this.textBoxX10.Text = "2016-08-12";
+            this.textBoxX10.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // textBoxX8
             // 
@@ -797,34 +590,6 @@
             this.textBoxX8.Text = "2016-08-12";
             this.textBoxX8.WatermarkColor = System.Drawing.Color.Maroon;
             // 
-            // labelX9
-            // 
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX9.Location = new System.Drawing.Point(1092, 20);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(90, 23);
-            this.labelX9.TabIndex = 0;
-            this.labelX9.Text = "随访次数：";
-            this.labelX9.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX10
-            // 
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX10.Location = new System.Drawing.Point(1092, 58);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(90, 23);
-            this.labelX10.TabIndex = 0;
-            this.labelX10.Text = "最近随访：";
-            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
             // textBoxX9
             // 
             // 
@@ -844,24 +609,259 @@
             this.textBoxX9.Text = "2016-07-21";
             this.textBoxX9.WatermarkColor = System.Drawing.Color.Maroon;
             // 
-            // textBoxX10
+            // tb_hosindate
             // 
             // 
             // 
             // 
-            this.textBoxX10.Border.Class = "TextBoxBorder";
-            this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX10.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX10.Location = new System.Drawing.Point(1175, 56);
-            this.textBoxX10.Name = "textBoxX10";
-            this.textBoxX10.PreventEnterBeep = true;
-            this.textBoxX10.ReadOnly = true;
-            this.textBoxX10.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX10.TabIndex = 1;
-            this.textBoxX10.TabStop = false;
-            this.textBoxX10.Text = "2016-08-12";
-            this.textBoxX10.WatermarkColor = System.Drawing.Color.Maroon;
+            this.tb_hosindate.Border.Class = "TextBoxBorder";
+            this.tb_hosindate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosindate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_hosindate.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_hosindate.Location = new System.Drawing.Point(909, 18);
+            this.tb_hosindate.Name = "tb_hosindate";
+            this.tb_hosindate.PreventEnterBeep = true;
+            this.tb_hosindate.ReadOnly = true;
+            this.tb_hosindate.Size = new System.Drawing.Size(162, 26);
+            this.tb_hosindate.TabIndex = 1;
+            this.tb_hosindate.TabStop = false;
+            this.tb_hosindate.Text = "2016-07-21";
+            this.tb_hosindate.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // textBoxX5
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX5.Border.Class = "TextBoxBorder";
+            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxX5.ForeColor = System.Drawing.Color.Maroon;
+            this.textBoxX5.Location = new System.Drawing.Point(643, 57);
+            this.textBoxX5.Name = "textBoxX5";
+            this.textBoxX5.PreventEnterBeep = true;
+            this.textBoxX5.ReadOnly = true;
+            this.textBoxX5.Size = new System.Drawing.Size(162, 26);
+            this.textBoxX5.TabIndex = 1;
+            this.textBoxX5.TabStop = false;
+            this.textBoxX5.Text = "2016-08-12";
+            this.textBoxX5.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // tb_phone
+            // 
+            // 
+            // 
+            // 
+            this.tb_phone.Border.Class = "TextBoxBorder";
+            this.tb_phone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_phone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_phone.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_phone.Location = new System.Drawing.Point(643, 18);
+            this.tb_phone.Name = "tb_phone";
+            this.tb_phone.PreventEnterBeep = true;
+            this.tb_phone.ReadOnly = true;
+            this.tb_phone.Size = new System.Drawing.Size(162, 26);
+            this.tb_phone.TabIndex = 1;
+            this.tb_phone.TabStop = false;
+            this.tb_phone.Text = "13800138000";
+            this.tb_phone.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // textBoxX2
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX2.Border.Class = "TextBoxBorder";
+            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxX2.ForeColor = System.Drawing.Color.Maroon;
+            this.textBoxX2.Location = new System.Drawing.Point(377, 58);
+            this.textBoxX2.Name = "textBoxX2";
+            this.textBoxX2.PreventEnterBeep = true;
+            this.textBoxX2.ReadOnly = true;
+            this.textBoxX2.Size = new System.Drawing.Size(162, 26);
+            this.textBoxX2.TabIndex = 1;
+            this.textBoxX2.TabStop = false;
+            this.textBoxX2.Text = "130722189705136653X";
+            this.textBoxX2.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // tb_sex
+            // 
+            // 
+            // 
+            // 
+            this.tb_sex.Border.Class = "TextBoxBorder";
+            this.tb_sex.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_sex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_sex.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_sex.Location = new System.Drawing.Point(111, 57);
+            this.tb_sex.Name = "tb_sex";
+            this.tb_sex.PreventEnterBeep = true;
+            this.tb_sex.ReadOnly = true;
+            this.tb_sex.Size = new System.Drawing.Size(162, 26);
+            this.tb_sex.TabIndex = 1;
+            this.tb_sex.TabStop = false;
+            this.tb_sex.Text = "男";
+            this.tb_sex.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // labelX10
+            // 
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX10.Location = new System.Drawing.Point(1092, 58);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(90, 23);
+            this.labelX10.TabIndex = 0;
+            this.labelX10.Text = "最近随访：";
+            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX6
+            // 
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX6.Location = new System.Drawing.Point(28, 20);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(90, 23);
+            this.labelX6.TabIndex = 0;
+            this.labelX6.Text = "住院号：";
+            this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX8
+            // 
+            // 
+            // 
+            // 
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX8.Location = new System.Drawing.Point(826, 58);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.Size = new System.Drawing.Size(90, 23);
+            this.labelX8.TabIndex = 0;
+            this.labelX8.Text = "出院日期：";
+            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX9
+            // 
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX9.Location = new System.Drawing.Point(1092, 20);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(90, 23);
+            this.labelX9.TabIndex = 0;
+            this.labelX9.Text = "随访次数：";
+            this.labelX9.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // tb_name
+            // 
+            // 
+            // 
+            // 
+            this.tb_name.Border.Class = "TextBoxBorder";
+            this.tb_name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_name.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_name.Location = new System.Drawing.Point(377, 18);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.PreventEnterBeep = true;
+            this.tb_name.ReadOnly = true;
+            this.tb_name.Size = new System.Drawing.Size(162, 26);
+            this.tb_name.TabIndex = 1;
+            this.tb_name.TabStop = false;
+            this.tb_name.Text = "欧阳伟民";
+            this.tb_name.WatermarkColor = System.Drawing.Color.Maroon;
+            // 
+            // labelX7
+            // 
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX7.Location = new System.Drawing.Point(826, 20);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(90, 23);
+            this.labelX7.TabIndex = 0;
+            this.labelX7.Text = "住院日期：";
+            this.labelX7.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX5
+            // 
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX5.Location = new System.Drawing.Point(560, 59);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(90, 23);
+            this.labelX5.TabIndex = 0;
+            this.labelX5.Text = "出生日期：";
+            this.labelX5.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX3.Location = new System.Drawing.Point(560, 20);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(90, 23);
+            this.labelX3.TabIndex = 0;
+            this.labelX3.Text = "联系电话：";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX2.Location = new System.Drawing.Point(294, 60);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(90, 23);
+            this.labelX2.TabIndex = 0;
+            this.labelX2.Text = "身份证号：";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX4.Location = new System.Drawing.Point(28, 59);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(90, 23);
+            this.labelX4.TabIndex = 0;
+            this.labelX4.Text = "性别：";
+            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX1.Location = new System.Drawing.Point(294, 20);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(90, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "姓名：";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // RF_main
             // 
@@ -909,19 +909,19 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_name;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_phone;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_sex;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_hosno;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_hosindate;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX10;

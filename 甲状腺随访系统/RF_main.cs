@@ -19,9 +19,16 @@ namespace 甲状腺随访系统
         UC_followUp uC_followUp = new UC_followUp();
         UC_recurrencecs uC_recurrencecs = new UC_recurrencecs();
 
+
+        #region 初始化
         public RF_main()
         {
             InitializeComponent();
+
+            
+            Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
+            
+            //添加功能面板
             panEX_main.Controls.Add(uC_patientInfo);
             panEX_main.Controls.Add(uC_diagnosis);
             panEX_main.Controls.Add(uC_surgeryHistory);
@@ -29,6 +36,7 @@ namespace 甲状腺随访系统
             panEX_main.Controls.Add(uC_followUp);
             panEX_main.Controls.Add(uC_recurrencecs);
 
+            //设置缩放属性
             uC_patientInfo.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_diagnosis.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_surgeryHistory.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
@@ -36,14 +44,23 @@ namespace 甲状腺随访系统
             uC_followUp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_recurrencecs.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
 
-            //uC_patientInfo.Visible = true;
+            //设置功能面板的可见性
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
         }
+        #endregion 
 
+        #region 更新功能面板事件
+        /// <summary>
+        /// 更新功能面板
+        /// </summary>
+        void fillPaitentBoard(object obj, EventArgs args) {
+            tb_name.Text = Conf.currentPatient.basicInfo.name;
+        }
+        #endregion
 
         #region 界面按钮操作
         private void bt_patientAdd_Click(object sender, EventArgs e)
@@ -137,6 +154,9 @@ namespace 甲状腺随访系统
             ToastNotification.Show(this,"系统数据保存成功");
         }
         #endregion
+
+
+
 
     }
 }

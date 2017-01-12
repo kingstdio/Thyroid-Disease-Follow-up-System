@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conf.cs" />
+    <Compile Include="Control\RefreshPatient.cs" />
+    <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="F_patientChoose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,12 +65,12 @@
       <DependentUpon>F_patientChoose.cs</DependentUpon>
     </Compile>
     <Compile Include="INIHelper.cs" />
-    <Compile Include="model\BasicInfo.cs" />
-    <Compile Include="model\FamilyHistory.cs" />
-    <Compile Include="model\Imageology.cs" />
-    <Compile Include="model\NormalRiskFactors.cs" />
-    <Compile Include="model\Patient.cs" />
-    <Compile Include="model\SpecialRiskFactors.cs" />
+    <Compile Include="MODEL\BasicInfo.cs" />
+    <Compile Include="MODEL\FamilyHistory.cs" />
+    <Compile Include="MODEL\Imageology.cs" />
+    <Compile Include="MODEL\NormalRiskFactors.cs" />
+    <Compile Include="MODEL\Patient.cs" />
+    <Compile Include="MODEL\SpecialRiskFactors.cs" />
     <Compile Include="RF_main.cs">
       <SubType>Form</SubType>
     </Compile>

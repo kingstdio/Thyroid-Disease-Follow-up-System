@@ -31,3 +31,4 @@ E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_recurre
 E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_retrieve.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_surgeryHistory.resources
 E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.GenerateResource.Cache
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csprojResolveAssemblyReference.cache
