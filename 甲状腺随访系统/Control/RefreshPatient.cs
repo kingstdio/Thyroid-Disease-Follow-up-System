@@ -22,7 +22,18 @@ namespace 甲状腺随访系统.Control
             DataRow dr= DAO.PatientInfo.getBasicInfo(pid);
 
 
+
             Conf.currentPatient.basicInfo.name =  dr["name"].ToString();
+            Conf.currentPatient.basicInfo.hosnumber = dr["hosnumber"].ToString();
+            Conf.currentPatient.basicInfo.mobile = dr["mobile"].ToString();
+            Conf.currentPatient.basicInfo.hosindate = Convert.ToDateTime(dr["hosindate"]);
+            Conf.currentPatient.basicInfo.sex = Convert.ToBoolean(dr["sex"]);
+            Conf.currentPatient.basicInfo.idcard = dr["idcard"].ToString();
+            Conf.currentPatient.basicInfo.birthday = Convert.ToDateTime(dr["birthday"]);
+            Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);
+
+            Conf.currentPatient.lastFollowDate = DAO.PatientInfo.getLastFollowDate(pid);
+
             refreshPaitentBoard(null,EventArgs.Empty);
             return true;
         }

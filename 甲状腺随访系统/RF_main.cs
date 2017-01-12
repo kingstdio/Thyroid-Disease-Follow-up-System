@@ -59,6 +59,15 @@ namespace 甲状腺随访系统
         /// </summary>
         void fillPaitentBoard(object obj, EventArgs args) {
             tb_name.Text = Conf.currentPatient.basicInfo.name;
+            tb_hosno.Text = Conf.currentPatient.basicInfo.hosnumber;
+            tb_phone.Text = Conf.currentPatient.basicInfo.mobile;
+            tb_hosindate.Text = Conf.currentPatient.basicInfo.hosindate.ToShortDateString();
+            tb_sex.Text = Conf.currentPatient.basicInfo.sex?"男":"女";
+            tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
+            tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
+            tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
+           
+           
         }
         #endregion
 
@@ -154,6 +163,11 @@ namespace 甲状腺随访系统
             ToastNotification.Show(this,"系统数据保存成功");
         }
         #endregion
+
+        private void panEX_main_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 

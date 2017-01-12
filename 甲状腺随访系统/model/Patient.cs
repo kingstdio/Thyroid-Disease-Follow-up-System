@@ -37,5 +37,14 @@ namespace 甲状腺随访系统.model
         /// </summary>
         public Imageology imageology = new Imageology();
 
+        /// <summary>
+        /// 最近随访时间
+        /// </summary>
+        public DateTime lastFollowDate { get; set; }
+
+        /// <summary>
+        /// 随访次数
+        /// </summary>
+        public int followTimes { get; set; }
     }
 }

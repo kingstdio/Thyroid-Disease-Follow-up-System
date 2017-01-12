@@ -21,6 +21,11 @@ namespace 甲状腺随访系统
 
         }
 
+        private void cbe_Doctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
