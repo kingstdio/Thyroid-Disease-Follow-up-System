@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -23,6 +24,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+obj/
+bin/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -272,3 +275,15 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
+甲状腺随访系统/bin/Release/甲状腺随访系统.pdb
+甲状腺随访系统.suo
+甲状腺随访系统/bin/Release/data/conf/lang/CN.ini
+甲状腺随访系统/bin/Release/甲状腺随访系统.exe
+甲状腺随访系统/bin/Release/甲状腺随访系统.pdb
+甲状腺随访系统/obj/x86/Release/DesignTimeResolveAssemblyReferencesInput.cache
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.csproj.FileListAbsolute.txt
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.csproj.GenerateResource.Cache
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.exe
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.pdb
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.RF_main.resources
+甲状腺随访系统/obj/x86/Release/甲状腺随访系统.UC_patientInfo.resources
