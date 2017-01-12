@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace 甲状腺随访系统.Control
 {
@@ -18,7 +19,10 @@ namespace 甲状腺随访系统.Control
         public static bool refresh(int pid) 
         {
             Conf.currentPatient.id = pid;
-            Conf.currentPatient.basicInfo.name = "zhangsan";
+            DataRow dr= DAO.PatientInfo.getBasicInfo(pid);
+
+
+            Conf.currentPatient.basicInfo.name =  dr["name"].ToString();
             refreshPaitentBoard(null,EventArgs.Empty);
             return true;
         }

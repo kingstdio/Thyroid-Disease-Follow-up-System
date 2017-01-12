@@ -58,6 +58,7 @@
     <Compile Include="Conf.cs" />
     <Compile Include="Control\RefreshPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
+    <Compile Include="DAO\PatientInfo.cs" />
     <Compile Include="F_patientChoose.cs">
       <SubType>Form</SubType>
     </Compile>

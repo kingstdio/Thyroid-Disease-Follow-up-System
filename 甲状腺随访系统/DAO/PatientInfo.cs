@@ -14,8 +14,9 @@ namespace 甲状腺随访系统.DAO
         /// <param name="pid"></param>
         /// <returns></returns>
         public static DataRow getBasicInfo(int pid) {
+            string sql = @"select * from tb_patientInfo";
+             return SQLHELPER.ExecuteDataRow(sql);
 
-            return null;
         }
     }
 }
