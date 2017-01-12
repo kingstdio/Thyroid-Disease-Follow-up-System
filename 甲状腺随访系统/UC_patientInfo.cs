@@ -50,13 +50,19 @@ namespace 甲状腺随访系统
         void fillUI(object obj, EventArgs args)
         {
             tb_patientName.Text = Conf.currentPatient.basicInfo.name;
+            tb_idNumber.Text = Conf.currentPatient.basicInfo.idcard;
+            tb_patientAddress.Text = Conf.currentPatient.basicInfo.address;
+            tb_patientPhone2.Text = Conf.currentPatient.basicInfo.mobile;
+            tb_patientPhone3.Text = Conf.currentPatient.basicInfo.phone;
+
+            tb_hospitalNo.Text = Conf.currentPatient.basicInfo.hosnumber;
+            switch_gender.Value = Conf.currentPatient.basicInfo.sex;
+
+            dti_age.Value = Conf.currentPatient.basicInfo.hosage;
+
 
         }
 
-        private void sideNavItem5_VisibleChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace 甲状腺随访系统.DAO
 {
@@ -15,8 +16,9 @@ namespace 甲状腺随访系统.DAO
         /// <param name="pid"></param>
         /// <returns></returns>
         public static DataRow getBasicInfo(int pid) {
-            string sql = @"select id,name,idcard,address,mobile,hosnumber,sex,birthday,hosindate,hosoutdate from tb_patientInfo";
-             return SQLHELPER.ExecuteDataRow(sql);
+            string sql = @"select id,name,idcard,address,mobile,phone,hosnumber,sex,birthday,hosindate,hosoutdate from tb_patientInfo where id=@id";
+            SqlParameter[] param = { new SqlParameter("@id", pid) };
+             return SQLHELPER.ExecuteDataRow(sql,param);
 
         }
 

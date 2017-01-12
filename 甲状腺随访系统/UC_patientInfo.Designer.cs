@@ -2285,7 +2285,6 @@
             this.sideNavItem5.Panel = this.sideNavPanel1;
             this.sideNavItem5.Symbol = "";
             this.sideNavItem5.Text = "患者基本信息";
-            this.sideNavItem5.VisibleChanged += new System.EventHandler(this.sideNavItem5_VisibleChanged);
             // 
             // separator3
             // 

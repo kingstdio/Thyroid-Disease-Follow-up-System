@@ -26,8 +26,10 @@ namespace 甲状腺随访系统.Control
             Conf.currentPatient.basicInfo.name =  dr["name"].ToString();
             Conf.currentPatient.basicInfo.hosnumber = dr["hosnumber"].ToString();
             Conf.currentPatient.basicInfo.mobile = dr["mobile"].ToString();
+            Conf.currentPatient.basicInfo.phone = dr["phone"].ToString();
             Conf.currentPatient.basicInfo.hosindate = Convert.ToDateTime(dr["hosindate"]);
             Conf.currentPatient.basicInfo.sex = Convert.ToBoolean(dr["sex"]);
+            Conf.currentPatient.basicInfo.address = dr["address"].ToString();
             Conf.currentPatient.basicInfo.idcard = dr["idcard"].ToString();
             Conf.currentPatient.basicInfo.birthday = Convert.ToDateTime(dr["birthday"]);
             Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);
