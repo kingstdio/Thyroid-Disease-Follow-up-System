@@ -14,24 +14,6 @@ D:\Document\资料\医疗大数据资料\软件源码\甲状腺随访系统\甲�
 D:\Document\资料\医疗大数据资料\软件源码\甲状腺随访系统\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.GenerateResource.Cache
 D:\Document\资料\医疗大数据资料\软件源码\甲状腺随访系统\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
 D:\Document\资料\医疗大数据资料\软件源码\甲状腺随访系统\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
-E:\GIT-Th\甲状腺随访系统\bin\Release\data\conf\lang\CN.ini
-E:\GIT-Th\甲状腺随访系统\bin\Release\data\conf\lang\EN.ini
-E:\GIT-Th\甲状腺随访系统\bin\Release\甲状腺随访系统.exe
-E:\GIT-Th\甲状腺随访系统\bin\Release\甲状腺随访系统.pdb
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.F_patientChoose.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.RF_main.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.Properties.Resources.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_diagnosis.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_followUp.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_patientInfo.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_postOperative.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_recurrencecs.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_retrieve.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_surgeryHistory.resources
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.GenerateResource.Cache
-E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csprojResolveAssemblyReference.cache
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
 D:\GIT\甲状腺随访系统\bin\Release\data\conf\lang\CN.ini
@@ -50,3 +32,21 @@ D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_recurrence
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_retrieve.resources
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_surgeryHistory.resources
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.GenerateResource.Cache
+E:\GIT-Th\甲状腺随访系统\bin\Release\data\conf\lang\CN.ini
+E:\GIT-Th\甲状腺随访系统\bin\Release\data\conf\lang\EN.ini
+E:\GIT-Th\甲状腺随访系统\bin\Release\甲状腺随访系统.exe
+E:\GIT-Th\甲状腺随访系统\bin\Release\甲状腺随访系统.pdb
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csprojResolveAssemblyReference.cache
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.F_patientChoose.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.RF_main.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.Properties.Resources.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_diagnosis.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_followUp.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_patientInfo.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_postOperative.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_recurrencecs.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_retrieve.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.UC_surgeryHistory.resources
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.GenerateResource.Cache
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
+E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
