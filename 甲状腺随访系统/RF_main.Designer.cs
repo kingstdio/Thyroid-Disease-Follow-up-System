@@ -56,22 +56,22 @@
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.tb_hosno = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_hosoutdate = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_hosindate = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_birthday = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_phone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_idcard = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_sex = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.lb_hosoutdate = new DevComponents.DotNetBar.LabelX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.tb_name = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.lb_birthday = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.lb_idcard = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.ribbonControl1.SuspendLayout();
@@ -492,6 +492,7 @@
             this.panEX_main.Style.GradientAngle = 90;
             this.panEX_main.TabIndex = 1;
             this.panEX_main.Text = "主面板";
+            this.panEX_main.Click += new System.EventHandler(this.panEX_main_Click);
             // 
             // panelEx1
             // 
@@ -502,22 +503,22 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.tb_hosno);
             this.panelEx1.Controls.Add(this.textBoxX10);
-            this.panelEx1.Controls.Add(this.textBoxX8);
+            this.panelEx1.Controls.Add(this.tb_hosoutdate);
             this.panelEx1.Controls.Add(this.textBoxX9);
             this.panelEx1.Controls.Add(this.tb_hosindate);
-            this.panelEx1.Controls.Add(this.textBoxX5);
+            this.panelEx1.Controls.Add(this.tb_birthday);
             this.panelEx1.Controls.Add(this.tb_phone);
-            this.panelEx1.Controls.Add(this.textBoxX2);
+            this.panelEx1.Controls.Add(this.tb_idcard);
             this.panelEx1.Controls.Add(this.tb_sex);
             this.panelEx1.Controls.Add(this.labelX10);
             this.panelEx1.Controls.Add(this.labelX6);
-            this.panelEx1.Controls.Add(this.labelX8);
+            this.panelEx1.Controls.Add(this.lb_hosoutdate);
             this.panelEx1.Controls.Add(this.labelX9);
             this.panelEx1.Controls.Add(this.tb_name);
             this.panelEx1.Controls.Add(this.labelX7);
-            this.panelEx1.Controls.Add(this.labelX5);
+            this.panelEx1.Controls.Add(this.lb_birthday);
             this.panelEx1.Controls.Add(this.labelX3);
-            this.panelEx1.Controls.Add(this.labelX2);
+            this.panelEx1.Controls.Add(this.lb_idcard);
             this.panelEx1.Controls.Add(this.labelX4);
             this.panelEx1.Controls.Add(this.labelX1);
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
@@ -571,24 +572,24 @@
             this.textBoxX10.Text = "2016-08-12";
             this.textBoxX10.WatermarkColor = System.Drawing.Color.Maroon;
             // 
-            // textBoxX8
+            // tb_hosoutdate
             // 
             // 
             // 
             // 
-            this.textBoxX8.Border.Class = "TextBoxBorder";
-            this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX8.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX8.Location = new System.Drawing.Point(909, 56);
-            this.textBoxX8.Name = "textBoxX8";
-            this.textBoxX8.PreventEnterBeep = true;
-            this.textBoxX8.ReadOnly = true;
-            this.textBoxX8.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX8.TabIndex = 1;
-            this.textBoxX8.TabStop = false;
-            this.textBoxX8.Text = "2016-08-12";
-            this.textBoxX8.WatermarkColor = System.Drawing.Color.Maroon;
+            this.tb_hosoutdate.Border.Class = "TextBoxBorder";
+            this.tb_hosoutdate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosoutdate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_hosoutdate.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_hosoutdate.Location = new System.Drawing.Point(909, 56);
+            this.tb_hosoutdate.Name = "tb_hosoutdate";
+            this.tb_hosoutdate.PreventEnterBeep = true;
+            this.tb_hosoutdate.ReadOnly = true;
+            this.tb_hosoutdate.Size = new System.Drawing.Size(162, 26);
+            this.tb_hosoutdate.TabIndex = 1;
+            this.tb_hosoutdate.TabStop = false;
+            this.tb_hosoutdate.Text = "2016-08-12";
+            this.tb_hosoutdate.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // textBoxX9
             // 
@@ -628,24 +629,24 @@
             this.tb_hosindate.Text = "2016-07-21";
             this.tb_hosindate.WatermarkColor = System.Drawing.Color.Maroon;
             // 
-            // textBoxX5
+            // tb_birthday
             // 
             // 
             // 
             // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX5.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX5.Location = new System.Drawing.Point(643, 57);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.ReadOnly = true;
-            this.textBoxX5.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX5.TabIndex = 1;
-            this.textBoxX5.TabStop = false;
-            this.textBoxX5.Text = "2016-08-12";
-            this.textBoxX5.WatermarkColor = System.Drawing.Color.Maroon;
+            this.tb_birthday.Border.Class = "TextBoxBorder";
+            this.tb_birthday.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_birthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_birthday.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_birthday.Location = new System.Drawing.Point(643, 57);
+            this.tb_birthday.Name = "tb_birthday";
+            this.tb_birthday.PreventEnterBeep = true;
+            this.tb_birthday.ReadOnly = true;
+            this.tb_birthday.Size = new System.Drawing.Size(162, 26);
+            this.tb_birthday.TabIndex = 1;
+            this.tb_birthday.TabStop = false;
+            this.tb_birthday.Text = "2016-08-12";
+            this.tb_birthday.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // tb_phone
             // 
@@ -666,24 +667,24 @@
             this.tb_phone.Text = "13800138000";
             this.tb_phone.WatermarkColor = System.Drawing.Color.Maroon;
             // 
-            // textBoxX2
+            // tb_idcard
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxX2.ForeColor = System.Drawing.Color.Maroon;
-            this.textBoxX2.Location = new System.Drawing.Point(377, 58);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.ReadOnly = true;
-            this.textBoxX2.Size = new System.Drawing.Size(162, 26);
-            this.textBoxX2.TabIndex = 1;
-            this.textBoxX2.TabStop = false;
-            this.textBoxX2.Text = "130722189705136653X";
-            this.textBoxX2.WatermarkColor = System.Drawing.Color.Maroon;
+            this.tb_idcard.Border.Class = "TextBoxBorder";
+            this.tb_idcard.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_idcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_idcard.ForeColor = System.Drawing.Color.Maroon;
+            this.tb_idcard.Location = new System.Drawing.Point(377, 58);
+            this.tb_idcard.Name = "tb_idcard";
+            this.tb_idcard.PreventEnterBeep = true;
+            this.tb_idcard.ReadOnly = true;
+            this.tb_idcard.Size = new System.Drawing.Size(162, 26);
+            this.tb_idcard.TabIndex = 1;
+            this.tb_idcard.TabStop = false;
+            this.tb_idcard.Text = "130722189705136653X";
+            this.tb_idcard.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // tb_sex
             // 
@@ -732,19 +733,19 @@
             this.labelX6.Text = "住院号：";
             this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            // labelX8
+            // lb_hosoutdate
             // 
             // 
             // 
             // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX8.Location = new System.Drawing.Point(826, 58);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(90, 23);
-            this.labelX8.TabIndex = 0;
-            this.labelX8.Text = "出院日期：";
-            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.lb_hosoutdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_hosoutdate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_hosoutdate.Location = new System.Drawing.Point(826, 58);
+            this.lb_hosoutdate.Name = "lb_hosoutdate";
+            this.lb_hosoutdate.Size = new System.Drawing.Size(90, 23);
+            this.lb_hosoutdate.TabIndex = 0;
+            this.lb_hosoutdate.Text = "出院日期：";
+            this.lb_hosoutdate.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX9
             // 
@@ -793,19 +794,19 @@
             this.labelX7.Text = "住院日期：";
             this.labelX7.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            // labelX5
+            // lb_birthday
             // 
             // 
             // 
             // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX5.Location = new System.Drawing.Point(560, 59);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(90, 23);
-            this.labelX5.TabIndex = 0;
-            this.labelX5.Text = "出生日期：";
-            this.labelX5.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.lb_birthday.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_birthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_birthday.Location = new System.Drawing.Point(560, 59);
+            this.lb_birthday.Name = "lb_birthday";
+            this.lb_birthday.Size = new System.Drawing.Size(90, 23);
+            this.lb_birthday.TabIndex = 0;
+            this.lb_birthday.Text = "出生日期：";
+            this.lb_birthday.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX3
             // 
@@ -821,19 +822,19 @@
             this.labelX3.Text = "联系电话：";
             this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            // labelX2
+            // lb_idcard
             // 
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX2.Location = new System.Drawing.Point(294, 60);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(90, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "身份证号：";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.lb_idcard.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_idcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_idcard.Location = new System.Drawing.Point(294, 60);
+            this.lb_idcard.Name = "lb_idcard";
+            this.lb_idcard.Size = new System.Drawing.Size(90, 23);
+            this.lb_idcard.TabIndex = 0;
+            this.lb_idcard.Text = "身份证号：";
+            this.lb_idcard.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX4
             // 
@@ -910,19 +911,19 @@
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_name;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_idcard;
+        private DevComponents.DotNetBar.LabelX lb_idcard;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_phone;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_sex;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_hosno;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_birthday;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
+        private DevComponents.DotNetBar.LabelX lb_birthday;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_hosoutdate;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_hosindate;
-        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.DotNetBar.LabelX lb_hosoutdate;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX10;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX9;

@@ -14,6 +14,7 @@ namespace 甲状腺随访系统
         public UC_patientInfo()
         {
             InitializeComponent();
+            Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
         }
 
         private void UC_patientInfo_Load(object sender, EventArgs e)
@@ -46,70 +47,18 @@ namespace 甲状腺随访系统
             //wbox_tips.Visible = true;
         }
 
-        private void tb_oHistory_TextChanged(object sender, EventArgs e)
+        void fillUI(object obj, EventArgs args)
+        {
+            tb_patientName.Text = Conf.currentPatient.basicInfo.name;
+
+        }
+
+        private void sideNavItem5_VisibleChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void switchButton3_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void labelX4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_AFM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sideNavItem4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelX41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sideNavPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void sideNavPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void doubleInput2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doubleInput5_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doubleInput6_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doubleInput9_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void doubleInput8_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
     }
 }

@@ -28,40 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
-            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.tsh = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.FT3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FT4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xdl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.richTextBoxEx2 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.richTextBoxEx1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.line8 = new DevComponents.DotNetBar.Controls.Line();
-            this.line7 = new DevComponents.DotNetBar.Controls.Line();
-            this.line6 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
-            this.line3 = new DevComponents.DotNetBar.Controls.Line();
-            this.line5 = new DevComponents.DotNetBar.Controls.Line();
-            this.line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.itb_eut = new DevComponents.Editors.IntegerInput();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.dataGridViewDoubleInputColumn1 = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
@@ -139,6 +115,30 @@
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.labelX28 = new DevComponents.DotNetBar.LabelX();
             this.labelX29 = new DevComponents.DotNetBar.LabelX();
+            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.tsh = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.FT3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FT4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xdl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richTextBoxEx2 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.richTextBoxEx1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.line8 = new DevComponents.DotNetBar.Controls.Line();
+            this.line7 = new DevComponents.DotNetBar.Controls.Line();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.line5 = new DevComponents.DotNetBar.Controls.Line();
+            this.line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.itb_eut = new DevComponents.Editors.IntegerInput();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator1 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -222,19 +222,19 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
+            this.sideNavPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).BeginInit();
             this.sideNavPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itb_eut)).BeginInit();
-            this.sideNavPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             this.SuspendLayout();
             // 
             // sideNav1
             // 
-            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -250,315 +250,6 @@
             this.sideNav1.Size = new System.Drawing.Size(1413, 568);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
-            // 
-            // sideNavPanel1
-            // 
-            this.sideNavPanel1.Controls.Add(this.dataGridViewX1);
-            this.sideNavPanel1.Controls.Add(this.richTextBoxEx2);
-            this.sideNavPanel1.Controls.Add(this.richTextBoxEx1);
-            this.sideNavPanel1.Controls.Add(this.line8);
-            this.sideNavPanel1.Controls.Add(this.line7);
-            this.sideNavPanel1.Controls.Add(this.line6);
-            this.sideNavPanel1.Controls.Add(this.line4);
-            this.sideNavPanel1.Controls.Add(this.line3);
-            this.sideNavPanel1.Controls.Add(this.line5);
-            this.sideNavPanel1.Controls.Add(this.line2);
-            this.sideNavPanel1.Controls.Add(this.line1);
-            this.sideNavPanel1.Controls.Add(this.itb_eut);
-            this.sideNavPanel1.Controls.Add(this.labelX4);
-            this.sideNavPanel1.Controls.Add(this.labelX3);
-            this.sideNavPanel1.Controls.Add(this.labelX2);
-            this.sideNavPanel1.Controls.Add(this.labelX1);
-            this.sideNavPanel1.Controls.Add(this.lb_eut);
-            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
-            this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
-            this.sideNavPanel1.TabIndex = 2;
-            this.sideNavPanel1.Visible = false;
-            // 
-            // dataGridViewX1
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tsh,
-            this.FT3,
-            this.FT4,
-            this.sTG,
-            this.ATG,
-            this.xdl});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(201, 116);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewX1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewX1.RowTemplate.Height = 23;
-            this.dataGridViewX1.Size = new System.Drawing.Size(984, 156);
-            this.dataGridViewX1.TabIndex = 2;
-            // 
-            // tsh
-            // 
-            // 
-            // 
-            // 
-            this.tsh.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.tsh.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.tsh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tsh.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.tsh.HeaderText = "TS(uIu/ml)";
-            this.tsh.Increment = 1D;
-            this.tsh.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.tsh.Name = "tsh";
-            this.tsh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // FT3
-            // 
-            this.FT3.HeaderText = "FT3(pmol/l)";
-            this.FT3.Name = "FT3";
-            // 
-            // FT4
-            // 
-            this.FT4.HeaderText = "FT4(pmol/l)";
-            this.FT4.Name = "FT4";
-            // 
-            // sTG
-            // 
-            this.sTG.HeaderText = "sTG(ng/dl)";
-            this.sTG.Name = "sTG";
-            // 
-            // ATG
-            // 
-            this.ATG.HeaderText = "A-TG(iu/ml)";
-            this.ATG.Name = "ATG";
-            // 
-            // xdl
-            // 
-            this.xdl.HeaderText = "吸碘率（%）";
-            this.xdl.Name = "xdl";
-            // 
-            // richTextBoxEx2
-            // 
-            // 
-            // 
-            // 
-            this.richTextBoxEx2.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.richTextBoxEx2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.richTextBoxEx2.Location = new System.Drawing.Point(201, 368);
-            this.richTextBoxEx2.Name = "richTextBoxEx2";
-            this.richTextBoxEx2.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-                "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.richTextBoxEx2.Size = new System.Drawing.Size(984, 98);
-            this.richTextBoxEx2.TabIndex = 4;
-            // 
-            // richTextBoxEx1
-            // 
-            // 
-            // 
-            // 
-            this.richTextBoxEx1.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.richTextBoxEx1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.richTextBoxEx1.Location = new System.Drawing.Point(201, 271);
-            this.richTextBoxEx1.Name = "richTextBoxEx1";
-            this.richTextBoxEx1.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-                "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.richTextBoxEx1.Size = new System.Drawing.Size(984, 98);
-            this.richTextBoxEx1.TabIndex = 3;
-            // 
-            // line8
-            // 
-            this.line8.BackColor = System.Drawing.Color.Transparent;
-            this.line8.ForeColor = System.Drawing.Color.White;
-            this.line8.Location = new System.Drawing.Point(1184, 58);
-            this.line8.Name = "line8";
-            this.line8.Size = new System.Drawing.Size(1, 408);
-            this.line8.TabIndex = 92;
-            this.line8.Text = "line1";
-            this.line8.VerticalLine = true;
-            this.line8.Click += new System.EventHandler(this.line8_Click);
-            // 
-            // line7
-            // 
-            this.line7.BackColor = System.Drawing.Color.Transparent;
-            this.line7.ForeColor = System.Drawing.Color.White;
-            this.line7.Location = new System.Drawing.Point(77, 271);
-            this.line7.Name = "line7";
-            this.line7.Size = new System.Drawing.Size(1108, 1);
-            this.line7.TabIndex = 91;
-            this.line7.Text = "line1";
-            // 
-            // line6
-            // 
-            this.line6.BackColor = System.Drawing.Color.Transparent;
-            this.line6.ForeColor = System.Drawing.Color.White;
-            this.line6.Location = new System.Drawing.Point(77, 368);
-            this.line6.Name = "line6";
-            this.line6.Size = new System.Drawing.Size(1108, 1);
-            this.line6.TabIndex = 91;
-            this.line6.Text = "line1";
-            // 
-            // line4
-            // 
-            this.line4.BackColor = System.Drawing.Color.Transparent;
-            this.line4.ForeColor = System.Drawing.Color.White;
-            this.line4.Location = new System.Drawing.Point(201, 58);
-            this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(1, 408);
-            this.line4.TabIndex = 90;
-            this.line4.Text = "line1";
-            this.line4.VerticalLine = true;
-            // 
-            // line3
-            // 
-            this.line3.BackColor = System.Drawing.Color.Transparent;
-            this.line3.ForeColor = System.Drawing.Color.White;
-            this.line3.Location = new System.Drawing.Point(76, 58);
-            this.line3.Name = "line3";
-            this.line3.Size = new System.Drawing.Size(1, 408);
-            this.line3.TabIndex = 90;
-            this.line3.Text = "line1";
-            this.line3.VerticalLine = true;
-            // 
-            // line5
-            // 
-            this.line5.BackColor = System.Drawing.Color.Transparent;
-            this.line5.ForeColor = System.Drawing.Color.White;
-            this.line5.Location = new System.Drawing.Point(77, 465);
-            this.line5.Name = "line5";
-            this.line5.Size = new System.Drawing.Size(1108, 1);
-            this.line5.TabIndex = 90;
-            this.line5.Text = "line1";
-            // 
-            // line2
-            // 
-            this.line2.BackColor = System.Drawing.Color.Transparent;
-            this.line2.ForeColor = System.Drawing.Color.White;
-            this.line2.Location = new System.Drawing.Point(77, 115);
-            this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(1108, 1);
-            this.line2.TabIndex = 90;
-            this.line2.Text = "line1";
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.ForeColor = System.Drawing.Color.White;
-            this.line1.Location = new System.Drawing.Point(77, 58);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(1108, 1);
-            this.line1.TabIndex = 90;
-            this.line1.Text = "line1";
-            // 
-            // itb_eut
-            // 
-            // 
-            // 
-            // 
-            this.itb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.itb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.itb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.itb_eut.Location = new System.Drawing.Point(378, 74);
-            this.itb_eut.Name = "itb_eut";
-            this.itb_eut.ShowUpDown = true;
-            this.itb_eut.Size = new System.Drawing.Size(234, 26);
-            this.itb_eut.TabIndex = 1;
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX4.Location = new System.Drawing.Point(76, 401);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(132, 23);
-            this.labelX4.TabIndex = 9;
-            this.labelX4.Text = "放疗方案及计量";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX3.Location = new System.Drawing.Point(76, 306);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(132, 23);
-            this.labelX3.TabIndex = 9;
-            this.labelX3.Text = "化疗方案及计量";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX2.Location = new System.Drawing.Point(77, 191);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(132, 23);
-            this.labelX2.TabIndex = 9;
-            this.labelX2.Text = "碘治疗";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX1.Location = new System.Drawing.Point(77, 77);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(132, 23);
-            this.labelX1.TabIndex = 9;
-            this.labelX1.Text = "药物治疗";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lb_eut
-            // 
-            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_eut.Location = new System.Drawing.Point(263, 77);
-            this.lb_eut.Name = "lb_eut";
-            this.lb_eut.Size = new System.Drawing.Size(132, 23);
-            this.lb_eut.TabIndex = 9;
-            this.lb_eut.Text = "优甲乐（ug）：";
             // 
             // sideNavPanel3
             // 
@@ -633,7 +324,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridViewX3.Location = new System.Drawing.Point(206, 322);
             this.dataGridViewX3.Name = "dataGridViewX3";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1338,6 +1029,315 @@
             this.labelX29.TabIndex = 110;
             this.labelX29.Text = "术后检查";
             this.labelX29.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // sideNavPanel1
+            // 
+            this.sideNavPanel1.Controls.Add(this.dataGridViewX1);
+            this.sideNavPanel1.Controls.Add(this.richTextBoxEx2);
+            this.sideNavPanel1.Controls.Add(this.richTextBoxEx1);
+            this.sideNavPanel1.Controls.Add(this.line8);
+            this.sideNavPanel1.Controls.Add(this.line7);
+            this.sideNavPanel1.Controls.Add(this.line6);
+            this.sideNavPanel1.Controls.Add(this.line4);
+            this.sideNavPanel1.Controls.Add(this.line3);
+            this.sideNavPanel1.Controls.Add(this.line5);
+            this.sideNavPanel1.Controls.Add(this.line2);
+            this.sideNavPanel1.Controls.Add(this.line1);
+            this.sideNavPanel1.Controls.Add(this.itb_eut);
+            this.sideNavPanel1.Controls.Add(this.labelX4);
+            this.sideNavPanel1.Controls.Add(this.labelX3);
+            this.sideNavPanel1.Controls.Add(this.labelX2);
+            this.sideNavPanel1.Controls.Add(this.labelX1);
+            this.sideNavPanel1.Controls.Add(this.lb_eut);
+            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
+            this.sideNavPanel1.Name = "sideNavPanel1";
+            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
+            this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Visible = false;
+            // 
+            // dataGridViewX1
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tsh,
+            this.FT3,
+            this.FT4,
+            this.sTG,
+            this.ATG,
+            this.xdl});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dataGridViewX1.Location = new System.Drawing.Point(201, 116);
+            this.dataGridViewX1.Name = "dataGridViewX1";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewX1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewX1.RowTemplate.Height = 23;
+            this.dataGridViewX1.Size = new System.Drawing.Size(984, 156);
+            this.dataGridViewX1.TabIndex = 2;
+            // 
+            // tsh
+            // 
+            // 
+            // 
+            // 
+            this.tsh.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.tsh.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.tsh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tsh.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.tsh.HeaderText = "TS(uIu/ml)";
+            this.tsh.Increment = 1D;
+            this.tsh.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.tsh.Name = "tsh";
+            this.tsh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // FT3
+            // 
+            this.FT3.HeaderText = "FT3(pmol/l)";
+            this.FT3.Name = "FT3";
+            // 
+            // FT4
+            // 
+            this.FT4.HeaderText = "FT4(pmol/l)";
+            this.FT4.Name = "FT4";
+            // 
+            // sTG
+            // 
+            this.sTG.HeaderText = "sTG(ng/dl)";
+            this.sTG.Name = "sTG";
+            // 
+            // ATG
+            // 
+            this.ATG.HeaderText = "A-TG(iu/ml)";
+            this.ATG.Name = "ATG";
+            // 
+            // xdl
+            // 
+            this.xdl.HeaderText = "吸碘率（%）";
+            this.xdl.Name = "xdl";
+            // 
+            // richTextBoxEx2
+            // 
+            // 
+            // 
+            // 
+            this.richTextBoxEx2.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.richTextBoxEx2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.richTextBoxEx2.Location = new System.Drawing.Point(201, 368);
+            this.richTextBoxEx2.Name = "richTextBoxEx2";
+            this.richTextBoxEx2.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.richTextBoxEx2.Size = new System.Drawing.Size(984, 98);
+            this.richTextBoxEx2.TabIndex = 4;
+            // 
+            // richTextBoxEx1
+            // 
+            // 
+            // 
+            // 
+            this.richTextBoxEx1.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.richTextBoxEx1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.richTextBoxEx1.Location = new System.Drawing.Point(201, 271);
+            this.richTextBoxEx1.Name = "richTextBoxEx1";
+            this.richTextBoxEx1.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.richTextBoxEx1.Size = new System.Drawing.Size(984, 98);
+            this.richTextBoxEx1.TabIndex = 3;
+            // 
+            // line8
+            // 
+            this.line8.BackColor = System.Drawing.Color.Transparent;
+            this.line8.ForeColor = System.Drawing.Color.White;
+            this.line8.Location = new System.Drawing.Point(1184, 58);
+            this.line8.Name = "line8";
+            this.line8.Size = new System.Drawing.Size(1, 408);
+            this.line8.TabIndex = 92;
+            this.line8.Text = "line1";
+            this.line8.VerticalLine = true;
+            this.line8.Click += new System.EventHandler(this.line8_Click);
+            // 
+            // line7
+            // 
+            this.line7.BackColor = System.Drawing.Color.Transparent;
+            this.line7.ForeColor = System.Drawing.Color.White;
+            this.line7.Location = new System.Drawing.Point(77, 271);
+            this.line7.Name = "line7";
+            this.line7.Size = new System.Drawing.Size(1108, 1);
+            this.line7.TabIndex = 91;
+            this.line7.Text = "line1";
+            // 
+            // line6
+            // 
+            this.line6.BackColor = System.Drawing.Color.Transparent;
+            this.line6.ForeColor = System.Drawing.Color.White;
+            this.line6.Location = new System.Drawing.Point(77, 368);
+            this.line6.Name = "line6";
+            this.line6.Size = new System.Drawing.Size(1108, 1);
+            this.line6.TabIndex = 91;
+            this.line6.Text = "line1";
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            this.line4.ForeColor = System.Drawing.Color.White;
+            this.line4.Location = new System.Drawing.Point(201, 58);
+            this.line4.Name = "line4";
+            this.line4.Size = new System.Drawing.Size(1, 408);
+            this.line4.TabIndex = 90;
+            this.line4.Text = "line1";
+            this.line4.VerticalLine = true;
+            // 
+            // line3
+            // 
+            this.line3.BackColor = System.Drawing.Color.Transparent;
+            this.line3.ForeColor = System.Drawing.Color.White;
+            this.line3.Location = new System.Drawing.Point(76, 58);
+            this.line3.Name = "line3";
+            this.line3.Size = new System.Drawing.Size(1, 408);
+            this.line3.TabIndex = 90;
+            this.line3.Text = "line1";
+            this.line3.VerticalLine = true;
+            // 
+            // line5
+            // 
+            this.line5.BackColor = System.Drawing.Color.Transparent;
+            this.line5.ForeColor = System.Drawing.Color.White;
+            this.line5.Location = new System.Drawing.Point(77, 465);
+            this.line5.Name = "line5";
+            this.line5.Size = new System.Drawing.Size(1108, 1);
+            this.line5.TabIndex = 90;
+            this.line5.Text = "line1";
+            // 
+            // line2
+            // 
+            this.line2.BackColor = System.Drawing.Color.Transparent;
+            this.line2.ForeColor = System.Drawing.Color.White;
+            this.line2.Location = new System.Drawing.Point(77, 115);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(1108, 1);
+            this.line2.TabIndex = 90;
+            this.line2.Text = "line1";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.Color.White;
+            this.line1.Location = new System.Drawing.Point(77, 58);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(1108, 1);
+            this.line1.TabIndex = 90;
+            this.line1.Text = "line1";
+            // 
+            // itb_eut
+            // 
+            // 
+            // 
+            // 
+            this.itb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.itb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.itb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.itb_eut.Location = new System.Drawing.Point(378, 74);
+            this.itb_eut.Name = "itb_eut";
+            this.itb_eut.ShowUpDown = true;
+            this.itb_eut.Size = new System.Drawing.Size(234, 26);
+            this.itb_eut.TabIndex = 1;
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX4.Location = new System.Drawing.Point(76, 401);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(132, 23);
+            this.labelX4.TabIndex = 9;
+            this.labelX4.Text = "放疗方案及计量";
+            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX3.Location = new System.Drawing.Point(76, 306);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(132, 23);
+            this.labelX3.TabIndex = 9;
+            this.labelX3.Text = "化疗方案及计量";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX2.Location = new System.Drawing.Point(77, 191);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(132, 23);
+            this.labelX2.TabIndex = 9;
+            this.labelX2.Text = "碘治疗";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX1.Location = new System.Drawing.Point(77, 77);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(132, 23);
+            this.labelX1.TabIndex = 9;
+            this.labelX1.Text = "药物治疗";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // lb_eut
+            // 
+            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
+            this.lb_eut.Location = new System.Drawing.Point(263, 77);
+            this.lb_eut.Name = "lb_eut";
+            this.lb_eut.Size = new System.Drawing.Size(132, 23);
+            this.lb_eut.TabIndex = 9;
+            this.lb_eut.Text = "优甲乐（ug）：";
             // 
             // sideNavItem1
             // 
@@ -2134,11 +2134,11 @@
             this.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
+            this.sideNavPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).EndInit();
             this.sideNavPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itb_eut)).EndInit();
-            this.sideNavPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
             this.ResumeLayout(false);
 

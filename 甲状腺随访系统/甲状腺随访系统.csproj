@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conf.cs" />
-    <Compile Include="Control\RefreshPatient.cs" />
+    <Compile Include="CONTROL\RefreshPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
     <Compile Include="F_patientChoose.cs">
@@ -159,6 +159,7 @@
     <EmbeddedResource Include="UC_surgeryHistory.resx">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="data\conf\lang\CN.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

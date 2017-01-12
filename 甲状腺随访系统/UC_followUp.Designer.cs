@@ -29,6 +29,38 @@
         private void InitializeComponent()
         {
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
+            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.cbe_DM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.null_DM = new DevComponents.Editors.ComboItem();
+            this.yes_DM = new DevComponents.Editors.ComboItem();
+            this.no_DM = new DevComponents.Editors.ComboItem();
+            this.cbe_CD = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.null_CD = new DevComponents.Editors.ComboItem();
+            this.TC_CD = new DevComponents.Editors.ComboItem();
+            this.OC_CD = new DevComponents.Editors.ComboItem();
+            this.OD_CD = new DevComponents.Editors.ComboItem();
+            this.cbe_LDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.null_LDM = new DevComponents.Editors.ComboItem();
+            this.brain_LDM = new DevComponents.Editors.ComboItem();
+            this.lung_LDM = new DevComponents.Editors.ComboItem();
+            this.liver_LDM = new DevComponents.Editors.ComboItem();
+            this.bone_LDM = new DevComponents.Editors.ComboItem();
+            this.cbe_VS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.null_VS = new DevComponents.Editors.ComboItem();
+            this.death_VS = new DevComponents.Editors.ComboItem();
+            this.alive_VS = new DevComponents.Editors.ComboItem();
+            this.LTFU_VS = new DevComponents.Editors.ComboItem();
+            this.dti_DD = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dateTimeInput3 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dti_DLC = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.lb_CD = new DevComponents.DotNetBar.LabelX();
+            this.lb_DD = new DevComponents.DotNetBar.LabelX();
+            this.lb_LDM = new DevComponents.DotNetBar.LabelX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.lb_DM = new DevComponents.DotNetBar.LabelX();
+            this.lb_VS = new DevComponents.DotNetBar.LabelX();
+            this.lb_DLC = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.followDate = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -46,41 +78,6 @@
             this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn11 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn12 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.cbe_DM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.null_DM = new DevComponents.Editors.ComboItem();
-            this.yes_DM = new DevComponents.Editors.ComboItem();
-            this.no_DM = new DevComponents.Editors.ComboItem();
-            this.NA_DM = new DevComponents.Editors.ComboItem();
-            this.cbe_CD = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.null_CD = new DevComponents.Editors.ComboItem();
-            this.TC_CD = new DevComponents.Editors.ComboItem();
-            this.OC_CD = new DevComponents.Editors.ComboItem();
-            this.OD_CD = new DevComponents.Editors.ComboItem();
-            this.NA_CD = new DevComponents.Editors.ComboItem();
-            this.cbe_LDM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.null_LDM = new DevComponents.Editors.ComboItem();
-            this.brain_LDM = new DevComponents.Editors.ComboItem();
-            this.lung_LDM = new DevComponents.Editors.ComboItem();
-            this.liver_LDM = new DevComponents.Editors.ComboItem();
-            this.bone_LDM = new DevComponents.Editors.ComboItem();
-            this.NA_LDM = new DevComponents.Editors.ComboItem();
-            this.cbe_VS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.null_VS = new DevComponents.Editors.ComboItem();
-            this.death_VS = new DevComponents.Editors.ComboItem();
-            this.alive_VS = new DevComponents.Editors.ComboItem();
-            this.LTFU_VS = new DevComponents.Editors.ComboItem();
-            this.dti_DD = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.dateTimeInput3 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.dti_DLC = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.lb_CD = new DevComponents.DotNetBar.LabelX();
-            this.lb_DD = new DevComponents.DotNetBar.LabelX();
-            this.lb_LDM = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.lb_DM = new DevComponents.DotNetBar.LabelX();
-            this.lb_VS = new DevComponents.DotNetBar.LabelX();
-            this.lb_DLC = new DevComponents.DotNetBar.LabelX();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator3 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem4 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -119,21 +116,21 @@
             this.lb_FT3 = new DevComponents.DotNetBar.LabelX();
             this.lb_TSH = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
-            this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).BeginInit();
+            this.sideNavPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).BeginInit();
             this.SuspendLayout();
             // 
             // sideNav1
             // 
-            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -149,122 +146,6 @@
             this.sideNav1.Size = new System.Drawing.Size(1413, 566);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
-            // 
-            // sideNavPanel3
-            // 
-            this.sideNavPanel3.Controls.Add(this.superGridControl1);
-            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel3.Location = new System.Drawing.Point(96, 36);
-            this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1312, 529);
-            this.sideNavPanel3.TabIndex = 10;
-            this.sideNavPanel3.Visible = false;
-            // 
-            // superGridControl1
-            // 
-            this.superGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.superGridControl1.Location = new System.Drawing.Point(-12, 0);
-            this.superGridControl1.Name = "superGridControl1";
-            // 
-            // 
-            // 
-            this.superGridControl1.PrimaryGrid.AllowRowDelete = true;
-            this.superGridControl1.PrimaryGrid.AllowRowInsert = true;
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.followDate);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.TSH);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn1);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn2);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn3);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn4);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn5);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn6);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn7);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn8);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn9);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.Euthyrox);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn10);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn11);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn12);
-            this.superGridControl1.PrimaryGrid.ShowInsertRow = true;
-            this.superGridControl1.PrimaryGrid.UseAlternateColumnStyle = true;
-            this.superGridControl1.PrimaryGrid.UseAlternateRowStyle = true;
-            this.superGridControl1.Size = new System.Drawing.Size(1394, 530);
-            this.superGridControl1.TabIndex = 57;
-            this.superGridControl1.Text = "superGridControl1";
-            // 
-            // followDate
-            // 
-            this.followDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl);
-            this.followDate.Name = "随访日期";
-            // 
-            // TSH
-            // 
-            this.TSH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TSH.Name = "TSH";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn1.Name = "FT3(pmol/L)";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn2.Name = "FT4(pmol/L)";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn3.Name = "TPO(IU/ml)";
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn4.Name = "PTH(pg/ml)";
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn5.Name = "A-TG(IU/ml)";
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn6.Name = "TG(IU/ml)";
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn7.Name = "TG-Ab(IU/ml)";
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn8.Name = "Ca(mol/l)";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn9.Name = "P(mmol/l)";
-            // 
-            // Euthyrox
-            // 
-            this.Euthyrox.Name = "优甲乐剂量";
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn10.Name = "钙计量";
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Name = "副作用";
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Name = "其它症状";
             // 
             // sideNavPanel1
             // 
@@ -339,8 +220,7 @@
             this.cbe_DM.Items.AddRange(new object[] {
             this.null_DM,
             this.yes_DM,
-            this.no_DM,
-            this.NA_DM});
+            this.no_DM});
             this.cbe_DM.Location = new System.Drawing.Point(242, 149);
             this.cbe_DM.Name = "cbe_DM";
             this.cbe_DM.Size = new System.Drawing.Size(121, 26);
@@ -357,11 +237,6 @@
             this.no_DM.Text = "否";
             this.no_DM.Value = "否";
             // 
-            // NA_DM
-            // 
-            this.NA_DM.Text = "N.A";
-            this.NA_DM.Value = "N.A";
-            // 
             // cbe_CD
             // 
             this.cbe_CD.DisplayMember = "Text";
@@ -373,8 +248,7 @@
             this.null_CD,
             this.TC_CD,
             this.OC_CD,
-            this.OD_CD,
-            this.NA_CD});
+            this.OD_CD});
             this.cbe_CD.Location = new System.Drawing.Point(558, 147);
             this.cbe_CD.Name = "cbe_CD";
             this.cbe_CD.Size = new System.Drawing.Size(121, 26);
@@ -396,11 +270,6 @@
             this.OD_CD.Text = "其它疾病";
             this.OD_CD.Value = "其它疾病";
             // 
-            // NA_CD
-            // 
-            this.NA_CD.Text = "N.A";
-            this.NA_CD.Value = "N.A";
-            // 
             // cbe_LDM
             // 
             this.cbe_LDM.DisplayMember = "Text";
@@ -413,8 +282,7 @@
             this.brain_LDM,
             this.lung_LDM,
             this.liver_LDM,
-            this.bone_LDM,
-            this.NA_LDM});
+            this.bone_LDM});
             this.cbe_LDM.Location = new System.Drawing.Point(558, 49);
             this.cbe_LDM.Name = "cbe_LDM";
             this.cbe_LDM.Size = new System.Drawing.Size(121, 26);
@@ -440,11 +308,6 @@
             // 
             this.bone_LDM.Text = "骨骼";
             this.bone_LDM.Value = "骨骼";
-            // 
-            // NA_LDM
-            // 
-            this.NA_LDM.Text = "N.A";
-            this.NA_LDM.Value = "N.A";
             // 
             // cbe_VS
             // 
@@ -708,6 +571,122 @@
             this.lb_DLC.TabIndex = 10;
             this.lb_DLC.Text = "最后联系日期（Y/M/D):";
             this.lb_DLC.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // sideNavPanel3
+            // 
+            this.sideNavPanel3.Controls.Add(this.superGridControl1);
+            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel3.Location = new System.Drawing.Point(96, 36);
+            this.sideNavPanel3.Name = "sideNavPanel3";
+            this.sideNavPanel3.Size = new System.Drawing.Size(1312, 529);
+            this.sideNavPanel3.TabIndex = 10;
+            this.sideNavPanel3.Visible = false;
+            // 
+            // superGridControl1
+            // 
+            this.superGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.superGridControl1.Location = new System.Drawing.Point(-12, 0);
+            this.superGridControl1.Name = "superGridControl1";
+            // 
+            // 
+            // 
+            this.superGridControl1.PrimaryGrid.AllowRowDelete = true;
+            this.superGridControl1.PrimaryGrid.AllowRowInsert = true;
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.followDate);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.TSH);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn1);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn2);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn3);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn4);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn5);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn6);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn7);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn8);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn9);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.Euthyrox);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn10);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn11);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn12);
+            this.superGridControl1.PrimaryGrid.ShowInsertRow = true;
+            this.superGridControl1.PrimaryGrid.UseAlternateColumnStyle = true;
+            this.superGridControl1.PrimaryGrid.UseAlternateRowStyle = true;
+            this.superGridControl1.Size = new System.Drawing.Size(1394, 530);
+            this.superGridControl1.TabIndex = 57;
+            this.superGridControl1.Text = "superGridControl1";
+            // 
+            // followDate
+            // 
+            this.followDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl);
+            this.followDate.Name = "随访日期";
+            // 
+            // TSH
+            // 
+            this.TSH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TSH.Name = "TSH";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn1.Name = "FT3(pmol/L)";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn2.Name = "FT4(pmol/L)";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn3.Name = "TPO(IU/ml)";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn4.Name = "PTH(pg/ml)";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn5.Name = "A-TG(IU/ml)";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn6.Name = "TG(IU/ml)";
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn7.Name = "TG-Ab(IU/ml)";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn8.Name = "Ca(mol/l)";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn9.Name = "P(mmol/l)";
+            // 
+            // Euthyrox
+            // 
+            this.Euthyrox.Name = "优甲乐剂量";
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn10.Name = "钙计量";
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Name = "副作用";
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Name = "其它症状";
             // 
             // sideNavItem1
             // 
@@ -1292,12 +1271,12 @@
             this.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
-            this.sideNavPanel3.ResumeLayout(false);
             this.sideNavPanel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).EndInit();
+            this.sideNavPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).EndInit();
             this.ResumeLayout(false);
@@ -1339,12 +1318,9 @@
         private DevComponents.Editors.ComboItem null_DM;
         private DevComponents.Editors.ComboItem yes_DM;
         private DevComponents.Editors.ComboItem no_DM;
-        private DevComponents.Editors.ComboItem NA_DM;
         private DevComponents.Editors.ComboItem liver_LDM;
         private DevComponents.Editors.ComboItem bone_LDM;
-        private DevComponents.Editors.ComboItem NA_LDM;
         private DevComponents.Editors.ComboItem OD_CD;
-        private DevComponents.Editors.ComboItem NA_CD;
         private DevComponents.DotNetBar.Separator separator2;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_PTH;

@@ -43,9 +43,19 @@ namespace 甲状腺随访系统.model
         public bool sex { get; set; }
 
         /// <summary>
-        /// 住院日期
+        /// 出生日期
         /// </summary>
         public DateTime birthday { get; set; }
+
+        /// <summary>
+        /// 住院年龄
+        /// </summary>
+        public int hosage { get; set; }
+
+        /// <summary>
+        /// 住院日期
+        /// </summary>
+        public DateTime hosindate { get; set; }
 
         /// <summary>
         /// 出院日期
