@@ -1,6 +1,6 @@
 USE follw_up_DB
 
-CREATE TABLE tb_patientInfo(
+CREATE TABLE [dbo].[tb_patientInfo](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[name] [varchar](50) NULL,						--患者姓名
 	[idcard] [char](18) NULL,						--身份证号
@@ -52,6 +52,7 @@ CREATE TABLE tb_patientInfo(
 
 CREATE TABLE [dbo].[tb_diagnosis](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
 	[tirads] [varchar](50) NULL,					--（二维超声）TI-RADS级
 	[part] [varchar](50) NULL,						--部
 	[tdlymphnodemetastisis] [bit] NULL,				--淋巴结转移
@@ -91,160 +92,165 @@ CREATE TABLE [dbo].[tb_diagnosis](
 
 CREATE TABLE [dbo].[tb_surgeryHistory](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
 	[surgerytime] [date] NULL,						--手术时间
 	[surgerytype] [char](10) NULL,					--手术类型
 	[surgeryfrequency] [char](10) NULL,				--手术次数
 	[doctor] [char](10) NULL,						--术者
 	[leftlobe] [char](10) NULL,						--（甲状腺根治术）左叶
-	[rightlobe] [char](10) NULL,					--
-	[leftVI] [char](10) NULL,
-	[rightVI] [char](10) NULL,
-	[leftneck] [char](10) NULL,
-	[rightneck] [char](10) NULL,
-	[PCmaxtumordiameter] [float] NULL,
-	[PCalltumordiameter] [float] NULL,
-	[PCalltumorrange] [float] NULL,
-	[PCmulifocality] [bit] NULL,
-	[PCbilateralcancer] [bit] NULL,
-	[PCcapsuleinvasion] [char](10) NULL,
-	[PClymphaticmetastasis] [bit] NULL,
-	[PClymphocyticthyroiditis] [bit] NULL,
-	[PChypotype] [char](20) NULL,
-	[FCmaxtumordiameter] [float] NULL,
-	[FCalltumordiameter] [float] NULL,
-	[FCalltumorrange] [float] NULL,
-	[FCmulifocality] [bit] NULL,
-	[FCbilateralcancer] [bit] NULL,
-	[FCcapsuleinvasion] [char](10) NULL,
-	[FClymphaticmetastasis] [bit] NULL,
-	[FClymphocyticthyroiditis] [bit] NULL,
-	[Ileftn] [int] NULL,
-	[Ileftd] [int] NULL,
-	[Irightn] [int] NULL,
+	[rightlobe] [char](10) NULL,					--右叶
+	[leftVI] [char](10) NULL,						--左VI区
+	[rightVI] [char](10) NULL,						--右VI区
+	[leftneck] [char](10) NULL,						--左侧颈
+	[rightneck] [char](10) NULL,					--右侧颈
+	[PCmaxtumordiameter] [float] NULL,				--（乳头状癌）最大肿瘤直径
+	[PCalltumordiameter] [float] NULL,				--所有肿瘤直径和
+	[PCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[PCmulifocality] [bit] NULL,					--多灶性
+	[PCbilateralcancer] [bit] NULL,					--双侧癌
+	[PCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
+	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
+	[PClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
+	[PChypotype] [char](20) NULL,					--亚型
+	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
+	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
+	[FCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[FCmulifocality] [bit] NULL,					--多灶性
+	[FCbilateralcancer] [bit] NULL,					--双侧癌
+	[FCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
+	[FClymphaticmetastasis] [bit] NULL,				--淋巴结转移
+	[FClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
+	[Ileftn] [int] NULL,							--I区左
+	[Ileftd] [int] NULL,							
+	[Irightn] [int] NULL,							--I区右
 	[Irightd] [int] NULL,
-	[IIleftn] [int] NULL,
+	[IIleftn] [int] NULL,							--II区左
 	[IIleftd] [int] NULL,
-	[IIrightn] [int] NULL,
+	[IIrightn] [int] NULL,							--II区右
 	[IIrightd] [int] NULL,
-	[IIIleftn] [int] NULL,
+	[IIIleftn] [int] NULL,							--III区左
 	[IIIleftd] [int] NULL,
-	[IIIrightn] [int] NULL,
+	[IIIrightn] [int] NULL,							--III区右
 	[IIIrightd] [int] NULL,
-	[IVleftn] [int] NULL,
+	[IVleftn] [int] NULL,							--IV区左
 	[IVleftd] [int] NULL,
-	[IVrightn] [int] NULL,
+	[IVrightn] [int] NULL,							--IV区右
 	[IVrightd] [int] NULL,
-	[Vleftn] [int] NULL,
+	[Vleftn] [int] NULL,							--V区左
 	[Vleftd] [int] NULL,
-	[Vrightn] [int] NULL,
+	[Vrightn] [int] NULL,							--V区右
 	[Vrightd] [int] NULL,
-	[VIleftn] [int] NULL,
+	[VIleftn] [int] NULL,							--VI区左
 	[VIleftd] [int] NULL,
-	[VIrightn] [int] NULL,
+	[VIrightn] [int] NULL,							--VI去右
 	[VIrightd] [int] NULL,
-	[prelaryngealn] [int] NULL,
+	[prelaryngealn] [int] NULL,						--喉前
 	[prelaryngeald] [int] NULL,
-	[region] [varchar](50) NULL,
-	[regionleftn] [int] NULL,
+	[region] [varchar](50) NULL,					--区
+	[regionleftn] [int] NULL,						--区左
 	[regionleftd] [int] NULL,
-	[regionrightn] [int] NULL,
+	[regionrightn] [int] NULL,						--区右
 	[regionrightd] [int] NULL,
-	[carbonnano] [bit] NULL,
-	[primarytumors] [char](10) NULL,
-	[RLNM] [char](10) NULL,
-	[distantmetastasis] [char](10) NULL,
-	[PTNM] [char](10) NULL,
-	[otherthyroidcancer] [char](20) NULL,
-	[melecularneuropathology] [bit] NULL,
-	[TGT] [char](10) NULL,
-	[CK] [char](10) NULL,
-	[CK19] [char](10) NULL,
-	[CD151] [char](10) NULL,
-	[galecins3] [char](10) NULL,
-	[calctionin] [char](10) NULL,
-	[braf] [char](10) NULL,
-	[Ki67] [varchar](50) NULL,
-	[cyclinD1] [char](10) NULL,
-	[HBME1] [char](10) NULL,
-	[TTF1] [char](10) NULL,
-	[VEGF] [varchar](50) NULL,
-	[others] [varchar](256) NULL,
+	[carbonnano] [bit] NULL,						--是否使用碳纳米
+	[primarytumors] [char](10) NULL,				--原发性肿瘤T
+	[RLNM] [char](10) NULL,							--区域淋巴转移N
+	[distantmetastasis] [char](10) NULL,			--远处转移M
+	[PTNM] [char](10) NULL,							--PTNM分期
+	[otherthyroidcancer] [char](20) NULL,			--其它甲状腺癌
+	[melecularneuropathology] [bit] NULL,			--分子病理
+	[TGT] [char](10) NULL,							--（免疫组化）TGT/TG
+	[CK] [char](10) NULL,							--CK
+	[CK19] [char](10) NULL,							--CK19
+	[CD151] [char](10) NULL,						--CD151
+	[galecins3] [char](10) NULL,					--半乳凝素-3
+	[calctionin] [char](10) NULL,					--降钙素
+	[braf] [char](10) NULL,							--Braf
+	[Ki67] [varchar](50) NULL,						--Ki67（%）
+	[cyclinD1] [char](10) NULL,						--Cycling D1
+	[HBME1] [char](10) NULL,						--HBME-1
+	[TTF1] [char](10) NULL,							--TTF-1
+	[VEGF] [varchar](50) NULL,						--VEGF
+	[others] [varchar](256) NULL,					--其它
 	)
 	GO
 
 CREATE TABLE [dbo].[tb_followUp](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,
-	[lastconnect] [date] NULL,
-	[distantmetastasislocation] [char](10) NULL,
-	[vitalstatus] [char](10) NULL,
-	[deathdate] [date] NULL,
-	[distantmetastasis] [char](10) NULL,
-	[deathcause] [char](10) NULL,
-	[diatantmetasisdate] [date] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
+	[lastconnect] [date] NULL,						--最后联系时间
+	[distantmetastasislocation] [char](10) NULL,	--远处转移位置
+	[vitalstatus] [char](10) NULL,					--生死状态
+	[deathdate] [date] NULL,						--死亡日期
+	[distantmetastasis] [char](10) NULL,			--远处转移
+	[deathcause] [char](10) NULL,					--死亡原因
+	[diatantmetasisdate] [date] NULL,				--远处转移日期
 	)
 	GO
 
 
 CREATE TABLE [dbo].[tb_recurrencecs](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,
-	[TG] [varchar](50) NULL,
-	[TGAB] [varchar](50) NULL,
-	[CEA] [varchar](50) NULL,
-	[calcitonin] [varchar](50) NULL,
-	[CT] [varchar](50) NULL,
-	[MRI] [varchar](50) NULL,
-	[I131] [varchar](50) NULL,
-	[PETCT] [varchar](50) NULL,
-	[FNA] [varchar](50) NULL,
-	[braf] [bit] NULL,
-	[TGeluant] [varchar](50) NULL,
-	[tumorlocation] [varchar](50) NULL,
-	[tumorsize] [varchar](50) NULL,
-	[lymphadenlocation] [varchar](50) NULL,
-	[lymphadensize] [varchar](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[TG] [varchar](50) NULL,						--（血清学指标）TG
+	[TGAB] [varchar](50) NULL,						--TGAB
+	[CEA] [varchar](50) NULL,						--CEA
+	[calcitonin] [varchar](50) NULL,				--降钙素
+	[CT] [varchar](50) NULL,						--（影响学指标）CT
+	[MRI] [varchar](50) NULL,						--MRI
+	[I131] [varchar](50) NULL,						--I131
+	[PETCT] [varchar](50) NULL,						--PET-CT
+	[FNA] [varchar](50) NULL,						--（组织病理学）FNA
+	[braf] [bit] NULL,								--B-raf
+	[TGeluant] [varchar](50) NULL,					--TG洗脱液
+	[tumorlocation] [varchar](50) NULL,				--（肿瘤）位置
+	[tumorsize] [varchar](50) NULL,					--（肿瘤）大小
+	[lymphadenlocation] [varchar](50) NULL,			--（淋巴结）位置
+	[lymphadensize] [varchar](50) NULL,				--（淋巴结）大小
 	)
 	GO
 
 CREATE TABLE [dbo].[tb_inspectionAfterSurgery](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,
-	[days] [float] NULL,
-	[PTH] [float] NULL,
-	[Ca] [float] NULL,
-	[P] [float] NULL,
-	[alkalinephosphatase] [float] NULL,
-	[D] [float] NULL,
-	[D2] [float] NULL,
-	[D3] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
+	[days] [float] NULL,							--天数
+	[PTH] [float] NULL,								--PTH
+	[Ca] [float] NULL,								--Ca
+	[P] [float] NULL,								--P
+	[alkalinephosphatase] [float] NULL,				--碱性磷酸酶
+	[D] [float] NULL,								--25-强及维生素D
+	[D2] [float] NULL,								--D2
+	[D3] [float] NULL,								--D3
 	)
 	GO
 
 CREATE TABLE [dbo].[tb_radioactiveIodine](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,
-	[TS] [float] NULL,
-	[FT3] [float] NULL,
-	[FT4] [float] NULL,
-	[sTG] [float] NULL,
-	[ATG] [float] NULL,
-	[iodineuptakerate] [float] NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
+	[TS] [float] NULL,								--TS
+	[FT3] [float] NULL,								--FT3
+	[FT4] [float] NULL,								--FT4
+	[sTG] [float] NULL,								--sTG
+	[ATG] [float] NULL,								--A-TG
+	[iodineuptakerate] [float] NULL,				--吸碘率（%）
 	)
 	GO
 
 CREATE TABLE [dbo].[tb_visit](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,
-	[date] [date] NULL,
-	[TSH] [float] NULL,
-	[FT3] [float] NULL,
-	[FT4] [float] NULL,
-	[TPO] [float] NULL,
-	[PTH] [float] NULL,
-	[ATG] [float] NULL,
-	[TG] [float] NULL,
-	[TGAb] [float] NULL,
-	[Ca] [float] NULL,
-	[P] [float] NULL,
-	[euthyrox] [float] NULL,
-	[Cadosage] [float] NULL,
-	[sideeffect] [varbinary](50) NULL,
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
+	[Vdate] [date] NULL,								--随访日期
+	[TSH] [float] NULL,								--TSH
+	[FT3] [float] NULL,								--FT3
+	[FT4] [float] NULL,								--FT4
+	[TPO] [float] NULL,								--TPO
+	[PTH] [float] NULL,								--PTH
+	[ATG] [float] NULL,								--A-TG
+	[TG] [float] NULL,								--TG
+	[TGAb] [float] NULL,							--TG-Ab
+	[Ca] [float] NULL,								--Ca
+	[P] [float] NULL,								--P
+	[euthyrox] [float] NULL,						--优甲乐剂量
+	[Cadosage] [float] NULL,						--钙剂量
+	[sideeffect] [varbinary](50) NULL,				--副作用
 	)
 	GO
 
