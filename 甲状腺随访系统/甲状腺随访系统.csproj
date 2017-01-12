@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="data\sql\随访系统数据库.sql" />
     <Content Include="data\ui\icon.ico" />
     <Content Include="data\ui\patientAdd.png" />
     <Content Include="data\ui\riskFactor.png" />
