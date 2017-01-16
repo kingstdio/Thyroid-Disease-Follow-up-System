@@ -2,7 +2,7 @@ USE follw_up_DB
 
 CREATE TABLE [dbo].[tb_patientInfo](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
-	[name] [varchar](50) NULL,						--患者姓名
+	[INTEGER] [varchar](50) NULL,						--患者姓名
 	[idcard] [char](18) NULL,						--身份证号
 	[address] [varchar](128) NULL,					-- 居住地址
 	[mobile] [char](16) NULL,						--移动电话

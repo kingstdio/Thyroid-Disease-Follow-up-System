@@ -115,3 +115,4 @@ D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_retrieve.res
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_surgeryHistory.resources
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csproj.GenerateResource.Cache
 E:\GIT-Th\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.F_patientChoose.resources
+E:\GIT-Th\甲状腺随访系统\bin\Debug\System.Data.SQLite.dll
