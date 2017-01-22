@@ -36,7 +36,7 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 正常分娩次数
         /// </summary>
-        public string deliverytimes { get; set; }
+        public int deliverytimes { get; set; }
 
         /// <summary>
         /// 是否绝经
@@ -71,6 +71,6 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 体质指数
         /// </summary>
-        public float onstitutional { get; set; }
+        public float constitutional { get; set; }
     }
 }

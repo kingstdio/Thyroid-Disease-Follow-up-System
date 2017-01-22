@@ -35,6 +35,7 @@ namespace 甲状腺随访系统.Control
             Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);
 
             Conf.currentPatient.lastFollowDate = DAO.PatientInfo.getLastFollowDate(pid);
+            Conf.currentPatient.followTimes = DAO.PatientInfo.getFollowTimes(pid);
 
             refreshPaitentBoard(null,EventArgs.Empty);
             return true;

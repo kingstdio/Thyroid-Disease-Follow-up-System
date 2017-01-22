@@ -66,6 +66,9 @@ namespace 甲状腺随访系统
             tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
             tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
             tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
+            tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
+            tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
+
            
            
         }

@@ -24,14 +24,20 @@ namespace 甲状腺随访系统.DAO
 
         public static DateTime getLastFollowDate(int pid)
         {
-            sql = @"";
-            return DateTime.Now;
+            sql = @"select top 1 Vdate from tb_visit where pid=@id order by Vdate desc";
+            SqlParameter[] param = { new SqlParameter("@id", pid) };
+            DateTime Vdate = Convert.ToDateTime(SQLHELPER.ExecuteScalar(sql, param));
+            return Vdate;
         }
 
-        public static int getFollowCount(int pid) 
+        public static int getFollowTimes(int pid) 
         {
-            sql = @"";
-            return 0;
+            sql = @"select Count(Vdate) from tb_visit where pid=@id";
+            SqlParameter[] param = { new SqlParameter("@id", pid) };
+            int num = Convert.ToInt32(SQLHELPER.ExecuteScalar(sql, param));
+         
+           
+            return num;
         }
     }
 }
