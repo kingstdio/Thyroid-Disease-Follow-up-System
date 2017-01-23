@@ -15,10 +15,11 @@ namespace 甲状腺随访系统.DAO
         /// </summary>
         /// <param name="pid"></param>
         /// <returns></returns>
-        public static DataRow getBasicInfo(int pid) {
-            string sql = @"select id,name,idcard,address,mobile,phone,hosnumber,sex,birthday,hosindate,hosoutdate from tb_patientInfo where id=@id";
+        public static DataTable getBasicInfo(int pid) {
+            //string sql = @"select id,name,idcard,address,mobile,phone,hosnumber,sex,birthday,hosindate,hosoutdate from tb_patientInfo where id=@id";
+            string sql = @"select * from tb_patientInfo where id=@id";
             SqlParameter[] param = { new SqlParameter("@id", pid) };
-             return SQLHELPER.ExecuteDataRow(sql,param);
+             return SQLHELPER.ExecuteDataTable(sql,param);
 
         }
 
