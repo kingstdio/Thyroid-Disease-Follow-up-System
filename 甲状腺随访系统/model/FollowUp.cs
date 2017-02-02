@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class FollowUp
+    public class FollowUp
     {
         /// <summary>
         /// 最后联系时间

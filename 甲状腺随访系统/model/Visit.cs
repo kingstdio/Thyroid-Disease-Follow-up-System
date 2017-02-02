@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class Visit
+    public class Visit
     {
         /// <summary>
         /// 随访日期

@@ -71,11 +71,25 @@
     </Compile>
     <Compile Include="INIHelper.cs" />
     <Compile Include="MODEL\BasicInfo.cs" />
+    <Compile Include="MODEL\BasicOperInfo.cs" />
+    <Compile Include="MODEL\Complication.cs" />
+    <Compile Include="MODEL\DiffereThyrCarc.cs" />
     <Compile Include="MODEL\FamilyHistory.cs" />
+    <Compile Include="MODEL\FollowUp.cs" />
+    <Compile Include="MODEL\HematologicalExamination .cs" />
+    <Compile Include="MODEL\HistologicalExamination.cs" />
+    <Compile Include="MODEL\ImageExamination.cs" />
     <Compile Include="MODEL\Imageology.cs" />
+    <Compile Include="MODEL\InspecAfterSurg.cs" />
+    <Compile Include="MODEL\LympMeta.cs" />
     <Compile Include="MODEL\NormalRiskFactors.cs" />
+    <Compile Include="MODEL\OtherThyrCarc.cs" />
     <Compile Include="MODEL\Patient.cs" />
+    <Compile Include="MODEL\RadioIodine.cs" />
+    <Compile Include="MODEL\Recurrencecs.cs" />
     <Compile Include="MODEL\SpecialRiskFactors.cs" />
+    <Compile Include="MODEL\Therapy.cs" />
+    <Compile Include="MODEL\Visit.cs" />
     <Compile Include="RF_main.cs">
       <SubType>Form</SubType>
     </Compile>

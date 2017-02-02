@@ -64,7 +64,7 @@ namespace 甲状腺随访系统
             dti_dateLeave.Value = Conf.currentPatient.basicInfo.hosoutdate;
 
             //一般危险因素
-            cbe_resident.SelectedValue = Conf.currentPatient.normalRiskFactors.resident;
+            cbe_resident.SelectedIndex = cbe_resident.FindString(Conf.currentPatient.normalRiskFactors.resident);
             ii_AFM.Value = Conf.currentPatient.normalRiskFactors.menophaniaage;
             ii_AFP.Value = Conf.currentPatient.normalRiskFactors.pregnancyage;
             ii_TP.Value = Conf.currentPatient.normalRiskFactors.pregnancytimes;
@@ -105,7 +105,7 @@ namespace 甲状腺随访系统
             switch_familyhistory.Value = Conf.currentPatient.familyHistory.familyhistory;
             tb_fht.Text = Conf.currentPatient.familyHistory.familyhistorytext;
 
-
+  
 
 
 

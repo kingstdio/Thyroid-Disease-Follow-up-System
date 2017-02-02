@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class InspecAfterSurg
+    public class InspecAfterSurg
     {
         /// <summary>
         /// 天数

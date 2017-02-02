@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
 using 甲状腺随访系统.model;
+using 甲状腺随访系统.MODEL;
 
 namespace 甲状腺随访系统.Control
 {
@@ -22,13 +23,66 @@ namespace 甲状腺随访系统.Control
         public static bool refresh(int pid) 
         {
             Conf.currentPatient.id = pid;
-            DataTable dtPatientInfo= DAO.PatientInfo.getBasicInfo(pid);
+            DataTable dtPatientInfo = DAO.PatientInfo.getBasicInfo(pid);
+            DataTable dtdiagosis = DAO.PatientInfo.getDiagnosis(pid);
+            DataTable dtsurgeryHistory = DAO.PatientInfo.getSurgeryHistory(pid);
+            DataTable dtpostOperative = DAO.PatientInfo.getPostOperative(pid);
+            DataTable dtfollowUp = DAO.PatientInfo.getFollowUp(pid);
+            DataTable dtrecurrencecs = DAO.PatientInfo.getRecurrencecs(pid);
+            DataTable dtinspect = DAO.PatientInfo.getInspectionAfterSurgery(pid);
+            DataTable dtradio = DAO.PatientInfo.getRadioactiveIodine(pid);
+            DataTable dtvisit = DAO.PatientInfo.getVisit(pid);
 
-            TableToModel<BasicInfo>(Conf.currentPatient.basicInfo, dtPatientInfo);
-            TableToModel<NormalRiskFactors>(Conf.currentPatient.normalRiskFactors, dtPatientInfo);
-            TableToModel<SpecialRiskFactors>(Conf.currentPatient.specialRiskFactors, dtPatientInfo);
-            TableToModel<FamilyHistory>(Conf.currentPatient.familyHistory, dtPatientInfo);
-            TableToModel<Imageology>(Conf.currentPatient.imageology, dtPatientInfo);
+            //病人信息
+            if (dtPatientInfo.Rows.Count > 0)
+            {
+                TableToModel<BasicInfo>(Conf.currentPatient.basicInfo, dtPatientInfo);
+                TableToModel<NormalRiskFactors>(Conf.currentPatient.normalRiskFactors, dtPatientInfo);
+                TableToModel<SpecialRiskFactors>(Conf.currentPatient.specialRiskFactors, dtPatientInfo);
+                TableToModel<FamilyHistory>(Conf.currentPatient.familyHistory, dtPatientInfo);
+            }
+            //诊断
+            if (dtdiagosis.Rows.Count > 0)
+            {
+                TableToModel<ImageExamination>(Conf.currentPatient.imageExamination, dtdiagosis);
+                TableToModel<HistologicalExamination>(Conf.currentPatient.histologicalExamination, dtdiagosis);
+                TableToModel<HematologicalExamination>(Conf.currentPatient.hematologicalExamination, dtdiagosis);
+            }
+            //手术史
+            if (dtsurgeryHistory.Rows.Count > 0)
+            {
+                TableToModel<BasicOperInfo>(Conf.currentPatient.basicOperInfo, dtsurgeryHistory);
+                TableToModel<DiffereThyrCarc>(Conf.currentPatient.differeThyrCarc, dtsurgeryHistory);
+                TableToModel<LympMeta>(Conf.currentPatient.lympMeta, dtsurgeryHistory);
+                TableToModel<InspecAfterSurg>(Conf.currentPatient.inspecAfterSurg, dtsurgeryHistory);
+            }
+            //术后
+            if (dtpostOperative.Rows.Count > 0)
+            {
+                TableToModel<Therapy>(Conf.currentPatient.therapy, dtpostOperative);
+                TableToModel<Complication>(Conf.currentPatient.complication, dtpostOperative);
+                TableToModel<RadioIodine>(Conf.currentPatient.radioIodine, dtpostOperative);
+                TableToModel<Complication>(Conf.currentPatient.complication, dtpostOperative);
+            }
+            //追踪
+            if (dtfollowUp.Rows.Count > 0)
+            {
+                TableToModel<FollowUp>(Conf.currentPatient.followUp, dtfollowUp);
+                
+            }
+            if (dtvisit.Rows.Count > 0)
+            {
+                TableToModel<Visit>(Conf.currentPatient.visit, dtvisit);
+ 
+            }
+            //复发
+            if (dtrecurrencecs.Rows.Count > 0)
+            {
+                TableToModel<Recurrencecs>(Conf.currentPatient.recurrencecs, dtrecurrencecs);
+            }
+
+
+          
 
            // dr.Table.Columns.Contains("列名");
            // dr[1].Equals
@@ -55,6 +109,7 @@ namespace 甲状腺随访系统.Control
             return true;
         }
 
+  
 
 
         /// <summary>
@@ -81,28 +136,49 @@ namespace 甲状腺随访系统.Control
                     String name = pi.Name;  //获取属性名称
                     //若model属性名称与表中的列名相同
                     if (name == dtInfo.Columns[i].ColumnName)
-                    {        
+                    {
+                        object value = null ;
                         //获取表中该列对应的数据
-                        object value = dtInfo.Rows[0][i].ToString();
+                        if (dtInfo.Columns[i].DataType == typeof(string))
+                        {
+                            if (dtInfo.Rows[0][i] == System.DBNull.Value)
+                                value = Convert.ToString(null);
+                            else
+                            value = dtInfo.Rows[0][i].ToString();
+                        }
+                        
                         //判断是否为bool类型
                         if (dtInfo.Columns[i].DataType == typeof(bool))
                         {
-                            value = Convert.ToBoolean(dtInfo.Rows[0][i]);
+
+                            if (dtInfo.Rows[0][i] == System.DBNull.Value)
+                                value = Convert.ToBoolean(null);
+                            else
+                                value = Convert.ToBoolean(dtInfo.Rows[0][i]);
                         }
                         //判断是否为DateTime类型
-                        else if (dtInfo.Columns[i].DataType == typeof(DateTime))
+                        else if (dtInfo.Columns[i].DataType == typeof(DateTime) )
                         {
+                            if (dtInfo.Rows[0][i] == System.DBNull.Value)
+                                value = Convert.ToDateTime(null);
+                            else
                             value = Convert.ToDateTime(dtInfo.Rows[0][i]);
                         }
                         //判断是否为int类型
-                        else if (dtInfo.Columns[i].DataType == typeof(int))
+                        else if (dtInfo.Columns[i].DataType == typeof(int) )
                         {
+                            if (dtInfo.Rows[0][i] == System.DBNull.Value)
+                                value = Convert.ToInt32(null);
+                            else
                             value = Convert.ToInt32(dtInfo.Rows[0][i]);
-                            //value = isDBNull.Value? null : (int?)(dtInfo.Rows[0][i]);
                         }
                         //判断是否为float类型
-                        else if (dtInfo.Columns[i].DataType == typeof(float))
+                        else if (dtInfo.Columns[i].DataType == typeof(float) )
                         {
+                            if (dtInfo.Rows[0][i] == System.DBNull.Value)
+                                value = Convert.ToDouble(null);
+                                
+                            else
                             value = Convert.ToDouble(dtInfo.Rows[0][i]);
                         }
                         //将表中该列下的数据赋值给model中的同名属性
@@ -128,5 +204,7 @@ namespace 甲状腺随访系统.Control
             }
         }
         #endregion
+
+        
     }
 }

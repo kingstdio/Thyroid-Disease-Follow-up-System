@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class Recurrencecs
+    public class Recurrencecs
     {
         /// <summary>
         /// （血清学指标）TG
@@ -55,7 +55,7 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// B-raf
         /// </summary>
-        public string braf { get; set; }
+        public bool braf { get; set; }
 
         /// <summary>
         /// TG洗脱液

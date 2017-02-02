@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class LympMeta
+    public class LympMeta
     {
         /// <summary>
         /// I区左

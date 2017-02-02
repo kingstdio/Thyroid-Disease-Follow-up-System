@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class HematologicalExamination
+    public class HematologicalExamination
     {
 
         /// <summary>

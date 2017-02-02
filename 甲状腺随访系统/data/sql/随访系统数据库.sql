@@ -2,7 +2,7 @@ USE follw_up_DB
 
 CREATE TABLE [dbo].[tb_patientInfo](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
-	[INTEGER] [varchar](50) NULL,						--患者姓名
+	[name] [varchar](50) NULL,						--患者姓名
 	[idcard] [char](18) NULL,						--身份证号
 	[address] [varchar](128) NULL,					-- 居住地址
 	[mobile] [char](16) NULL,						--移动电话
@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[PCbilateralcancer] [bit] NULL,					--双侧癌
 	[PCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
 	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
-	[PClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
+	[PClymphocytic。thyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
 	[PChypotype] [char](20) NULL,					--亚型
 	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
 	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
@@ -174,6 +174,27 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	)
 	GO
 
+CREATE TABLE [dbo].[tb_postOperative](
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NULL,								--患者编号
+	[euthyrox] [float] NULL,						--（药物治疗）优甲乐
+	[chemotherapy] [varchar](256) NULL,				--化疗方案及计量
+	[radiotherapy] [varchar](256) NULL,				--放疗方案及计量
+	[hoarseness] [char](10) NULL,					--（常规项）声音嘶哑
+	[dyspnea] [char](10) NULL,						--呼吸困难
+	[drinkchok] [char](10) NULL,					--饮水呛咳
+	[hyperspasmia] [char](10) NULL,					--抽搐
+	[galactorrhea] [bit] NULL,						--淋巴漏或乳漏
+	[infection] [bit] NULL,							--感染
+	[Bparalysis] [char](10) NULL,					--（术后声带B超）麻痹
+	[Bhypomotility] [char](10) NULL,				--运动减弱
+	[PLparalysis] [char](10) NULL,					--（术后喉镜）麻痹
+	[PLhypomotility] [char](10) NULL,				--运动减弱
+	[VocalChange] [char](10) NULL,				    --语调改变
+	[bleed] [bit] NULL,								--出血
+	)
+	GO
+	
 CREATE TABLE [dbo].[tb_followUp](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
@@ -215,7 +236,7 @@ CREATE TABLE [dbo].[tb_inspectionAfterSurgery](
 	[PTH] [float] NULL,								--PTH
 	[Ca] [float] NULL,								--Ca
 	[P] [float] NULL,								--P
-	[alkalinephosphatase] [float] NULL,				--碱性磷酸酶
+	[AP] [float] NULL,				--碱性磷酸酶
 	[D] [float] NULL,								--25-强及维生素D
 	[D2] [float] NULL,								--D2
 	[D3] [float] NULL,								--D3
@@ -230,7 +251,7 @@ CREATE TABLE [dbo].[tb_radioactiveIodine](
 	[FT4] [float] NULL,								--FT4
 	[sTG] [float] NULL,								--sTG
 	[ATG] [float] NULL,								--A-TG
-	[iodineuptakerate] [float] NULL,				--吸碘率（%）
+	[iodrate] [float] NULL,				--吸碘率（%）
 	)
 	GO
 
@@ -250,7 +271,8 @@ CREATE TABLE [dbo].[tb_visit](
 	[P] [float] NULL,								--P
 	[euthyrox] [float] NULL,						--优甲乐剂量
 	[Cadosage] [float] NULL,						--钙剂量
-	[sideeffect] [varbinary](50) NULL,				--副作用
+	[sideeffect] [varchar](50) NULL,				--副作用
+	[others] [varchar](256) NULL,
 	)
 	GO
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class DiffereThyrCarc
+    public class DiffereThyrCarc
     {
         /// <summary>
         /// （乳头状癌）最大肿瘤直径

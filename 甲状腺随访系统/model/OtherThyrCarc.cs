@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class OtherThyrCarc
+    public class OtherThyrCarc
     {
         /// <summary>
         /// 其它甲状腺癌
@@ -15,7 +15,7 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// 分子病理
         /// </summary>
-        public string melecularneuropathology { get; set; }
+        public bool melecularneuropathology { get; set; }
 
         /// <summary>
         /// （免疫组化）TGT/TG

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class HistologicalExamination
+    public class HistologicalExamination
     {
         /// <summary>
         /// （甲状腺FNA）Bethesda报告级别

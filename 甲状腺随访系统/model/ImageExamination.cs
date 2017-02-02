@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class ImageExamination
+    public class ImageExamination
     {
         /// <summary>
         /// （二维超声）TI-RADS级
@@ -30,7 +30,7 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// （超声造影）是否考虑为甲状腺癌
         /// </summary>
-        public bool ucthyroidcancer { get; set; }
+        public string ucthyroidcancer { get; set; }
 
         /// <summary>
         /// 弹性影响评分

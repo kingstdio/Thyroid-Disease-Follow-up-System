@@ -5,7 +5,7 @@ using System.Text;
 
 namespace 甲状腺随访系统.MODEL
 {
-    class BasicOperInfo
+    public class BasicOperInfo
     {
         /// <summary>
         /// 手术时间
