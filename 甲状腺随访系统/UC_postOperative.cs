@@ -36,6 +36,7 @@ namespace 甲状腺随访系统
         {
             //术后治疗
             dtb_eut.Value = Conf.currentPatient.therapy.euthyrox;
+            Console.WriteLine(Conf.currentPatient.therapy.euthyrox);
             rtbe_chemotherapy.Text = Conf.currentPatient.therapy.chemotherapy;
             rtbe_radiotherapy.Text = Conf.currentPatient.therapy.radiotherapy;
 

@@ -45,13 +45,13 @@ namespace 甲状腺随访系统
             cbe_UC.SelectedIndex = cbe_UC.FindString(Conf.currentPatient.imageExamination.ucthyroidcancer);
           
 
-            cbe_EIR.SelectedIndex = cbe_EIR.FindString(Conf.currentPatient.imageExamination.elasticimpactrating.ToString());
+            cbe_EIR.SelectedIndex = cbe_EIR.FindString(Conf.currentPatient.imageExamination.elasticimpactrating);
 
             switch_CTthyroi.Value = Conf.currentPatient.imageExamination.ctthyroidcancer;
             switch_CTlymp.Value = Conf.currentPatient.imageExamination.ctlymphnodemetastisis;
 
             cbe_laryngoscope.SelectedIndex = cbe_laryngoscope.FindString(Conf.currentPatient.imageExamination.laryngoscope);
-            cbe_op.SelectedIndex = cbe_op.FindString(Conf.currentPatient.imageExamination.laryngoscope);
+            cbe_op.SelectedIndex = cbe_op.FindString(Conf.currentPatient.imageExamination.diagnosis);
 
             //组织学检查
             cbe_bethesda.SelectedIndex = cbe_bethesda.FindString(Conf.currentPatient.histologicalExamination.Bethesda);

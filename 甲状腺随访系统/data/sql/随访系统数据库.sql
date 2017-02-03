@@ -18,13 +18,13 @@ CREATE TABLE [dbo].[tb_patientInfo](
 	[pregnancyage] [int] NULL,						--初孕年龄
 	[pregnancytimes] [int] NULL,					--怀孕次数
 	[abortiontimes] [int] NULL,						--流产次数
-	[deliverytimes] [nchar](10) NULL,				--正常分娩次数
+	[deliverytimes] [int] NULL,						--正常分娩次数
 	[menopause] [bit] NULL,							--是否绝经
 	[smoke] [bit] NULL,								--是否吸烟
-	[drink] [nchar](10) NULL,						--是否饮酒
+	[drink] [bit](10) NULL,							--是否饮酒
 	[occupation] [varchar](50) NULL,				--职业
 	[height] [int] NULL,							--身高
-	[weight] [int] NULL,							--体重
+	[weight] [float] NULL,							--体重
 	[constitutional] [float] NULL,					--体质指数
 	[prolactin] [float] NULL,						--泌乳素
 	[estradiol] [float] NULL,						--雌二醇
@@ -58,20 +58,20 @@ CREATE TABLE [dbo].[tb_diagnosis](
 	[tdlymphnodemetastisis] [bit] NULL,				--淋巴结转移
 	[remark] [varchar](256) NULL,					--备注（区）
 	[ucthyroidcancer] [bit] NULL,					--（超声造影）是否考虑为甲状腺癌
-	[elasticimpactrating] [int] NULL,				--弹性影响评分
+	[elasticimpactrating] [float] NULL,				--弹性影响评分
 	[ctthyroidcancer] [bit] NULL,					--（CT/MRI）是否考虑为甲状腺癌
 	[ctlymphnodemetastisis] [bit] NULL,				--是否考虑为淋巴结转移
 	[laryngoscope] [varchar](10) NULL,				--（术前喉镜）喉镜情况
 	[diagnosis] [varchar](50) NULL,					--诊断
-	[Bethesda] [char](5) NULL,						--（甲状腺FNA）Bethesda报告级别
-	[thyroidbraf] [char](5) NULL,					--Braf基因
-	[thyroidRAS] [char](5) NULL,					--RAS基因
-	[thyroidTERT] [char](5) NULL,					--TERT基因
-	[thyroidPTC1] [char](5) NULL,					--RET/PTC1
-	[thyroidPTC3] [char](5) NULL,					--RET/PTC3
-	[thyroidPAX8] [char](5) NULL,					--PAX8/PPARG
+	[Bethesda] [varchar](10) NULL,				    --（甲状腺FNA）Bethesda报告级别
+	[thyroidbraf] [varchar](10) NULL,			    --Braf基因
+	[thyroidRAS] [varchar](10) NULL,				--RAS基因
+	[thyroidTERT] [varchar](10) NULL,				--TERT基因
+	[thyroidPTC1] [varchar](10) NULL,				--RET/PTC1
+	[thyroidPTC3] [varchar](10) NULL,				--RET/PTC3
+	[thyroidPAX8] [varchar](10) NULL,				--PAX8/PPARG
 	[lymphnodesFNA] [varchar](50) NULL,				--（淋巴结FNA）FNA
-	[lymphnodesbraf] [char](5) NULL,				--B-raf基因
+	[lymphnodesbraf] [varchar](10) NULL,			--B-raf基因
 	[lymphnodestg] [float] NULL,					--Tg洗脱液
 	[TSH] [float] NULL,								--（甲功）TSH
 	[ATG] [float] NULL,								--ATG
@@ -94,30 +94,30 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
 	[surgerytime] [date] NULL,						--手术时间
-	[surgerytype] [char](10) NULL,					--手术类型
-	[surgeryfrequency] [char](10) NULL,				--手术次数
-	[doctor] [char](10) NULL,						--术者
-	[leftlobe] [char](10) NULL,						--（甲状腺根治术）左叶
-	[rightlobe] [char](10) NULL,					--右叶
-	[leftVI] [char](10) NULL,						--左VI区
-	[rightVI] [char](10) NULL,						--右VI区
-	[leftneck] [char](10) NULL,						--左侧颈
-	[rightneck] [char](10) NULL,					--右侧颈
+	[surgerytype] [varchar](10) NULL,				--手术类型
+	[surgeryfrequency] [varchar](10) NULL,			--手术次数
+	[doctor] [varchar](10) NULL,					--术者
+	[leftlobe] [varchar](10) NULL,					--（甲状腺根治术）左叶
+	[rightlobe] [varchar](10) NULL,					--右叶
+	[leftVI] [varchar](10) NULL,					--左VI区
+	[rightVI] [varchar](10) NULL,					--右VI区
+	[leftneck] [varchar](10) NULL,					--左侧颈
+	[rightneck] [varchar](10) NULL,					--右侧颈
 	[PCmaxtumordiameter] [float] NULL,				--（乳头状癌）最大肿瘤直径
 	[PCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[PCalltumorrange] [float] NULL,					--所有肿瘤直径范围
 	[PCmulifocality] [bit] NULL,					--多灶性
 	[PCbilateralcancer] [bit] NULL,					--双侧癌
-	[PCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
+	[PCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
 	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
-	[PClymphocytic。thyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
-	[PChypotype] [char](20) NULL,					--亚型
+	[PClymphocytic。thyroiditis] [bit] NULL,		--伴淋巴细胞甲状腺炎
+	[PChypotype] [varchar](20) NULL,				--亚型
 	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
 	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[FCalltumorrange] [float] NULL,					--所有肿瘤直径范围
 	[FCmulifocality] [bit] NULL,					--多灶性
 	[FCbilateralcancer] [bit] NULL,					--双侧癌
-	[FCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
+	[FCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
 	[FClymphaticmetastasis] [bit] NULL,				--淋巴结转移
 	[FClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
 	[Ileftn] [int] NULL,							--I区左
@@ -152,23 +152,23 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[regionrightn] [int] NULL,						--区右
 	[regionrightd] [int] NULL,
 	[carbonnano] [bit] NULL,						--是否使用碳纳米
-	[primarytumors] [char](10) NULL,				--原发性肿瘤T
-	[RLNM] [char](10) NULL,							--区域淋巴转移N
-	[distantmetastasis] [char](10) NULL,			--远处转移M
-	[PTNM] [char](10) NULL,							--PTNM分期
-	[otherthyroidcancer] [char](20) NULL,			--其它甲状腺癌
+	[primarytumors] [varchar](10) NULL,				--原发性肿瘤T
+	[RLNM] [varchar](10) NULL,						--区域淋巴转移N
+	[distantmetastasis] [varchar](10) NULL,			--远处转移M
+	[PTNM] [varchar](10) NULL,						--PTNM分期
+	[otherthyroidcancer] [varchar](20) NULL,		--其它甲状腺癌
 	[melecularneuropathology] [bit] NULL,			--分子病理
-	[TGT] [char](10) NULL,							--（免疫组化）TGT/TG
-	[CK] [char](10) NULL,							--CK
-	[CK19] [char](10) NULL,							--CK19
-	[CD151] [char](10) NULL,						--CD151
-	[galecins3] [char](10) NULL,					--半乳凝素-3
-	[calctionin] [char](10) NULL,					--降钙素
-	[braf] [char](10) NULL,							--Braf
+	[TGT] [varchar](10) NULL,						--（免疫组化）TGT/TG
+	[CK] [varchar](10) NULL,						--CK
+	[CK19] [varchar](10) NULL,						--CK19
+	[CD151] [varchar](10) NULL,						--CD151
+	[galecins3] [varchar](10) NULL,					--半乳凝素-3
+	[calctionin] [varchar](10) NULL,				--降钙素
+	[braf] [varchar](10) NULL,						--Braf
 	[Ki67] [varchar](50) NULL,						--Ki67（%）
-	[cyclinD1] [char](10) NULL,						--Cycling D1
-	[HBME1] [char](10) NULL,						--HBME-1
-	[TTF1] [char](10) NULL,							--TTF-1
+	[cyclinD1] [varchar](10) NULL,					--Cycling D1
+	[HBME1] [varchar](10) NULL,						--HBME-1
+	[TTF1] [varchar](10) NULL,						--TTF-1
 	[VEGF] [varchar](50) NULL,						--VEGF
 	[others] [varchar](256) NULL,					--其它
 	)
@@ -180,17 +180,17 @@ CREATE TABLE [dbo].[tb_postOperative](
 	[euthyrox] [float] NULL,						--（药物治疗）优甲乐
 	[chemotherapy] [varchar](256) NULL,				--化疗方案及计量
 	[radiotherapy] [varchar](256) NULL,				--放疗方案及计量
-	[hoarseness] [char](10) NULL,					--（常规项）声音嘶哑
-	[dyspnea] [char](10) NULL,						--呼吸困难
-	[drinkchok] [char](10) NULL,					--饮水呛咳
-	[hyperspasmia] [char](10) NULL,					--抽搐
+	[hoarseness] [varchar](10) NULL,				--（常规项）声音嘶哑
+	[dyspnea] [varchar](10) NULL,					--呼吸困难
+	[drinkchok] [varchar](10) NULL,					--饮水呛咳
+	[hyperspasmia] [varchar](10) NULL,				--抽搐
 	[galactorrhea] [bit] NULL,						--淋巴漏或乳漏
 	[infection] [bit] NULL,							--感染
-	[Bparalysis] [char](10) NULL,					--（术后声带B超）麻痹
-	[Bhypomotility] [char](10) NULL,				--运动减弱
-	[PLparalysis] [char](10) NULL,					--（术后喉镜）麻痹
-	[PLhypomotility] [char](10) NULL,				--运动减弱
-	[VocalChange] [char](10) NULL,				    --语调改变
+	[Bparalysis] [varchar](10) NULL,				--（术后声带B超）麻痹
+	[Bhypomotility] [varchar](10) NULL,				--运动减弱
+	[PLparalysis] [varchar](10) NULL,				--（术后喉镜）麻痹
+	[PLhypomotility] [varchar](10) NULL,			--运动减弱
+	[VocalChange] [varchar](10) NULL,			    --语调改变
 	[bleed] [bit] NULL,								--出血
 	)
 	GO
@@ -199,11 +199,11 @@ CREATE TABLE [dbo].[tb_followUp](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
 	[lastconnect] [date] NULL,						--最后联系时间
-	[distantmetastasislocation] [char](10) NULL,	--远处转移位置
-	[vitalstatus] [char](10) NULL,					--生死状态
+	[distantmetastasislocation] [varchar](10) NULL,	--远处转移位置
+	[vitalstatus] [varchar](10) NULL,				--生死状态
 	[deathdate] [date] NULL,						--死亡日期
-	[distantmetastasis] [char](10) NULL,			--远处转移
-	[deathcause] [char](10) NULL,					--死亡原因
+	[distantmetastasis] [varchar](10) NULL,			--远处转移
+	[deathcause] [varchar](10) NULL,				--死亡原因
 	[diatantmetasisdate] [date] NULL,				--远处转移日期
 	)
 	GO
@@ -258,7 +258,7 @@ CREATE TABLE [dbo].[tb_radioactiveIodine](
 CREATE TABLE [dbo].[tb_visit](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
-	[Vdate] [date] NULL,								--随访日期
+	[Vdate] [date] NULL,							--随访日期
 	[TSH] [float] NULL,								--TSH
 	[FT3] [float] NULL,								--FT3
 	[FT4] [float] NULL,								--FT4

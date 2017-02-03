@@ -15,62 +15,62 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// TSH
         /// </summary>
-        public float TSH { get; set; }
+        public Double TSH { get; set; }
 
         /// <summary>
         /// FT3
         /// </summary>
-        public float FT3 { get; set; }
+        public Double FT3 { get; set; }
 
         /// <summary>
         /// FT4
         /// </summary>
-        public float FT4 { get; set; }
+        public Double FT4 { get; set; }
 
         /// <summary>
         /// TPO
         /// </summary>
-        public float TPO { get; set; }
+        public Double TPO { get; set; }
 
         /// <summary>
         /// PTH
         /// </summary>
-        public float PTH { get; set; }
+        public Double PTH { get; set; }
 
         /// <summary>
         /// ATG
         /// </summary>
-        public float ATG { get; set; }
+        public Double ATG { get; set; }
 
         /// <summary>
         /// TG
         /// </summary>
-        public float TG { get; set; }
+        public Double TG { get; set; }
 
         /// <summary>
         /// TGAb
         /// </summary>
-        public float TGAb { get; set; }
+        public Double TGAb { get; set; }
 
         /// <summary>
         /// Ca
         /// </summary>
-        public float Ca { get; set; }
+        public Double Ca { get; set; }
 
         /// <summary>
         /// P
         /// </summary>
-        public float P { get; set; }
+        public Double P { get; set; }
 
         /// <summary>
         /// 优甲乐剂量
         /// </summary>
-        public float euthyrox { get; set; }
+        public Double euthyrox { get; set; }
 
         /// <summary>
         /// 钙剂量
         /// </summary>
-        public float Cadosage { get; set; }
+        public Double Cadosage { get; set; }
 
         /// <summary>
         ///副作用

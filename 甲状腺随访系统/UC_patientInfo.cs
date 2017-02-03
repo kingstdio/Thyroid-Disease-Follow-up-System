@@ -76,7 +76,7 @@ namespace 甲状腺随访系统
             switch_drink.Value = Conf.currentPatient.normalRiskFactors.drink;
             tb_occupation.Text = Conf.currentPatient.normalRiskFactors.occupation;
             dti_height.Value = Conf.currentPatient.normalRiskFactors.height;
-            dti_wight.Value = Conf.currentPatient.normalRiskFactors.weight;
+            dti_weight.Value = Conf.currentPatient.normalRiskFactors.weight;
             tb_BMI.Text = Convert.ToString(Conf.currentPatient.normalRiskFactors.constitutional);
 
             //特殊危险因素

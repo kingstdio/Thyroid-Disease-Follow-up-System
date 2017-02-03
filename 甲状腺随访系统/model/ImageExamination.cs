@@ -35,7 +35,7 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// 弹性影响评分
         /// </summary>
-        public int elasticimpactrating { get; set; }
+        public string elasticimpactrating { get; set; }
 
         /// <summary>
         /// （CT/MRI）是否考虑为甲状腺癌

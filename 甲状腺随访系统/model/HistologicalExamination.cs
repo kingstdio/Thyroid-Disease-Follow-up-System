@@ -55,6 +55,6 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// Tg洗脱液
         /// </summary>
-        public float lymphnodestg { get; set; }
+        public Double lymphnodestg { get; set; }
     }
 }

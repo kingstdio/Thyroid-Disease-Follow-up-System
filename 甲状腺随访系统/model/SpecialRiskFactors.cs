@@ -12,56 +12,56 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 泌乳素
         /// </summary>
-        public float prolactin { get; set; }
+        public Double prolactin { get; set; }
 
         /// <summary>
         /// 雌二醇
         /// </summary>
-        public float estradiol { get; set; }
+        public Double estradiol { get; set; }
 
         /// <summary>
         /// 孕酮
         /// </summary>
-        public float pregnendione { get; set; }
+        public Double pregnendione { get; set; }
 
         /// <summary>
         /// 睾酮
         /// </summary>
-        public float testosterone { get; set; }
+        public Double testosterone { get; set; }
 
         /// <summary>
         /// 促黄体激素
         /// </summary>
-        public float luteinizing { get; set; }
+        public Double luteinizing { get; set; }
 
         /// <summary>
         /// 促卵泡刺激素
         /// </summary>
-        public float folliclestimulating { get; set; }
+        public Double folliclestimulating { get; set; }
 
         /// <summary>
         /// 胆固醇
         /// </summary>
-        public float cholesterol { get; set; }
+        public Double cholesterol { get; set; }
 
         /// <summary>
         /// 低密度脂蛋白
         /// </summary>
-        public float llipoprotein { get; set; }
+        public Double llipoprotein { get; set; }
 
         /// <summary>
         /// 高密度脂蛋白
         /// </summary>
-        public float hlipoprotein { get; set; }
+        public Double hlipoprotein { get; set; }
 
         /// <summary>
         /// 甘油三酯
         /// </summary>
-        public float triglyceride { get; set; }
+        public Double triglyceride { get; set; }
 
         /// <summary>
         /// 血糖
         /// </summary>
-        public float bloodGlucose { get; set; }
+        public Double bloodGlucose { get; set; }
     }
 }

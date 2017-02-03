@@ -28,16 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
+            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.dtb_eut = new DevComponents.Editors.DoubleInput();
+            this.dgv_radio = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.TS = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
+            this.FT3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FT4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iodrate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.line8 = new DevComponents.DotNetBar.Controls.Line();
+            this.line7 = new DevComponents.DotNetBar.Controls.Line();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.line5 = new DevComponents.DotNetBar.Controls.Line();
+            this.line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.dgv_inspect = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.dgv_days = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
@@ -115,30 +139,6 @@
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.labelX28 = new DevComponents.DotNetBar.LabelX();
             this.labelX29 = new DevComponents.DotNetBar.LabelX();
-            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.dtb_eut = new DevComponents.Editors.DoubleInput();
-            this.dgv_radio = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.TS = new DevComponents.DotNetBar.Controls.DataGridViewDoubleInputColumn();
-            this.FT3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FT4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iodrate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.line8 = new DevComponents.DotNetBar.Controls.Line();
-            this.line7 = new DevComponents.DotNetBar.Controls.Line();
-            this.line6 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
-            this.line3 = new DevComponents.DotNetBar.Controls.Line();
-            this.line5 = new DevComponents.DotNetBar.Controls.Line();
-            this.line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator1 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -222,11 +222,11 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
-            this.sideNavPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inspect)).BeginInit();
             this.sideNavPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_radio)).BeginInit();
+            this.sideNavPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inspect)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,6 +250,322 @@
             this.sideNav1.Size = new System.Drawing.Size(1413, 568);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
+            // 
+            // sideNavPanel1
+            // 
+            this.sideNavPanel1.Controls.Add(this.dtb_eut);
+            this.sideNavPanel1.Controls.Add(this.dgv_radio);
+            this.sideNavPanel1.Controls.Add(this.rtbe_radiotherapy);
+            this.sideNavPanel1.Controls.Add(this.rtbe_chemotherapy);
+            this.sideNavPanel1.Controls.Add(this.line8);
+            this.sideNavPanel1.Controls.Add(this.line7);
+            this.sideNavPanel1.Controls.Add(this.line6);
+            this.sideNavPanel1.Controls.Add(this.line4);
+            this.sideNavPanel1.Controls.Add(this.line3);
+            this.sideNavPanel1.Controls.Add(this.line5);
+            this.sideNavPanel1.Controls.Add(this.line2);
+            this.sideNavPanel1.Controls.Add(this.line1);
+            this.sideNavPanel1.Controls.Add(this.labelX4);
+            this.sideNavPanel1.Controls.Add(this.labelX3);
+            this.sideNavPanel1.Controls.Add(this.labelX2);
+            this.sideNavPanel1.Controls.Add(this.labelX1);
+            this.sideNavPanel1.Controls.Add(this.lb_eut);
+            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
+            this.sideNavPanel1.Name = "sideNavPanel1";
+            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
+            this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Visible = false;
+            // 
+            // dtb_eut
+            // 
+            // 
+            // 
+            // 
+            this.dtb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dtb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtb_eut.Increment = 1D;
+            this.dtb_eut.Location = new System.Drawing.Point(387, 77);
+            this.dtb_eut.Name = "dtb_eut";
+            this.dtb_eut.ShowUpDown = true;
+            this.dtb_eut.Size = new System.Drawing.Size(202, 26);
+            this.dtb_eut.TabIndex = 93;
+            // 
+            // dgv_radio
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_radio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_radio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_radio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TS,
+            this.FT3,
+            this.FT4,
+            this.sTG,
+            this.ATG,
+            this.iodrate});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_radio.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_radio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgv_radio.Location = new System.Drawing.Point(201, 116);
+            this.dgv_radio.Name = "dgv_radio";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_radio.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_radio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv_radio.RowTemplate.Height = 23;
+            this.dgv_radio.Size = new System.Drawing.Size(984, 156);
+            this.dgv_radio.TabIndex = 2;
+            // 
+            // TS
+            // 
+            // 
+            // 
+            // 
+            this.TS.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.TS.BackgroundStyle.Class = "DataGridViewNumericBorder";
+            this.TS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TS.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
+            this.TS.DataPropertyName = "TS";
+            this.TS.HeaderText = "TS(uIu/ml)";
+            this.TS.Increment = 1D;
+            this.TS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            this.TS.Name = "TS";
+            this.TS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // FT3
+            // 
+            this.FT3.DataPropertyName = "FT3";
+            this.FT3.HeaderText = "FT3(pmol/l)";
+            this.FT3.Name = "FT3";
+            // 
+            // FT4
+            // 
+            this.FT4.DataPropertyName = "FT4";
+            this.FT4.HeaderText = "FT4(pmol/l)";
+            this.FT4.Name = "FT4";
+            // 
+            // sTG
+            // 
+            this.sTG.DataPropertyName = "sTG";
+            this.sTG.HeaderText = "sTG(ng/dl)";
+            this.sTG.Name = "sTG";
+            // 
+            // ATG
+            // 
+            this.ATG.DataPropertyName = "ATG";
+            this.ATG.HeaderText = "A-TG(iu/ml)";
+            this.ATG.Name = "ATG";
+            // 
+            // iodrate
+            // 
+            this.iodrate.DataPropertyName = "iodrate";
+            this.iodrate.HeaderText = "吸碘率（%）";
+            this.iodrate.Name = "iodrate";
+            // 
+            // rtbe_radiotherapy
+            // 
+            // 
+            // 
+            // 
+            this.rtbe_radiotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.rtbe_radiotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rtbe_radiotherapy.Location = new System.Drawing.Point(201, 368);
+            this.rtbe_radiotherapy.Name = "rtbe_radiotherapy";
+            this.rtbe_radiotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.rtbe_radiotherapy.Size = new System.Drawing.Size(984, 98);
+            this.rtbe_radiotherapy.TabIndex = 4;
+            // 
+            // rtbe_chemotherapy
+            // 
+            // 
+            // 
+            // 
+            this.rtbe_chemotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.rtbe_chemotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rtbe_chemotherapy.Location = new System.Drawing.Point(201, 271);
+            this.rtbe_chemotherapy.Name = "rtbe_chemotherapy";
+            this.rtbe_chemotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.rtbe_chemotherapy.Size = new System.Drawing.Size(984, 98);
+            this.rtbe_chemotherapy.TabIndex = 3;
+            // 
+            // line8
+            // 
+            this.line8.BackColor = System.Drawing.Color.Transparent;
+            this.line8.ForeColor = System.Drawing.Color.White;
+            this.line8.Location = new System.Drawing.Point(1184, 58);
+            this.line8.Name = "line8";
+            this.line8.Size = new System.Drawing.Size(1, 408);
+            this.line8.TabIndex = 92;
+            this.line8.Text = "line1";
+            this.line8.VerticalLine = true;
+            this.line8.Click += new System.EventHandler(this.line8_Click);
+            // 
+            // line7
+            // 
+            this.line7.BackColor = System.Drawing.Color.Transparent;
+            this.line7.ForeColor = System.Drawing.Color.White;
+            this.line7.Location = new System.Drawing.Point(77, 271);
+            this.line7.Name = "line7";
+            this.line7.Size = new System.Drawing.Size(1108, 1);
+            this.line7.TabIndex = 91;
+            this.line7.Text = "line1";
+            // 
+            // line6
+            // 
+            this.line6.BackColor = System.Drawing.Color.Transparent;
+            this.line6.ForeColor = System.Drawing.Color.White;
+            this.line6.Location = new System.Drawing.Point(77, 368);
+            this.line6.Name = "line6";
+            this.line6.Size = new System.Drawing.Size(1108, 1);
+            this.line6.TabIndex = 91;
+            this.line6.Text = "line1";
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            this.line4.ForeColor = System.Drawing.Color.White;
+            this.line4.Location = new System.Drawing.Point(201, 58);
+            this.line4.Name = "line4";
+            this.line4.Size = new System.Drawing.Size(1, 408);
+            this.line4.TabIndex = 90;
+            this.line4.Text = "line1";
+            this.line4.VerticalLine = true;
+            // 
+            // line3
+            // 
+            this.line3.BackColor = System.Drawing.Color.Transparent;
+            this.line3.ForeColor = System.Drawing.Color.White;
+            this.line3.Location = new System.Drawing.Point(76, 58);
+            this.line3.Name = "line3";
+            this.line3.Size = new System.Drawing.Size(1, 408);
+            this.line3.TabIndex = 90;
+            this.line3.Text = "line1";
+            this.line3.VerticalLine = true;
+            // 
+            // line5
+            // 
+            this.line5.BackColor = System.Drawing.Color.Transparent;
+            this.line5.ForeColor = System.Drawing.Color.White;
+            this.line5.Location = new System.Drawing.Point(77, 465);
+            this.line5.Name = "line5";
+            this.line5.Size = new System.Drawing.Size(1108, 1);
+            this.line5.TabIndex = 90;
+            this.line5.Text = "line1";
+            // 
+            // line2
+            // 
+            this.line2.BackColor = System.Drawing.Color.Transparent;
+            this.line2.ForeColor = System.Drawing.Color.White;
+            this.line2.Location = new System.Drawing.Point(77, 115);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(1108, 1);
+            this.line2.TabIndex = 90;
+            this.line2.Text = "line1";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.Color.White;
+            this.line1.Location = new System.Drawing.Point(77, 58);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(1108, 1);
+            this.line1.TabIndex = 90;
+            this.line1.Text = "line1";
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX4.Location = new System.Drawing.Point(76, 401);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(132, 23);
+            this.labelX4.TabIndex = 9;
+            this.labelX4.Text = "放疗方案及计量";
+            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX3.Location = new System.Drawing.Point(76, 306);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(132, 23);
+            this.labelX3.TabIndex = 9;
+            this.labelX3.Text = "化疗方案及计量";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX2.Location = new System.Drawing.Point(77, 191);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(132, 23);
+            this.labelX2.TabIndex = 9;
+            this.labelX2.Text = "碘治疗";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX1.Location = new System.Drawing.Point(77, 77);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(132, 23);
+            this.labelX1.TabIndex = 9;
+            this.labelX1.Text = "药物治疗";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // lb_eut
+            // 
+            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
+            this.lb_eut.Location = new System.Drawing.Point(263, 77);
+            this.lb_eut.Name = "lb_eut";
+            this.lb_eut.Size = new System.Drawing.Size(132, 23);
+            this.lb_eut.TabIndex = 9;
+            this.lb_eut.Text = "优甲乐（ug）：";
             // 
             // sideNavPanel3
             // 
@@ -420,17 +736,17 @@
             // 
             // comboItem10
             // 
-            this.comboItem10.Text = "1.否";
+            this.comboItem10.Text = "否";
             this.comboItem10.Value = "否";
             // 
             // comboItem11
             // 
-            this.comboItem11.Text = "2.单侧";
+            this.comboItem11.Text = "单侧";
             this.comboItem11.Value = "单侧";
             // 
             // comboItem12
             // 
-            this.comboItem12.Text = "3.两侧";
+            this.comboItem12.Text = "两侧";
             this.comboItem12.Value = "两侧";
             // 
             // line17
@@ -584,17 +900,17 @@
             // 
             // comboItem14
             // 
-            this.comboItem14.Text = "1.正常";
+            this.comboItem14.Text = "正常";
             this.comboItem14.Value = "正常";
             // 
             // comboItem15
             // 
-            this.comboItem15.Text = "2.单侧活动减退";
+            this.comboItem15.Text = "单侧活动减退";
             this.comboItem15.Value = "单侧活动减退";
             // 
             // comboItem16
             // 
-            this.comboItem16.Text = "3.双侧活动减退";
+            this.comboItem16.Text = "双侧活动减退";
             this.comboItem16.Value = "双侧活动减退";
             // 
             // cbe_PLparalysis
@@ -617,17 +933,17 @@
             // 
             // comboItem18
             // 
-            this.comboItem18.Text = "1.否";
+            this.comboItem18.Text = "否";
             this.comboItem18.Value = "否";
             // 
             // comboItem19
             // 
-            this.comboItem19.Text = "2.单侧";
+            this.comboItem19.Text = "单侧";
             this.comboItem19.Value = "单侧";
             // 
             // comboItem20
             // 
-            this.comboItem20.Text = "3.两侧";
+            this.comboItem20.Text = "两侧";
             this.comboItem20.Value = "两侧";
             // 
             // cbe_Bparalysis
@@ -650,17 +966,17 @@
             // 
             // comboItem22
             // 
-            this.comboItem22.Text = "1.否";
+            this.comboItem22.Text = "否";
             this.comboItem22.Value = "否";
             // 
             // comboItem23
             // 
-            this.comboItem23.Text = "2.单侧";
+            this.comboItem23.Text = "单侧";
             this.comboItem23.Value = "单侧";
             // 
             // comboItem24
             // 
-            this.comboItem24.Text = "3.两侧";
+            this.comboItem24.Text = "两侧";
             this.comboItem24.Value = "两侧";
             // 
             // labelX13
@@ -1037,322 +1353,6 @@
             this.labelX29.TabIndex = 110;
             this.labelX29.Text = "术后检查";
             this.labelX29.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // sideNavPanel1
-            // 
-            this.sideNavPanel1.Controls.Add(this.dtb_eut);
-            this.sideNavPanel1.Controls.Add(this.dgv_radio);
-            this.sideNavPanel1.Controls.Add(this.rtbe_radiotherapy);
-            this.sideNavPanel1.Controls.Add(this.rtbe_chemotherapy);
-            this.sideNavPanel1.Controls.Add(this.line8);
-            this.sideNavPanel1.Controls.Add(this.line7);
-            this.sideNavPanel1.Controls.Add(this.line6);
-            this.sideNavPanel1.Controls.Add(this.line4);
-            this.sideNavPanel1.Controls.Add(this.line3);
-            this.sideNavPanel1.Controls.Add(this.line5);
-            this.sideNavPanel1.Controls.Add(this.line2);
-            this.sideNavPanel1.Controls.Add(this.line1);
-            this.sideNavPanel1.Controls.Add(this.labelX4);
-            this.sideNavPanel1.Controls.Add(this.labelX3);
-            this.sideNavPanel1.Controls.Add(this.labelX2);
-            this.sideNavPanel1.Controls.Add(this.labelX1);
-            this.sideNavPanel1.Controls.Add(this.lb_eut);
-            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
-            this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
-            this.sideNavPanel1.TabIndex = 2;
-            this.sideNavPanel1.Visible = false;
-            // 
-            // dtb_eut
-            // 
-            // 
-            // 
-            // 
-            this.dtb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dtb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtb_eut.Increment = 1D;
-            this.dtb_eut.Location = new System.Drawing.Point(387, 77);
-            this.dtb_eut.Name = "dtb_eut";
-            this.dtb_eut.ShowUpDown = true;
-            this.dtb_eut.Size = new System.Drawing.Size(202, 26);
-            this.dtb_eut.TabIndex = 93;
-            // 
-            // dgv_radio
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_radio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_radio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_radio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TS,
-            this.FT3,
-            this.FT4,
-            this.sTG,
-            this.ATG,
-            this.iodrate});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_radio.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_radio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgv_radio.Location = new System.Drawing.Point(201, 116);
-            this.dgv_radio.Name = "dgv_radio";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_radio.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_radio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgv_radio.RowTemplate.Height = 23;
-            this.dgv_radio.Size = new System.Drawing.Size(984, 156);
-            this.dgv_radio.TabIndex = 2;
-            // 
-            // TS
-            // 
-            // 
-            // 
-            // 
-            this.TS.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.TS.BackgroundStyle.Class = "DataGridViewNumericBorder";
-            this.TS.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TS.BackgroundStyle.TextColor = System.Drawing.SystemColors.ControlText;
-            this.TS.DataPropertyName = "TS";
-            this.TS.HeaderText = "TS(uIu/ml)";
-            this.TS.Increment = 1D;
-            this.TS.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            this.TS.Name = "TS";
-            this.TS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // FT3
-            // 
-            this.FT3.DataPropertyName = "FT3";
-            this.FT3.HeaderText = "FT3(pmol/l)";
-            this.FT3.Name = "FT3";
-            // 
-            // FT4
-            // 
-            this.FT4.DataPropertyName = "FT4";
-            this.FT4.HeaderText = "FT4(pmol/l)";
-            this.FT4.Name = "FT4";
-            // 
-            // sTG
-            // 
-            this.sTG.DataPropertyName = "sTG";
-            this.sTG.HeaderText = "sTG(ng/dl)";
-            this.sTG.Name = "sTG";
-            // 
-            // ATG
-            // 
-            this.ATG.DataPropertyName = "ATG";
-            this.ATG.HeaderText = "A-TG(iu/ml)";
-            this.ATG.Name = "ATG";
-            // 
-            // iodrate
-            // 
-            this.iodrate.DataPropertyName = "iodrate";
-            this.iodrate.HeaderText = "吸碘率（%）";
-            this.iodrate.Name = "iodrate";
-            // 
-            // rtbe_radiotherapy
-            // 
-            // 
-            // 
-            // 
-            this.rtbe_radiotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.rtbe_radiotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rtbe_radiotherapy.Location = new System.Drawing.Point(201, 368);
-            this.rtbe_radiotherapy.Name = "rtbe_radiotherapy";
-            this.rtbe_radiotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rtbe_radiotherapy.Size = new System.Drawing.Size(984, 98);
-            this.rtbe_radiotherapy.TabIndex = 4;
-            // 
-            // rtbe_chemotherapy
-            // 
-            // 
-            // 
-            // 
-            this.rtbe_chemotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.rtbe_chemotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rtbe_chemotherapy.Location = new System.Drawing.Point(201, 271);
-            this.rtbe_chemotherapy.Name = "rtbe_chemotherapy";
-            this.rtbe_chemotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rtbe_chemotherapy.Size = new System.Drawing.Size(984, 98);
-            this.rtbe_chemotherapy.TabIndex = 3;
-            // 
-            // line8
-            // 
-            this.line8.BackColor = System.Drawing.Color.Transparent;
-            this.line8.ForeColor = System.Drawing.Color.White;
-            this.line8.Location = new System.Drawing.Point(1184, 58);
-            this.line8.Name = "line8";
-            this.line8.Size = new System.Drawing.Size(1, 408);
-            this.line8.TabIndex = 92;
-            this.line8.Text = "line1";
-            this.line8.VerticalLine = true;
-            this.line8.Click += new System.EventHandler(this.line8_Click);
-            // 
-            // line7
-            // 
-            this.line7.BackColor = System.Drawing.Color.Transparent;
-            this.line7.ForeColor = System.Drawing.Color.White;
-            this.line7.Location = new System.Drawing.Point(77, 271);
-            this.line7.Name = "line7";
-            this.line7.Size = new System.Drawing.Size(1108, 1);
-            this.line7.TabIndex = 91;
-            this.line7.Text = "line1";
-            // 
-            // line6
-            // 
-            this.line6.BackColor = System.Drawing.Color.Transparent;
-            this.line6.ForeColor = System.Drawing.Color.White;
-            this.line6.Location = new System.Drawing.Point(77, 368);
-            this.line6.Name = "line6";
-            this.line6.Size = new System.Drawing.Size(1108, 1);
-            this.line6.TabIndex = 91;
-            this.line6.Text = "line1";
-            // 
-            // line4
-            // 
-            this.line4.BackColor = System.Drawing.Color.Transparent;
-            this.line4.ForeColor = System.Drawing.Color.White;
-            this.line4.Location = new System.Drawing.Point(201, 58);
-            this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(1, 408);
-            this.line4.TabIndex = 90;
-            this.line4.Text = "line1";
-            this.line4.VerticalLine = true;
-            // 
-            // line3
-            // 
-            this.line3.BackColor = System.Drawing.Color.Transparent;
-            this.line3.ForeColor = System.Drawing.Color.White;
-            this.line3.Location = new System.Drawing.Point(76, 58);
-            this.line3.Name = "line3";
-            this.line3.Size = new System.Drawing.Size(1, 408);
-            this.line3.TabIndex = 90;
-            this.line3.Text = "line1";
-            this.line3.VerticalLine = true;
-            // 
-            // line5
-            // 
-            this.line5.BackColor = System.Drawing.Color.Transparent;
-            this.line5.ForeColor = System.Drawing.Color.White;
-            this.line5.Location = new System.Drawing.Point(77, 465);
-            this.line5.Name = "line5";
-            this.line5.Size = new System.Drawing.Size(1108, 1);
-            this.line5.TabIndex = 90;
-            this.line5.Text = "line1";
-            // 
-            // line2
-            // 
-            this.line2.BackColor = System.Drawing.Color.Transparent;
-            this.line2.ForeColor = System.Drawing.Color.White;
-            this.line2.Location = new System.Drawing.Point(77, 115);
-            this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(1108, 1);
-            this.line2.TabIndex = 90;
-            this.line2.Text = "line1";
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.ForeColor = System.Drawing.Color.White;
-            this.line1.Location = new System.Drawing.Point(77, 58);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(1108, 1);
-            this.line1.TabIndex = 90;
-            this.line1.Text = "line1";
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX4.Location = new System.Drawing.Point(76, 401);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(132, 23);
-            this.labelX4.TabIndex = 9;
-            this.labelX4.Text = "放疗方案及计量";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX3.Location = new System.Drawing.Point(76, 306);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(132, 23);
-            this.labelX3.TabIndex = 9;
-            this.labelX3.Text = "化疗方案及计量";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX2.Location = new System.Drawing.Point(77, 191);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(132, 23);
-            this.labelX2.TabIndex = 9;
-            this.labelX2.Text = "碘治疗";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX1.Location = new System.Drawing.Point(77, 77);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(132, 23);
-            this.labelX1.TabIndex = 9;
-            this.labelX1.Text = "药物治疗";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lb_eut
-            // 
-            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_eut.Location = new System.Drawing.Point(263, 77);
-            this.lb_eut.Name = "lb_eut";
-            this.lb_eut.Size = new System.Drawing.Size(132, 23);
-            this.lb_eut.TabIndex = 9;
-            this.lb_eut.Text = "优甲乐（ug）：";
             // 
             // sideNavItem1
             // 
@@ -2149,11 +2149,11 @@
             this.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
-            this.sideNavPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_inspect)).EndInit();
             this.sideNavPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_radio)).EndInit();
+            this.sideNavPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_inspect)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
             this.ResumeLayout(false);
 

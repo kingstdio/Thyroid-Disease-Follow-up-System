@@ -54,7 +54,8 @@ namespace 甲状腺随访系统.Control
                 TableToModel<BasicOperInfo>(Conf.currentPatient.basicOperInfo, dtsurgeryHistory);
                 TableToModel<DiffereThyrCarc>(Conf.currentPatient.differeThyrCarc, dtsurgeryHistory);
                 TableToModel<LympMeta>(Conf.currentPatient.lympMeta, dtsurgeryHistory);
-                TableToModel<InspecAfterSurg>(Conf.currentPatient.inspecAfterSurg, dtsurgeryHistory);
+               // TableToModel<InspecAfterSurg>(Conf.currentPatient.inspecAfterSurg, dtsurgeryHistory);
+                TableToModel<OtherThyrCarc>(Conf.currentPatient.otherThyrCarc, dtsurgeryHistory);
             }
             //术后
             if (dtpostOperative.Rows.Count > 0)
@@ -97,6 +98,8 @@ namespace 甲状腺随访系统.Control
             Conf.currentPatient.basicInfo.idcard = dr["idcard"].ToString();
             Conf.currentPatient.basicInfo.birthday = Convert.ToDateTime(dr["birthday"]);
             Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);*/
+           // Conf.currentPatient.normalRiskFactors.weight = Convert.ToDouble(dtPatientInfo.Rows[0]["weight"]);
+            Console.WriteLine(dtPatientInfo.Rows[0]["weight"]);
             
 
 
@@ -167,19 +170,24 @@ namespace 甲状腺随访系统.Control
                         //判断是否为int类型
                         else if (dtInfo.Columns[i].DataType == typeof(int) )
                         {
+                            
                             if (dtInfo.Rows[0][i] == System.DBNull.Value)
                                 value = Convert.ToInt32(null);
                             else
                             value = Convert.ToInt32(dtInfo.Rows[0][i]);
                         }
                         //判断是否为float类型
-                        else if (dtInfo.Columns[i].DataType == typeof(float) )
+                        else if (dtInfo.Columns[i].DataType == typeof(Double) )
                         {
+                            
+                            
                             if (dtInfo.Rows[0][i] == System.DBNull.Value)
-                                value = Convert.ToDouble(null);
-                                
+                                value = Convert.ToDouble(null);    
+                                //value = float.Parse(null);
                             else
-                            value = Convert.ToDouble(dtInfo.Rows[0][i]);
+                                value = Convert.ToDouble(dtInfo.Rows[0][i]);
+                                //value = float.Parse(dtInfo.Rows[0][i].ToString()); 
+
                         }
                         //将表中该列下的数据赋值给model中的同名属性
                         modelType.GetProperty(name).SetValue(objmodel, value, null);

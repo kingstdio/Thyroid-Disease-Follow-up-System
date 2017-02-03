@@ -1486,12 +1486,12 @@
             // UC_yes
             // 
             this.UC_yes.Text = "是";
-            this.UC_yes.Value = "是";
+            this.UC_yes.Value = "";
             // 
             // UC_no
             // 
             this.UC_no.Text = "否";
-            this.UC_no.Value = "否";
+            this.UC_no.Value = "";
             // 
             // lb_remark
             // 
@@ -1713,6 +1713,7 @@
             // comboItem6
             // 
             this.comboItem6.Text = "单侧麻痹";
+            this.comboItem6.Value = "单侧麻痹";
             // 
             // comboItem7
             // 

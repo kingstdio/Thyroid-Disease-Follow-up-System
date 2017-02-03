@@ -10,7 +10,7 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// （药物治疗）优甲乐
         /// </summary>
-       public double euthyrox { get; set; }
+       public Double euthyrox { get; set; }
 
         /// <summary>
         /// 化疗方案及计量

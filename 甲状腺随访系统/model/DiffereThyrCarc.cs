@@ -10,17 +10,17 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// （乳头状癌）最大肿瘤直径
         /// </summary>
-        public float PCmaxtumordiameter { get; set; }
+        public Double PCmaxtumordiameter { get; set; }
 
         /// <summary>
         /// 所有肿瘤直径和
         /// </summary>
-        public float PCalltumordiameter { get; set; }
+        public Double PCalltumordiameter { get; set; }
 
         /// <summary>
         /// 所有肿瘤直径范围
         /// </summary>
-        public float PCalltumorrange { get; set; }
+        public Double PCalltumorrange { get; set; }
 
         /// <summary>
         /// 多灶性
@@ -55,17 +55,17 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// （滤泡性癌）最大肿瘤直径
         /// </summary>
-        public float FCmaxtumordiameter { get; set; }
+        public Double FCmaxtumordiameter { get; set; }
 
         /// <summary>
         /// 所有肿瘤直径和
         /// </summary>
-        public float FCalltumordiameter { get; set; }
+        public Double FCalltumordiameter { get; set; }
 
         /// <summary>
         /// 所有肿瘤直径范围
         /// </summary>
-        public float FCalltumorrange { get; set; }
+        public Double FCalltumorrange { get; set; }
 
         /// <summary>
         /// 多灶性

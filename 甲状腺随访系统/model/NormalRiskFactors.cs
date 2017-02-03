@@ -66,11 +66,11 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 体重
         /// </summary>
-        public int weight { get; set; }
+        public Double weight { get; set; }
 
         /// <summary>
         /// 体质指数
         /// </summary>
-        public float constitutional { get; set; }
+        public Double constitutional { get; set; }
     }
 }
