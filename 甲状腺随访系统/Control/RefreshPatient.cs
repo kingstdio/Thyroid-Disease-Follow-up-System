@@ -32,6 +32,7 @@ namespace 甲状腺随访系统.Control
             DataTable dtinspect = DAO.PatientInfo.getInspectionAfterSurgery(pid);
             DataTable dtradio = DAO.PatientInfo.getRadioactiveIodine(pid);
             DataTable dtvisit = DAO.PatientInfo.getVisit(pid);
+       
 
             //病人信息
             if (dtPatientInfo.Rows.Count > 0)
@@ -99,7 +100,7 @@ namespace 甲状腺随访系统.Control
             Conf.currentPatient.basicInfo.birthday = Convert.ToDateTime(dr["birthday"]);
             Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);*/
            // Conf.currentPatient.normalRiskFactors.weight = Convert.ToDouble(dtPatientInfo.Rows[0]["weight"]);
-            Console.WriteLine(dtPatientInfo.Rows[0]["weight"]);
+            
             
 
 

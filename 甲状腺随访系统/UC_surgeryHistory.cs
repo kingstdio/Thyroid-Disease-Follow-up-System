@@ -125,6 +125,106 @@ namespace 甲状腺随访系统
             tb_other.Text = Conf.currentPatient.otherThyrCarc.others;
         }
 
+        void InsertData(object obj, EventArgs args)
+        {
+            //基础手术资料
+            Conf.currentPatient.basicOperInfo.surgerytime = dti_DS.Value;
+            Conf.currentPatient.basicOperInfo.surgerytype = cbe_surgeryType1.Text;
+            Conf.currentPatient.basicOperInfo.surgeryfrequency = cbe_surgeryTime.Text;
+            Conf.currentPatient.basicOperInfo.doctor = cbe_Doctor.Text;
+
+            Conf.currentPatient.basicOperInfo.leftlobe = cbe_LL.Text;
+            Conf.currentPatient.basicOperInfo.rightlobe = cbe_RL.Text;
+            Conf.currentPatient.basicOperInfo.leftVI = cbe_LVI.Text;
+            Conf.currentPatient.basicOperInfo.rightVI = cbe_RVI.Text;
+            Conf.currentPatient.basicOperInfo.rightneck = cbe_LN.Text;
+            Conf.currentPatient.basicOperInfo.rightneck = cbe_RN.Text;
+
+            //分化型甲状腺癌
+            Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter = di_PCmax.Value;
+            Conf.currentPatient.differeThyrCarc.PCalltumordiameter = di_PCall.Value;
+            Conf.currentPatient.differeThyrCarc.PCalltumorrange = di_PCallrange.Value;
+            Conf.currentPatient.differeThyrCarc.PCmulifocality = switch_PCmuli.Value;
+            Conf.currentPatient.differeThyrCarc.PCbilateralcancer = switch_PCbilcancer.Value;
+            Conf.currentPatient.differeThyrCarc.PCcapsuleinvasion = cbe_PCCI.Text;
+            Conf.currentPatient.differeThyrCarc.PClymphaticmetastasis = switch_PClymmeta.Value;
+            Conf.currentPatient.differeThyrCarc.PClymphocyticthyroiditis = switch_PClymthy.Value;
+            Conf.currentPatient.differeThyrCarc.PChypotype = cbe_subtype.Text;
+
+            Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter = di_FCmax.Value;
+            Conf.currentPatient.differeThyrCarc.FCalltumordiameter = di_FCall.Value;
+            Conf.currentPatient.differeThyrCarc.FCalltumorrange = di_FCallrange.Value;
+            Conf.currentPatient.differeThyrCarc.FCmulifocality = switch_FCmuli.Value;
+            Conf.currentPatient.differeThyrCarc.FCbilateralcancer = switch_FCbilcancer.Value;
+            Conf.currentPatient.differeThyrCarc.FCcapsuleinvasion = cbe_FCCI.Text;
+            Conf.currentPatient.differeThyrCarc.FClymphaticmetastasis = switch_FClymmeta.Value;
+            Conf.currentPatient.differeThyrCarc.FClymphocyticthyroiditis = switch_FClymthy.Value;
+
+            //淋巴结转移
+            Console.WriteLine(tb_Iregion1.Text);
+            Conf.currentPatient.lympMeta.Ileftn = Convert.ToInt32(string.IsNullOrEmpty(tb_Iregion1.Text) ? "0":tb_Iregion1.Text);
+            Conf.currentPatient.lympMeta.Ileftd = Convert.ToInt32(string.IsNullOrEmpty(tb_Iregion2.Text) ? "0" : tb_Iregion2.Text);
+            Conf.currentPatient.lympMeta.Irightn = Convert.ToInt32(string.IsNullOrEmpty(tb_Iregion3.Text) ? "0" : tb_Iregion3.Text);
+            Conf.currentPatient.lympMeta.Irightd = Convert.ToInt32(string.IsNullOrEmpty(tb_Iregion4.Text) ? "0" : tb_Iregion4.Text);
+
+            Conf.currentPatient.lympMeta.IIleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_IIregion1.Text) ? "0" : tb_IIregion1.Text);
+            Conf.currentPatient.lympMeta.IIleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_IIregion2.Text) ? "0" : tb_IIregion2.Text);
+            Conf.currentPatient.lympMeta.IIrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_IIregion3.Text) ? "0" : tb_IIregion3.Text);
+            Conf.currentPatient.lympMeta.IIrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_IIregion4.Text) ? "0" : tb_IIregion4.Text);
+
+            Conf.currentPatient.lympMeta.IIIleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_IIIregion1.Text) ? "0" : tb_IIIregion1.Text);
+            Conf.currentPatient.lympMeta.IIIleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_IIIregion2.Text) ? "0" : tb_IIIregion2.Text);
+            Conf.currentPatient.lympMeta.IIIrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_IIIregion3.Text) ? "0" : tb_IIIregion3.Text);
+            Conf.currentPatient.lympMeta.IIIrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_IIIregion4.Text) ? "0" : tb_IIIregion4.Text);
+
+            Conf.currentPatient.lympMeta.IVleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_IVregion1.Text) ? "0" : tb_IVregion1.Text);
+            Conf.currentPatient.lympMeta.IVleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_IVregion2.Text) ? "0" : tb_IVregion2.Text);
+            Conf.currentPatient.lympMeta.IVrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_IVregion3.Text) ? "0" : tb_IVregion3.Text);
+            Conf.currentPatient.lympMeta.IVrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_IVregion4.Text) ? "0" : tb_IVregion4.Text);
+
+            Conf.currentPatient.lympMeta.Vleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_Vregion1.Text) ? "0" : tb_Vregion1.Text);
+            Conf.currentPatient.lympMeta.Vleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_Vregion2.Text) ? "0" : tb_Vregion2.Text);
+            Conf.currentPatient.lympMeta.Vrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_Vregion3.Text) ? "0" : tb_Vregion3.Text);
+            Conf.currentPatient.lympMeta.Vrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_Vregion4.Text) ? "0" : tb_Vregion4.Text);
+
+            Conf.currentPatient.lympMeta.VIleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion1.Text) ? "0" : tb_VIregion1.Text);
+            Conf.currentPatient.lympMeta.VIleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion2.Text) ? "0" : tb_VIregion2.Text);
+            Conf.currentPatient.lympMeta.VIrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion3.Text) ? "0" : tb_VIregion3.Text);
+            Conf.currentPatient.lympMeta.VIrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion4.Text) ? "0" : tb_VIregion4.Text);
+
+            Conf.currentPatient.lympMeta.region = tb_region.Text;
+            Conf.currentPatient.lympMeta.regionleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_region1.Text) ? "0" : tb_region1.Text);
+            Conf.currentPatient.lympMeta.regionleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_region2.Text) ? "0" : tb_region2.Text);
+            Conf.currentPatient.lympMeta.regionrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_region3.Text) ? "0" : tb_region3.Text);
+            Conf.currentPatient.lympMeta.regionrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_region4.Text) ? "0" : tb_region4.Text);
+
+            Conf.currentPatient.lympMeta.prelaryngealn = Convert.ToInt32(string.IsNullOrEmpty(tb_prelaryngeal1.Text) ? "0" : tb_prelaryngeal1.Text);
+            Conf.currentPatient.lympMeta.prelaryngeald = Convert.ToInt32(string.IsNullOrEmpty(tb_prelaryngeal2.Text) ? "0" : tb_prelaryngeal2.Text);
+       
+            Conf.currentPatient.lympMeta.carbonnano = switch_carbonnano.Value;
+            Conf.currentPatient.lympMeta.primarytumors = cbe_PT.Text;
+            Conf.currentPatient.lympMeta.RLNM = cbe_NI.Text;
+            Conf.currentPatient.lympMeta.distantmetastasis = cbe_DM.Text;
+            Conf.currentPatient.lympMeta.PTNM = cbe_pStage.Text;
+
+            //其它甲状腺癌及免疫组化
+
+            Conf.currentPatient.otherThyrCarc.otherthyroidcancer = cbe_otherthy.Text;
+            Conf.currentPatient.otherThyrCarc.melecularneuropathology = switch_mele.Value;
+            Conf.currentPatient.otherThyrCarc.TGT = cbe_TGTTG.Text;
+            Conf.currentPatient.otherThyrCarc.CK = cbe_CK.Text;
+            Conf.currentPatient.otherThyrCarc.CK19 = cbe_CK19.Text;
+            Conf.currentPatient.otherThyrCarc.CD151 = cbe_CD151.Text;
+            Conf.currentPatient.otherThyrCarc.galecins3 = cbe_Gal3.Text;
+            Conf.currentPatient.otherThyrCarc.calctionin = cbe_calc.Text;
+            Conf.currentPatient.otherThyrCarc.braf = cbe_braf.Text;
+            Conf.currentPatient.otherThyrCarc.Ki67 = tb_Ki.Text;
+            Conf.currentPatient.otherThyrCarc.cyclinD1 = cbe_cyc.Text;
+            Conf.currentPatient.otherThyrCarc.HBME1 = cbe_hbme.Text;
+            Conf.currentPatient.otherThyrCarc.TTF1 = cbe_TTF.Text;
+            Conf.currentPatient.otherThyrCarc.VEGF = tb_VEGF.Text;
+            Conf.currentPatient.otherThyrCarc.others = tb_other.Text;
+        }
 
     }
 }

@@ -85,5 +85,56 @@ namespace 甲状腺随访系统
 
         }
 
+        void InsertData(object sender, EventArgs e)
+        {
+            //影像学检查
+            Conf.currentPatient.imageExamination.tirads = cbe_TI.Text;
+            Conf.currentPatient.imageExamination.part = cbe_TI2.Text;
+            Conf.currentPatient.imageExamination.tdlymphnodemetastisis = switch_trans.Value;
+            Conf.currentPatient.imageExamination.remark = tb_remark.Text;
+            Conf.currentPatient.imageExamination.ucthyroidcancer = cbe_UC.Text;
+
+
+            Conf.currentPatient.imageExamination.elasticimpactrating = cbe_EIR.Text;
+
+            Conf.currentPatient.imageExamination.ctthyroidcancer = switch_CTthyroi.Value;
+            Conf.currentPatient.imageExamination.ctlymphnodemetastisis = switch_CTlymp.Value;
+
+            Conf.currentPatient.imageExamination.laryngoscope = cbe_laryngoscope.Text;
+            Conf.currentPatient.imageExamination.diagnosis = cbe_op.Text;
+
+            //组织学检查
+            Conf.currentPatient.histologicalExamination.Bethesda = cbe_bethesda.Text;
+            Conf.currentPatient.histologicalExamination.thyroidbraf = cbe_braf.Text;
+            Conf.currentPatient.histologicalExamination.thyroidRAS = cbe_RAS.Text;
+            Conf.currentPatient.histologicalExamination.thyroidTERT = cbe_TERT.Text;
+            Conf.currentPatient.histologicalExamination.thyroidPTC1 = cbe_PTC1.Text;
+            Conf.currentPatient.histologicalExamination.thyroidPTC3 = cbe_PTC3.Text;
+            Conf.currentPatient.histologicalExamination.thyroidPAX8 = cbe_PAX8.Text;
+
+            Conf.currentPatient.histologicalExamination.lymphnodesFNA = tb_TGE.Text;
+            Conf.currentPatient.histologicalExamination.lymphnodesbraf = cbe_braf1.Text;
+            Conf.currentPatient.histologicalExamination.lymphnodestg = di_TG.Value;
+
+            //血液检查
+            Conf.currentPatient.hematologicalExamination.TSH = di_TSH.Value;
+            Conf.currentPatient.hematologicalExamination.FT3 = di_FT3.Value;
+            Conf.currentPatient.hematologicalExamination.FT4 = di_FT4.Value;
+            Conf.currentPatient.hematologicalExamination.ATG = di_ATG.Value;
+            Conf.currentPatient.hematologicalExamination.ATPO = di_ATPO.Value;
+            Conf.currentPatient.hematologicalExamination.PTH = di_PTH.Value;
+            Conf.currentPatient.hematologicalExamination.CT = di_CT.Value;
+            Conf.currentPatient.hematologicalExamination.TG = di_TG1.Value;
+            Conf.currentPatient.hematologicalExamination.CEA = di_CEA.Value;
+
+            Conf.currentPatient.hematologicalExamination.K = di_K.Value;
+            Conf.currentPatient.hematologicalExamination.Na = di_Na.Value;
+            Conf.currentPatient.hematologicalExamination.Cl = di_Cl.Value;
+            Conf.currentPatient.hematologicalExamination.Ca = di_Ca.Value;
+            Conf.currentPatient.hematologicalExamination.P = di_P.Value;
+
+        }
+
+
     }
 }

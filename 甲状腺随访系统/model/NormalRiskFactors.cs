@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace 甲状腺随访系统.model
+namespace 甲状腺随访系统.MODEL
 {
     public class NormalRiskFactors
     {

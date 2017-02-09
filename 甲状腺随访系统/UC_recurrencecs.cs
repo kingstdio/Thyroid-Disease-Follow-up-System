@@ -84,6 +84,28 @@ namespace 甲状腺随访系统
             tb_lymphadenLoc.Text = Conf.currentPatient.recurrencecs.lymphadenlocation;
             tb_lymphadenSize.Text = Conf.currentPatient.recurrencecs.lymphadensize;
         }
+        void InsertData(object obj, EventArgs args)
+        {
+            //复发检查
+            Conf.currentPatient.recurrencecs.TG = tb_TG.Text;
+            Conf.currentPatient.recurrencecs.TGAB = tb_TGAB.Text;
+            Conf.currentPatient.recurrencecs.CEA = tb_CEA.Text;
+            Conf.currentPatient.recurrencecs.calcitonin = tb_calcitonin.Text;
 
+            Conf.currentPatient.recurrencecs.CT = tb_CT.Text;
+            Conf.currentPatient.recurrencecs.MRI = tb_MRI.Text;
+            Conf.currentPatient.recurrencecs.I131 = tb_I131.Text;
+            Conf.currentPatient.recurrencecs.PETCT = tb_PET.Text;
+
+            Conf.currentPatient.recurrencecs.FNA = tb_FNA.Text;
+            Conf.currentPatient.recurrencecs.braf = switch_braf.Value;
+            Conf.currentPatient.recurrencecs.TGeluant = tb_TGEluant.Text;
+
+            Conf.currentPatient.recurrencecs.tumorlocation = tb_location.Text;
+            Conf.currentPatient.recurrencecs.tumorsize = tb_size.Text;
+
+            Conf.currentPatient.recurrencecs.lymphadenlocation = tb_lymphadenLoc.Text;
+            Conf.currentPatient.recurrencecs.lymphadensize = tb_lymphadenSize.Text;
+        }
     }
 }

@@ -14,11 +14,6 @@ namespace 甲状腺随访系统.MODEL
         public Double TSH { get; set; }
 
         /// <summary>
-        /// Tg洗脱液
-        /// </summary>
-        public Double lymphnodestg { get; set; }
-
-        /// <summary>
         /// ATG
         /// </summary>
         public Double ATG { get; set; }

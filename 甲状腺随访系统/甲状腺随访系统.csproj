@@ -61,6 +61,8 @@
   <ItemGroup>
     <Compile Include="Conf.cs" />
     <Compile Include="CONTROL\RefreshPatient.cs" />
+    <Compile Include="DAO\DeletePatient.cs" />
+    <Compile Include="DAO\InsertPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
     <Compile Include="F_patientChoose.cs">

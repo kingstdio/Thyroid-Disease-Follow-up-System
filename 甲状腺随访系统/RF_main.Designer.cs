@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RF_main));
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.bt_save = new DevComponents.DotNetBar.ButtonX();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_recurrencecs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
@@ -74,6 +75,7 @@
             this.lb_idcard = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -125,6 +127,8 @@
             // ribbonPanel1
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.buttonX1);
+            this.ribbonPanel1.Controls.Add(this.bt_save);
             this.ribbonPanel1.Controls.Add(this.ribbonBar8);
             this.ribbonPanel1.Controls.Add(this.ribbonBar7);
             this.ribbonPanel1.Controls.Add(this.ribbonBar6);
@@ -149,6 +153,18 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            // 
+            // bt_save
+            // 
+            this.bt_save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_save.Location = new System.Drawing.Point(1275, 49);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(92, 30);
+            this.bt_save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_save.TabIndex = 7;
+            this.bt_save.Text = "保存";
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // ribbonBar8
             // 
@@ -471,7 +487,7 @@
             // styleManager1
             // 
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
             // 
             // panEX_main
             // 
@@ -485,7 +501,6 @@
             this.panEX_main.Size = new System.Drawing.Size(1408, 661);
             this.panEX_main.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panEX_main.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panEX_main.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
             this.panEX_main.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panEX_main.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.panEX_main.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
@@ -527,7 +542,6 @@
             this.panelEx1.Size = new System.Drawing.Size(1408, 99);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
             this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
@@ -541,8 +555,8 @@
             // 
             this.tb_hosno.Border.Class = "TextBoxBorder";
             this.tb_hosno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosno.DisabledBackColor = System.Drawing.Color.White;
             this.tb_hosno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_hosno.ForeColor = System.Drawing.Color.Maroon;
             this.tb_hosno.Location = new System.Drawing.Point(111, 18);
             this.tb_hosno.Name = "tb_hosno";
             this.tb_hosno.PreventEnterBeep = true;
@@ -560,8 +574,8 @@
             // 
             this.tb_FUNear.Border.Class = "TextBoxBorder";
             this.tb_FUNear.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_FUNear.DisabledBackColor = System.Drawing.Color.White;
             this.tb_FUNear.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_FUNear.ForeColor = System.Drawing.Color.Maroon;
             this.tb_FUNear.Location = new System.Drawing.Point(1175, 56);
             this.tb_FUNear.Name = "tb_FUNear";
             this.tb_FUNear.PreventEnterBeep = true;
@@ -579,8 +593,8 @@
             // 
             this.tb_hosoutdate.Border.Class = "TextBoxBorder";
             this.tb_hosoutdate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosoutdate.DisabledBackColor = System.Drawing.Color.White;
             this.tb_hosoutdate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_hosoutdate.ForeColor = System.Drawing.Color.Maroon;
             this.tb_hosoutdate.Location = new System.Drawing.Point(909, 56);
             this.tb_hosoutdate.Name = "tb_hosoutdate";
             this.tb_hosoutdate.PreventEnterBeep = true;
@@ -598,8 +612,8 @@
             // 
             this.tb_FUTimes.Border.Class = "TextBoxBorder";
             this.tb_FUTimes.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_FUTimes.DisabledBackColor = System.Drawing.Color.White;
             this.tb_FUTimes.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_FUTimes.ForeColor = System.Drawing.Color.Maroon;
             this.tb_FUTimes.Location = new System.Drawing.Point(1175, 18);
             this.tb_FUTimes.Name = "tb_FUTimes";
             this.tb_FUTimes.PreventEnterBeep = true;
@@ -617,8 +631,8 @@
             // 
             this.tb_hosindate.Border.Class = "TextBoxBorder";
             this.tb_hosindate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_hosindate.DisabledBackColor = System.Drawing.Color.White;
             this.tb_hosindate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_hosindate.ForeColor = System.Drawing.Color.Maroon;
             this.tb_hosindate.Location = new System.Drawing.Point(909, 18);
             this.tb_hosindate.Name = "tb_hosindate";
             this.tb_hosindate.PreventEnterBeep = true;
@@ -636,8 +650,8 @@
             // 
             this.tb_birthday.Border.Class = "TextBoxBorder";
             this.tb_birthday.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_birthday.DisabledBackColor = System.Drawing.Color.White;
             this.tb_birthday.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_birthday.ForeColor = System.Drawing.Color.Maroon;
             this.tb_birthday.Location = new System.Drawing.Point(643, 57);
             this.tb_birthday.Name = "tb_birthday";
             this.tb_birthday.PreventEnterBeep = true;
@@ -655,8 +669,8 @@
             // 
             this.tb_phone.Border.Class = "TextBoxBorder";
             this.tb_phone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_phone.DisabledBackColor = System.Drawing.Color.White;
             this.tb_phone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_phone.ForeColor = System.Drawing.Color.Maroon;
             this.tb_phone.Location = new System.Drawing.Point(643, 18);
             this.tb_phone.Name = "tb_phone";
             this.tb_phone.PreventEnterBeep = true;
@@ -674,8 +688,8 @@
             // 
             this.tb_idcard.Border.Class = "TextBoxBorder";
             this.tb_idcard.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_idcard.DisabledBackColor = System.Drawing.Color.White;
             this.tb_idcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_idcard.ForeColor = System.Drawing.Color.Maroon;
             this.tb_idcard.Location = new System.Drawing.Point(377, 58);
             this.tb_idcard.Name = "tb_idcard";
             this.tb_idcard.PreventEnterBeep = true;
@@ -693,8 +707,8 @@
             // 
             this.tb_sex.Border.Class = "TextBoxBorder";
             this.tb_sex.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_sex.DisabledBackColor = System.Drawing.Color.White;
             this.tb_sex.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_sex.ForeColor = System.Drawing.Color.Maroon;
             this.tb_sex.Location = new System.Drawing.Point(111, 57);
             this.tb_sex.Name = "tb_sex";
             this.tb_sex.PreventEnterBeep = true;
@@ -768,8 +782,8 @@
             // 
             this.tb_name.Border.Class = "TextBoxBorder";
             this.tb_name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_name.DisabledBackColor = System.Drawing.Color.White;
             this.tb_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_name.ForeColor = System.Drawing.Color.Maroon;
             this.tb_name.Location = new System.Drawing.Point(377, 18);
             this.tb_name.Name = "tb_name";
             this.tb_name.PreventEnterBeep = true;
@@ -864,6 +878,18 @@
             this.labelX1.Text = "姓名：";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(1275, 13);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(92, 30);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 8;
+            this.buttonX1.Text = "删除患者";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // RF_main
             // 
             this.ClientSize = new System.Drawing.Size(1418, 818);
@@ -929,6 +955,8 @@
         private DevComponents.DotNetBar.Controls.TextBoxX tb_FUTimes;
         private DevComponents.DotNetBar.LabelX lb_FUNear;
         private DevComponents.DotNetBar.LabelX lb_FUTimes;
+        private DevComponents.DotNetBar.ButtonX bt_save;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
 
     }
 }

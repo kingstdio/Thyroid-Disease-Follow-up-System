@@ -78,6 +78,7 @@ namespace 甲状腺随访系统
             }
         }
 
+
         public static SqlDataReader ExecuteReader(string sql, params SqlParameter[] parameters)
         {
             using (SqlConnection conn = new SqlConnection(connstr))
@@ -91,9 +92,16 @@ namespace 甲状腺随访系统
                         cmd.Parameters.Add(parameter);
                     }
                     return cmd.ExecuteReader();
+                 
                 }
             }
         }
+
+
+
+
+
+
 
         #region 判断一个表是否存在
         /// <summary>

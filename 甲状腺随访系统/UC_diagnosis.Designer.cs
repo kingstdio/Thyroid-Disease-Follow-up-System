@@ -228,9 +228,9 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel2);
             this.sideNav1.Controls.Add(this.sideNavPanel5);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Controls.Add(this.sideNavPanel2);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -292,7 +292,7 @@
             this.sideNavPanel5.Name = "sideNavPanel5";
             this.sideNavPanel5.Size = new System.Drawing.Size(1294, 531);
             this.sideNavPanel5.TabIndex = 30;
-            this.sideNavPanel5.Visible = false;
+            this.sideNavPanel5.Leave += new System.EventHandler(this.InsertData);
             // 
             // di_Cl
             // 
@@ -895,6 +895,7 @@
             this.sideNavPanel1.Size = new System.Drawing.Size(1294, 531);
             this.sideNavPanel1.TabIndex = 2;
             this.sideNavPanel1.Visible = false;
+            this.sideNavPanel1.Leave += new System.EventHandler(this.InsertData);
             // 
             // cbe_braf1
             // 
@@ -1464,6 +1465,8 @@
             this.sideNavPanel2.Name = "sideNavPanel2";
             this.sideNavPanel2.Size = new System.Drawing.Size(1294, 531);
             this.sideNavPanel2.TabIndex = 46;
+            this.sideNavPanel2.Visible = false;
+            this.sideNavPanel2.Leave += new System.EventHandler(this.InsertData);
             // 
             // cbe_UC
             // 
@@ -2110,7 +2113,6 @@
             // 
             // sideNavItem3
             // 
-            this.sideNavItem3.Checked = true;
             this.sideNavItem3.Name = "sideNavItem3";
             this.sideNavItem3.Panel = this.sideNavPanel2;
             this.sideNavItem3.Symbol = "";
@@ -2146,6 +2148,7 @@
             // 
             // sideNavItem6
             // 
+            this.sideNavItem6.Checked = true;
             this.sideNavItem6.Name = "sideNavItem6";
             this.sideNavItem6.Panel = this.sideNavPanel5;
             this.sideNavItem6.Symbol = "58274";
