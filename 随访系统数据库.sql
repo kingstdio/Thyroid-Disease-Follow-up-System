@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[PCbilateralcancer] [bit] NULL,					--双侧癌
 	[PCcapsuleinvasion] [char](10) NULL,			--被膜侵犯
 	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
-	[PClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
+	[PClymphocytic。thyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
 	[PChypotype] [char](20) NULL,					--亚型
 	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
 	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
@@ -174,6 +174,25 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	)
 	GO
 
+CREATE TABLE [dbo].[tb_postOperative](
+	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NULL,								--患者编号
+	[euthyrox] [float] NULL,						--（药物治疗）优甲乐
+	[chemotherapy] [varchar](256) NULL,				--化疗方案及计量
+	[radiotherapy] [varchar](256) NULL,				--放疗方案及计量
+	[hoarseness] [char](10) NULL,					--（常规项）声音嘶哑
+	[dyspnea] [char](10) NULL,						--呼吸困难
+	[drinkchok] [char](10) NULL,					--饮水呛咳
+	[hyperspasmia] [char](10) NULL,					--抽搐
+	[galactorrhea] [bit] NULL,						--淋巴漏或乳漏
+	[infection] [bit] NULL,							--感染
+	[Bparalysis] [char](10) NULL,					--（术后声带B超）麻痹
+	[Bhypomotility] [char](10) NULL,				--运动减弱
+	[PLparalysis] [char](10) NULL,					--（术后喉镜）麻痹
+	[PLhypomotility] [char](10) NULL,				--运动减弱
+	[VocalChange] [char](10) NULL,				    --语调改变
+	[bleed] [bit] NULL,								--出血
+	
 CREATE TABLE [dbo].[tb_followUp](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace 甲状腺随访系统.model
+namespace 甲状腺随访系统.MODEL
 {
     public class FamilyHistory
     {
@@ -42,7 +42,7 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 是否有其它良性肿瘤
         /// </summary>
-        public int otherptumour { get; set; }
+        public bool otherptumour { get; set; }
 
         /// <summary>
         /// 其它良性肿瘤内容
@@ -52,7 +52,7 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 是否有家族甲状腺病史
         /// </summary>
-        public int familyhistory { get; set; }
+        public bool familyhistory { get; set; }
 
         /// <summary>
         /// 家族甲状腺病史内容

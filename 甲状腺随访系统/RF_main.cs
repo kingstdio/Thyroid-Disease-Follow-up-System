@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Threading;
 
 namespace 甲状腺随访系统
 {
@@ -66,6 +67,9 @@ namespace 甲状腺随访系统
             tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
             tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
             tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
+            tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
+            tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
+
            
            
         }
@@ -166,6 +170,30 @@ namespace 甲状腺随访系统
 
         private void panEX_main_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void bt_save_Click(object sender, EventArgs e)
+        {
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           DialogResult r1 = MessageBox.Show("确定要删除该患者吗？","",MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+            int result = (int)r1;
+            if(result == 1)
+            {
+                DAO.DeletePatient.DelPatient(Conf.currentPatient.id);
+                this.Dispose();
+                this.Close();
+                new Thread((ThreadStart)delegate
+                {
+                    Application.Run(new RF_main());
+                }).Start();
+                Conf.currentPatient.id = 0;
+            }
 
         }
 

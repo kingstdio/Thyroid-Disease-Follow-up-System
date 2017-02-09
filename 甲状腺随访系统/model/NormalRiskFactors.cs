@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace 甲状腺随访系统.model
+namespace 甲状腺随访系统.MODEL
 {
     public class NormalRiskFactors
     {
@@ -36,7 +36,7 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 正常分娩次数
         /// </summary>
-        public string deliverytimes { get; set; }
+        public int deliverytimes { get; set; }
 
         /// <summary>
         /// 是否绝经
@@ -66,11 +66,11 @@ namespace 甲状腺随访系统.model
         /// <summary>
         /// 体重
         /// </summary>
-        public int weight { get; set; }
+        public Double weight { get; set; }
 
         /// <summary>
         /// 体质指数
         /// </summary>
-        public float onstitutional { get; set; }
+        public Double constitutional { get; set; }
     }
 }

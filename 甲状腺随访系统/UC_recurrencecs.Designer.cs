@@ -30,7 +30,7 @@
         {
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.switchButton2 = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.switch_braf = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.tb_lymphadenSize = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_lymphadenLoc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_lymphadenLoc = new DevComponents.DotNetBar.LabelX();
@@ -83,9 +83,9 @@
             // 
             // sideNav1
             // 
-            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
@@ -101,7 +101,7 @@
             // 
             // sideNavPanel1
             // 
-            this.sideNavPanel1.Controls.Add(this.switchButton2);
+            this.sideNavPanel1.Controls.Add(this.switch_braf);
             this.sideNavPanel1.Controls.Add(this.tb_lymphadenSize);
             this.sideNavPanel1.Controls.Add(this.tb_lymphadenLoc);
             this.sideNavPanel1.Controls.Add(this.lb_lymphadenLoc);
@@ -152,22 +152,23 @@
             this.sideNavPanel1.TabIndex = 60;
             this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel1_Paint);
+            this.sideNavPanel1.Leave += new System.EventHandler(this.InsertData);
             // 
-            // switchButton2
+            // switch_braf
             // 
             // 
             // 
             // 
-            this.switchButton2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switchButton2.Location = new System.Drawing.Point(666, 278);
-            this.switchButton2.Name = "switchButton2";
-            this.switchButton2.OffText = "否";
-            this.switchButton2.OnText = "是";
-            this.switchButton2.Size = new System.Drawing.Size(121, 26);
-            this.switchButton2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchButton2.SwitchWidth = 60;
-            this.switchButton2.TabIndex = 10;
+            this.switch_braf.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switch_braf.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switch_braf.Location = new System.Drawing.Point(666, 278);
+            this.switch_braf.Name = "switch_braf";
+            this.switch_braf.OffText = "否";
+            this.switch_braf.OnText = "是";
+            this.switch_braf.Size = new System.Drawing.Size(121, 26);
+            this.switch_braf.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switch_braf.SwitchWidth = 60;
+            this.switch_braf.TabIndex = 10;
             // 
             // tb_lymphadenSize
             // 
@@ -850,6 +851,6 @@
         private DevComponents.DotNetBar.LabelX lb_lymphadenLoc;
         private DevComponents.DotNetBar.LabelX lb_lymphadenSize;
         private DevComponents.DotNetBar.LabelX lb_lymphaden;
-        private DevComponents.DotNetBar.Controls.SwitchButton switchButton2;
+        private DevComponents.DotNetBar.Controls.SwitchButton switch_braf;
     }
 }
