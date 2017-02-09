@@ -13,7 +13,7 @@ namespace 甲状腺随访系统
 {
     public partial class UC_followUp : UserControl
     {
-        DataSet ds = new DataSet();
+        DataSet ds;
         SqlDataAdapter da;
         SqlConnection conn = new SqlConnection(SQLHELPER.connstr);
         public UC_followUp()
@@ -24,8 +24,7 @@ namespace 甲状腺随访系统
 
         void fillUI(object obj, EventArgs args)
         {
-            Console.WriteLine("追踪病人id测试");
-            Console.WriteLine(Conf.currentPatient.id);
+           
             //追踪
             dti_DLC.Value = Conf.currentPatient.followUp.lastconnect;
             cbe_VS.SelectedIndex = cbe_VS.FindString(Conf.currentPatient.followUp.vitalstatus);
@@ -34,18 +33,20 @@ namespace 甲状腺随访系统
             cbe_LDM.SelectedIndex = cbe_LDM.FindString(Conf.currentPatient.followUp.distantmetastasislocation);
             dti_DD.Value = Conf.currentPatient.followUp.deathdate;
             cbe_CD.SelectedIndex = cbe_CD.FindString(Conf.currentPatient.followUp.deathcause);
-         
+            
             conn.Open();
        
             SqlCommand com = conn.CreateCommand();
             com.CommandText = "select t.id,t.pid,t.Vdate,t.TSH,t.FT3,t.FT4,t.TPO,t.PTH,t.ATG,t.TG,t.TGAb,t.Ca,t.P,t.euthyrox,t.Cadosage,t.sideeffect,t.others from tb_visit t where pid=@id";
             com.Parameters.Add(new SqlParameter("@id", Conf.currentPatient.id));
             da = new SqlDataAdapter(com);
+            ds = new DataSet();
             da.Fill(ds);
             
 
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             da.Update(ds);
+            //this.sgc_visit.PrimaryGrid.Rows.Clear(); 
             this.sgc_visit.PrimaryGrid.DataSource = ds.Tables[0];
 
             

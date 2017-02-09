@@ -12,7 +12,7 @@ namespace 甲状腺随访系统
 {
     public partial class UC_postOperative : UserControl
     {
-        DataSet ds = new DataSet();
+        DataSet ds;
         DataSet Radiods = new DataSet();
         SqlDataAdapter da, Radioda;
         SqlConnection conn = new SqlConnection(SQLHELPER.connstr);
@@ -66,6 +66,7 @@ namespace 甲状腺随访系统
             com.CommandText = "select * from tb_inspectionAfterSurgery t where pid=@id";
             com.Parameters.Add(new SqlParameter("@id", Conf.currentPatient.id));
             da = new SqlDataAdapter(com);
+            ds = new DataSet();
             da.Fill(ds);
 
 
@@ -79,6 +80,7 @@ namespace 甲状腺随访系统
             Radiocom.CommandText = "select * from tb_radioactiveIodine t where pid=@id";
             Radiocom.Parameters.Add(new SqlParameter("@id", Conf.currentPatient.id));
             Radioda = new SqlDataAdapter(Radiocom);
+            Radiods = new DataSet();
             Radioda.Fill(Radiods);
 
 
