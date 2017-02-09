@@ -21,7 +21,7 @@ CREATE TABLE [dbo].[tb_patientInfo](
 	[deliverytimes] [int] NULL,						--正常分娩次数
 	[menopause] [bit] NULL,							--是否绝经
 	[smoke] [bit] NULL,								--是否吸烟
-	[drink] [bit](10) NULL,							--是否饮酒
+	[drink] [bit] NULL,								--是否饮酒
 	[occupation] [varchar](50) NULL,				--职业
 	[height] [int] NULL,							--身高
 	[weight] [float] NULL,							--体重
@@ -57,8 +57,8 @@ CREATE TABLE [dbo].[tb_diagnosis](
 	[part] [varchar](50) NULL,						--部
 	[tdlymphnodemetastisis] [bit] NULL,				--淋巴结转移
 	[remark] [varchar](256) NULL,					--备注（区）
-	[ucthyroidcancer] [bit] NULL,					--（超声造影）是否考虑为甲状腺癌
-	[elasticimpactrating] [float] NULL,				--弹性影响评分
+	[ucthyroidcancer] [varchar](10) NULL,			--（超声造影）是否考虑为甲状腺癌
+	[elasticimpactrating] [varchar](10) NULL,		--弹性影响评分
 	[ctthyroidcancer] [bit] NULL,					--（CT/MRI）是否考虑为甲状腺癌
 	[ctlymphnodemetastisis] [bit] NULL,				--是否考虑为淋巴结转移
 	[laryngoscope] [varchar](10) NULL,				--（术前喉镜）喉镜情况
@@ -156,7 +156,7 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[RLNM] [varchar](10) NULL,						--区域淋巴转移N
 	[distantmetastasis] [varchar](10) NULL,			--远处转移M
 	[PTNM] [varchar](10) NULL,						--PTNM分期
-	[otherthyroidcancer] [varchar](20) NULL,		--其它甲状腺癌
+	[otherthyroidcancer] [varchar](50) NULL,		--其它甲状腺癌
 	[melecularneuropathology] [bit] NULL,			--分子病理
 	[TGT] [varchar](10) NULL,						--（免疫组化）TGT/TG
 	[CK] [varchar](10) NULL,						--CK
@@ -176,7 +176,7 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 
 CREATE TABLE [dbo].[tb_postOperative](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
-	[pid] [int] NULL,								--患者编号
+	[pid] [int] NOT NULL,								--患者编号
 	[euthyrox] [float] NULL,						--（药物治疗）优甲乐
 	[chemotherapy] [varchar](256) NULL,				--化疗方案及计量
 	[radiotherapy] [varchar](256) NULL,				--放疗方案及计量
@@ -211,6 +211,7 @@ CREATE TABLE [dbo].[tb_followUp](
 
 CREATE TABLE [dbo].[tb_recurrencecs](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[pid] [int] NOT NULL,							--患者编号
 	[TG] [varchar](50) NULL,						--（血清学指标）TG
 	[TGAB] [varchar](50) NULL,						--TGAB
 	[CEA] [varchar](50) NULL,						--CEA
@@ -236,7 +237,7 @@ CREATE TABLE [dbo].[tb_inspectionAfterSurgery](
 	[PTH] [float] NULL,								--PTH
 	[Ca] [float] NULL,								--Ca
 	[P] [float] NULL,								--P
-	[AP] [float] NULL,				--碱性磷酸酶
+	[AP] [float] NULL,								--碱性磷酸酶
 	[D] [float] NULL,								--25-强及维生素D
 	[D2] [float] NULL,								--D2
 	[D3] [float] NULL,								--D3
