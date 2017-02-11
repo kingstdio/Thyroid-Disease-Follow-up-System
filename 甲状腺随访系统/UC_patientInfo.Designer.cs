@@ -15,6 +15,7 @@
         {
             if (disposing && (components != null))
             {
+                this.ActiveControl.KeyPress +=new System.Windows.Forms.KeyPressEventHandler(InsertData); 
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -214,9 +215,9 @@
             // 
             this.snav_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel1);
             this.snav_patientInfo.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sni_menu,
@@ -262,8 +263,8 @@
             this.sideNavPanel5.Name = "sideNavPanel5";
             this.sideNavPanel5.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel5.TabIndex = 21;
-            this.sideNavPanel5.Visible = false;
-            this.sideNavPanel5.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel5.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel5.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // switch_otherptumour
             // 
@@ -581,7 +582,8 @@
             this.sideNavPanel4.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel4.TabIndex = 17;
             this.sideNavPanel4.Visible = false;
-            this.sideNavPanel4.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel4.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel4.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // labelX33
             // 
@@ -1233,7 +1235,9 @@
             this.sideNavPanel3.Name = "sideNavPanel3";
             this.sideNavPanel3.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel3.TabIndex = 13;
-            this.sideNavPanel3.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel3.Visible = false;
+            this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // cbe_resident
             // 
@@ -1750,7 +1754,8 @@
             this.sideNavPanel1.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel1.TabIndex = 47;
             this.sideNavPanel1.Visible = false;
-            this.sideNavPanel1.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // dti_age
             // 
@@ -2300,7 +2305,6 @@
             // 
             // sideNavItem1
             // 
-            this.sideNavItem1.Checked = true;
             this.sideNavItem1.Name = "sideNavItem1";
             this.sideNavItem1.Panel = this.sideNavPanel3;
             this.sideNavItem1.Symbol = "57344";
@@ -2337,6 +2341,7 @@
             // 
             // sideNavItem3
             // 
+            this.sideNavItem3.Checked = true;
             this.sideNavItem3.Name = "sideNavItem3";
             this.sideNavItem3.Panel = this.sideNavPanel5;
             this.sideNavItem3.Symbol = "57346";

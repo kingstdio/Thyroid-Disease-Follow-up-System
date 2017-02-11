@@ -16,11 +16,18 @@ namespace 甲状腺随访系统.DAO
       
             try
             {
-                string sql = "delete tb_patientInfo where id =@id;delete tb_diagnosis where id =@id;delete tb_surgeryHistory where id =@id;delete tb_postOperative where id =@id;delete tb_followUp where id =@id;delete tb_recurrencecs where id =@id;delete tb_visit where pid=@id;delete tb_inspectionAfterSurgery where pid=@id;delete tb_radioactiveIodine where pid=@id;";
-                SqlParameter[] param = { new SqlParameter("@id", pid) };
-                SQLHELPER.ExecuteNoneQuery(sql, param);
-                MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
-                
+                if (pid == 0)
+                {
+                    MessageBox.Show("没有可删除病患！");
+                }
+                else
+                {
+
+                    string sql = "delete tb_patientInfo where id =@id;delete tb_diagnosis where id =@id;delete tb_surgeryHistory where id =@id;delete tb_postOperative where id =@id;delete tb_followUp where id =@id;delete tb_recurrencecs where id =@id;delete tb_visit where pid=@id;delete tb_inspectionAfterSurgery where pid=@id;delete tb_radioactiveIodine where pid=@id;";
+                    SqlParameter[] param = { new SqlParameter("@id", pid) };
+                    SQLHELPER.ExecuteNoneQuery(sql, param);
+                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                }
             }
             catch (Exception ex)
             {

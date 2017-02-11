@@ -106,6 +106,17 @@ namespace 甲状腺随访系统
 
             Conf.currentPatient.recurrencecs.lymphadenlocation = tb_lymphadenLoc.Text;
             Conf.currentPatient.recurrencecs.lymphadensize = tb_lymphadenSize.Text;
+
+            
         }
+
+
+
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+
+
     }
 }

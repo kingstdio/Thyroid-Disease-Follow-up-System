@@ -51,8 +51,34 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
+
+            
         }
         #endregion 
+
+
+
+        protected override void WndProc(ref Message msg)
+        {
+            //Windows系统消息，winuser.h文件中有WM_...的定义 
+            //十六进制数字，0x是前导符后面是真正的数字 
+            const int WM_SYSCOMMAND = 0x0112;
+            //winuser.h文件中有SC_...的定义 
+            const int SC_CLOSE = 0xF060;
+            if (msg.Msg == WM_SYSCOMMAND && ((int)msg.WParam == SC_CLOSE))
+            {
+                // 点击winform右上关闭按钮 
+                
+               
+                DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+              
+            }
+            base.WndProc(ref msg);
+        }  
+
+
+
+
 
         #region 更新功能面板事件
         /// <summary>

@@ -11,10 +11,12 @@ namespace 甲状腺随访系统
 {
     public partial class UC_diagnosis : UserControl
     {
+       
         public UC_diagnosis()
-        {
+        {      
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
+            
         }
 
  
@@ -85,7 +87,8 @@ namespace 甲状腺随访系统
 
         }
 
-        void InsertData(object sender, EventArgs e)
+
+        public void InsertData(object sender, EventArgs e)
         {
             //影像学检查
             Conf.currentPatient.imageExamination.tirads = cbe_TI.Text;
@@ -133,8 +136,15 @@ namespace 甲状腺随访系统
             Conf.currentPatient.hematologicalExamination.Ca = di_Ca.Value;
             Conf.currentPatient.hematologicalExamination.P = di_P.Value;
 
+            //DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+
         }
 
 
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+    
     }
 }

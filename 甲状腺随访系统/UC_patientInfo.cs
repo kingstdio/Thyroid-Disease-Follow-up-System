@@ -165,11 +165,19 @@ namespace 甲状腺随访系统
             Conf.currentPatient.familyHistory.othernoptumourtext = tb_otherptt.Text;
             Conf.currentPatient.familyHistory.familyhistory = switch_familyhistory.Value;
             Conf.currentPatient.familyHistory.familyhistorytext = tb_fht.Text;
+         ;
+            
+
+
         }
 
 
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
 
 
-
+         
     }
 }

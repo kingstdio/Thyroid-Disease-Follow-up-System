@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DevComponents.DotNetBar.SuperGrid;
 
 namespace 甲状腺随访系统
 {
@@ -58,7 +59,7 @@ namespace 甲状腺随访系统
             cbe_VocalChange.SelectedIndex = cbe_VocalChange.FindString(Conf.currentPatient.complication.VocalChange);
             switch_bleed.Value = Conf.currentPatient.complication.bleed;
             
-            dgv_radio.DataSource = DAO.PatientInfo.getRadioactiveIodine(Conf.currentPatient.id);
+            //dgv_radio.DataSource = DAO.PatientInfo.getRadioactiveIodine(Conf.currentPatient.id);
 
             conn.Open();
             //术后检查
@@ -72,7 +73,7 @@ namespace 甲状腺随访系统
 
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             da.Update(ds);
-            this.dgv_inspect.DataSource = ds.Tables[0];
+            this.sgc_inspect.PrimaryGrid.DataSource = ds.Tables[0];
 
             //碘治疗
 
@@ -86,7 +87,7 @@ namespace 甲状腺随访系统
 
             SqlCommandBuilder Radiobuilder = new SqlCommandBuilder(Radioda);
             Radioda.Update(Radiods);
-            this.dgv_radio.DataSource = Radiods.Tables[0];
+            this.sgc_radio.PrimaryGrid.DataSource = Radiods.Tables[0];
             conn.Close();
 
 
@@ -112,11 +113,68 @@ namespace 甲状腺随访系统
             Conf.currentPatient.complication.PLhypomotility = cbe_PLhypomotility.Text;
             Conf.currentPatient.complication.VocalChange = cbe_VocalChange.Text;
             Conf.currentPatient.complication.bleed = switch_bleed.Value;
+            
+
+          
+
+          
+
 
         }
-        //术后检测
-        void Update_Click(object sender, EventArgs e)
+
+     
+        private void sgc_inspect_RowDeleted(object sender, DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs e)
         {
+            Console.WriteLine("测试Delete键");
+
+            foreach (GridRow item in this.sgc_inspect.PrimaryGrid.DeletedRows)
+            {
+                //sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
+                Console.WriteLine("测试foreach");
+                try
+                {
+                    Console.WriteLine("测试try键");
+                    ds.Tables[0].Rows[item.Index].Delete();
+                    da.Update(ds.Tables[0]);//以数据集的表更新数据库
+                    ds.Tables[0].AcceptChanges();//接受对数据的修改
+                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //出现异常提示更新失败
+                }
+            }
+        }
+
+        private void sgc_radio_RowDeleted(object sender, GridRowDeletedEventArgs e)
+        {
+            Console.WriteLine("测试Delete键");
+
+            foreach (GridRow item in this.sgc_radio.PrimaryGrid.DeletedRows)
+            {
+                //sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
+                Console.WriteLine("测试foreach");
+                try
+                {
+                    Console.WriteLine("测试try键");
+                    Radiods.Tables[0].Rows[item.Index].Delete();
+                    Radioda.Update(Radiods.Tables[0]);//以数据集的表更新数据库
+                    Radiods.Tables[0].AcceptChanges();//接受对数据的修改
+                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //出现异常提示更新失败
+                }
+            }
+        }
+
+
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+            //更新inspect表
             if (ds.HasChanges())//如果数据集因我们对datagridview的操作发生改变
             {
                 try//捕获异常
@@ -138,31 +196,9 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
-        }
 
-        private void Delete_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("删除测试");
 
-            int delRowIndex = dgv_inspect.CurrentRow.Index;
-            this.dgv_inspect.Rows.RemoveAt(delRowIndex);
-                try
-                {
-                    da.Update(ds.Tables[0]);//以数据集的表更新数据库
-                    ds.Tables[0].AcceptChanges();//接受对数据的修改
-                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //出现异常提示更新失败
-                }
-            
-
-        }
-        //碘治疗
-        void UpdateRadio_Click(object sender, EventArgs e)
-        {
+            //更新radio表
             if (Radiods.HasChanges())//如果数据集因我们对datagridview的操作发生改变
             {
                 try//捕获异常
@@ -175,7 +211,7 @@ namespace 甲状腺随访系统
                     }
 
                     Radioda.Update(Radiods.Tables[0]);//以数据集的表更新数据库
-                   Radiods.Tables[0].AcceptChanges();//接受对数据的修改
+                    Radiods.Tables[0].AcceptChanges();//接受对数据的修改
                     MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
                 }
                 catch (Exception ex)
@@ -184,31 +220,10 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
+
+
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
-
-        private void DeleteRadio_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("删除测试");
-
-            int delRowIndex = dgv_inspect.CurrentRow.Index;
-            this.dgv_radio.Rows.RemoveAt(delRowIndex);
-            try
-            {
-                Radioda.Update(Radiods.Tables[0]);//以数据集的表更新数据库
-                Radiods.Tables[0].AcceptChanges();//接受对数据的修改
-                MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //出现异常提示更新失败
-            }
-
-
-        }
-
-
-
 
 
 

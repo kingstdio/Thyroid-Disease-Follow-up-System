@@ -29,25 +29,6 @@
         private void InitializeComponent()
         {
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
-            this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.sgc_visit = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.VDate = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.TSH = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.FT3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.FT4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.TPO = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.PTH = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.ATG = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.TG = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.TGAb = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.Ca = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.P = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.euthyrox = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.Cadosage = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.sideeffect = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.others = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.id = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.pid = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cbe_DM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -80,6 +61,25 @@
             this.lb_DM = new DevComponents.DotNetBar.LabelX();
             this.lb_VS = new DevComponents.DotNetBar.LabelX();
             this.lb_DLC = new DevComponents.DotNetBar.LabelX();
+            this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.sgc_visit = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.VDate = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.TSH = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.FT3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.FT4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.TPO = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.PTH = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.ATG = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.TG = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.TGAb = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.Ca = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.P = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.euthyrox = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.Cadosage = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.sideeffect = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.others = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.id = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.pid = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator3 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem4 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -117,15 +117,13 @@
             this.lb_FT4 = new DevComponents.DotNetBar.LabelX();
             this.lb_FT3 = new DevComponents.DotNetBar.LabelX();
             this.lb_TSH = new DevComponents.DotNetBar.LabelX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.sideNav1.SuspendLayout();
-            this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_dismetadate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).BeginInit();
+            this.sideNavPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).BeginInit();
             this.SuspendLayout();
@@ -135,8 +133,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator3,
@@ -151,149 +149,6 @@
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
             // 
-            // sideNavPanel3
-            // 
-            this.sideNavPanel3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.sideNavPanel3.Controls.Add(this.sgc_visit);
-            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel3.Location = new System.Drawing.Point(96, 36);
-            this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1312, 529);
-            this.sideNavPanel3.TabIndex = 10;
-            // 
-            // sgc_visit
-            // 
-            this.sgc_visit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sgc_visit.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgc_visit.Location = new System.Drawing.Point(-12, 0);
-            this.sgc_visit.Name = "sgc_visit";
-            // 
-            // 
-            // 
-            this.sgc_visit.PrimaryGrid.AllowRowDelete = true;
-            this.sgc_visit.PrimaryGrid.AllowRowInsert = true;
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.VDate);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.TSH);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.FT3);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.FT4);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.TPO);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.PTH);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.ATG);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.TG);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.TGAb);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.Ca);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.P);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.euthyrox);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.Cadosage);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.sideeffect);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.others);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.id);
-            this.sgc_visit.PrimaryGrid.Columns.Add(this.pid);
-            this.sgc_visit.PrimaryGrid.ShowInsertRow = true;
-            this.sgc_visit.PrimaryGrid.UseAlternateColumnStyle = true;
-            this.sgc_visit.PrimaryGrid.UseAlternateRowStyle = true;
-            this.sgc_visit.Size = new System.Drawing.Size(1332, 530);
-            this.sgc_visit.TabIndex = 1;
-            this.sgc_visit.Text = "superGridControl1";
-            // 
-            // VDate
-            // 
-            this.VDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl);
-            this.VDate.HeaderText = "随访日期";
-            this.VDate.Name = "Vdate";
-            this.VDate.Tag = "随访日期";
-            // 
-            // TSH
-            // 
-            this.TSH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TSH.Name = "TSH";
-            // 
-            // FT3
-            // 
-            this.FT3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.FT3.HeaderText = "FT3(pmol/L)";
-            this.FT3.Name = "FT3";
-            // 
-            // FT4
-            // 
-            this.FT4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.FT4.HeaderText = "FT4(pmol/L)";
-            this.FT4.Name = "FT4";
-            // 
-            // TPO
-            // 
-            this.TPO.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TPO.HeaderText = "TPO(IU/ml)";
-            this.TPO.Name = "TPO";
-            // 
-            // PTH
-            // 
-            this.PTH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.PTH.HeaderText = "PTH(pg/ml)";
-            this.PTH.Name = "PTH";
-            // 
-            // ATG
-            // 
-            this.ATG.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.ATG.HeaderText = "A-TG(IU/ml)";
-            this.ATG.Name = "ATG";
-            // 
-            // TG
-            // 
-            this.TG.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TG.HeaderText = "TG(IU/ml)";
-            this.TG.Name = "TG";
-            // 
-            // TGAb
-            // 
-            this.TGAb.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TGAb.HeaderText = "TG-Ab(IU/ml)";
-            this.TGAb.Name = "TGAb";
-            // 
-            // Ca
-            // 
-            this.Ca.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.Ca.HeaderText = "Ca(mol/l)";
-            this.Ca.Name = "Ca";
-            // 
-            // P
-            // 
-            this.P.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.P.HeaderText = "P(mmol/l)";
-            this.P.Name = "P";
-            // 
-            // euthyrox
-            // 
-            this.euthyrox.HeaderText = "优甲乐剂量";
-            this.euthyrox.Name = "euthyrox";
-            // 
-            // Cadosage
-            // 
-            this.Cadosage.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.Cadosage.HeaderText = "钙计量";
-            this.Cadosage.Name = "Cadosage";
-            // 
-            // sideeffect
-            // 
-            this.sideeffect.HeaderText = "副作用";
-            this.sideeffect.Name = "sideeffect";
-            // 
-            // others
-            // 
-            this.others.HeaderText = "其它症状";
-            this.others.Name = "others";
-            // 
-            // id
-            // 
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // pid
-            // 
-            this.pid.Name = "pid";
-            this.pid.Visible = false;
-            // 
             // sideNavPanel1
             // 
             this.sideNavPanel1.Controls.Add(this.groupPanel1);
@@ -302,8 +157,8 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1312, 529);
             this.sideNavPanel1.TabIndex = 2;
-            this.sideNavPanel1.Visible = false;
-            this.sideNavPanel1.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // groupPanel1
             // 
@@ -721,6 +576,151 @@
             this.lb_DLC.Text = "最后联系日期（Y/M/D):";
             this.lb_DLC.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
+            // sideNavPanel3
+            // 
+            this.sideNavPanel3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.sideNavPanel3.Controls.Add(this.sgc_visit);
+            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel3.Location = new System.Drawing.Point(96, 36);
+            this.sideNavPanel3.Name = "sideNavPanel3";
+            this.sideNavPanel3.Size = new System.Drawing.Size(1312, 529);
+            this.sideNavPanel3.TabIndex = 10;
+            this.sideNavPanel3.Visible = false;
+            // 
+            // sgc_visit
+            // 
+            this.sgc_visit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sgc_visit.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.sgc_visit.Location = new System.Drawing.Point(-12, 0);
+            this.sgc_visit.Name = "sgc_visit";
+            // 
+            // 
+            // 
+            this.sgc_visit.PrimaryGrid.AllowRowDelete = true;
+            this.sgc_visit.PrimaryGrid.AllowRowInsert = true;
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.VDate);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.TSH);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.FT3);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.FT4);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.TPO);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.PTH);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.ATG);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.TG);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.TGAb);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.Ca);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.P);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.euthyrox);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.Cadosage);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.sideeffect);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.others);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.id);
+            this.sgc_visit.PrimaryGrid.Columns.Add(this.pid);
+            this.sgc_visit.PrimaryGrid.ShowInsertRow = true;
+            this.sgc_visit.PrimaryGrid.UseAlternateColumnStyle = true;
+            this.sgc_visit.PrimaryGrid.UseAlternateRowStyle = true;
+            this.sgc_visit.Size = new System.Drawing.Size(1332, 530);
+            this.sgc_visit.TabIndex = 1;
+            this.sgc_visit.Text = "superGridControl1";
+            this.sgc_visit.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_visit_RowDeleted);
+            // 
+            // VDate
+            // 
+            this.VDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl);
+            this.VDate.HeaderText = "随访日期";
+            this.VDate.Name = "Vdate";
+            this.VDate.Tag = "随访日期";
+            // 
+            // TSH
+            // 
+            this.TSH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TSH.Name = "TSH";
+            // 
+            // FT3
+            // 
+            this.FT3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.FT3.HeaderText = "FT3(pmol/L)";
+            this.FT3.Name = "FT3";
+            // 
+            // FT4
+            // 
+            this.FT4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.FT4.HeaderText = "FT4(pmol/L)";
+            this.FT4.Name = "FT4";
+            // 
+            // TPO
+            // 
+            this.TPO.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TPO.HeaderText = "TPO(IU/ml)";
+            this.TPO.Name = "TPO";
+            // 
+            // PTH
+            // 
+            this.PTH.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.PTH.HeaderText = "PTH(pg/ml)";
+            this.PTH.Name = "PTH";
+            // 
+            // ATG
+            // 
+            this.ATG.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.ATG.HeaderText = "A-TG(IU/ml)";
+            this.ATG.Name = "ATG";
+            // 
+            // TG
+            // 
+            this.TG.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TG.HeaderText = "TG(IU/ml)";
+            this.TG.Name = "TG";
+            // 
+            // TGAb
+            // 
+            this.TGAb.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TGAb.HeaderText = "TG-Ab(IU/ml)";
+            this.TGAb.Name = "TGAb";
+            // 
+            // Ca
+            // 
+            this.Ca.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.Ca.HeaderText = "Ca(mol/l)";
+            this.Ca.Name = "Ca";
+            // 
+            // P
+            // 
+            this.P.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.P.HeaderText = "P(mmol/l)";
+            this.P.Name = "P";
+            // 
+            // euthyrox
+            // 
+            this.euthyrox.HeaderText = "优甲乐剂量";
+            this.euthyrox.Name = "euthyrox";
+            // 
+            // Cadosage
+            // 
+            this.Cadosage.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.Cadosage.HeaderText = "钙计量";
+            this.Cadosage.Name = "Cadosage";
+            // 
+            // sideeffect
+            // 
+            this.sideeffect.HeaderText = "副作用";
+            this.sideeffect.Name = "sideeffect";
+            // 
+            // others
+            // 
+            this.others.HeaderText = "其它症状";
+            this.others.Name = "others";
+            // 
+            // id
+            // 
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // pid
+            // 
+            this.pid.Name = "pid";
+            this.pid.Visible = false;
+            // 
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;
@@ -740,7 +740,6 @@
             // 
             // sideNavItem4
             // 
-            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";
@@ -758,6 +757,7 @@
             // 
             // sideNavItem2
             // 
+            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";
@@ -1295,47 +1295,21 @@
             this.lb_TSH.TabIndex = 13;
             this.lb_TSH.Text = "TSH uIU/ml:";
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(1274, 7);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 58;
-            this.buttonX1.Text = "保存更改";
-            this.buttonX1.Click += new System.EventHandler(this.Update_Click);
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(1184, 7);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(75, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 59;
-            this.buttonX2.Text = "删除该行";
-            this.buttonX2.Click += new System.EventHandler(this.Delete_Click);
-            // 
             // UC_followUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.sideNav1);
             this.Name = "UC_followUp";
             this.Size = new System.Drawing.Size(1416, 568);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
-            this.sideNavPanel3.ResumeLayout(false);
             this.sideNavPanel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_dismetadate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).EndInit();
+            this.sideNavPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).EndInit();
             this.ResumeLayout(false);
@@ -1431,8 +1405,6 @@
         private DevComponents.DotNetBar.SuperGrid.GridColumn others;
         private DevComponents.DotNetBar.Controls.SideNavItem sideNavItem4;
         private DevComponents.DotNetBar.Separator separator3;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.SuperGrid.GridColumn pid;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id;
 

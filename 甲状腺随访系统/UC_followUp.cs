@@ -62,11 +62,43 @@ namespace 甲状腺随访系统
             Conf.currentPatient.followUp.diatantmetasisdate = dti_dismetadate.Value;
             Conf.currentPatient.followUp.distantmetastasislocation = cbe_LDM.Text;
             Conf.currentPatient.followUp.deathdate = dti_DD.Value;
-            Conf.currentPatient.followUp.deathcause = cbe_CD.Text; 
+            Conf.currentPatient.followUp.deathcause = cbe_CD.Text;
+
+            
+            
         }
 
-        void Update_Click(object sender, EventArgs e)
+      
+
+        private void sgc_visit_RowDeleted(object sender, GridRowDeletedEventArgs e)
         {
+            Console.WriteLine("测试Delete键");
+
+            foreach (GridRow item in this.sgc_visit.PrimaryGrid.DeletedRows)
+            {
+                //sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
+                Console.WriteLine("测试foreach");
+                try
+                {
+                    Console.WriteLine("测试try键");
+                    ds.Tables[0].Rows[item.Index].Delete();
+                    da.Update(ds.Tables[0]);//以数据集的表更新数据库
+                    ds.Tables[0].AcceptChanges();//接受对数据的修改
+                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //出现异常提示更新失败
+                }
+            }
+             
+        }
+
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+
+            //离开时更新supergridcontrol
             if (ds.HasChanges())//如果数据集因我们对datagridview的操作发生改变
             {
                 try//捕获异常
@@ -88,30 +120,10 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
+
+
+
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
-
-        private void Delete_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("删除测试");
-            foreach (GridRow item in this.sgc_visit.PrimaryGrid.SelectedRows)
-            {
-                sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
-                ds.Tables[0].Rows[item.Index].Delete();
-                try
-                {
-                da.Update(ds.Tables[0]);//以数据集的表更新数据库
-                    ds.Tables[0].AcceptChanges();//接受对数据的修改
-                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //出现异常提示更新失败
-                }
-            }
-      
-        }
-
-
     }
 }

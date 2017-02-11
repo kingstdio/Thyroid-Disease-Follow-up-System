@@ -151,8 +151,8 @@
             this.sideNavPanel1.Size = new System.Drawing.Size(1315, 531);
             this.sideNavPanel1.TabIndex = 60;
             this.sideNavPanel1.Visible = false;
-            this.sideNavPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.sideNavPanel1_Paint);
-            this.sideNavPanel1.Leave += new System.EventHandler(this.InsertData);
+            this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // switch_braf
             // 

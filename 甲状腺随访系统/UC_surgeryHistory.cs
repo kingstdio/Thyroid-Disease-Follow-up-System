@@ -224,7 +224,16 @@ namespace 甲状腺随访系统
             Conf.currentPatient.otherThyrCarc.TTF1 = cbe_TTF.Text;
             Conf.currentPatient.otherThyrCarc.VEGF = tb_VEGF.Text;
             Conf.currentPatient.otherThyrCarc.others = tb_other.Text;
+
+           
         }
 
+        void RefreshDatabase(object sender, EventArgs e)
+        {
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+      
+
     }
+
 }

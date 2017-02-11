@@ -1,4 +1,7 @@
-﻿namespace 甲状腺随访系统
+﻿using System.Windows.Forms;
+using System;
+using System.Runtime.InteropServices;
+namespace 甲状腺随访系统
 {
     partial class RF_main
     {
@@ -13,6 +16,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -32,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RF_main));
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.bt_save = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_recurrencecs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
@@ -75,7 +79,6 @@
             this.lb_idcard = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -128,7 +131,6 @@
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel1.Controls.Add(this.buttonX1);
-            this.ribbonPanel1.Controls.Add(this.bt_save);
             this.ribbonPanel1.Controls.Add(this.ribbonBar8);
             this.ribbonPanel1.Controls.Add(this.ribbonBar7);
             this.ribbonPanel1.Controls.Add(this.ribbonBar6);
@@ -154,17 +156,17 @@
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
             // 
-            // bt_save
+            // buttonX1
             // 
-            this.bt_save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_save.Location = new System.Drawing.Point(1275, 49);
-            this.bt_save.Name = "bt_save";
-            this.bt_save.Size = new System.Drawing.Size(92, 30);
-            this.bt_save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_save.TabIndex = 7;
-            this.bt_save.Text = "保存";
-            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(1278, 31);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(92, 30);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 8;
+            this.buttonX1.Text = "删除患者";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // ribbonBar8
             // 
@@ -878,18 +880,6 @@
             this.labelX1.Text = "姓名：";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(1275, 13);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(92, 30);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 8;
-            this.buttonX1.Text = "删除患者";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
             // RF_main
             // 
             this.ClientSize = new System.Drawing.Size(1418, 818);
@@ -955,7 +945,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX tb_FUTimes;
         private DevComponents.DotNetBar.LabelX lb_FUNear;
         private DevComponents.DotNetBar.LabelX lb_FUTimes;
-        private DevComponents.DotNetBar.ButtonX bt_save;
         private DevComponents.DotNetBar.ButtonX buttonX1;
 
     }
