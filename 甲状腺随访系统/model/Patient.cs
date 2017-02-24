@@ -114,6 +114,5 @@ namespace 甲状腺随访系统.model
         /// </summary>
         public int followTimes { get; set; }
 
-       
     }
 }

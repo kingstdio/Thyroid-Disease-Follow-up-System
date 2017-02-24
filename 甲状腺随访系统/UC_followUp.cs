@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.SuperGrid;
 using System.Data.SqlClient;
+using DevComponents.DotNetBar;
 
 namespace 甲状腺随访系统
 {
@@ -128,6 +129,11 @@ namespace 甲状腺随访系统
 
 
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+
+        private void 删除当前行ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToastNotification.Show(this, "删除成功");
         }
     }
 }
