@@ -724,6 +724,7 @@
             this.lb_DLC.Text = "最后联系日期（Y/M/D):";
             this.lb_DLC.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
+            this.sgc_visit.Leave += new System.EventHandler(this.RefreshDatabase);
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;

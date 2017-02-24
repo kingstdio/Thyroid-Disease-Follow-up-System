@@ -29,6 +29,7 @@ namespace 甲状腺随访系统
             
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
             
+            
             //添加功能面板
             panEX_main.Controls.Add(uC_patientInfo);
             panEX_main.Controls.Add(uC_diagnosis);
@@ -71,10 +72,10 @@ namespace 甲状腺随访系统
 
 
                 if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
-                {
+                this.saveRecord();
                     ToastNotification.Show(this, "系统数据保存成功");
                 }
-              
+                
             }
             base.WndProc(ref msg);
         }  
@@ -230,7 +231,19 @@ namespace 甲状腺随访系统
 
         }
 
-
+        #region 定义刷新病人信息界面事件
+        /// <summary>
+        /// 存储supergrid中数据
+        /// </summary>
+        public static event EventHandler saveFollowRecord  = null;
+        protected void saveRecord()
+        {
+            if (saveFollowRecord != null)
+            {
+                saveFollowRecord(this, EventArgs.Empty);
+            }
+        }
+        #endregion
 
 
     }

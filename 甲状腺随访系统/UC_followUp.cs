@@ -21,10 +21,15 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
+            RF_main.saveFollowRecord += new EventHandler(saveFRecord);
         }
 
+        void saveFRecord(object obj, EventArgs args) {
+            RefreshDatabase(obj,args);
+        }
         void fillUI(object obj, EventArgs args)
         {
+           
            
             //追踪
             dti_DLC.Value = Conf.currentPatient.followUp.lastconnect;
@@ -77,6 +82,7 @@ namespace 甲状腺随访系统
 
             foreach (GridRow item in this.sgc_visit.PrimaryGrid.DeletedRows)
             {
+                //sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
                 Console.WriteLine("测试foreach");
                 try
                 {
@@ -92,6 +98,7 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
+             
         }
         #endregion
 
@@ -107,12 +114,13 @@ namespace 甲状腺随访系统
                     //DataTable dt = ds.Tables[0];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
+
                         ds.Tables[0].Rows[i]["pid"] = Conf.currentPatient.id;
                     }
 
                     da.Update(ds.Tables[0]);//以数据集的表更新数据库
                     ds.Tables[0].AcceptChanges();//接受对数据的修改
-                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                    MessageBox.Show("更新成功        ！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
                 }
                 catch (Exception ex)
                 {
@@ -120,9 +128,13 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
+
+
+
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
         #endregion
+
 
     }
 }
