@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.sgc_visit = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
@@ -118,8 +117,6 @@
             this.lb_FT4 = new DevComponents.DotNetBar.LabelX();
             this.lb_FT3 = new DevComponents.DotNetBar.LabelX();
             this.lb_TSH = new DevComponents.DotNetBar.LabelX();
-            this.cmst_followUp = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.删除当前行ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sideNav1.SuspendLayout();
             this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
@@ -129,7 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).BeginInit();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).BeginInit();
-            this.cmst_followUp.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideNav1
@@ -167,7 +163,6 @@
             // 
             this.sgc_visit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sgc_visit.ContextMenuStrip = this.cmst_followUp;
             this.sgc_visit.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.sgc_visit.Location = new System.Drawing.Point(-12, 0);
             this.sgc_visit.Name = "sgc_visit";
@@ -193,13 +188,16 @@
             this.sgc_visit.PrimaryGrid.Columns.Add(this.others);
             this.sgc_visit.PrimaryGrid.Columns.Add(this.id);
             this.sgc_visit.PrimaryGrid.Columns.Add(this.pid);
+            this.sgc_visit.PrimaryGrid.MultiSelect = false;
             this.sgc_visit.PrimaryGrid.ShowInsertRow = true;
             this.sgc_visit.PrimaryGrid.UseAlternateColumnStyle = true;
             this.sgc_visit.PrimaryGrid.UseAlternateRowStyle = true;
             this.sgc_visit.Size = new System.Drawing.Size(1332, 530);
             this.sgc_visit.TabIndex = 1;
+            this.sgc_visit.TabSelection = DevComponents.DotNetBar.SuperGrid.TabSelection.CellSameRow;
             this.sgc_visit.Text = "superGridControl1";
             this.sgc_visit.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_visit_RowDeleted);
+            this.sgc_visit.Leave += new System.EventHandler(this.RefreshDatabase);
             // 
             // VDate
             // 
@@ -1300,21 +1298,6 @@
             this.lb_TSH.TabIndex = 13;
             this.lb_TSH.Text = "TSH uIU/ml:";
             // 
-            // cmst_followUp
-            // 
-            this.cmst_followUp.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.删除当前行ToolStripMenuItem});
-            this.cmst_followUp.Name = "cmst_followUp";
-            this.cmst_followUp.Size = new System.Drawing.Size(137, 26);
-            // 
-            // 删除当前行ToolStripMenuItem
-            // 
-            this.删除当前行ToolStripMenuItem.Image = global::甲状腺随访系统.Properties.Resources.tips;
-            this.删除当前行ToolStripMenuItem.Name = "删除当前行ToolStripMenuItem";
-            this.删除当前行ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.删除当前行ToolStripMenuItem.Text = "删除当前行";
-            this.删除当前行ToolStripMenuItem.Click += new System.EventHandler(this.删除当前行ToolStripMenuItem_Click);
-            // 
             // UC_followUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1332,7 +1315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).EndInit();
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).EndInit();
-            this.cmst_followUp.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1428,8 +1410,6 @@
         private DevComponents.DotNetBar.Separator separator3;
         private DevComponents.DotNetBar.SuperGrid.GridColumn pid;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id;
-        private System.Windows.Forms.ContextMenuStrip cmst_followUp;
-        private System.Windows.Forms.ToolStripMenuItem 删除当前行ToolStripMenuItem;
 
        
     }

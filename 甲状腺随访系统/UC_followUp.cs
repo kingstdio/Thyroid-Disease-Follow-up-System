@@ -69,15 +69,14 @@ namespace 甲状腺随访系统
             
         }
 
-      
 
+        #region 删除一行记录
         private void sgc_visit_RowDeleted(object sender, GridRowDeletedEventArgs e)
         {
             Console.WriteLine("测试Delete键");
 
             foreach (GridRow item in this.sgc_visit.PrimaryGrid.DeletedRows)
             {
-                //sgc_visit.PrimaryGrid.Rows.RemoveAt(item.Index);
                 Console.WriteLine("测试foreach");
                 try
                 {
@@ -85,17 +84,18 @@ namespace 甲状腺随访系统
                     ds.Tables[0].Rows[item.Index].Delete();
                     da.Update(ds.Tables[0]);//以数据集的表更新数据库
                     ds.Tables[0].AcceptChanges();//接受对数据的修改
-                    MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                    ToastNotification.Show(this, "删除成功");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ToastNotification.Show(this, "删除失败"+ex.Message); 
                     //出现异常提示更新失败
                 }
             }
-             
         }
+        #endregion
 
+        #region 离开当前页时更新数据库
         void RefreshDatabase(object sender, EventArgs e)
         {
 
@@ -107,7 +107,6 @@ namespace 甲状腺随访系统
                     //DataTable dt = ds.Tables[0];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
-
                         ds.Tables[0].Rows[i]["pid"] = Conf.currentPatient.id;
                     }
 
@@ -121,15 +120,9 @@ namespace 甲状腺随访系统
                     //出现异常提示更新失败
                 }
             }
-
-
-
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
+        #endregion
 
-        private void 删除当前行ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ToastNotification.Show(this, "删除成功");
-        }
     }
 }
