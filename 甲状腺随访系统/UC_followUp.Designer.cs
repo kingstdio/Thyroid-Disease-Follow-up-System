@@ -133,8 +133,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Controls.Add(this.sideNavPanel3);
+            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator3,
@@ -157,6 +157,7 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1312, 529);
             this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -585,7 +586,6 @@
             this.sideNavPanel3.Name = "sideNavPanel3";
             this.sideNavPanel3.Size = new System.Drawing.Size(1312, 529);
             this.sideNavPanel3.TabIndex = 10;
-            this.sideNavPanel3.Visible = false;
             // 
             // sgc_visit
             // 
@@ -623,6 +623,7 @@
             this.sgc_visit.TabIndex = 1;
             this.sgc_visit.Text = "superGridControl1";
             this.sgc_visit.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_visit_RowDeleted);
+            this.sgc_visit.Leave += new System.EventHandler(this.RefreshDatabase);
             // 
             // VDate
             // 
@@ -740,6 +741,7 @@
             // 
             // sideNavItem4
             // 
+            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";
@@ -757,7 +759,6 @@
             // 
             // sideNavItem2
             // 
-            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";

@@ -21,6 +21,12 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
+            RF_main.saveFollowRecord += new EventHandler(saveFRecord);
+        }
+
+        void saveFRecord(object obj, EventArgs args)
+        {
+            RefreshDatabase(obj, args);
         }
 
         private void line8_Click(object sender, EventArgs e)
