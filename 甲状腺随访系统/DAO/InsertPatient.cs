@@ -17,7 +17,7 @@ namespace 甲状腺随访系统.DAO
         /// </summary>
         /// <param name="pid"></param>
         /// <returns></returns>
-        public static void InsertBasicInfo(int pid)
+        public static bool InsertBasicInfo(int pid)
         {
             int currentID = Conf.currentPatient.id;   
             //病人信息
@@ -78,12 +78,12 @@ namespace 甲状腺随访系统.DAO
                         SQLHELPER.ExecuteNoneQuery(sqlRe);
 
                         Conf.currentPatient.id = currentID;
-
-                        MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
+                        
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "更新失败！"+ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                         //出现异常提示更新失败
                     }
                 }
@@ -120,17 +120,16 @@ namespace 甲状腺随访系统.DAO
                         string sqlReU = "update tb_recurrencecs set pid = '" + pid + "',TG = '" + re.TG + "',TGAB = '" + re.TGAB + "',CEA = '" + re.CEA + "',calcitonin = '" + re.calcitonin + "',CT = '" + re.CT + "',MRI = '" + re.MRI + "',I131 = '" + re.I131 + "',PETCT = '" + re.PETCT + "',FNA = '" + re.FNA + "',braf = '" + re.braf + "',TGeluant = '" + re.TGeluant + "',tumorlocation = '" + re.tumorlocation + "',tumorsize = '" + re.tumorsize + "',lymphadenlocation = '" + re.lymphadenlocation + "',lymphadensize = '" + re.lymphadensize + "'where pid = @id";
                         SqlParameter[] param5 = { new SqlParameter("@id", pid) };
                         SQLHELPER.ExecuteNoneQuery(sqlFUU, param5);
-
-
-                        MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);//弹出提示更新成功
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //出现异常提示更新失败
+                        MessageBox.Show(ex.Message, "更新失败！" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
                 }
+                return true;
             }
+            return false;
         }
 
        

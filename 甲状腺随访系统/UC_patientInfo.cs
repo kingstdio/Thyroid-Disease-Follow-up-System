@@ -15,7 +15,6 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
-           
         }
 
         private void UC_patientInfo_Load(object sender, EventArgs e)

@@ -68,9 +68,12 @@ namespace 甲状腺随访系统
             if (msg.Msg == WM_SYSCOMMAND && ((int)msg.WParam == SC_CLOSE))
             {
                 // 点击winform右上关闭按钮 
-                
-               
-                DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+
+
+                if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
+                {
+                    ToastNotification.Show(this, "系统数据保存成功");
+                }
               
             }
             base.WndProc(ref msg);
@@ -191,6 +194,7 @@ namespace 甲状腺随访系统
         private void buttonItem2_Click(object sender, EventArgs e)
         {
             ToastNotification.Show(this,"系统数据保存成功");
+            
         }
         #endregion
 
@@ -208,16 +212,19 @@ namespace 甲状腺随访系统
         {
            // MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);
            DialogResult r1 = MessageBox.Show("确定要删除该患者吗？","",MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+           
             int result = (int)r1;
             if(result == 1)
             {
                 DAO.DeletePatient.DelPatient(Conf.currentPatient.id);
-                this.Dispose();
-                this.Close();
-                new Thread((ThreadStart)delegate
-                {
-                    Application.Run(new RF_main());
-                }).Start();
+                Conf.currentPatient = new model.Patient();
+                Control.RefreshPatient.refresh(0);
+                //this.Dispose();
+                //this.Close();
+                //new Thread((ThreadStart)delegate
+                //{
+                //    Application.Run(new RF_main());
+                //}).Start();
                 Conf.currentPatient.id = 0;
             }
 
