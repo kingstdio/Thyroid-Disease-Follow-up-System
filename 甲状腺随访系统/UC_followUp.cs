@@ -21,12 +21,8 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
-            RF_main.saveFollowRecord += new EventHandler(saveFRecord);
         }
 
-        void saveFRecord(object obj, EventArgs args) {
-            RefreshDatabase(obj,args);
-        }
         void fillUI(object obj, EventArgs args)
         {
            
@@ -134,6 +130,11 @@ namespace 甲状腺随访系统
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
         #endregion
+
+        private void UC_followUp_Validated(object sender, EventArgs e)
+        {
+            RefreshDatabase(sender, e);
+        }
 
 
     }

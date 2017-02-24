@@ -53,34 +53,12 @@ namespace 甲状腺随访系统
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
 
+            fillPaitentBoard(null, null);
+
             
         }
         #endregion 
-
-
-
-        protected override void WndProc(ref Message msg)
-        {
-            //Windows系统消息，winuser.h文件中有WM_...的定义 
-            //十六进制数字，0x是前导符后面是真正的数字 
-            const int WM_SYSCOMMAND = 0x0112;
-            //winuser.h文件中有SC_...的定义 
-            const int SC_CLOSE = 0xF060;
-            if (msg.Msg == WM_SYSCOMMAND && ((int)msg.WParam == SC_CLOSE))
-            {
-                // 点击winform右上关闭按钮 
-
-
-                if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
-                this.saveRecord();
-                    ToastNotification.Show(this, "系统数据保存成功");
-                }
-                
-            }
-            base.WndProc(ref msg);
-        }  
-
-
+ 
 
 
 
@@ -89,13 +67,23 @@ namespace 甲状腺随访系统
         /// 更新功能面板
         /// </summary>
         void fillPaitentBoard(object obj, EventArgs args) {
+
             tb_name.Text = Conf.currentPatient.basicInfo.name;
             tb_hosno.Text = Conf.currentPatient.basicInfo.hosnumber;
             tb_phone.Text = Conf.currentPatient.basicInfo.mobile;
             tb_hosindate.Text = Conf.currentPatient.basicInfo.hosindate.ToShortDateString();
-            tb_sex.Text = Conf.currentPatient.basicInfo.sex?"男":"女";
+            if (Conf.currentPatient.id == 0)
+            {
+                tb_sex.Text = string.Empty;
+                tb_birthday.Text = string.Empty;
+            }
+            else
+            {
+                tb_sex.Text = Conf.currentPatient.basicInfo.sex ? "男" : "女";
+                tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
+            }
             tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
-            tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
+            
             tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
             tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
             tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
@@ -199,10 +187,7 @@ namespace 甲状腺随访系统
         }
         #endregion
 
-        private void panEX_main_Click(object sender, EventArgs e)
-        {
-           
-        }
+  
 
         private void bt_save_Click(object sender, EventArgs e)
         {
@@ -231,19 +216,16 @@ namespace 甲状腺随访系统
 
         }
 
-        #region 定义刷新病人信息界面事件
-        /// <summary>
-        /// 存储supergrid中数据
-        /// </summary>
-        public static event EventHandler saveFollowRecord  = null;
-        protected void saveRecord()
+
+        private void RF_main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (saveFollowRecord != null)
+            uC_followUp.Validate();
+            uC_postOperative.Validate();
+            if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
             {
-                saveFollowRecord(this, EventArgs.Empty);
+                ToastNotification.Show(this, "系统数据保存成功");
             }
         }
-        #endregion
 
 
     }

@@ -724,7 +724,6 @@
             this.lb_DLC.Text = "最后联系日期（Y/M/D):";
             this.lb_DLC.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
-            this.sgc_visit.Leave += new System.EventHandler(this.RefreshDatabase);
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;
@@ -1306,6 +1305,7 @@
             this.Controls.Add(this.sideNav1);
             this.Name = "UC_followUp";
             this.Size = new System.Drawing.Size(1416, 568);
+            this.Validated += new System.EventHandler(this.UC_followUp_Validated);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
             this.sideNavPanel3.ResumeLayout(false);

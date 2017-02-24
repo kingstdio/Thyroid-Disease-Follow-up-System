@@ -21,7 +21,6 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
-            RF_main.saveFollowRecord += new EventHandler(saveFRecord);
         }
 
         void saveFRecord(object obj, EventArgs args)
@@ -199,6 +198,7 @@ namespace 甲状腺随访系统
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                     //出现异常提示更新失败
                 }
             }
@@ -223,12 +223,18 @@ namespace 甲状腺随访系统
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "更新失败！", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                     //出现异常提示更新失败
                 }
             }
 
 
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+        }
+
+        private void UC_postOperative_Validated(object sender, EventArgs e)
+        {
+            RefreshDatabase(sender, e);
         }
 
 
