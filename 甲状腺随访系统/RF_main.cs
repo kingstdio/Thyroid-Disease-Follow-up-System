@@ -71,22 +71,29 @@ namespace 甲状腺随访系统
             tb_name.Text = Conf.currentPatient.basicInfo.name;
             tb_hosno.Text = Conf.currentPatient.basicInfo.hosnumber;
             tb_phone.Text = Conf.currentPatient.basicInfo.mobile;
-            tb_hosindate.Text = Conf.currentPatient.basicInfo.hosindate.ToShortDateString();
+            
+            tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
             if (Conf.currentPatient.id == 0)
             {
                 tb_sex.Text = string.Empty;
                 tb_birthday.Text = string.Empty;
+                tb_hosoutdate.Text = string.Empty;
+                tb_FUNear.Text = string.Empty;
+                tb_FUTimes.Text = string.Empty;
+                tb_hosindate.Text = string.Empty;
             }
             else
             {
                 tb_sex.Text = Conf.currentPatient.basicInfo.sex ? "男" : "女";
                 tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
+                tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
+                tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
+                tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
+                tb_hosindate.Text = Conf.currentPatient.basicInfo.hosindate.ToShortDateString();
             }
-            tb_idcard.Text = Conf.currentPatient.basicInfo.idcard;
+           
             
-            tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
-            tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
-            tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
+           
 
            
            
