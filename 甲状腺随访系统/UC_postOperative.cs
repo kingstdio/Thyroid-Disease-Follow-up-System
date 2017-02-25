@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar.SuperGrid;
+using DevComponents.DotNetBar;
 
 namespace 甲状腺随访系统
 {
@@ -229,7 +230,11 @@ namespace 甲状腺随访系统
             }
 
 
-            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+            if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
+            {
+                ToastNotification.Show(Parent, "系统数据保存成功");
+
+            }
         }
 
         private void UC_postOperative_Validated(object sender, EventArgs e)

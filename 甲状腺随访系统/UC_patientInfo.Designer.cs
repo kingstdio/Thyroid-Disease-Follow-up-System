@@ -113,7 +113,6 @@
             this.dti_height = new DevComponents.Editors.IntegerInput();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.lb_weight = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
@@ -127,7 +126,6 @@
             this.lb_eutociaT = new DevComponents.DotNetBar.LabelX();
             this.lb_TIA = new DevComponents.DotNetBar.LabelX();
             this.tb_occupation = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_bodyMI = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.dti_age = new DevComponents.Editors.IntegerInput();
             this.dti_regDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
@@ -215,10 +213,10 @@
             // 
             this.snav_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel1);
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
             this.snav_patientInfo.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sni_menu,
             this.separator1,
@@ -263,6 +261,7 @@
             this.sideNavPanel5.Name = "sideNavPanel5";
             this.sideNavPanel5.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel5.TabIndex = 21;
+            this.sideNavPanel5.Visible = false;
             this.sideNavPanel5.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel5.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -1215,7 +1214,6 @@
             this.sideNavPanel3.Controls.Add(this.dti_height);
             this.sideNavPanel3.Controls.Add(this.labelX8);
             this.sideNavPanel3.Controls.Add(this.labelX7);
-            this.sideNavPanel3.Controls.Add(this.labelX6);
             this.sideNavPanel3.Controls.Add(this.lb_weight);
             this.sideNavPanel3.Controls.Add(this.labelX5);
             this.sideNavPanel3.Controls.Add(this.labelX4);
@@ -1229,7 +1227,6 @@
             this.sideNavPanel3.Controls.Add(this.lb_eutociaT);
             this.sideNavPanel3.Controls.Add(this.lb_TIA);
             this.sideNavPanel3.Controls.Add(this.tb_occupation);
-            this.sideNavPanel3.Controls.Add(this.tb_bodyMI);
             this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideNavPanel3.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel3.Name = "sideNavPanel3";
@@ -1359,7 +1356,7 @@
             this.tb_BMI.Border.Class = "TextBoxBorder";
             this.tb_BMI.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_BMI.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_BMI.Location = new System.Drawing.Point(731, 368);
+            this.tb_BMI.Location = new System.Drawing.Point(731, 314);
             this.tb_BMI.Name = "tb_BMI";
             this.tb_BMI.PreventEnterBeep = true;
             this.tb_BMI.ReadOnly = true;
@@ -1375,7 +1372,7 @@
             this.lb_BMI.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_BMI.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lb_BMI.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_BMI.Location = new System.Drawing.Point(578, 370);
+            this.lb_BMI.Location = new System.Drawing.Point(577, 316);
             this.lb_BMI.Name = "lb_BMI";
             this.lb_BMI.Size = new System.Drawing.Size(118, 23);
             this.lb_BMI.TabIndex = 27;
@@ -1490,21 +1487,6 @@
             this.labelX7.Size = new System.Drawing.Size(123, 23);
             this.labelX7.TabIndex = 23;
             this.labelX7.Text = "（kg/m  ）";
-            // 
-            // labelX6
-            // 
-            this.labelX6.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX6.Location = new System.Drawing.Point(577, 316);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(118, 23);
-            this.labelX6.TabIndex = 23;
-            this.labelX6.Text = "体质指数：";
-            this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_weight
             // 
@@ -1701,21 +1683,6 @@
             this.tb_occupation.Size = new System.Drawing.Size(230, 26);
             this.tb_occupation.TabIndex = 16;
             // 
-            // tb_bodyMI
-            // 
-            // 
-            // 
-            // 
-            this.tb_bodyMI.Border.Class = "TextBoxBorder";
-            this.tb_bodyMI.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_bodyMI.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_bodyMI.Location = new System.Drawing.Point(731, 315);
-            this.tb_bodyMI.Name = "tb_bodyMI";
-            this.tb_bodyMI.PreventEnterBeep = true;
-            this.tb_bodyMI.ReadOnly = true;
-            this.tb_bodyMI.Size = new System.Drawing.Size(230, 26);
-            this.tb_bodyMI.TabIndex = 16;
-            // 
             // sideNavPanel1
             // 
             this.sideNavPanel1.Controls.Add(this.dti_age);
@@ -1753,7 +1720,6 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1276, 531);
             this.sideNavPanel1.TabIndex = 47;
-            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -2288,6 +2254,7 @@
             // 
             // sideNavItem5
             // 
+            this.sideNavItem5.Checked = true;
             this.sideNavItem5.Name = "sideNavItem5";
             this.sideNavItem5.Panel = this.sideNavPanel1;
             this.sideNavItem5.Symbol = "";
@@ -2341,7 +2308,6 @@
             // 
             // sideNavItem3
             // 
-            this.sideNavItem3.Checked = true;
             this.sideNavItem3.Name = "sideNavItem3";
             this.sideNavItem3.Panel = this.sideNavPanel5;
             this.sideNavItem3.Symbol = "57346";
@@ -2429,12 +2395,10 @@
         private DevComponents.DotNetBar.Controls.SwitchButton switch_smoke;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_occupation;
-        private DevComponents.DotNetBar.Controls.TextBoxX tb_bodyMI;
         private DevComponents.DotNetBar.Controls.SwitchButton switch_otherntumour;
         private DevComponents.DotNetBar.LabelX labelX36;
         private DevComponents.DotNetBar.Controls.SwitchButton switch_diabetes;

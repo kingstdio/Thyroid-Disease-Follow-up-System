@@ -126,8 +126,11 @@ namespace 甲状腺随访系统
             }
 
 
+            if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
+            {
+                ToastNotification.Show(Parent, "系统数据保存成功");
 
-            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+            }
         }
         #endregion
 

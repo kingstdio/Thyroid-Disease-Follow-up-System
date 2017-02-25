@@ -32,6 +32,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
+            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.sgc_radio = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.dtb_eut = new DevComponents.Editors.DoubleInput();
+            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.line8 = new DevComponents.DotNetBar.Controls.Line();
+            this.line7 = new DevComponents.DotNetBar.Controls.Line();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.line5 = new DevComponents.DotNetBar.Controls.Line();
+            this.line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.sgc_inspect = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.day = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -111,32 +137,6 @@
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.labelX28 = new DevComponents.DotNetBar.LabelX();
             this.labelX29 = new DevComponents.DotNetBar.LabelX();
-            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.sgc_radio = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.dtb_eut = new DevComponents.Editors.DoubleInput();
-            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.line8 = new DevComponents.DotNetBar.Controls.Line();
-            this.line7 = new DevComponents.DotNetBar.Controls.Line();
-            this.line6 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
-            this.line3 = new DevComponents.DotNetBar.Controls.Line();
-            this.line5 = new DevComponents.DotNetBar.Controls.Line();
-            this.line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator1 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -220,9 +220,9 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
-            this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).BeginInit();
+            this.sideNavPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,8 +231,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -246,6 +246,309 @@
             this.sideNav1.Size = new System.Drawing.Size(1413, 568);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
+            // 
+            // sideNavPanel1
+            // 
+            this.sideNavPanel1.Controls.Add(this.sgc_radio);
+            this.sideNavPanel1.Controls.Add(this.dtb_eut);
+            this.sideNavPanel1.Controls.Add(this.rtbe_radiotherapy);
+            this.sideNavPanel1.Controls.Add(this.rtbe_chemotherapy);
+            this.sideNavPanel1.Controls.Add(this.line8);
+            this.sideNavPanel1.Controls.Add(this.line7);
+            this.sideNavPanel1.Controls.Add(this.line6);
+            this.sideNavPanel1.Controls.Add(this.line4);
+            this.sideNavPanel1.Controls.Add(this.line3);
+            this.sideNavPanel1.Controls.Add(this.line5);
+            this.sideNavPanel1.Controls.Add(this.line2);
+            this.sideNavPanel1.Controls.Add(this.line1);
+            this.sideNavPanel1.Controls.Add(this.labelX4);
+            this.sideNavPanel1.Controls.Add(this.labelX3);
+            this.sideNavPanel1.Controls.Add(this.labelX2);
+            this.sideNavPanel1.Controls.Add(this.labelX1);
+            this.sideNavPanel1.Controls.Add(this.lb_eut);
+            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
+            this.sideNavPanel1.Name = "sideNavPanel1";
+            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
+            this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
+            // 
+            // sgc_radio
+            // 
+            this.sgc_radio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sgc_radio.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.sgc_radio.Location = new System.Drawing.Point(201, 115);
+            this.sgc_radio.Name = "sgc_radio";
+            // 
+            // 
+            // 
+            this.sgc_radio.PrimaryGrid.AllowRowDelete = true;
+            this.sgc_radio.PrimaryGrid.AllowRowInsert = true;
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn2);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn3);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn4);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn5);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn6);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn7);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn9);
+            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn10);
+            this.sgc_radio.PrimaryGrid.ShowInsertRow = true;
+            this.sgc_radio.PrimaryGrid.UseAlternateColumnStyle = true;
+            this.sgc_radio.PrimaryGrid.UseAlternateRowStyle = true;
+            this.sgc_radio.Size = new System.Drawing.Size(984, 157);
+            this.sgc_radio.TabIndex = 140;
+            this.sgc_radio.Text = "superGridControl1";
+            this.sgc_radio.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_radio_RowDeleted);
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn2.HeaderText = "TS(uTu/ml)";
+            this.gridColumn2.Name = "TS";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn3.HeaderText = "FT3(pmol/l)";
+            this.gridColumn3.Name = "FT3";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn4.HeaderText = "FT4(pmol/l)";
+            this.gridColumn4.Name = "FT4";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn5.HeaderText = "sTG(ng/dl)";
+            this.gridColumn5.Name = "sTG";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn6.HeaderText = "A-TG(iu/ml)";
+            this.gridColumn6.Name = "ATG";
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn7.HeaderText = "吸碘率（%）";
+            this.gridColumn7.Name = "iodrate";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Name = "id";
+            this.gridColumn9.Visible = false;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Name = "pid";
+            this.gridColumn10.Visible = false;
+            // 
+            // dtb_eut
+            // 
+            // 
+            // 
+            // 
+            this.dtb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dtb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtb_eut.Increment = 1D;
+            this.dtb_eut.Location = new System.Drawing.Point(387, 77);
+            this.dtb_eut.Name = "dtb_eut";
+            this.dtb_eut.ShowUpDown = true;
+            this.dtb_eut.Size = new System.Drawing.Size(202, 26);
+            this.dtb_eut.TabIndex = 93;
+            // 
+            // rtbe_radiotherapy
+            // 
+            // 
+            // 
+            // 
+            this.rtbe_radiotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.rtbe_radiotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rtbe_radiotherapy.Location = new System.Drawing.Point(201, 368);
+            this.rtbe_radiotherapy.Name = "rtbe_radiotherapy";
+            this.rtbe_radiotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.rtbe_radiotherapy.Size = new System.Drawing.Size(984, 98);
+            this.rtbe_radiotherapy.TabIndex = 4;
+            // 
+            // rtbe_chemotherapy
+            // 
+            // 
+            // 
+            // 
+            this.rtbe_chemotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.rtbe_chemotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rtbe_chemotherapy.Location = new System.Drawing.Point(201, 271);
+            this.rtbe_chemotherapy.Name = "rtbe_chemotherapy";
+            this.rtbe_chemotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
+    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
+            this.rtbe_chemotherapy.Size = new System.Drawing.Size(984, 98);
+            this.rtbe_chemotherapy.TabIndex = 3;
+            // 
+            // line8
+            // 
+            this.line8.BackColor = System.Drawing.Color.Transparent;
+            this.line8.ForeColor = System.Drawing.Color.White;
+            this.line8.Location = new System.Drawing.Point(1184, 58);
+            this.line8.Name = "line8";
+            this.line8.Size = new System.Drawing.Size(1, 408);
+            this.line8.TabIndex = 92;
+            this.line8.Text = "line1";
+            this.line8.VerticalLine = true;
+            this.line8.Click += new System.EventHandler(this.line8_Click);
+            // 
+            // line7
+            // 
+            this.line7.BackColor = System.Drawing.Color.Transparent;
+            this.line7.ForeColor = System.Drawing.Color.White;
+            this.line7.Location = new System.Drawing.Point(77, 271);
+            this.line7.Name = "line7";
+            this.line7.Size = new System.Drawing.Size(1108, 1);
+            this.line7.TabIndex = 91;
+            this.line7.Text = "line1";
+            // 
+            // line6
+            // 
+            this.line6.BackColor = System.Drawing.Color.Transparent;
+            this.line6.ForeColor = System.Drawing.Color.White;
+            this.line6.Location = new System.Drawing.Point(77, 368);
+            this.line6.Name = "line6";
+            this.line6.Size = new System.Drawing.Size(1108, 1);
+            this.line6.TabIndex = 91;
+            this.line6.Text = "line1";
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            this.line4.ForeColor = System.Drawing.Color.White;
+            this.line4.Location = new System.Drawing.Point(201, 58);
+            this.line4.Name = "line4";
+            this.line4.Size = new System.Drawing.Size(1, 408);
+            this.line4.TabIndex = 90;
+            this.line4.Text = "line1";
+            this.line4.VerticalLine = true;
+            // 
+            // line3
+            // 
+            this.line3.BackColor = System.Drawing.Color.Transparent;
+            this.line3.ForeColor = System.Drawing.Color.White;
+            this.line3.Location = new System.Drawing.Point(76, 58);
+            this.line3.Name = "line3";
+            this.line3.Size = new System.Drawing.Size(1, 408);
+            this.line3.TabIndex = 90;
+            this.line3.Text = "line1";
+            this.line3.VerticalLine = true;
+            // 
+            // line5
+            // 
+            this.line5.BackColor = System.Drawing.Color.Transparent;
+            this.line5.ForeColor = System.Drawing.Color.White;
+            this.line5.Location = new System.Drawing.Point(77, 465);
+            this.line5.Name = "line5";
+            this.line5.Size = new System.Drawing.Size(1108, 1);
+            this.line5.TabIndex = 90;
+            this.line5.Text = "line1";
+            // 
+            // line2
+            // 
+            this.line2.BackColor = System.Drawing.Color.Transparent;
+            this.line2.ForeColor = System.Drawing.Color.White;
+            this.line2.Location = new System.Drawing.Point(77, 115);
+            this.line2.Name = "line2";
+            this.line2.Size = new System.Drawing.Size(1108, 1);
+            this.line2.TabIndex = 90;
+            this.line2.Text = "line1";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.ForeColor = System.Drawing.Color.White;
+            this.line1.Location = new System.Drawing.Point(77, 58);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(1108, 1);
+            this.line1.TabIndex = 90;
+            this.line1.Text = "line1";
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX4.Location = new System.Drawing.Point(76, 401);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(132, 23);
+            this.labelX4.TabIndex = 9;
+            this.labelX4.Text = "放疗方案及计量";
+            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX3.Location = new System.Drawing.Point(76, 306);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(132, 23);
+            this.labelX3.TabIndex = 9;
+            this.labelX3.Text = "化疗方案及计量";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX2.Location = new System.Drawing.Point(77, 191);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(132, 23);
+            this.labelX2.TabIndex = 9;
+            this.labelX2.Text = "碘治疗";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX1.Location = new System.Drawing.Point(77, 77);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(132, 23);
+            this.labelX1.TabIndex = 9;
+            this.labelX1.Text = "药物治疗";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // lb_eut
+            // 
+            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
+            this.lb_eut.Location = new System.Drawing.Point(263, 77);
+            this.lb_eut.Name = "lb_eut";
+            this.lb_eut.Size = new System.Drawing.Size(132, 23);
+            this.lb_eut.TabIndex = 9;
+            this.lb_eut.Text = "优甲乐（ug）：";
             // 
             // sideNavPanel3
             // 
@@ -291,6 +594,7 @@
             this.sideNavPanel3.Name = "sideNavPanel3";
             this.sideNavPanel3.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel3.TabIndex = 13;
+            this.sideNavPanel3.Visible = false;
             this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -1020,310 +1324,6 @@
             this.labelX29.Text = "术后检查";
             this.labelX29.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // sideNavPanel1
-            // 
-            this.sideNavPanel1.Controls.Add(this.sgc_radio);
-            this.sideNavPanel1.Controls.Add(this.dtb_eut);
-            this.sideNavPanel1.Controls.Add(this.rtbe_radiotherapy);
-            this.sideNavPanel1.Controls.Add(this.rtbe_chemotherapy);
-            this.sideNavPanel1.Controls.Add(this.line8);
-            this.sideNavPanel1.Controls.Add(this.line7);
-            this.sideNavPanel1.Controls.Add(this.line6);
-            this.sideNavPanel1.Controls.Add(this.line4);
-            this.sideNavPanel1.Controls.Add(this.line3);
-            this.sideNavPanel1.Controls.Add(this.line5);
-            this.sideNavPanel1.Controls.Add(this.line2);
-            this.sideNavPanel1.Controls.Add(this.line1);
-            this.sideNavPanel1.Controls.Add(this.labelX4);
-            this.sideNavPanel1.Controls.Add(this.labelX3);
-            this.sideNavPanel1.Controls.Add(this.labelX2);
-            this.sideNavPanel1.Controls.Add(this.labelX1);
-            this.sideNavPanel1.Controls.Add(this.lb_eut);
-            this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel1.Location = new System.Drawing.Point(108, 36);
-            this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
-            this.sideNavPanel1.TabIndex = 2;
-            this.sideNavPanel1.Visible = false;
-            this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
-            this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
-            // 
-            // sgc_radio
-            // 
-            this.sgc_radio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sgc_radio.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgc_radio.Location = new System.Drawing.Point(201, 115);
-            this.sgc_radio.Name = "sgc_radio";
-            // 
-            // 
-            // 
-            this.sgc_radio.PrimaryGrid.AllowRowDelete = true;
-            this.sgc_radio.PrimaryGrid.AllowRowInsert = true;
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn2);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn3);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn4);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn5);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn6);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn7);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn9);
-            this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn10);
-            this.sgc_radio.PrimaryGrid.ShowInsertRow = true;
-            this.sgc_radio.PrimaryGrid.UseAlternateColumnStyle = true;
-            this.sgc_radio.PrimaryGrid.UseAlternateRowStyle = true;
-            this.sgc_radio.Size = new System.Drawing.Size(984, 157);
-            this.sgc_radio.TabIndex = 140;
-            this.sgc_radio.Text = "superGridControl1";
-            this.sgc_radio.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_radio_RowDeleted);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn2.HeaderText = "TS(uTu/ml)";
-            this.gridColumn2.Name = "TS";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn3.HeaderText = "FT3(pmol/l)";
-            this.gridColumn3.Name = "FT3";
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn4.HeaderText = "FT4(pmol/l)";
-            this.gridColumn4.Name = "FT4";
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn5.HeaderText = "sTG(ng/dl)";
-            this.gridColumn5.Name = "sTG";
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn6.HeaderText = "A-TG(iu/ml)";
-            this.gridColumn6.Name = "ATG";
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn7.HeaderText = "吸碘率（%）";
-            this.gridColumn7.Name = "iodrate";
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Name = "id";
-            this.gridColumn9.Visible = false;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Name = "pid";
-            this.gridColumn10.Visible = false;
-            // 
-            // dtb_eut
-            // 
-            // 
-            // 
-            // 
-            this.dtb_eut.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtb_eut.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.dtb_eut.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtb_eut.Increment = 1D;
-            this.dtb_eut.Location = new System.Drawing.Point(387, 77);
-            this.dtb_eut.Name = "dtb_eut";
-            this.dtb_eut.ShowUpDown = true;
-            this.dtb_eut.Size = new System.Drawing.Size(202, 26);
-            this.dtb_eut.TabIndex = 93;
-            // 
-            // rtbe_radiotherapy
-            // 
-            // 
-            // 
-            // 
-            this.rtbe_radiotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.rtbe_radiotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rtbe_radiotherapy.Location = new System.Drawing.Point(201, 368);
-            this.rtbe_radiotherapy.Name = "rtbe_radiotherapy";
-            this.rtbe_radiotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rtbe_radiotherapy.Size = new System.Drawing.Size(984, 98);
-            this.rtbe_radiotherapy.TabIndex = 4;
-            // 
-            // rtbe_chemotherapy
-            // 
-            // 
-            // 
-            // 
-            this.rtbe_chemotherapy.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.rtbe_chemotherapy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.rtbe_chemotherapy.Location = new System.Drawing.Point(201, 271);
-            this.rtbe_chemotherapy.Name = "rtbe_chemotherapy";
-            this.rtbe_chemotherapy.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.rtbe_chemotherapy.Size = new System.Drawing.Size(984, 98);
-            this.rtbe_chemotherapy.TabIndex = 3;
-            // 
-            // line8
-            // 
-            this.line8.BackColor = System.Drawing.Color.Transparent;
-            this.line8.ForeColor = System.Drawing.Color.White;
-            this.line8.Location = new System.Drawing.Point(1184, 58);
-            this.line8.Name = "line8";
-            this.line8.Size = new System.Drawing.Size(1, 408);
-            this.line8.TabIndex = 92;
-            this.line8.Text = "line1";
-            this.line8.VerticalLine = true;
-            this.line8.Click += new System.EventHandler(this.line8_Click);
-            // 
-            // line7
-            // 
-            this.line7.BackColor = System.Drawing.Color.Transparent;
-            this.line7.ForeColor = System.Drawing.Color.White;
-            this.line7.Location = new System.Drawing.Point(77, 271);
-            this.line7.Name = "line7";
-            this.line7.Size = new System.Drawing.Size(1108, 1);
-            this.line7.TabIndex = 91;
-            this.line7.Text = "line1";
-            // 
-            // line6
-            // 
-            this.line6.BackColor = System.Drawing.Color.Transparent;
-            this.line6.ForeColor = System.Drawing.Color.White;
-            this.line6.Location = new System.Drawing.Point(77, 368);
-            this.line6.Name = "line6";
-            this.line6.Size = new System.Drawing.Size(1108, 1);
-            this.line6.TabIndex = 91;
-            this.line6.Text = "line1";
-            // 
-            // line4
-            // 
-            this.line4.BackColor = System.Drawing.Color.Transparent;
-            this.line4.ForeColor = System.Drawing.Color.White;
-            this.line4.Location = new System.Drawing.Point(201, 58);
-            this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(1, 408);
-            this.line4.TabIndex = 90;
-            this.line4.Text = "line1";
-            this.line4.VerticalLine = true;
-            // 
-            // line3
-            // 
-            this.line3.BackColor = System.Drawing.Color.Transparent;
-            this.line3.ForeColor = System.Drawing.Color.White;
-            this.line3.Location = new System.Drawing.Point(76, 58);
-            this.line3.Name = "line3";
-            this.line3.Size = new System.Drawing.Size(1, 408);
-            this.line3.TabIndex = 90;
-            this.line3.Text = "line1";
-            this.line3.VerticalLine = true;
-            // 
-            // line5
-            // 
-            this.line5.BackColor = System.Drawing.Color.Transparent;
-            this.line5.ForeColor = System.Drawing.Color.White;
-            this.line5.Location = new System.Drawing.Point(77, 465);
-            this.line5.Name = "line5";
-            this.line5.Size = new System.Drawing.Size(1108, 1);
-            this.line5.TabIndex = 90;
-            this.line5.Text = "line1";
-            // 
-            // line2
-            // 
-            this.line2.BackColor = System.Drawing.Color.Transparent;
-            this.line2.ForeColor = System.Drawing.Color.White;
-            this.line2.Location = new System.Drawing.Point(77, 115);
-            this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(1108, 1);
-            this.line2.TabIndex = 90;
-            this.line2.Text = "line1";
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.ForeColor = System.Drawing.Color.White;
-            this.line1.Location = new System.Drawing.Point(77, 58);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(1108, 1);
-            this.line1.TabIndex = 90;
-            this.line1.Text = "line1";
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX4.Location = new System.Drawing.Point(76, 401);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(132, 23);
-            this.labelX4.TabIndex = 9;
-            this.labelX4.Text = "放疗方案及计量";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX3.Location = new System.Drawing.Point(76, 306);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(132, 23);
-            this.labelX3.TabIndex = 9;
-            this.labelX3.Text = "化疗方案及计量";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX2.Location = new System.Drawing.Point(77, 191);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(132, 23);
-            this.labelX2.TabIndex = 9;
-            this.labelX2.Text = "碘治疗";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX1.Location = new System.Drawing.Point(77, 77);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(132, 23);
-            this.labelX1.TabIndex = 9;
-            this.labelX1.Text = "药物治疗";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lb_eut
-            // 
-            this.lb_eut.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lb_eut.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lb_eut.Font = new System.Drawing.Font("宋体", 12F);
-            this.lb_eut.Location = new System.Drawing.Point(263, 77);
-            this.lb_eut.Name = "lb_eut";
-            this.lb_eut.Size = new System.Drawing.Size(132, 23);
-            this.lb_eut.TabIndex = 9;
-            this.lb_eut.Text = "优甲乐（ug）：";
-            // 
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;
@@ -1343,6 +1343,7 @@
             // 
             // sideNavItem2
             // 
+            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";
@@ -1360,7 +1361,6 @@
             // 
             // sideNavItem4
             // 
-            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";
@@ -2120,9 +2120,9 @@
             this.Validated += new System.EventHandler(this.UC_postOperative_Validated);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
-            this.sideNavPanel3.ResumeLayout(false);
             this.sideNavPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).EndInit();
+            this.sideNavPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
             this.ResumeLayout(false);
 

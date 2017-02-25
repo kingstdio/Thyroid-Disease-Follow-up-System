@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace 甲状腺随访系统
 {
@@ -173,7 +174,11 @@ namespace 甲状腺随访系统
 
         void RefreshDatabase(object sender, EventArgs e)
         {
-            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+            if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
+            {
+                ToastNotification.Show(Parent, "系统数据保存成功"); 
+                
+            }
         }
 
 

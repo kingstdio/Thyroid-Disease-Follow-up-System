@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using 甲状腺随访系统.MODEL;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace 甲状腺随访系统.DAO
 {
@@ -78,6 +79,7 @@ namespace 甲状腺随访系统.DAO
                         SQLHELPER.ExecuteNoneQuery(sqlRe);
 
                         Conf.currentPatient.id = currentID;
+                        
                         
                     }
                     catch (Exception ex)

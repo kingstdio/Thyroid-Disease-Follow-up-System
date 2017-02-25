@@ -101,8 +101,8 @@ namespace 甲状腺随访系统
         #endregion
 
         #region 界面按钮操作
-        private void bt_patientAdd_Click(object sender, EventArgs e)
-        {
+        private void bt_patientInfo_Click(object sender, EventArgs e)
+        { 
             
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
@@ -159,6 +159,20 @@ namespace 甲状腺随访系统
             uC_recurrencecs.Visible = false;
             uC_postOperative.Visible = true;
         }
+
+
+        private void bt_new_Click(object sender, EventArgs e)
+        {
+            Conf.currentPatient = new model.Patient();
+            Control.RefreshPatient.refresh(0);
+            uC_diagnosis.Visible = false;
+            uC_surgeryHistory.Visible = false;
+            uC_postOperative.Visible = false;
+            uC_followUp.Visible = false;
+            uC_recurrencecs.Visible = false;
+            uC_patientInfo.Visible = true;
+        }
+
 
         /// <summary>
         /// 界面追踪按钮
@@ -234,6 +248,16 @@ namespace 甲状腺随访系统
             }
         }
 
+        private void ribbonPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+    
+
+    
 
     }
 }
