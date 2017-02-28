@@ -3,11 +3,11 @@ USE follw_up_DB
 CREATE TABLE [dbo].[tb_patientInfo](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[name] [varchar](50) NULL,						--患者姓名
-	[idcard] [char](18) NULL,						--身份证号
+	[idcard] [varchar](18) NULL,					--身份证号
 	[address] [varchar](128) NULL,					-- 居住地址
-	[mobile] [char](16) NULL,						--移动电话
-	[phone] [char](16) NULL,						--备用电话
-	[hosnumber] [char](16) NULL,					-- 住院号
+	[mobile] [varchar](11) NULL,					--移动电话
+	[phone] [varchar](11) NULL,						--备用电话
+	[hosnumber] [varchar](8) NULL,					-- 住院号
 	[sex] [bit] NULL,								--性别
 	[birthday] [date] NULL,							--出生日期
 	[hosage] [int] NULL,							--住院年龄
