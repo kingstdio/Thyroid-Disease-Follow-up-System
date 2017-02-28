@@ -146,11 +146,11 @@
             this.tb_idcard.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_idcard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_idcard.ForeColor = System.Drawing.Color.Maroon;
-            this.tb_idcard.Location = new System.Drawing.Point(110, 25);
+            this.tb_idcard.Location = new System.Drawing.Point(415, 22);
             this.tb_idcard.Name = "tb_idcard";
             this.tb_idcard.PreventEnterBeep = true;
             this.tb_idcard.Size = new System.Drawing.Size(179, 26);
-            this.tb_idcard.TabIndex = 1;
+            this.tb_idcard.TabIndex = 2;
             this.tb_idcard.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // tb_hosno
@@ -192,7 +192,7 @@
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX6.Location = new System.Drawing.Point(17, 27);
+            this.labelX6.Location = new System.Drawing.Point(322, 24);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(90, 23);
             this.labelX6.TabIndex = 5;
@@ -208,11 +208,12 @@
             this.tb_name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tb_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_name.ForeColor = System.Drawing.Color.Maroon;
-            this.tb_name.Location = new System.Drawing.Point(415, 25);
+            this.tb_name.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tb_name.Location = new System.Drawing.Point(108, 20);
             this.tb_name.Name = "tb_name";
             this.tb_name.PreventEnterBeep = true;
             this.tb_name.Size = new System.Drawing.Size(179, 26);
-            this.tb_name.TabIndex = 2;
+            this.tb_name.TabIndex = 1;
             this.tb_name.WatermarkColor = System.Drawing.Color.Maroon;
             // 
             // labelX3
@@ -250,7 +251,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX1.Location = new System.Drawing.Point(323, 27);
+            this.labelX1.Location = new System.Drawing.Point(16, 22);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(90, 23);
             this.labelX1.TabIndex = 2;
@@ -264,6 +265,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 361);
             this.Controls.Add(this.panelEx1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

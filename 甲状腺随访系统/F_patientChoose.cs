@@ -44,16 +44,35 @@ namespace 甲状腺随访系统
             hosNumber = tb_hosno.Text.Trim() == "" ? string.Empty : tb_hosno.Text.Trim();
             name = tb_name.Text.Trim() == "" ? string.Empty : tb_name.Text.Trim();
             idcardno = tb_idcard.Text.Trim() == "" ? string.Empty : tb_idcard.Text.Trim();
-            mobile = tb_tel.Text.Trim() == "" ? string.Empty : lb_phone.Text.Trim();
+            mobile = tb_tel.Text.Trim() == "" ? string.Empty : tb_tel.Text.Trim();
 
             if (hosNumber == string.Empty && name == string.Empty && idcardno == string.Empty && mobile == string.Empty)
             {
                 MessageBox.Show("请输入至少一个查询条件", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
 
             pinfo = DAO.PatientChoose.fill(name, idcardno, mobile, hosNumber);
+            Console.WriteLine(mobile);
             dgv_show.DataSource = pinfo;
+
+            if (pinfo.Rows.Count == 1)
+            {
+                int pid = (int)dgv_show.CurrentRow.Cells["编号"].Value;
+                Control.RefreshPatient.refresh(pid);
+                this.Close();
+            }
+
+            if (pinfo.Rows.Count == 0)
+            {
+                if (MessageBox.Show("该患者不存在，是否新建档案？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    Conf.mainForm.Validate();
+                    this.Dispose();
+                    
+                }
+            }
         }
 
 

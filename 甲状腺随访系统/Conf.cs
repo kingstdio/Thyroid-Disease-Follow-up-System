@@ -21,5 +21,8 @@ namespace 甲状腺随访系统
         public static string sqliteConn = @"Data Source=./dbs/his.db;Pooling=true;FailIfMissing=false";
 
         public static Patient currentPatient = new Patient();
+
+
+        public static RF_main mainForm;
     }
 }

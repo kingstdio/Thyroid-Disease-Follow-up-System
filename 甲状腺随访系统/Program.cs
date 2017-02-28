@@ -15,7 +15,7 @@ namespace 甲状腺随访系统
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RF_main());
+            Application.Run(Conf.mainForm= new RF_main());
         }
     }
 }

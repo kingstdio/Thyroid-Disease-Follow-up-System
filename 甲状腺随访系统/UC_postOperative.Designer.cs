@@ -231,8 +231,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Controls.Add(this.sideNavPanel3);
+            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -271,13 +271,12 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
             // sgc_radio
             // 
-            this.sgc_radio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.sgc_radio.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.sgc_radio.Location = new System.Drawing.Point(201, 115);
             this.sgc_radio.Name = "sgc_radio";
@@ -294,6 +293,7 @@
             this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn7);
             this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn9);
             this.sgc_radio.PrimaryGrid.Columns.Add(this.gridColumn10);
+            this.sgc_radio.PrimaryGrid.MultiSelect = false;
             this.sgc_radio.PrimaryGrid.ShowInsertRow = true;
             this.sgc_radio.PrimaryGrid.UseAlternateColumnStyle = true;
             this.sgc_radio.PrimaryGrid.UseAlternateRowStyle = true;
@@ -301,12 +301,15 @@
             this.sgc_radio.TabIndex = 140;
             this.sgc_radio.Text = "superGridControl1";
             this.sgc_radio.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_radio_RowDeleted);
+            this.sgc_radio.Click += new System.EventHandler(this.sgc_radio_Click);
             // 
             // gridColumn2
             // 
+            this.gridColumn2.ColumnSortMode = DevComponents.DotNetBar.SuperGrid.ColumnSortMode.None;
             this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
             this.gridColumn2.HeaderText = "TS(uTu/ml)";
             this.gridColumn2.Name = "TS";
+            this.gridColumn2.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
             // 
             // gridColumn3
             // 
@@ -594,7 +597,6 @@
             this.sideNavPanel3.Name = "sideNavPanel3";
             this.sideNavPanel3.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel3.TabIndex = 13;
-            this.sideNavPanel3.Visible = false;
             this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -627,12 +629,14 @@
             this.sgc_inspect.TabIndex = 139;
             this.sgc_inspect.Text = "superGridControl1";
             this.sgc_inspect.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_inspect_RowDeleted);
+            this.sgc_inspect.Click += new System.EventHandler(this.sgc_inspect_Click);
             // 
             // day
             // 
             this.day.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl);
             this.day.HeaderText = "天数";
             this.day.Name = "days";
+            this.day.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
             // 
             // gridColumn11
             // 
@@ -1343,7 +1347,6 @@
             // 
             // sideNavItem2
             // 
-            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";
@@ -1361,6 +1364,7 @@
             // 
             // sideNavItem4
             // 
+            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";

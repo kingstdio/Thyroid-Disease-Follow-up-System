@@ -197,11 +197,13 @@
             this.sgc_visit.TabSelection = DevComponents.DotNetBar.SuperGrid.TabSelection.CellSameRow;
             this.sgc_visit.Text = "superGridControl1";
             this.sgc_visit.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_visit_RowDeleted);
+            this.sgc_visit.Click += new System.EventHandler(this.sgc_visit_Click);
             this.sgc_visit.Leave += new System.EventHandler(this.RefreshDatabase);
             // 
             // VDate
             // 
-            this.VDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl);
+            this.VDate.ColumnSortMode = DevComponents.DotNetBar.SuperGrid.ColumnSortMode.None;
+            this.VDate.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimePickerEditControl);
             this.VDate.HeaderText = "随访日期";
             this.VDate.Name = "Vdate";
             this.VDate.Tag = "随访日期";

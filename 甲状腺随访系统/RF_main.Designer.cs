@@ -552,6 +552,7 @@ namespace 甲状腺随访系统
             this.panEX_main.Style.GradientAngle = 90;
             this.panEX_main.TabIndex = 1;
             this.panEX_main.Text = "主面板";
+            this.panEX_main.Validated += new System.EventHandler(this.panEX_main_Validated);
             // 
             // panelEx1
             // 
@@ -931,6 +932,7 @@ namespace 甲状腺随访系统
             this.Name = "RF_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "甲状腺疾病随访系统-吉林大学白求恩第一附属医院";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RF_main_FormClosing);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();

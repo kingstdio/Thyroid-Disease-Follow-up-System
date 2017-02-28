@@ -16,6 +16,9 @@ namespace 甲状腺随访系统
         {
             InitializeComponent();
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
+
+            lb_beizhu.Visible = false;
+            tb_fht.Visible = tb_othertt.Visible = tb_otherptt.Visible = false;
         }
 
         private void UC_patientInfo_Load(object sender, EventArgs e)
@@ -78,7 +81,8 @@ namespace 甲状腺随访系统
             tb_occupation.Text = Conf.currentPatient.normalRiskFactors.occupation;
             dti_height.Value = Conf.currentPatient.normalRiskFactors.height;
             dti_weight.Value = Conf.currentPatient.normalRiskFactors.weight;
-            tb_BMI.Text = Convert.ToString(Conf.currentPatient.normalRiskFactors.constitutional);
+            dti_weight.Value = Conf.currentPatient.normalRiskFactors.constitutional;
+           // tb_BMI.Text = Convert.ToString(Conf.currentPatient.normalRiskFactors.constitutional);
 
             //特殊危险因素
             di_prolactin.Value = Conf.currentPatient.specialRiskFactors.prolactin;
@@ -100,11 +104,37 @@ namespace 甲状腺随访系统
             switch_coronary.Value = Conf.currentPatient.familyHistory.coronary;
             switch_radiotherapy.Value = Conf.currentPatient.familyHistory.radiotherapy;
             switch_otherntumour.Value = Conf.currentPatient.familyHistory.otherntumour;
-            tb_othertt.Text = Conf.currentPatient.familyHistory.otherntumourtext;
-            switch_otherptumour.Value = Conf.currentPatient.familyHistory.otherptumour;
-            tb_otherptt.Text = Conf.currentPatient.familyHistory.othernoptumourtext;
-            switch_familyhistory.Value = Conf.currentPatient.familyHistory.familyhistory;
-            tb_fht.Text = Conf.currentPatient.familyHistory.familyhistorytext;
+
+            //其它恶性肿瘤
+            if (Conf.currentPatient.familyHistory.otherntumour)
+            {
+                switch_otherntumour.Value = true;              
+                tb_othertt.Visible = true;
+                
+                tb_othertt.Text = Conf.currentPatient.familyHistory.otherntumourtext;
+            }
+            else {
+                tb_othertt.Visible = false;
+            }
+            
+            //其它良性肿瘤
+            if (Conf.currentPatient.familyHistory.otherptumour)
+            {
+                switch_otherptumour.Value = true;
+                tb_otherptt.Visible = true;
+                tb_otherptt.Text = Conf.currentPatient.familyHistory.othernoptumourtext;
+            } 
+            else 
+            {
+                tb_otherptt.Visible = false;
+            }
+
+            //家族史
+            if (Conf.currentPatient.familyHistory.familyhistory)
+            { switch_familyhistory.Value = true; tb_fht.Visible = true; tb_fht.Text = Conf.currentPatient.familyHistory.familyhistorytext; } else { tb_fht.Visible = false; }
+            
+ 
+            
 
         }
 
@@ -138,7 +168,7 @@ namespace 甲状腺随访系统
             Conf.currentPatient.normalRiskFactors.occupation = tb_occupation.Text;
             Conf.currentPatient.normalRiskFactors.height = dti_height.Value;
             Conf.currentPatient.normalRiskFactors.weight = dti_weight.Value ;
-          //  Conf.currentPatient.normalRiskFactors.constitutional = Convert.ToDouble(tb_BMI.Text);
+            Conf.currentPatient.normalRiskFactors.constitutional = Convert.ToDouble(dti_BMI.Value);
 
             //特殊危险因素
             Conf.currentPatient.specialRiskFactors.prolactin = di_prolactin.Value;
@@ -174,11 +204,100 @@ namespace 甲状腺随访系统
 
         void RefreshDatabase(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tb_patientName.Text) || string.IsNullOrEmpty(tb_idNumber.Text))
+            {
+                MessageBox.Show("信息未保存！姓名或身份证号不可为空！", "提示", MessageBoxButtons.OK);
+            }
             if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
             {
-                ToastNotification.Show(Parent, "系统数据保存成功"); 
-                
+                ToastNotification.Show(Parent, "系统数据保存成功");                 
             }
+        }
+
+        private void tb_idNumber_Leave(object sender, EventArgs e)
+        {
+
+            Conf.currentPatient.basicInfo.name = tb_patientName.Text;
+            Conf.currentPatient.basicInfo.idcard = tb_idNumber.Text;
+
+            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
+         
+            
+
+        }
+
+        private void switch_otherntumour_Leave(object sender, EventArgs e)
+        {
+            if (switch_otherntumour.Value == true)
+            {
+                tb_othertt.ReadOnly = false;
+            }
+            else
+            {
+                tb_othertt.ReadOnly = true;
+            }
+        }
+
+        private void switch_otherptumour_Leave(object sender, EventArgs e)
+        {
+            if (switch_otherptumour.Value == true)
+            {
+                tb_otherptt.ReadOnly = false;
+            }
+            else
+            {
+                tb_otherptt.ReadOnly = true;
+            }
+        }
+
+
+        private void dti_height_Leave(object sender, EventArgs e)
+        {
+            if (dti_height.Value != 0 && dti_weight.Value != 0)
+            {
+                double bmi = Convert.ToDouble(dti_weight.Value) / (Convert.ToDouble(dti_height.Value) * Convert.ToDouble(dti_height.Value));
+                dti_BMI.Value = bmi;
+            }
+            else
+            {
+                dti_BMI.Value = 0;
+            }
+        }
+
+        private void dti_weight_Leave(object sender, EventArgs e)
+        {
+            if (dti_height.Value != 0 && dti_weight.Value != 0)
+            {
+                double bmi = Convert.ToDouble(dti_weight.Value) / (Convert.ToDouble(dti_height.Value) * Convert.ToDouble(dti_height.Value));
+                dti_BMI.Value = bmi;
+            }
+            else
+            {
+                dti_BMI.Value = 0;
+            }
+        }
+
+        private void switch_familyhistory_ValueChanged(object sender, EventArgs e)
+        {
+            if (switch_familyhistory.Value)
+            {
+                tb_fht.Visible = true;
+                lb_beizhu.Visible = true;
+            }
+            else {
+                tb_fht.Visible = false;
+                lb_beizhu.Visible = false;
+            }
+        }
+
+        private void switch_otherptumour_ValueChanged(object sender, EventArgs e)
+        {
+            if (switch_otherptumour.Value) { tb_otherptt.Visible = true; } else { tb_otherptt.Visible = false; }
+        }
+
+        private void switch_otherntumour_ValueChanged(object sender, EventArgs e)
+        {
+            if (switch_otherntumour.Value) { tb_othertt.Visible = true; } else { tb_othertt.Visible = false; }
         }
 
 

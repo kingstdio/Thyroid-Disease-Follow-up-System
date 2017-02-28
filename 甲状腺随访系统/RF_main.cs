@@ -253,6 +253,18 @@ namespace 甲状腺随访系统
 
         }
 
+        private void panEX_main_Validated(object sender, EventArgs e)
+        {
+            Conf.currentPatient = new model.Patient();
+            Control.RefreshPatient.refresh(0);
+            uC_diagnosis.Visible = false;
+            uC_surgeryHistory.Visible = false;
+            uC_postOperative.Visible = false;
+            uC_followUp.Visible = false;
+            uC_recurrencecs.Visible = false;
+            uC_patientInfo.Visible = true;
+        }
+
        
 
     

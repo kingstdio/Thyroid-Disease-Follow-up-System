@@ -45,14 +45,37 @@ namespace 甲状腺随访系统.DAO
             //判断当前病患是否存在，若不存在则新增记录
 
             //if(!string.IsNullOrEmpty(bi.name)&&!string.IsNullOrWhiteSpace(bi.name)) 
-            if ((!string.IsNullOrEmpty(bi.name) && !string.IsNullOrWhiteSpace(bi.name)) || (!string.IsNullOrEmpty(bi.idcard) && !string.IsNullOrWhiteSpace(bi.idcard)) || (!string.IsNullOrEmpty(bi.mobile) && !string.IsNullOrWhiteSpace(bi.mobile)) || (!string.IsNullOrEmpty(bi.hosnumber) && !string.IsNullOrWhiteSpace(bi.hosnumber)))
+            if ((!string.IsNullOrEmpty(bi.name) && !string.IsNullOrWhiteSpace(bi.name)) && ((!string.IsNullOrEmpty(bi.idcard) && !string.IsNullOrWhiteSpace(bi.idcard))))
             {
-
                 if (pid == 0)
                 {
                     try
                     {
-                        
+                        string sqlSel = @"select id,name,idcard from tb_patientInfo where name=@name and idcard=@idcard ";
+                        SqlParameter[] param = { new SqlParameter("@name", bi.name),new SqlParameter("@idcard",bi.idcard) };
+                        DataRow dr = SQLHELPER.ExecuteDataRow(sqlSel, param); 
+                        if (dr!=null)
+                        {
+                            pid = Convert.ToInt32(dr[0]);
+                            Conf.currentPatient.id = pid;
+                            if (MessageBox.Show("该患者已存在，获得患者信息？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                            {
+                                Control.RefreshPatient.refresh(Conf.currentPatient.id);
+                            }
+                            else
+                            {
+                                Conf.currentPatient.id = 0;
+                            }
+                         
+                            
+                                                        //string msg="";
+                            //foreach (DataRow dr in dt.Rows) {
+                            //    msg += dr[0] + "\t\t" + dr[1]+"\r\n";
+                            //}
+                            //MessageBox.Show("发现同名情况\r\n" + msg,"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //return false;
+                        }
+
                         //患者基本信息
                         string sql = "insert into tb_patientInfo values ('" + bi.name + "','" + bi.idcard + "','" + bi.address + "','" + bi.mobile + "','" + bi.phone + "','" + bi.hosnumber + "','" + bi.sex + "','" + bi.birthday + "','" + bi.hosage + "','" + bi.hosindate + "','" + bi.hosoutdate + "','" + nrf.resident + "','" + nrf.menophaniaage + "','" + nrf.pregnancyage + "','" + nrf.pregnancytimes + "','" + nrf.abortiontimes + "','" + nrf.deliverytimes + "','" + nrf.menopause + "','" + nrf.smoke + "','" + nrf.drink + "','" + nrf.occupation + "','" + nrf.height + "','" + nrf.weight + "','" + nrf.constitutional + "','" + srf.prolactin + "','" + srf.estradiol + "','" + srf.pregnendione + "','" + srf.testosterone + "','" + srf.luteinizing + "','" + srf.folliclestimulating + "','" + srf.cholesterol + "','" + srf.llipoprotein + "','" + srf.hlipoprotein + "','" + srf.triglyceride + "','" + srf.bloodGlucose + "','" + fh.hypertension + "','" + fh.diabetes + "','" + fh.coronary + "','" + fh.radiotherapy + "','" + fh.otherntumour + "','" + fh.otherntumourtext + "','" + fh.otherptumour + "','" + fh.othernoptumourtext + "','" + fh.familyhistory + "','" + fh.familyhistorytext + "');select @@identity";
                         //("'@Conf.currentPatient.basicInfo.name.ToString()'","' + Conf.currentPatient.basicInfo.idcard.ToString() + '","' + Conf.currentPatient.basicInfo.address.ToString() + '",'"+ Conf.currentPatient.basicInfo.mobile.ToString() + "')";
@@ -79,12 +102,12 @@ namespace 甲状腺随访系统.DAO
                         SQLHELPER.ExecuteNoneQuery(sqlRe);
 
                         Conf.currentPatient.id = currentID;
-                        
-                        
+
+
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "更新失败！"+ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "更新失败！" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                         //出现异常提示更新失败
                     }
@@ -131,6 +154,7 @@ namespace 甲状腺随访系统.DAO
                 }
                 return true;
             }
+          
             return false;
         }
 
