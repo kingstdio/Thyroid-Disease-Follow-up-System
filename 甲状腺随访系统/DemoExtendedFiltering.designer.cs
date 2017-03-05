@@ -165,6 +165,7 @@ namespace 甲状腺随访系统
             this.cbxUseAgeSlider.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxUseAgeSlider.TabIndex = 12;
             this.cbxUseAgeSlider.Text = "使用滑块年龄过滤器";
+            this.cbxUseAgeSlider.Visible = false;
             this.cbxUseAgeSlider.CheckedChanged += new System.EventHandler(this.CbxUseAgeSliderCheckedChanged);
             // 
             // cbxShowPanelExpr
