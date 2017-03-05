@@ -96,8 +96,11 @@ namespace 甲状腺随访系统.DAO
             return num;
         }
 
-
-   
+        public static DataTable getInfo()
+        {
+            string sql = @"select * from tb_patientInfo";
+            return SQLHELPER.ExecuteDataTable(sql);
+        }
 
     }
 }

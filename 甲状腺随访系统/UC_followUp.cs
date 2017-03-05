@@ -14,6 +14,7 @@ namespace 甲状腺随访系统
 {
     public partial class UC_followUp : UserControl
     {
+        
         DataSet ds;
         SqlDataAdapter da;
         SqlConnection conn = new SqlConnection(SQLHELPER.connstr);
@@ -198,6 +199,8 @@ namespace 甲状腺随访系统
             }
             
         }
+
+     
 
      
        

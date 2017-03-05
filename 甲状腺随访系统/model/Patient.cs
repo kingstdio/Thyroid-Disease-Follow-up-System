@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using 甲状腺随访系统.MODEL;
+using System.Data;
 
 namespace 甲状腺随访系统.model
 {
@@ -113,6 +114,12 @@ namespace 甲状腺随访系统.model
         /// 随访次数
         /// </summary>
         public int followTimes { get; set; }
+
+        /// <summary>
+        /// 所有信息
+        /// </summary>
+        public DataTable getInfo { get; set; }
+
 
     }
 }

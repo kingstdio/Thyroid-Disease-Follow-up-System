@@ -19,6 +19,7 @@ namespace 甲状腺随访系统
         UC_postOperative uC_postOperative = new UC_postOperative();
         UC_followUp uC_followUp = new UC_followUp();
         UC_recurrencecs uC_recurrencecs = new UC_recurrencecs();
+        
 
 
         #region 初始化
@@ -28,6 +29,7 @@ namespace 甲状腺随访系统
 
             
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
+            Control.RefreshPatient.newPaitentAction += new EventHandler(newPaitentAction);
             
             
             //添加功能面板
@@ -163,14 +165,16 @@ namespace 甲状腺随访系统
 
         private void bt_new_Click(object sender, EventArgs e)
         {
-            Conf.currentPatient = new model.Patient();
-            Control.RefreshPatient.refresh(0);
+           
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
             uC_patientInfo.Visible = true;
+
+            Conf.currentPatient = new model.Patient();
+            Control.RefreshPatient.refresh(0);
         }
 
 
@@ -217,23 +221,25 @@ namespace 甲状腺随访系统
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("更新成功！", "操作结果", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           DialogResult r1 = MessageBox.Show("确定要删除该患者吗？","",MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-           
+
+            DialogResult r1 = MessageBox.Show("确定要删除该患者吗？", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
             int result = (int)r1;
-            if(result == 1)
+
+            if (result == 1)
             {
-                DAO.DeletePatient.DelPatient(Conf.currentPatient.id);
+                Console.WriteLine("删除执行");
+                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
+                {
+                    ToastNotification.Show(this, "删除成功");
+            
+                }
                 Conf.currentPatient = new model.Patient();
-                Control.RefreshPatient.refresh(0);
-                //this.Dispose();
-                //this.Close();
-                //new Thread((ThreadStart)delegate
-                //{
-                //    Application.Run(new RF_main());
-                //}).Start();
                 Conf.currentPatient.id = 0;
+                Control.RefreshPatient.refresh(0);
+
             }
+
 
         }
 
@@ -248,25 +254,32 @@ namespace 甲状腺随访系统
             }
         }
 
-        private void ribbonPanel1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void panEX_main_Validated(object sender, EventArgs e)
+
+
+        /// <summary>
+        /// 新建用户时跳转界面
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="args"></param>
+        void newPaitentAction(object obj, EventArgs args)
         {
             Conf.currentPatient = new model.Patient();
-            Control.RefreshPatient.refresh(0);
             uC_diagnosis.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
             uC_patientInfo.Visible = true;
+            Control.RefreshPatient.refresh(0);
         }
 
-       
-
+        private void ribbonTabItem2_Click(object sender, EventArgs e)
+        {
+            SuperGridDemo.DemoExtendedFiltering demoExtendedFiltering = new SuperGridDemo.DemoExtendedFiltering();
+            demoExtendedFiltering.ShowDialog();
+        }
     
 
     

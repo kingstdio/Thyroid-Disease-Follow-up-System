@@ -81,7 +81,15 @@ namespace 甲状腺随访系统
             tb_occupation.Text = Conf.currentPatient.normalRiskFactors.occupation;
             dti_height.Value = Conf.currentPatient.normalRiskFactors.height;
             dti_weight.Value = Conf.currentPatient.normalRiskFactors.weight;
-            dti_weight.Value = Conf.currentPatient.normalRiskFactors.constitutional;
+            //BMI计算
+            if (dti_height.Value != 0 && dti_weight.Value != 0)
+            {
+                double bmi = Convert.ToDouble(dti_weight.Value) / (Convert.ToDouble(dti_height.Value) * Convert.ToDouble(dti_height.Value));
+                bmi = bmi * 10000;
+                Console.WriteLine(bmi);
+                dti_BMI.Value = bmi;
+            }
+            //tb_BMI.Text = Conf.currentPatient.normalRiskFactors.constitutional;
            // tb_BMI.Text = Convert.ToString(Conf.currentPatient.normalRiskFactors.constitutional);
 
             //特殊危险因素
@@ -206,7 +214,7 @@ namespace 甲状腺随访系统
         {
             if (string.IsNullOrEmpty(tb_patientName.Text) || string.IsNullOrEmpty(tb_idNumber.Text))
             {
-                MessageBox.Show("信息未保存！姓名或身份证号不可为空！", "提示", MessageBoxButtons.OK);
+                ToastNotification.Show(Parent, "患者姓名或身份证号目前为空！");
             }
             if (DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id))
             {
@@ -221,8 +229,8 @@ namespace 甲状腺随访系统
             Conf.currentPatient.basicInfo.idcard = tb_idNumber.Text;
 
             DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
-         
-            
+
+            Control.RefreshPatient.refresh(Conf.currentPatient.id);
 
         }
 
@@ -256,11 +264,13 @@ namespace 甲状腺随访系统
             if (dti_height.Value != 0 && dti_weight.Value != 0)
             {
                 double bmi = Convert.ToDouble(dti_weight.Value) / (Convert.ToDouble(dti_height.Value) * Convert.ToDouble(dti_height.Value));
+                bmi = bmi * 10000;
+                Console.WriteLine(bmi);
                 dti_BMI.Value = bmi;
             }
             else
             {
-                dti_BMI.Value = 0;
+                //dti_BMI.Value = 0;
             }
         }
 
@@ -269,11 +279,13 @@ namespace 甲状腺随访系统
             if (dti_height.Value != 0 && dti_weight.Value != 0)
             {
                 double bmi = Convert.ToDouble(dti_weight.Value) / (Convert.ToDouble(dti_height.Value) * Convert.ToDouble(dti_height.Value));
+                bmi = bmi * 10000;
+                Console.WriteLine(bmi);
                 dti_BMI.Value = bmi;
             }
             else
             {
-                dti_BMI.Value = 0;
+                //dti_BMI.Value = 0;
             }
         }
 
@@ -299,6 +311,17 @@ namespace 甲状腺随访系统
         {
             if (switch_otherntumour.Value) { tb_othertt.Visible = true; } else { tb_othertt.Visible = false; }
         }
+
+        private void UC_patientInfo_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                sideNavItem5.Select();
+                tb_patientName.Select();
+            }
+        }
+
+
 
 
          

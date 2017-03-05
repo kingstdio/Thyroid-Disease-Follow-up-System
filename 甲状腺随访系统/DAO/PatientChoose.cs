@@ -29,7 +29,7 @@ namespace 甲状腺随访系统.DAO
 
             DataTable dt = SQLHELPER.ExecuteDataTable(sql, param);
             return dt; 
-            name = idcard = phone = hosnum = null; 
+            
         }
     }
 }

@@ -65,6 +65,24 @@
     <Compile Include="DAO\InsertPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
+    <Compile Include="DemoBasicFiltering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoBasicFiltering.designer.cs">
+      <DependentUpon>DemoBasicFiltering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoExtendedFiltering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoExtendedFiltering.designer.cs">
+      <DependentUpon>DemoExtendedFiltering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoGridBasics0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoGridBasics0.designer.cs">
+      <DependentUpon>DemoGridBasics0.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_patientChoose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +118,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellServices.cs" />
     <Compile Include="SQLHELPER.cs" />
     <Compile Include="SqliteHelper.cs" />
     <Compile Include="UC_diagnosis.cs">
@@ -144,6 +163,21 @@
     <Compile Include="UC_surgeryHistory.Designer.cs">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc_view.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc_view.Designer.cs">
+      <DependentUpon>Uc_view.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DemoBasicFiltering.resx">
+      <DependentUpon>DemoBasicFiltering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoExtendedFiltering.resx">
+      <DependentUpon>DemoExtendedFiltering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemoGridBasics0.resx">
+      <DependentUpon>DemoGridBasics0.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_patientChoose.resx">
       <DependentUpon>F_patientChoose.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_surgeryHistory.resx">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_view.resx">
+      <DependentUpon>Uc_view.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="data\conf\lang\CN.ini">

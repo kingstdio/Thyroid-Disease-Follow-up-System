@@ -341,6 +341,11 @@ namespace 甲状腺随访系统
             }
         }
 
+        private void cbe_op_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

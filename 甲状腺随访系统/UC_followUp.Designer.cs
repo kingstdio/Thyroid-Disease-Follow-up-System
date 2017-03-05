@@ -50,6 +50,7 @@
             this.pid = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dti_DLC = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.cbe_DM = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.null_DM = new DevComponents.Editors.ComboItem();
             this.yes_DM = new DevComponents.Editors.ComboItem();
@@ -72,7 +73,6 @@
             this.LTFU_VS = new DevComponents.Editors.ComboItem();
             this.dti_DD = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.dti_dismetadate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.dti_DLC = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.lb_CD = new DevComponents.DotNetBar.LabelX();
             this.lb_DD = new DevComponents.DotNetBar.LabelX();
             this.lb_LDM = new DevComponents.DotNetBar.LabelX();
@@ -121,9 +121,9 @@
             this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_dismetadate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).BeginInit();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).BeginInit();
             this.SuspendLayout();
@@ -315,13 +315,13 @@
             this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.dti_DLC);
             this.groupPanel1.Controls.Add(this.cbe_DM);
             this.groupPanel1.Controls.Add(this.cbe_CD);
             this.groupPanel1.Controls.Add(this.cbe_LDM);
             this.groupPanel1.Controls.Add(this.cbe_VS);
             this.groupPanel1.Controls.Add(this.dti_DD);
             this.groupPanel1.Controls.Add(this.dti_dismetadate);
-            this.groupPanel1.Controls.Add(this.dti_DLC);
             this.groupPanel1.Controls.Add(this.lb_CD);
             this.groupPanel1.Controls.Add(this.lb_DD);
             this.groupPanel1.Controls.Add(this.lb_LDM);
@@ -363,6 +363,52 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "追踪";
+            // 
+            // dti_DLC
+            // 
+            // 
+            // 
+            // 
+            this.dti_DLC.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dti_DLC.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dti_DLC.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dti_DLC.ButtonDropDown.Visible = true;
+            this.dti_DLC.Font = new System.Drawing.Font("宋体", 12F);
+            this.dti_DLC.IsPopupCalendarOpen = false;
+            this.dti_DLC.Location = new System.Drawing.Point(242, 49);
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.dti_DLC.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dti_DLC.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dti_DLC.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dti_DLC.MonthCalendar.DisplayMonth = new System.DateTime(2016, 12, 1, 0, 0, 0, 0);
+            this.dti_DLC.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            // 
+            // 
+            // 
+            this.dti_DLC.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dti_DLC.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dti_DLC.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dti_DLC.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dti_DLC.MonthCalendar.TodayButtonVisible = true;
+            this.dti_DLC.Name = "dti_DLC";
+            this.dti_DLC.Size = new System.Drawing.Size(121, 26);
+            this.dti_DLC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dti_DLC.TabIndex = 19;
             // 
             // cbe_DM
             // 
@@ -587,38 +633,6 @@
             this.dti_dismetadate.Size = new System.Drawing.Size(121, 26);
             this.dti_dismetadate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dti_dismetadate.TabIndex = 4;
-            // 
-            // dti_DLC
-            // 
-            // 
-            // 
-            // 
-            this.dti_DLC.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dti_DLC.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dti_DLC.ButtonDropDown.Visible = true;
-            this.dti_DLC.Font = new System.Drawing.Font("宋体", 12F);
-            this.dti_DLC.IsPopupCalendarOpen = false;
-            this.dti_DLC.Location = new System.Drawing.Point(242, 51);
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.dti_DLC.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.dti_DLC.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dti_DLC.MonthCalendar.DisplayMonth = new System.DateTime(2016, 12, 1, 0, 0, 0, 0);
-            // 
-            // 
-            // 
-            this.dti_DLC.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dti_DLC.Name = "dti_DLC";
-            this.dti_DLC.Size = new System.Drawing.Size(121, 26);
-            this.dti_DLC.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dti_DLC.TabIndex = 1;
             // 
             // lb_CD
             // 
@@ -1313,9 +1327,9 @@
             this.sideNavPanel3.ResumeLayout(false);
             this.sideNavPanel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_DD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dti_dismetadate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dti_DLC)).EndInit();
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dti_FUD)).EndInit();
             this.ResumeLayout(false);
@@ -1332,7 +1346,6 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dti_DD;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dti_dismetadate;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dti_DLC;
         private DevComponents.DotNetBar.LabelX lb_CD;
         private DevComponents.DotNetBar.LabelX lb_DD;
         private DevComponents.DotNetBar.LabelX lb_LDM;
@@ -1413,6 +1426,7 @@
         private DevComponents.DotNetBar.Separator separator3;
         private DevComponents.DotNetBar.SuperGrid.GridColumn pid;
         private DevComponents.DotNetBar.SuperGrid.GridColumn id;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dti_DLC;
 
        
     }

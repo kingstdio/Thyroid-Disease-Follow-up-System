@@ -140,11 +140,13 @@ namespace 甲状腺随访系统.DAO
                         string sqlFUU = "update tb_followUp set pid = '" + pid + "',lastconnect = '" + fu.lastconnect + "',distantmetastasislocation = '" + fu.distantmetastasislocation + "',vitalstatus = '" + fu.vitalstatus + "',deathdate = '" + fu.deathdate + "',distantmetastasis = '" + fu.distantmetastasis + "',deathcause = '" + fu.deathcause + "',diatantmetasisdate = '" + fu.diatantmetasisdate + "'where pid = @id ";
                         SqlParameter[] param4 = { new SqlParameter("@id", pid) };
                         SQLHELPER.ExecuteNoneQuery(sqlFUU, param4);
-
+                        Console.WriteLine(re.TG);
                         //复发
                         string sqlReU = "update tb_recurrencecs set pid = '" + pid + "',TG = '" + re.TG + "',TGAB = '" + re.TGAB + "',CEA = '" + re.CEA + "',calcitonin = '" + re.calcitonin + "',CT = '" + re.CT + "',MRI = '" + re.MRI + "',I131 = '" + re.I131 + "',PETCT = '" + re.PETCT + "',FNA = '" + re.FNA + "',braf = '" + re.braf + "',TGeluant = '" + re.TGeluant + "',tumorlocation = '" + re.tumorlocation + "',tumorsize = '" + re.tumorsize + "',lymphadenlocation = '" + re.lymphadenlocation + "',lymphadensize = '" + re.lymphadensize + "'where pid = @id";
                         SqlParameter[] param5 = { new SqlParameter("@id", pid) };
-                        SQLHELPER.ExecuteNoneQuery(sqlFUU, param5);
+                        SQLHELPER.ExecuteNoneQuery(sqlReU, param5);
+
+
                     }
                     catch (Exception ex)
                     {

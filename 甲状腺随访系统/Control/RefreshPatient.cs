@@ -16,6 +16,11 @@ namespace 甲状腺随访系统.Control
     public class RefreshPatient
     {
 
+        public static bool newPatientAction() {
+            newPaitentAction(null, EventArgs.Empty);
+            return true;
+        }
+
         /// <summary>
         /// 更新病人信息
         /// </summary>
@@ -32,6 +37,7 @@ namespace 甲状腺随访系统.Control
             DataTable dtinspect = DAO.PatientInfo.getInspectionAfterSurgery(pid);
             DataTable dtradio = DAO.PatientInfo.getRadioactiveIodine(pid);
             DataTable dtvisit = DAO.PatientInfo.getVisit(pid);
+            
        
 
             //病人信息
@@ -214,6 +220,20 @@ namespace 甲状腺随访系统.Control
         }
         #endregion
 
-        
+
+        #region 新建用户时跳转界面
+        /// <summary>
+        /// 新建用户时跳转界面
+        /// </summary>
+        public static event EventHandler newPaitentAction = null;
+        protected void newPAction() 
+        {
+            if (newPaitentAction != null) 
+            {
+                refreshPaitentBoard(this, EventArgs.Empty);
+            }
+        }
+        #endregion
+
     }
 }

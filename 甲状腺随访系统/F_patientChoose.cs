@@ -68,7 +68,7 @@ namespace 甲状腺随访系统
             {
                 if (MessageBox.Show("该患者不存在，是否新建档案？", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    Conf.mainForm.Validate();
+                    Control.RefreshPatient.newPatientAction();
                     this.Dispose();
                     
                 }

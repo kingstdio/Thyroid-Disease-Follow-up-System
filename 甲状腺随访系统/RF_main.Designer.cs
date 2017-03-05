@@ -37,20 +37,13 @@ namespace 甲状腺随访系统
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_new = new DevComponents.DotNetBar.ButtonItem();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_recurrencecs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_followUp = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_pOperative = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_SH = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_diagnosis = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.bt_patientInfo = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
@@ -81,6 +74,13 @@ namespace 甲状腺随访系统
             this.lb_idcard = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.bt_new = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_recurrencecs = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_followUp = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_pOperative = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_SH = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_diagnosis = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_patientInfo = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
@@ -95,8 +95,8 @@ namespace 甲状腺随访系统
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1,
@@ -141,10 +141,10 @@ namespace 甲状腺随访系统
             this.ribbonPanel1.Controls.Add(this.ribbonBar3);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 0);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1408, 98);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1408, 151);
             // 
             // 
             // 
@@ -158,7 +158,7 @@ namespace 甲状腺随访系统
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Click += new System.EventHandler(this.ribbonPanel1_Click);
+            this.ribbonPanel1.Visible = false;
             // 
             // ribbonBar2
             // 
@@ -178,7 +178,7 @@ namespace 甲状腺随访系统
             this.bt_new});
             this.ribbonBar2.Location = new System.Drawing.Point(477, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(80, 95);
+            this.ribbonBar2.Size = new System.Drawing.Size(80, 148);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 9;
             this.ribbonBar2.Text = "新建档案";
@@ -190,14 +190,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_new
-            // 
-            this.bt_new.Image = ((System.Drawing.Image)(resources.GetObject("bt_new.Image")));
-            this.bt_new.Name = "bt_new";
-            this.bt_new.SubItemsExpandWidth = 14;
-            this.bt_new.Text = "buttonItem3";
-            this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
             // 
             // buttonX1
             // 
@@ -229,7 +221,7 @@ namespace 甲状腺随访系统
             this.bt_recurrencecs});
             this.ribbonBar8.Location = new System.Drawing.Point(398, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar8.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 6;
             this.ribbonBar8.Text = "复发";
@@ -241,14 +233,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_recurrencecs
-            // 
-            this.bt_recurrencecs.Image = ((System.Drawing.Image)(resources.GetObject("bt_recurrencecs.Image")));
-            this.bt_recurrencecs.Name = "bt_recurrencecs";
-            this.bt_recurrencecs.SubItemsExpandWidth = 14;
-            this.bt_recurrencecs.Text = "buttonItem2";
-            this.bt_recurrencecs.Click += new System.EventHandler(this.bt_recurrencecs_Click);
             // 
             // ribbonBar7
             // 
@@ -268,7 +252,7 @@ namespace 甲状腺随访系统
             this.bt_followUp});
             this.ribbonBar7.Location = new System.Drawing.Point(319, 0);
             this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar7.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar7.TabIndex = 5;
             this.ribbonBar7.Text = "追踪";
@@ -280,14 +264,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_followUp
-            // 
-            this.bt_followUp.Image = ((System.Drawing.Image)(resources.GetObject("bt_followUp.Image")));
-            this.bt_followUp.Name = "bt_followUp";
-            this.bt_followUp.SubItemsExpandWidth = 14;
-            this.bt_followUp.Text = "buttonItem2";
-            this.bt_followUp.Click += new System.EventHandler(this.bt_followUp_Click);
             // 
             // ribbonBar6
             // 
@@ -307,7 +283,7 @@ namespace 甲状腺随访系统
             this.bt_pOperative});
             this.ribbonBar6.Location = new System.Drawing.Point(240, 0);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar6.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 4;
             this.ribbonBar6.Text = "术后";
@@ -319,14 +295,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar6.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_pOperative
-            // 
-            this.bt_pOperative.Image = ((System.Drawing.Image)(resources.GetObject("bt_pOperative.Image")));
-            this.bt_pOperative.Name = "bt_pOperative";
-            this.bt_pOperative.SubItemsExpandWidth = 14;
-            this.bt_pOperative.Text = "buttonItem2";
-            this.bt_pOperative.Click += new System.EventHandler(this.bt_pOperative_Click);
             // 
             // ribbonBar5
             // 
@@ -346,7 +314,7 @@ namespace 甲状腺随访系统
             this.bt_SH});
             this.ribbonBar5.Location = new System.Drawing.Point(161, 0);
             this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar5.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar5.TabIndex = 3;
             this.ribbonBar5.Text = "手术";
@@ -358,14 +326,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar5.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_SH
-            // 
-            this.bt_SH.Image = ((System.Drawing.Image)(resources.GetObject("bt_SH.Image")));
-            this.bt_SH.Name = "bt_SH";
-            this.bt_SH.SubItemsExpandWidth = 14;
-            this.bt_SH.Text = "外科手术史";
-            this.bt_SH.Click += new System.EventHandler(this.bt_SH_Click);
             // 
             // ribbonBar3
             // 
@@ -385,7 +345,7 @@ namespace 甲状腺随访系统
             this.bt_diagnosis});
             this.ribbonBar3.Location = new System.Drawing.Point(82, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar3.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             this.ribbonBar3.Text = "诊断";
@@ -397,14 +357,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_diagnosis
-            // 
-            this.bt_diagnosis.Image = ((System.Drawing.Image)(resources.GetObject("bt_diagnosis.Image")));
-            this.bt_diagnosis.Name = "bt_diagnosis";
-            this.bt_diagnosis.SubItemsExpandWidth = 14;
-            this.bt_diagnosis.Text = "诊断";
-            this.bt_diagnosis.Click += new System.EventHandler(this.bt_diagnosis_Click_1);
             // 
             // ribbonBar1
             // 
@@ -424,7 +376,7 @@ namespace 甲状腺随访系统
             this.bt_patientInfo});
             this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(79, 95);
+            this.ribbonBar1.Size = new System.Drawing.Size(79, 148);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Text = "患者档案";
@@ -436,14 +388,6 @@ namespace 甲状腺随访系统
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // bt_patientInfo
-            // 
-            this.bt_patientInfo.Image = ((System.Drawing.Image)(resources.GetObject("bt_patientInfo.Image")));
-            this.bt_patientInfo.Name = "bt_patientInfo";
-            this.bt_patientInfo.SubItemsExpandWidth = 14;
-            this.bt_patientInfo.Text = "新增患者信息";
-            this.bt_patientInfo.Click += new System.EventHandler(this.bt_patientInfo_Click);
             // 
             // ribbonPanel2
             // 
@@ -467,7 +411,6 @@ namespace 甲状腺随访系统
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // ribbonBar4
             // 
@@ -509,21 +452,22 @@ namespace 甲状腺随访系统
             // 
             // ribbonTabItem1
             // 
-            this.ribbonTabItem1.Checked = true;
             this.ribbonTabItem1.Name = "ribbonTabItem1";
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "患者档案";
             // 
             // ribbonTabItem2
             // 
+            this.ribbonTabItem2.Checked = true;
             this.ribbonTabItem2.Name = "ribbonTabItem2";
             this.ribbonTabItem2.Panel = this.ribbonPanel2;
             this.ribbonTabItem2.Text = "病例检索";
+            this.ribbonTabItem2.Click += new System.EventHandler(this.ribbonTabItem2_Click);
             // 
             // buttonItem1
             // 
             this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "版本号：2017-2-24";
+            this.buttonItem1.Text = "版本号：2017-2-28";
             // 
             // qatCustomizeItem1
             // 
@@ -552,7 +496,6 @@ namespace 甲状腺随访系统
             this.panEX_main.Style.GradientAngle = 90;
             this.panEX_main.TabIndex = 1;
             this.panEX_main.Text = "主面板";
-            this.panEX_main.Validated += new System.EventHandler(this.panEX_main_Validated);
             // 
             // panelEx1
             // 
@@ -922,6 +865,62 @@ namespace 甲状腺随访系统
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "姓名：";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // bt_new
+            // 
+            this.bt_new.Image = ((System.Drawing.Image)(resources.GetObject("bt_new.Image")));
+            this.bt_new.Name = "bt_new";
+            this.bt_new.SubItemsExpandWidth = 14;
+            this.bt_new.Text = "buttonItem3";
+            this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
+            // 
+            // bt_recurrencecs
+            // 
+            this.bt_recurrencecs.Image = ((System.Drawing.Image)(resources.GetObject("bt_recurrencecs.Image")));
+            this.bt_recurrencecs.Name = "bt_recurrencecs";
+            this.bt_recurrencecs.SubItemsExpandWidth = 14;
+            this.bt_recurrencecs.Text = "buttonItem2";
+            this.bt_recurrencecs.Click += new System.EventHandler(this.bt_recurrencecs_Click);
+            // 
+            // bt_followUp
+            // 
+            this.bt_followUp.Image = ((System.Drawing.Image)(resources.GetObject("bt_followUp.Image")));
+            this.bt_followUp.Name = "bt_followUp";
+            this.bt_followUp.SubItemsExpandWidth = 14;
+            this.bt_followUp.Text = "buttonItem2";
+            this.bt_followUp.Click += new System.EventHandler(this.bt_followUp_Click);
+            // 
+            // bt_pOperative
+            // 
+            this.bt_pOperative.Image = ((System.Drawing.Image)(resources.GetObject("bt_pOperative.Image")));
+            this.bt_pOperative.Name = "bt_pOperative";
+            this.bt_pOperative.SubItemsExpandWidth = 14;
+            this.bt_pOperative.Text = "buttonItem2";
+            this.bt_pOperative.Click += new System.EventHandler(this.bt_pOperative_Click);
+            // 
+            // bt_SH
+            // 
+            this.bt_SH.Image = ((System.Drawing.Image)(resources.GetObject("bt_SH.Image")));
+            this.bt_SH.Name = "bt_SH";
+            this.bt_SH.SubItemsExpandWidth = 14;
+            this.bt_SH.Text = "外科手术史";
+            this.bt_SH.Click += new System.EventHandler(this.bt_SH_Click);
+            // 
+            // bt_diagnosis
+            // 
+            this.bt_diagnosis.Image = ((System.Drawing.Image)(resources.GetObject("bt_diagnosis.Image")));
+            this.bt_diagnosis.Name = "bt_diagnosis";
+            this.bt_diagnosis.SubItemsExpandWidth = 14;
+            this.bt_diagnosis.Text = "诊断";
+            this.bt_diagnosis.Click += new System.EventHandler(this.bt_diagnosis_Click_1);
+            // 
+            // bt_patientInfo
+            // 
+            this.bt_patientInfo.Image = ((System.Drawing.Image)(resources.GetObject("bt_patientInfo.Image")));
+            this.bt_patientInfo.Name = "bt_patientInfo";
+            this.bt_patientInfo.SubItemsExpandWidth = 14;
+            this.bt_patientInfo.Text = "新增患者信息";
+            this.bt_patientInfo.Click += new System.EventHandler(this.bt_patientInfo_Click);
             // 
             // RF_main
             // 
