@@ -869,6 +869,7 @@
             // 
             this.tb_PTH.Border.Class = "TextBoxBorder";
             this.tb_PTH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_PTH.DisabledBackColor = System.Drawing.Color.White;
             this.tb_PTH.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_PTH.Location = new System.Drawing.Point(196, 251);
             this.tb_PTH.Name = "tb_PTH";
@@ -883,6 +884,7 @@
             // 
             this.tb_TPO.Border.Class = "TextBoxBorder";
             this.tb_TPO.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_TPO.DisabledBackColor = System.Drawing.Color.White;
             this.tb_TPO.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_TPO.Location = new System.Drawing.Point(196, 204);
             this.tb_TPO.Name = "tb_TPO";
@@ -897,6 +899,7 @@
             // 
             this.tb_TGAb.Border.Class = "TextBoxBorder";
             this.tb_TGAb.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_TGAb.DisabledBackColor = System.Drawing.Color.White;
             this.tb_TGAb.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_TGAb.Location = new System.Drawing.Point(196, 387);
             this.tb_TGAb.Name = "tb_TGAb";
@@ -911,6 +914,7 @@
             // 
             this.tb_OS.Border.Class = "TextBoxBorder";
             this.tb_OS.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_OS.DisabledBackColor = System.Drawing.Color.White;
             this.tb_OS.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_OS.Location = new System.Drawing.Point(589, 254);
             this.tb_OS.Name = "tb_OS";
@@ -925,6 +929,7 @@
             // 
             this.tb_SR.Border.Class = "TextBoxBorder";
             this.tb_SR.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_SR.DisabledBackColor = System.Drawing.Color.White;
             this.tb_SR.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_SR.Location = new System.Drawing.Point(589, 213);
             this.tb_SR.Name = "tb_SR";
@@ -939,6 +944,7 @@
             // 
             this.tb_CaD.Border.Class = "TextBoxBorder";
             this.tb_CaD.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_CaD.DisabledBackColor = System.Drawing.Color.White;
             this.tb_CaD.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_CaD.Location = new System.Drawing.Point(589, 167);
             this.tb_CaD.Name = "tb_CaD";
@@ -953,6 +959,7 @@
             // 
             this.tb_ED.Border.Class = "TextBoxBorder";
             this.tb_ED.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_ED.DisabledBackColor = System.Drawing.Color.White;
             this.tb_ED.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_ED.Location = new System.Drawing.Point(589, 118);
             this.tb_ED.Name = "tb_ED";
@@ -967,6 +974,7 @@
             // 
             this.tb_P.Border.Class = "TextBoxBorder";
             this.tb_P.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_P.DisabledBackColor = System.Drawing.Color.White;
             this.tb_P.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_P.Location = new System.Drawing.Point(589, 75);
             this.tb_P.Name = "tb_P";
@@ -981,6 +989,7 @@
             // 
             this.tb_Ca.Border.Class = "TextBoxBorder";
             this.tb_Ca.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_Ca.DisabledBackColor = System.Drawing.Color.White;
             this.tb_Ca.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_Ca.Location = new System.Drawing.Point(589, 34);
             this.tb_Ca.Name = "tb_Ca";
@@ -995,6 +1004,7 @@
             // 
             this.tb_TG.Border.Class = "TextBoxBorder";
             this.tb_TG.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_TG.DisabledBackColor = System.Drawing.Color.White;
             this.tb_TG.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_TG.Location = new System.Drawing.Point(196, 347);
             this.tb_TG.Name = "tb_TG";
@@ -1009,6 +1019,7 @@
             // 
             this.tb_ATG.Border.Class = "TextBoxBorder";
             this.tb_ATG.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_ATG.DisabledBackColor = System.Drawing.Color.White;
             this.tb_ATG.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_ATG.Location = new System.Drawing.Point(196, 304);
             this.tb_ATG.Name = "tb_ATG";
@@ -1023,6 +1034,7 @@
             // 
             this.tb_FT4.Border.Class = "TextBoxBorder";
             this.tb_FT4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_FT4.DisabledBackColor = System.Drawing.Color.White;
             this.tb_FT4.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_FT4.Location = new System.Drawing.Point(196, 160);
             this.tb_FT4.Name = "tb_FT4";
@@ -1037,6 +1049,7 @@
             // 
             this.tb_FT3.Border.Class = "TextBoxBorder";
             this.tb_FT3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_FT3.DisabledBackColor = System.Drawing.Color.White;
             this.tb_FT3.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_FT3.Location = new System.Drawing.Point(196, 114);
             this.tb_FT3.Name = "tb_FT3";
@@ -1051,6 +1064,7 @@
             // 
             this.tb_TSH.Border.Class = "TextBoxBorder";
             this.tb_TSH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_TSH.DisabledBackColor = System.Drawing.Color.White;
             this.tb_TSH.Font = new System.Drawing.Font("宋体", 12F);
             this.tb_TSH.Location = new System.Drawing.Point(196, 72);
             this.tb_TSH.Name = "tb_TSH";

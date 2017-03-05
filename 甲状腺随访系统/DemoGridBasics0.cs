@@ -6,7 +6,7 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 
-namespace SuperGridDemo
+namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
     public partial class DemoGridBasics0 : Office2007Form
     {

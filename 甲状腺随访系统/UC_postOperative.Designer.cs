@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.cbe_PLhypomotility = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem13 = new DevComponents.Editors.ComboItem();
+            this.comboItem14 = new DevComponents.Editors.ComboItem();
+            this.comboItem15 = new DevComponents.Editors.ComboItem();
+            this.comboItem16 = new DevComponents.Editors.ComboItem();
             this.sgc_inspect = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.day = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.gridColumn11 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -214,11 +219,6 @@
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.cbe_PLhypomotility = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem13 = new DevComponents.Editors.ComboItem();
-            this.comboItem14 = new DevComponents.Editors.ComboItem();
-            this.comboItem15 = new DevComponents.Editors.ComboItem();
-            this.comboItem16 = new DevComponents.Editors.ComboItem();
             this.sideNav1.SuspendLayout();
             this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
@@ -231,8 +231,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Controls.Add(this.sideNavPanel1);
+            this.sideNav1.Controls.Add(this.sideNavPanel3);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -291,8 +291,42 @@
             this.sideNavPanel3.Name = "sideNavPanel3";
             this.sideNavPanel3.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel3.TabIndex = 13;
+            this.sideNavPanel3.Visible = false;
             this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
+            // 
+            // cbe_PLhypomotility
+            // 
+            this.cbe_PLhypomotility.DisplayMember = "Text";
+            this.cbe_PLhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_PLhypomotility.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_PLhypomotility.FormattingEnabled = true;
+            this.cbe_PLhypomotility.ItemHeight = 20;
+            this.cbe_PLhypomotility.Items.AddRange(new object[] {
+            this.comboItem13,
+            this.comboItem14,
+            this.comboItem15,
+            this.comboItem16});
+            this.cbe_PLhypomotility.Location = new System.Drawing.Point(629, 277);
+            this.cbe_PLhypomotility.Name = "cbe_PLhypomotility";
+            this.cbe_PLhypomotility.Size = new System.Drawing.Size(121, 26);
+            this.cbe_PLhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_PLhypomotility.TabIndex = 141;
+            // 
+            // comboItem14
+            // 
+            this.comboItem14.Text = "否";
+            this.comboItem14.Value = "否";
+            // 
+            // comboItem15
+            // 
+            this.comboItem15.Text = "单侧";
+            this.comboItem15.Value = "单侧";
+            // 
+            // comboItem16
+            // 
+            this.comboItem16.Text = "两侧";
+            this.comboItem16.Value = "两侧";
             // 
             // sgc_inspect
             // 
@@ -1013,7 +1047,6 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel1.TabIndex = 2;
-            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -1049,8 +1082,8 @@
             // 
             this.gridColumn2.ColumnSortMode = DevComponents.DotNetBar.SuperGrid.ColumnSortMode.None;
             this.gridColumn2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn2.HeaderText = "TS(uTu/ml)";
-            this.gridColumn2.Name = "TS";
+            this.gridColumn2.HeaderText = "TSH(uTu/ml)";
+            this.gridColumn2.Name = "TSH";
             this.gridColumn2.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
             // 
             // gridColumn3
@@ -1314,6 +1347,7 @@
             // 
             // sideNavItem2
             // 
+            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";
@@ -1331,7 +1365,6 @@
             // 
             // sideNavItem4
             // 
-            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";
@@ -2080,39 +2113,6 @@
             this.labelX12.TabIndex = 14;
             this.labelX12.Text = "术后检查";
             this.labelX12.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // cbe_PLhypomotility
-            // 
-            this.cbe_PLhypomotility.DisplayMember = "Text";
-            this.cbe_PLhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_PLhypomotility.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_PLhypomotility.FormattingEnabled = true;
-            this.cbe_PLhypomotility.ItemHeight = 20;
-            this.cbe_PLhypomotility.Items.AddRange(new object[] {
-            this.comboItem13,
-            this.comboItem14,
-            this.comboItem15,
-            this.comboItem16});
-            this.cbe_PLhypomotility.Location = new System.Drawing.Point(629, 277);
-            this.cbe_PLhypomotility.Name = "cbe_PLhypomotility";
-            this.cbe_PLhypomotility.Size = new System.Drawing.Size(121, 26);
-            this.cbe_PLhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PLhypomotility.TabIndex = 141;
-            // 
-            // comboItem14
-            // 
-            this.comboItem14.Text = "否";
-            this.comboItem14.Value = "否";
-            // 
-            // comboItem15
-            // 
-            this.comboItem15.Text = "单侧";
-            this.comboItem15.Value = "单侧";
-            // 
-            // comboItem16
-            // 
-            this.comboItem16.Text = "两侧";
-            this.comboItem16.Value = "两侧";
             // 
             // UC_postOperative
             // 

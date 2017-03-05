@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace 甲状腺随访系统
 {
-    public partial class Uc_view : UserControl
+    public partial class UC_view : UserControl
     {
-        public Uc_view()
+        public UC_view()
         {
             InitializeComponent();
         }

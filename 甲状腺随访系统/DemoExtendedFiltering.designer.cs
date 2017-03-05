@@ -1,6 +1,6 @@
 using DevComponents.DotNetBar.Controls;
 
-namespace SuperGridDemo
+namespace 甲状腺随访系统
 {
     partial class DemoExtendedFiltering
     {
@@ -32,12 +32,6 @@ namespace SuperGridDemo
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoExtendedFiltering));
-            this.gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.richTextBox1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -54,35 +48,6 @@ namespace SuperGridDemo
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.SuspendLayout();
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleLeft;
-            this.gridColumn1.Name = "Index";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Name = "LastName";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.FilterAutoScan = true;
-            this.gridColumn3.Name = "FirstName";
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl);
-            this.gridColumn4.Name = "Age";
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimePickerEditControl);
-            this.gridColumn5.Name = "HireDate";
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl);
-            this.gridColumn6.Name = "Citizen";
             // 
             // richTextBox1
             // 
@@ -108,11 +73,11 @@ namespace SuperGridDemo
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(566, 487);
+            this.labelX4.Location = new System.Drawing.Point(547, 486);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(94, 18);
+            this.labelX4.Size = new System.Drawing.Size(113, 18);
             this.labelX4.TabIndex = 18;
-            this.labelX4.Text = "Filter Match Type:";
+            this.labelX4.Text = "过滤器匹配类型：";
             this.labelX4.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX3
@@ -126,7 +91,7 @@ namespace SuperGridDemo
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(120, 18);
             this.labelX3.TabIndex = 17;
-            this.labelX3.Text = "Filter Image Visibility:";
+            this.labelX3.Text = "过滤图标可见性：";
             this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX1
@@ -140,7 +105,7 @@ namespace SuperGridDemo
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(120, 18);
             this.labelX1.TabIndex = 16;
-            this.labelX1.Text = "Filter Image Alignment:";
+            this.labelX1.Text = "过滤图标对齐：";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // labelX2
@@ -154,7 +119,7 @@ namespace SuperGridDemo
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(70, 18);
             this.labelX2.TabIndex = 14;
-            this.labelX2.Text = "Filter Level:";
+            this.labelX2.Text = "过滤水平：";
             this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // cbFilterLevel
@@ -199,7 +164,7 @@ namespace SuperGridDemo
             this.cbxUseAgeSlider.Size = new System.Drawing.Size(152, 21);
             this.cbxUseAgeSlider.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxUseAgeSlider.TabIndex = 12;
-            this.cbxUseAgeSlider.Text = "Use Slider for Age Filter";
+            this.cbxUseAgeSlider.Text = "使用滑块年龄过滤器";
             this.cbxUseAgeSlider.CheckedChanged += new System.EventHandler(this.CbxUseAgeSliderCheckedChanged);
             // 
             // cbxShowPanelExpr
@@ -214,7 +179,7 @@ namespace SuperGridDemo
             this.cbxShowPanelExpr.Size = new System.Drawing.Size(152, 21);
             this.cbxShowPanelExpr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxShowPanelExpr.TabIndex = 11;
-            this.cbxShowPanelExpr.Text = "Show Filter Expression";
+            this.cbxShowPanelExpr.Text = "显示筛选器表达式";
             this.cbxShowPanelExpr.CheckedChanged += new System.EventHandler(this.CbxShowPanelExprCheckedChanged);
             // 
             // cbFilterAlignment
@@ -257,7 +222,7 @@ namespace SuperGridDemo
             this.btnResetColumnFilters.Size = new System.Drawing.Size(113, 21);
             this.btnResetColumnFilters.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnResetColumnFilters.TabIndex = 5;
-            this.btnResetColumnFilters.Text = "Reset column filters";
+            this.btnResetColumnFilters.Text = "重置列过滤器";
             this.btnResetColumnFilters.Click += new System.EventHandler(this.BtnResetColumnFiltersClick);
             // 
             // btnResetPanelFilter
@@ -270,13 +235,13 @@ namespace SuperGridDemo
             this.btnResetPanelFilter.Size = new System.Drawing.Size(113, 21);
             this.btnResetPanelFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnResetPanelFilter.TabIndex = 4;
-            this.btnResetPanelFilter.Text = "Reset panel filter";
+            this.btnResetPanelFilter.Text = "重置面板过滤器";
             this.btnResetPanelFilter.Click += new System.EventHandler(this.BtnResetPanelFilterClick);
             // 
             // styleManager1
             // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Windows7Blue;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
             // 
             // superGridControl1
             // 
@@ -298,12 +263,6 @@ namespace SuperGridDemo
             // 
             // 
             this.superGridControl1.PrimaryGrid.ColumnHeader.RowHeight = 30;
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn1);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn2);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn3);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn4);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn5);
-            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn6);
             this.superGridControl1.PrimaryGrid.DefaultRowHeight = 24;
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
@@ -352,7 +311,7 @@ namespace SuperGridDemo
             this.MinimumSize = new System.Drawing.Size(565, 294);
             this.Name = "DemoExtendedFiltering";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SuperGrid Demo - Extended Data Filtering";
+            this.Text = "病历检索";
             this.ResumeLayout(false);
 
         }
@@ -374,11 +333,5 @@ namespace SuperGridDemo
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5;
-        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn6;
     }
 }

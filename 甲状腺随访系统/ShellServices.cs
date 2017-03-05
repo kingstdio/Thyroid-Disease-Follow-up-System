@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 
-namespace SuperGridDemo
+namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
     internal class ShellServices
     {

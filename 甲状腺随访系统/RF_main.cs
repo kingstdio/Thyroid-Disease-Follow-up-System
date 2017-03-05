@@ -19,6 +19,7 @@ namespace 甲状腺随访系统
         UC_postOperative uC_postOperative = new UC_postOperative();
         UC_followUp uC_followUp = new UC_followUp();
         UC_recurrencecs uC_recurrencecs = new UC_recurrencecs();
+        UC_view uC_view = new UC_view();
         
 
 
@@ -39,6 +40,7 @@ namespace 甲状腺随访系统
             panEX_main.Controls.Add(uC_postOperative);
             panEX_main.Controls.Add(uC_followUp);
             panEX_main.Controls.Add(uC_recurrencecs);
+            panEX_main.Controls.Add(uC_view);
 
             //设置缩放属性
             uC_patientInfo.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
@@ -47,6 +49,7 @@ namespace 甲状腺随访系统
             uC_postOperative.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_followUp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_recurrencecs.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            uC_view.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
 
             //设置功能面板的可见性
             uC_diagnosis.Visible = false;
@@ -54,6 +57,7 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
+            uC_view.Visible = false;
 
             fillPaitentBoard(null, null);
 
@@ -205,9 +209,25 @@ namespace 甲状腺随访系统
             
         }
 
+        //检索界面
+        private void rti_search_Click(object sender, EventArgs e)
+        {
+            uC_patientInfo.Visible = false;
+            uC_diagnosis.Visible = false;
+            uC_postOperative.Visible = false;
+            uC_surgeryHistory.Visible = false;
+            uC_followUp.Visible = false;
+            uC_recurrencecs.Visible = false;
+            uC_view.Visible = true;
+            
+            
+        }
+    
+
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            ToastNotification.Show(this,"系统数据保存成功");
+            甲状腺随访系统.DemoExtendedFiltering demoExtendedFiltering = new 甲状腺随访系统.DemoExtendedFiltering();
+            demoExtendedFiltering.ShowDialog();
             
         }
         #endregion
@@ -275,12 +295,8 @@ namespace 甲状腺随访系统
             Control.RefreshPatient.refresh(0);
         }
 
-        private void ribbonTabItem2_Click(object sender, EventArgs e)
-        {
-            SuperGridDemo.DemoExtendedFiltering demoExtendedFiltering = new SuperGridDemo.DemoExtendedFiltering();
-            demoExtendedFiltering.ShowDialog();
-        }
-    
+     
+       
 
     
 

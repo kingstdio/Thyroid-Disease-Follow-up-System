@@ -7,8 +7,9 @@ using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
+using ¼××´ÏÙËæ·ÃÏµÍ³;
 
-namespace SuperGridDemo
+namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
     public partial class DemoExtendedFiltering : Office2007Form
     {
@@ -66,12 +67,13 @@ namespace SuperGridDemo
         {
             GridPanel panel = superGridControl1.PrimaryGrid;
 
-            panel.Columns["LastName"].EditorType = typeof(MyComboBox);
-            panel.Columns["Citizen"].EditorType = typeof(MyCheckBox);
+            panel.DataSource = DAO.PatientInfo.getInfo();
+            //panel.Columns["LastName"].EditorType = typeof(MyComboBox);
+            //panel.Columns["Citizen"].EditorType = typeof(MyCheckBox);
+            
+            //// Add rows for the user to filter
 
-            // Add rows for the user to filter
-
-            AddRows();
+            //AddRows();
 
             // Hook onto a few of the filtering events
             // to demonstrate their use and simple application
@@ -766,75 +768,75 @@ namespace SuperGridDemo
 
         #endregion
 
-        #region AddRows
+        //#region AddRows
 
-        /// <summary>
-        /// Routine to add a random set of rows to the grid.
-        /// </summary>
-        private void AddRows()
-        {
-            Random rand = new Random();
+        ///// <summary>
+        ///// Routine to add a random set of rows to the grid.
+        ///// </summary>
+        //private void AddRows()
+        //{
+        //    Random rand = new Random();
 
-            superGridControl1.BeginUpdate();
+        //    superGridControl1.BeginUpdate();
 
-            GridPanel panel = superGridControl1.PrimaryGrid;
+        //    GridPanel panel = superGridControl1.PrimaryGrid;
 
-            // Add 500 root rows for the user to filter.
+        //    // Add 500 root rows for the user to filter.
 
-            for (int i = 0; i < 500; i++)
-            {
-                GridRow row = GetNewRow(i);
+        //    for (int i = 0; i < 500; i++)
+        //    {
+        //        GridRow row = GetNewRow(i);
 
-                panel.Rows.Add(row);
+        //        panel.Rows.Add(row);
 
-                // Add a random number of sub-rows (2 to 7).
+        //        // Add a random number of sub-rows (2 to 7).
 
-                int m = rand.Next(2, 7);
+        //        int m = rand.Next(2, 7);
 
-                for (int j = 0; j < m; j++)
-                    row.Rows.Add(GetNewRow(rand.Next(0, 500)));
-            }
+        //        for (int j = 0; j < m; j++)
+        //            row.Rows.Add(GetNewRow(rand.Next(0, 500)));
+        //    }
 
-            superGridControl1.EndUpdate();
-        }
+        //    superGridControl1.EndUpdate();
+        //}
 
-        #region GetNewRow
+        //#region GetNewRow
 
-        /// <summary>
-        /// Create a new random Employee row
-        /// </summary>
-        /// <param name="count"></param>
-        /// <returns></returns>
-        private GridRow GetNewRow(int count)
-        {
-            MyEmployee emp = MyEmployee.GetNewEmployee();
+        ///// <summary>
+        ///// Create a new random Employee row
+        ///// </summary>
+        ///// <param name="count"></param>
+        ///// <returns></returns>
+        ////private GridRow GetNewRow(int count)
+        ////{
+        ////    MyEmployee emp = MyEmployee.GetNewEmployee();
 
-            object firstName = (emp.Age % 7 == 0 ? (object)DBNull.Value : emp.FirstName);
-            object age = (emp.Age % 5 == 0 ? null : (object)emp.Age);
-            object citizen = (emp.Age % 3 == 0 ? null : (object)emp.Citizen);
-            object hireDate = (emp.Age % 6 == 0 ? null : (object)emp.HireDate);
+        ////    object firstName = (emp.Age % 7 == 0 ? (object)DBNull.Value : emp.FirstName);
+        ////    object age = (emp.Age % 5 == 0 ? null : (object)emp.Age);
+        ////    object citizen = (emp.Age % 3 == 0 ? null : (object)emp.Citizen);
+        ////    object hireDate = (emp.Age % 6 == 0 ? null : (object)emp.HireDate);
 
-            object[] ob1 = new object[]
-                { count, emp.LastName, firstName, age, hireDate, citizen };
+        ////    object[] ob1 = new object[]
+        ////        { count, emp.LastName, firstName, age, hireDate, citizen };
 
-            if (count % 100 == 50)
-            {
-                int n = count % 6 + 1;
+        ////    if (count % 100 == 50)
+        ////    {
+        ////        int n = count % 6 + 1;
 
-                object[] ob2 = new object[n];
+        ////        object[] ob2 = new object[n];
 
-                for (int j = 0; j < n; j++)
-                    ob2[j] = ob1[j];
+        ////        for (int j = 0; j < n; j++)
+        ////            ob2[j] = ob1[j];
 
-                return (new GridRow(ob2));
-            }
+        ////        return (new GridRow(ob2));
+        ////    }
             
-            return (new GridRow(ob1));
-        }
+        ////    return (new GridRow(ob1));
+        ////}
 
-        #endregion
+        //#endregion
 
-        #endregion
+        //#endregion
 
         #region CbxShowPanelExprCheckedChanged
 
