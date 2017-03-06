@@ -19,7 +19,7 @@ namespace 甲状腺随访系统
         UC_postOperative uC_postOperative = new UC_postOperative();
         UC_followUp uC_followUp = new UC_followUp();
         UC_recurrencecs uC_recurrencecs = new UC_recurrencecs();
-        UC_view uC_view = new UC_view();
+        PatientInfoFiltering demoExtendedFiltering = new PatientInfoFiltering();
         
 
 
@@ -40,7 +40,10 @@ namespace 甲状腺随访系统
             panEX_main.Controls.Add(uC_postOperative);
             panEX_main.Controls.Add(uC_followUp);
             panEX_main.Controls.Add(uC_recurrencecs);
-            panEX_main.Controls.Add(uC_view);
+
+            demoExtendedFiltering.TopLevel = false;
+            demoExtendedFiltering.Parent = this;
+            panEX_main.Controls.Add(demoExtendedFiltering);
 
             //设置缩放属性
             uC_patientInfo.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
@@ -49,7 +52,8 @@ namespace 甲状腺随访系统
             uC_postOperative.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_followUp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_recurrencecs.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-            uC_view.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+           
+
 
             //设置功能面板的可见性
             uC_diagnosis.Visible = false;
@@ -57,7 +61,8 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
-            uC_view.Visible = false;
+            demoExtendedFiltering.Visible = false;
+
 
             fillPaitentBoard(null, null);
 
@@ -108,137 +113,86 @@ namespace 甲状腺随访系统
 
         #region 界面按钮操作
         private void bt_patientInfo_Click(object sender, EventArgs e)
-        { 
-            
-            uC_diagnosis.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_patientInfo.Visible = true;
-        }
-
-
-
-        private void bt_riskFator_Click(object sender, EventArgs e)
         {
-            uC_patientInfo.Visible = false;       
-            uC_diagnosis.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            
+            changeUI("uC_patientInfo");
         }
-
 
         private void bt_diagnosis_Click_1(object sender, EventArgs e)
         {
-            uC_patientInfo.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_diagnosis.Visible = true;
-            
+            changeUI("uC_diagnosis");            
         }
-
-
 
         private void bt_SH_Click(object sender, EventArgs e)
         {
-            uC_patientInfo.Visible = false;
-            uC_diagnosis.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_surgeryHistory.Visible = true;
+            changeUI("uC_surgeryHistory");
+     
         }
-
-
-        private void bt_pOperative_Click(object sender, EventArgs e)
-        {
-            uC_patientInfo.Visible = false;
-            uC_diagnosis.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_postOperative.Visible = true;
-        }
-
 
         private void bt_new_Click(object sender, EventArgs e)
         {
-           
-            uC_diagnosis.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_patientInfo.Visible = true;
-
+            changeUI("uC_patientInfo");
             Conf.currentPatient = new model.Patient();
             Control.RefreshPatient.refresh(0);
         }
 
+        /// <summary>
+        /// 按钮-术后
+        /// </summary>
+        private void bt_pOperative_Click(object sender, EventArgs e)
+        {
+            changeUI("uC_postOperative");
+        }
 
         /// <summary>
-        /// 界面追踪按钮
+        /// 按钮-追踪
         /// </summary>
         private void bt_followUp_Click(object sender, EventArgs e)
         {
-            uC_patientInfo.Visible = false;
-            uC_diagnosis.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_surgeryHistory.Visible = false;         
-            uC_recurrencecs.Visible = false;         
-            uC_followUp.Visible = true;
-
+            changeUI("uC_followUp");
             F_patientChoose fchoosePatient = new F_patientChoose();
             fchoosePatient.ShowDialog();
         }
+       
 
         private void bt_recurrencecs_Click(object sender, EventArgs e)
         {
-            uC_patientInfo.Visible = false;
-            uC_diagnosis.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = true;
-            
+            changeUI("uC_recurrencecs");            
         }
-
-        //检索界面
-        private void rti_search_Click(object sender, EventArgs e)
+        //查询界面
+        private void buttonItem2_Click(object sender, EventArgs e)
         {
+            changeUI("PatientInfoFiltering");
+          
+           
+            panel_patientInfo.Visible = false;
+            //cp_wait.Visible = true;
+        }
+        #endregion
+
+        /// <summary>
+        /// 根据名称改变控件的可见性
+        /// </summary>
+        /// <param name="controlName">控件名称</param>
+        private void changeUI(string controlName) {
+
             uC_patientInfo.Visible = false;
             uC_diagnosis.Visible = false;
             uC_postOperative.Visible = false;
             uC_surgeryHistory.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
-            uC_view.Visible = true;
-            
-            
-        }
-    
+            panel_patientInfo.Visible = true;
+            demoExtendedFiltering.Visible = false;
 
-        private void buttonItem2_Click(object sender, EventArgs e)
-        {
-            甲状腺随访系统.DemoExtendedFiltering demoExtendedFiltering = new 甲状腺随访系统.DemoExtendedFiltering();
-            demoExtendedFiltering.ShowDialog();
-            
-        }
-        #endregion
 
-  
+            panEX_main.Controls.Find(controlName, false)[0].Visible = true;
 
-        private void bt_save_Click(object sender, EventArgs e)
-        {
-            DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
         }
 
+
+        /// <summary>
+        /// 删除按钮
+        /// </summary>
         private void buttonX1_Click(object sender, EventArgs e)
         {
 
@@ -284,21 +238,31 @@ namespace 甲状腺随访系统
         /// <param name="obj"></param>
         /// <param name="args"></param>
         void newPaitentAction(object obj, EventArgs args)
-        {
+        {      
             Conf.currentPatient = new model.Patient();
-            uC_diagnosis.Visible = false;
-            uC_surgeryHistory.Visible = false;
-            uC_postOperative.Visible = false;
-            uC_followUp.Visible = false;
-            uC_recurrencecs.Visible = false;
-            uC_patientInfo.Visible = true;
+            changeUI("uC_patientInfo");
             Control.RefreshPatient.refresh(0);
         }
 
-     
-       
 
-    
+
+
+
+        private void RF_main_SizeChanged(object sender, EventArgs e)
+        {
+            if (demoExtendedFiltering.Visible)
+            {
+                demoExtendedFiltering.WindowState = FormWindowState.Normal;
+                demoExtendedFiltering.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void panEX_main_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
 
     }
 }

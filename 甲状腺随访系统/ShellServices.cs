@@ -179,7 +179,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         public static void LoadRtbText(RichTextBoxEx rtb, string resource)
         {
             using (Stream stream =
-                typeof(DemoGridBasics0).Assembly.GetManifestResourceStream(resource))
+                typeof(GridBasics0).Assembly.GetManifestResourceStream(resource))
             {
                 if (stream != null)
                 {
@@ -201,7 +201,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         public static Bitmap LoadBitmap(string resource)
         {
             using (Stream stream =
-                typeof(DemoGridBasics0).Assembly.GetManifestResourceStream(resource))
+                typeof(GridBasics0).Assembly.GetManifestResourceStream(resource))
             {
                 if (stream != null)
                 {
@@ -245,7 +245,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         public static object GetResource(string resource)
         {
-            return (typeof(DemoGridBasics0).Assembly.GetManifestResourceStream(resource));
+            return (typeof(GridBasics0).Assembly.GetManifestResourceStream(resource));
         }
 
         #endregion

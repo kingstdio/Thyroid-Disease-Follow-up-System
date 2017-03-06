@@ -65,17 +65,17 @@
     <Compile Include="DAO\InsertPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
-    <Compile Include="DemoExtendedFiltering.cs">
+    <Compile Include="PatientInfoFiltering.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DemoExtendedFiltering.designer.cs">
-      <DependentUpon>DemoExtendedFiltering.cs</DependentUpon>
+    <Compile Include="PatientInfoFiltering.designer.cs">
+      <DependentUpon>PatientInfoFiltering.cs</DependentUpon>
     </Compile>
-    <Compile Include="DemoGridBasics0.cs">
+    <Compile Include="GridBasics0.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DemoGridBasics0.designer.cs">
-      <DependentUpon>DemoGridBasics0.cs</DependentUpon>
+    <Compile Include="GridBasics0.designer.cs">
+      <DependentUpon>GridBasics0.cs</DependentUpon>
     </Compile>
     <Compile Include="F_patientChoose.cs">
       <SubType>Form</SubType>
@@ -157,17 +157,11 @@
     <Compile Include="UC_surgeryHistory.Designer.cs">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_view.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_view.Designer.cs">
-      <DependentUpon>UC_view.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DemoExtendedFiltering.resx">
-      <DependentUpon>DemoExtendedFiltering.cs</DependentUpon>
+    <EmbeddedResource Include="PatientInfoFiltering.resx">
+      <DependentUpon>PatientInfoFiltering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DemoGridBasics0.resx">
-      <DependentUpon>DemoGridBasics0.cs</DependentUpon>
+    <EmbeddedResource Include="GridBasics0.resx">
+      <DependentUpon>GridBasics0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_patientChoose.resx">
       <DependentUpon>F_patientChoose.cs</DependentUpon>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_surgeryHistory.resx">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_view.resx">
-      <DependentUpon>UC_view.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="data\conf\lang\CN.ini">

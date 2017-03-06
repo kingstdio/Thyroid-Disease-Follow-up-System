@@ -135,6 +135,6 @@ D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_surgeryHisto
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csproj.GenerateResource.Cache
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.exe
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.pdb
-D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.DemoExtendedFiltering.resources
-D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.DemoGridBasics0.resources
-D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_view.resources
+D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csprojResolveAssemblyReference.cache
+D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.PatientInfoFiltering.resources
+D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.GridBasics0.resources

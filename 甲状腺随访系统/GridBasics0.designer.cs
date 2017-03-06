@@ -1,6 +1,6 @@
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
-    partial class DemoGridBasics0
+    partial class GridBasics0
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoGridBasics0));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GridBasics0));
             DevComponents.DotNetBar.SuperGrid.Style.Background background6 = new DevComponents.DotNetBar.SuperGrid.Style.Background();
             DevComponents.DotNetBar.SuperGrid.Style.Padding padding8 = new DevComponents.DotNetBar.SuperGrid.Style.Padding();
             DevComponents.DotNetBar.SuperGrid.Style.Padding padding9 = new DevComponents.DotNetBar.SuperGrid.Style.Padding();

@@ -2,7 +2,7 @@ using DevComponents.DotNetBar.Controls;
 
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
-    partial class DemoExtendedFiltering
+    partial class PatientInfoFiltering
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,13 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DemoExtendedFiltering));
-            this.richTextBox1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientInfoFiltering));
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.cbFilterLevel = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbFilterImageVisibility = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cbxUseAgeSlider = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cbxShowPanelExpr = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cbFilterAlignment = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cbMatchType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -47,24 +45,9 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.btnResetPanelFilter = new DevComponents.DotNetBar.ButtonX();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.circularProgressItem6 = new DevComponents.DotNetBar.CircularProgressItem();
+            this.cbxUseAgeSlider = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColorRichTextBox = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.richTextBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.richTextBox1.Location = new System.Drawing.Point(4, 4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Rtf = "{\\rtf1\\ansi\\ansicpg936\\deff0\\deflang1033\\deflangfe2052{\\fonttbl{\\f0\\fnil\\fcharset" +
-    "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
-            this.richTextBox1.Size = new System.Drawing.Size(780, 104);
-            this.richTextBox1.TabIndex = 2;
             // 
             // labelX4
             // 
@@ -152,22 +135,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.cbFilterImageVisibility.TabIndex = 13;
             this.cbFilterImageVisibility.SelectedIndexChanged += new System.EventHandler(this.CbFilterImageVisibilitySelectedIndexChanged);
             // 
-            // cbxUseAgeSlider
-            // 
-            this.cbxUseAgeSlider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            // 
-            // 
-            // 
-            this.cbxUseAgeSlider.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.cbxUseAgeSlider.Location = new System.Drawing.Point(151, 486);
-            this.cbxUseAgeSlider.Name = "cbxUseAgeSlider";
-            this.cbxUseAgeSlider.Size = new System.Drawing.Size(152, 21);
-            this.cbxUseAgeSlider.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbxUseAgeSlider.TabIndex = 12;
-            this.cbxUseAgeSlider.Text = "Ê¹ÓÃ»¬¿éÄêÁä¹ýÂËÆ÷";
-            this.cbxUseAgeSlider.Visible = false;
-            this.cbxUseAgeSlider.CheckedChanged += new System.EventHandler(this.CbxUseAgeSliderCheckedChanged);
-            // 
             // cbxShowPanelExpr
             // 
             this.cbxShowPanelExpr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -253,11 +220,12 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
             this.superGridControl1.FilterUseExtendedCustomDialog = true;
             this.superGridControl1.ForeColor = System.Drawing.Color.Black;
-            this.superGridControl1.Location = new System.Drawing.Point(0, 114);
+            this.superGridControl1.Location = new System.Drawing.Point(0, 0);
             this.superGridControl1.Name = "superGridControl1";
             // 
             // 
             // 
+            this.superGridControl1.PrimaryGrid.AllowEdit = false;
             this.superGridControl1.PrimaryGrid.AllowRowHeaderResize = true;
             this.superGridControl1.PrimaryGrid.AllowRowResize = true;
             // 
@@ -283,36 +251,61 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             // 
             // 
             this.superGridControl1.PrimaryGrid.Title.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.PanelControlled;
-            this.superGridControl1.Size = new System.Drawing.Size(784, 335);
+            this.superGridControl1.Size = new System.Drawing.Size(784, 449);
             this.superGridControl1.TabIndex = 0;
             this.superGridControl1.Text = "superGridControl1";
             // 
-            // DemoExtendedFiltering
+            // circularProgressItem6
+            // 
+            this.circularProgressItem6.Diameter = 48;
+            this.circularProgressItem6.Name = "circularProgressItem6";
+            this.circularProgressItem6.ProgressTextVisible = true;
+            // 
+            // cbxUseAgeSlider
+            // 
+            this.cbxUseAgeSlider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            // 
+            // 
+            // 
+            this.cbxUseAgeSlider.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cbxUseAgeSlider.Location = new System.Drawing.Point(151, 489);
+            this.cbxUseAgeSlider.Name = "cbxUseAgeSlider";
+            this.cbxUseAgeSlider.Size = new System.Drawing.Size(152, 21);
+            this.cbxUseAgeSlider.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbxUseAgeSlider.TabIndex = 19;
+            this.cbxUseAgeSlider.Text = "Use Slider for Age Filter";
+            this.cbxUseAgeSlider.Visible = false;
+            // 
+            // PatientInfoFiltering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(784, 519);
+            this.Controls.Add(this.cbxUseAgeSlider);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.cbFilterLevel);
             this.Controls.Add(this.cbFilterImageVisibility);
-            this.Controls.Add(this.cbxUseAgeSlider);
             this.Controls.Add(this.cbxShowPanelExpr);
             this.Controls.Add(this.cbFilterAlignment);
             this.Controls.Add(this.cbMatchType);
             this.Controls.Add(this.btnResetColumnFilters);
             this.Controls.Add(this.btnResetPanelFilter);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.superGridControl1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(565, 294);
-            this.Name = "DemoExtendedFiltering";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "PatientInfoFiltering";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "²¡Àú¼ìË÷";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
@@ -320,19 +313,19 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         #endregion
 
         private DevComponents.DotNetBar.SuperGrid.SuperGridControl superGridControl1;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx richTextBox1;
         private DevComponents.DotNetBar.ButtonX btnResetPanelFilter;
         private DevComponents.DotNetBar.ButtonX btnResetColumnFilters;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbMatchType;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbFilterAlignment;
         private DevComponents.DotNetBar.Controls.CheckBoxX cbxShowPanelExpr;
-        private DevComponents.DotNetBar.Controls.CheckBoxX cbxUseAgeSlider;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbFilterImageVisibility;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbFilterLevel;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.CircularProgressItem circularProgressItem6;
+        private CheckBoxX cbxUseAgeSlider;
     }
 }

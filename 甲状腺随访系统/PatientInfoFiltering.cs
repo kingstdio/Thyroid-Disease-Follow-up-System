@@ -8,10 +8,11 @@ using DevComponents.DotNetBar.Controls;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using ¼××´ÏÙËæ·ÃÏµÍ³;
+using System.Threading;
 
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
-    public partial class DemoExtendedFiltering : Office2007Form
+    public partial class PatientInfoFiltering : Office2007Form
     {
         #region Private variables
 
@@ -22,7 +23,8 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-        public DemoExtendedFiltering()
+        private GridPanel panel;
+        public PatientInfoFiltering()
         {
             InitializeComponent();
 
@@ -32,8 +34,12 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             InitControls();
             InitializeGrid();
 
-            ShellServices.LoadRtbText(richTextBox1,
-                "SuperGridDemo.Resources.DemoExtendedFiltering.rtf");
+            //ShellServices.LoadRtbText(richTextBox1,
+            //    "SuperGridDemo.Resources.DemoExtendedFiltering.rtf");
+
+            Thread getTableThread = new Thread(getPatientInfoTable);
+            getTableThread.Start();
+
         }
 
         #region InitControls
@@ -58,6 +64,12 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
+
+        public void getPatientInfoTable() {
+            GridPanel panel = superGridControl1.PrimaryGrid;
+            panel.DataSource = DAO.PatientInfo.getInfo();
+        }
+
         #region InitializeGrid
 
         /// <summary>
@@ -65,18 +77,9 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         /// </summary>
         private void InitializeGrid()
         {
-            GridPanel panel = superGridControl1.PrimaryGrid;
-
-            panel.DataSource = DAO.PatientInfo.getInfo();
-            //panel.Columns["LastName"].EditorType = typeof(MyComboBox);
-            //panel.Columns["Citizen"].EditorType = typeof(MyCheckBox);
             
-            //// Add rows for the user to filter
 
-            //AddRows();
-
-            // Hook onto a few of the filtering events
-            // to demonstrate their use and simple application
+            
 
             superGridControl1.FilterBeginEdit += SuperGridControl1FilterBeginEdit;
             superGridControl1.FilterLoadItems += SuperGridControl1FilterLoadItems;
@@ -768,75 +771,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-        //#region AddRows
-
-        ///// <summary>
-        ///// Routine to add a random set of rows to the grid.
-        ///// </summary>
-        //private void AddRows()
-        //{
-        //    Random rand = new Random();
-
-        //    superGridControl1.BeginUpdate();
-
-        //    GridPanel panel = superGridControl1.PrimaryGrid;
-
-        //    // Add 500 root rows for the user to filter.
-
-        //    for (int i = 0; i < 500; i++)
-        //    {
-        //        GridRow row = GetNewRow(i);
-
-        //        panel.Rows.Add(row);
-
-        //        // Add a random number of sub-rows (2 to 7).
-
-        //        int m = rand.Next(2, 7);
-
-        //        for (int j = 0; j < m; j++)
-        //            row.Rows.Add(GetNewRow(rand.Next(0, 500)));
-        //    }
-
-        //    superGridControl1.EndUpdate();
-        //}
-
-        //#region GetNewRow
-
-        ///// <summary>
-        ///// Create a new random Employee row
-        ///// </summary>
-        ///// <param name="count"></param>
-        ///// <returns></returns>
-        ////private GridRow GetNewRow(int count)
-        ////{
-        ////    MyEmployee emp = MyEmployee.GetNewEmployee();
-
-        ////    object firstName = (emp.Age % 7 == 0 ? (object)DBNull.Value : emp.FirstName);
-        ////    object age = (emp.Age % 5 == 0 ? null : (object)emp.Age);
-        ////    object citizen = (emp.Age % 3 == 0 ? null : (object)emp.Citizen);
-        ////    object hireDate = (emp.Age % 6 == 0 ? null : (object)emp.HireDate);
-
-        ////    object[] ob1 = new object[]
-        ////        { count, emp.LastName, firstName, age, hireDate, citizen };
-
-        ////    if (count % 100 == 50)
-        ////    {
-        ////        int n = count % 6 + 1;
-
-        ////        object[] ob2 = new object[n];
-
-        ////        for (int j = 0; j < n; j++)
-        ////            ob2[j] = ob1[j];
-
-        ////        return (new GridRow(ob2));
-        ////    }
-            
-        ////    return (new GridRow(ob1));
-        ////}
-
-        //#endregion
-
-        //#endregion
 
         #region CbxShowPanelExprCheckedChanged
 
@@ -950,6 +884,8 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-      
+
+
+
     }
 }

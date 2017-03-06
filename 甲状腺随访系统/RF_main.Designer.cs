@@ -60,7 +60,7 @@ namespace 甲状腺随访系统
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panEX_main = new DevComponents.DotNetBar.PanelEx();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.panel_patientInfo = new DevComponents.DotNetBar.PanelEx();
             this.tb_hosno = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_FUNear = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_hosoutdate = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -85,7 +85,7 @@ namespace 甲状腺随访系统
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.panEX_main.SuspendLayout();
-            this.panelEx1.SuspendLayout();
+            this.panel_patientInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -95,8 +95,8 @@ namespace 甲状腺随访系统
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1,
@@ -151,7 +151,6 @@ namespace 甲状腺随访系统
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // ribbonBar4
             // 
@@ -221,6 +220,7 @@ namespace 甲状腺随访系统
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // ribbonBar2
             // 
@@ -509,17 +509,16 @@ namespace 甲状腺随访系统
             // 
             // ribbonTabItem1
             // 
-            this.ribbonTabItem1.Checked = true;
             this.ribbonTabItem1.Name = "ribbonTabItem1";
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "患者档案";
             // 
             // rti_search
             // 
+            this.rti_search.Checked = true;
             this.rti_search.Name = "rti_search";
             this.rti_search.Panel = this.ribbonPanel2;
             this.rti_search.Text = "病例检索";
-            this.rti_search.Click += new System.EventHandler(this.rti_search_Click);
             // 
             // buttonItem1
             // 
@@ -539,7 +538,7 @@ namespace 甲状腺随访系统
             // 
             this.panEX_main.CanvasColor = System.Drawing.SystemColors.Control;
             this.panEX_main.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panEX_main.Controls.Add(this.panelEx1);
+            this.panEX_main.Controls.Add(this.panel_patientInfo);
             this.panEX_main.DisabledBackColor = System.Drawing.Color.Empty;
             this.panEX_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panEX_main.Location = new System.Drawing.Point(5, 155);
@@ -547,51 +546,60 @@ namespace 甲状腺随访系统
             this.panEX_main.Size = new System.Drawing.Size(1408, 661);
             this.panEX_main.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panEX_main.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panEX_main.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(196)))), ((int)(((byte)(216)))));
             this.panEX_main.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panEX_main.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.panEX_main.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panEX_main.Style.GradientAngle = 90;
+            this.panEX_main.StyleMouseDown.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(200)))), ((int)(((byte)(103)))));
+            this.panEX_main.StyleMouseDown.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(226)))), ((int)(((byte)(135)))));
+            this.panEX_main.StyleMouseDown.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(118)))), ((int)(((byte)(43)))));
+            this.panEX_main.StyleMouseDown.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
+            this.panEX_main.StyleMouseOver.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(225)))), ((int)(((byte)(135)))));
+            this.panEX_main.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
+            this.panEX_main.StyleMouseOver.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
+            this.panEX_main.StyleMouseOver.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.panEX_main.TabIndex = 1;
-            this.panEX_main.Text = "主面板";
+            this.panEX_main.Click += new System.EventHandler(this.panEX_main_Click);
             // 
-            // panelEx1
+            // panel_patientInfo
             // 
-            this.panelEx1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.tb_hosno);
-            this.panelEx1.Controls.Add(this.tb_FUNear);
-            this.panelEx1.Controls.Add(this.tb_hosoutdate);
-            this.panelEx1.Controls.Add(this.tb_FUTimes);
-            this.panelEx1.Controls.Add(this.tb_hosindate);
-            this.panelEx1.Controls.Add(this.tb_birthday);
-            this.panelEx1.Controls.Add(this.tb_phone);
-            this.panelEx1.Controls.Add(this.tb_idcard);
-            this.panelEx1.Controls.Add(this.tb_sex);
-            this.panelEx1.Controls.Add(this.lb_FUNear);
-            this.panelEx1.Controls.Add(this.labelX6);
-            this.panelEx1.Controls.Add(this.lb_hosoutdate);
-            this.panelEx1.Controls.Add(this.lb_FUTimes);
-            this.panelEx1.Controls.Add(this.tb_name);
-            this.panelEx1.Controls.Add(this.labelX7);
-            this.panelEx1.Controls.Add(this.lb_birthday);
-            this.panelEx1.Controls.Add(this.labelX3);
-            this.panelEx1.Controls.Add(this.lb_idcard);
-            this.panelEx1.Controls.Add(this.labelX4);
-            this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx1.Location = new System.Drawing.Point(0, 567);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(1408, 99);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 0;
+            this.panel_patientInfo.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panel_patientInfo.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panel_patientInfo.Controls.Add(this.tb_hosno);
+            this.panel_patientInfo.Controls.Add(this.tb_FUNear);
+            this.panel_patientInfo.Controls.Add(this.tb_hosoutdate);
+            this.panel_patientInfo.Controls.Add(this.tb_FUTimes);
+            this.panel_patientInfo.Controls.Add(this.tb_hosindate);
+            this.panel_patientInfo.Controls.Add(this.tb_birthday);
+            this.panel_patientInfo.Controls.Add(this.tb_phone);
+            this.panel_patientInfo.Controls.Add(this.tb_idcard);
+            this.panel_patientInfo.Controls.Add(this.tb_sex);
+            this.panel_patientInfo.Controls.Add(this.lb_FUNear);
+            this.panel_patientInfo.Controls.Add(this.labelX6);
+            this.panel_patientInfo.Controls.Add(this.lb_hosoutdate);
+            this.panel_patientInfo.Controls.Add(this.lb_FUTimes);
+            this.panel_patientInfo.Controls.Add(this.tb_name);
+            this.panel_patientInfo.Controls.Add(this.labelX7);
+            this.panel_patientInfo.Controls.Add(this.lb_birthday);
+            this.panel_patientInfo.Controls.Add(this.labelX3);
+            this.panel_patientInfo.Controls.Add(this.lb_idcard);
+            this.panel_patientInfo.Controls.Add(this.labelX4);
+            this.panel_patientInfo.Controls.Add(this.labelX1);
+            this.panel_patientInfo.DisabledBackColor = System.Drawing.Color.Empty;
+            this.panel_patientInfo.Location = new System.Drawing.Point(0, 567);
+            this.panel_patientInfo.Name = "panel_patientInfo";
+            this.panel_patientInfo.Size = new System.Drawing.Size(1408, 99);
+            this.panel_patientInfo.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panel_patientInfo.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panel_patientInfo.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panel_patientInfo.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panel_patientInfo.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panel_patientInfo.Style.GradientAngle = 90;
+            this.panel_patientInfo.TabIndex = 0;
             // 
             // tb_hosno
             // 
@@ -934,12 +942,13 @@ namespace 甲状腺随访系统
             this.Text = "甲状腺疾病随访系统-吉林大学白求恩第一附属医院";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RF_main_FormClosing);
+            this.SizeChanged += new System.EventHandler(this.RF_main_SizeChanged);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
             this.panEX_main.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
+            this.panel_patientInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -969,7 +978,7 @@ namespace 甲状腺随访系统
         private DevComponents.DotNetBar.ButtonItem bt_followUp;
         private DevComponents.DotNetBar.ButtonItem bt_pOperative;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
-        private DevComponents.DotNetBar.PanelEx panelEx1;
+        private DevComponents.DotNetBar.PanelEx panel_patientInfo;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_name;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_idcard;

@@ -8,7 +8,7 @@ using DevComponents.DotNetBar.SuperGrid.Style;
 
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
-    public partial class DemoGridBasics0 : Office2007Form
+    public partial class GridBasics0 : Office2007Form
     {
         #region Private variables
 
@@ -16,7 +16,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-        public DemoGridBasics0()
+        public GridBasics0()
         {
             InitializeComponent();
 
