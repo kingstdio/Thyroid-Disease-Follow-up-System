@@ -138,3 +138,5 @@ D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.pdb
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csprojResolveAssemblyReference.cache
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.PatientInfoFiltering.resources
 D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.GridBasics0.resources
+E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.exe
+E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.pdb
