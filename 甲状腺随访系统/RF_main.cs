@@ -190,34 +190,6 @@ namespace 甲状腺随访系统
         }
 
 
-        /// <summary>
-        /// 删除按钮
-        /// </summary>
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-
-            DialogResult r1 = MessageBox.Show("确定要删除该患者吗？", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            int result = (int)r1;
-
-            if (result == 1)
-            {
-                Console.WriteLine("删除执行");
-                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
-                {
-                    ToastNotification.Show(this, "删除成功");
-            
-                }
-                Conf.currentPatient = new model.Patient();
-                Conf.currentPatient.id = 0;
-                Control.RefreshPatient.refresh(0);
-
-            }
-
-
-        }
-
-
         private void RF_main_FormClosing(object sender, FormClosingEventArgs e)
         {
             uC_followUp.Validate();
@@ -257,10 +229,29 @@ namespace 甲状腺随访系统
             }
         }
 
-        private void panEX_main_Click(object sender, EventArgs e)
-        {
 
+
+        private void bt_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult r1 = MessageBox.Show("确定要删除该患者吗？", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+
+            int result = (int)r1;
+
+            if (result == 1)
+            {
+                Console.WriteLine("删除执行");
+                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
+                {
+                    ToastNotification.Show(this, "删除成功");
+
+                }
+                Conf.currentPatient = new model.Patient();
+                Conf.currentPatient.id = 0;
+                Control.RefreshPatient.refresh(0);
+
+            }
         }
+
 
      
 

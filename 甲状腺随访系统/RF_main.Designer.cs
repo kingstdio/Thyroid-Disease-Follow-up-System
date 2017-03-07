@@ -35,13 +35,11 @@ namespace 甲状腺随访系统
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RF_main));
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.rb_delete = new DevComponents.DotNetBar.RibbonBar();
+            this.bt_delete = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_new = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_recurrencecs = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
@@ -54,6 +52,9 @@ namespace 甲状腺随访系统
             this.bt_diagnosis = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_patientInfo = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.rti_search = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
@@ -82,8 +83,8 @@ namespace 甲状腺随访系统
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.ribbonControl1.SuspendLayout();
-            this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel2.SuspendLayout();
             this.panEX_main.SuspendLayout();
             this.panel_patientInfo.SuspendLayout();
             this.SuspendLayout();
@@ -95,8 +96,8 @@ namespace 甲状腺随访系统
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1,
@@ -129,73 +130,11 @@ namespace 甲状腺随访系统
             this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "甲状腺疾病随风系统-吉林大学白求恩第一附属医院";
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.ribbonBar4);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1408, 98);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            // 
-            // ribbonBar4
-            // 
-            this.ribbonBar4.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar4.ContainerControlProcessDialogKey = true;
-            this.ribbonBar4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar4.DragDropSupport = true;
-            this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2});
-            this.ribbonBar4.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(86, 95);
-            this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar4.TabIndex = 0;
-            this.ribbonBar4.Text = "检索";
-            // 
-            // 
-            // 
-            this.ribbonBar4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItemsExpandWidth = 14;
-            this.buttonItem2.Text = "buttonItem2";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
-            // 
             // ribbonPanel1
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.rb_delete);
             this.ribbonPanel1.Controls.Add(this.ribbonBar2);
-            this.ribbonPanel1.Controls.Add(this.buttonX1);
             this.ribbonPanel1.Controls.Add(this.ribbonBar8);
             this.ribbonPanel1.Controls.Add(this.ribbonBar7);
             this.ribbonPanel1.Controls.Add(this.ribbonBar6);
@@ -220,7 +159,45 @@ namespace 甲状腺随访系统
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
+            // 
+            // rb_delete
+            // 
+            this.rb_delete.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.rb_delete.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.rb_delete.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rb_delete.ContainerControlProcessDialogKey = true;
+            this.rb_delete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rb_delete.DragDropSupport = true;
+            this.rb_delete.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.bt_delete});
+            this.rb_delete.Location = new System.Drawing.Point(557, 0);
+            this.rb_delete.Name = "rb_delete";
+            this.rb_delete.Size = new System.Drawing.Size(77, 95);
+            this.rb_delete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.rb_delete.TabIndex = 10;
+            this.rb_delete.Text = "删除患者";
+            // 
+            // 
+            // 
+            this.rb_delete.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.rb_delete.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // bt_delete
+            // 
+            this.bt_delete.Image = ((System.Drawing.Image)(resources.GetObject("bt_delete.Image")));
+            this.bt_delete.Name = "bt_delete";
+            this.bt_delete.SubItemsExpandWidth = 14;
+            this.bt_delete.Text = "buttonItem3";
+            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
             // 
             // ribbonBar2
             // 
@@ -260,18 +237,6 @@ namespace 甲状腺随访系统
             this.bt_new.SubItemsExpandWidth = 14;
             this.bt_new.Text = "buttonItem3";
             this.bt_new.Click += new System.EventHandler(this.bt_new_Click);
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(1278, 31);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(92, 30);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 8;
-            this.buttonX1.Text = "删除患者";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // ribbonBar8
             // 
@@ -507,15 +472,78 @@ namespace 甲状腺随访系统
             this.bt_patientInfo.Text = "新增患者信息";
             this.bt_patientInfo.Click += new System.EventHandler(this.bt_patientInfo_Click);
             // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.ribbonBar4);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1408, 98);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // ribbonBar4
+            // 
+            this.ribbonBar4.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar4.ContainerControlProcessDialogKey = true;
+            this.ribbonBar4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar4.DragDropSupport = true;
+            this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem2});
+            this.ribbonBar4.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar4.Name = "ribbonBar4";
+            this.ribbonBar4.Size = new System.Drawing.Size(86, 95);
+            this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar4.TabIndex = 0;
+            this.ribbonBar4.Text = "检索";
+            // 
+            // 
+            // 
+            this.ribbonBar4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.SubItemsExpandWidth = 14;
+            this.buttonItem2.Text = "buttonItem2";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
+            // 
             // ribbonTabItem1
             // 
+            this.ribbonTabItem1.Checked = true;
             this.ribbonTabItem1.Name = "ribbonTabItem1";
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "患者档案";
             // 
             // rti_search
             // 
-            this.rti_search.Checked = true;
             this.rti_search.Name = "rti_search";
             this.rti_search.Panel = this.ribbonPanel2;
             this.rti_search.Text = "病例检索";
@@ -560,7 +588,6 @@ namespace 甲状腺随访系统
             this.panEX_main.StyleMouseOver.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.panEX_main.StyleMouseOver.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(57)))), ((int)(((byte)(120)))));
             this.panEX_main.TabIndex = 1;
-            this.panEX_main.Click += new System.EventHandler(this.panEX_main_Click);
             // 
             // panel_patientInfo
             // 
@@ -945,8 +972,8 @@ namespace 甲状腺随访系统
             this.SizeChanged += new System.EventHandler(this.RF_main_SizeChanged);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
-            this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel2.ResumeLayout(false);
             this.panEX_main.ResumeLayout(false);
             this.panel_patientInfo.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -999,9 +1026,10 @@ namespace 甲状腺随访系统
         private DevComponents.DotNetBar.Controls.TextBoxX tb_FUTimes;
         private DevComponents.DotNetBar.LabelX lb_FUNear;
         private DevComponents.DotNetBar.LabelX lb_FUTimes;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.RibbonBar ribbonBar2;
         private DevComponents.DotNetBar.ButtonItem bt_new;
+        private DevComponents.DotNetBar.RibbonBar rb_delete;
+        private DevComponents.DotNetBar.ButtonItem bt_delete;
 
     }
 }
