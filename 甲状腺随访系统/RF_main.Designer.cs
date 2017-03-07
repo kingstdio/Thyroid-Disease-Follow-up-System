@@ -57,7 +57,7 @@ namespace 甲状腺随访系统
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.rti_search = new DevComponents.DotNetBar.RibbonTabItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.bt_version = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panEX_main = new DevComponents.DotNetBar.PanelEx();
@@ -107,7 +107,7 @@ namespace 甲状腺随访系统
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem1,
+            this.bt_version,
             this.qatCustomizeItem1});
             this.ribbonControl1.Size = new System.Drawing.Size(1408, 154);
             this.ribbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -548,10 +548,10 @@ namespace 甲状腺随访系统
             this.rti_search.Panel = this.ribbonPanel2;
             this.rti_search.Text = "病例检索";
             // 
-            // buttonItem1
+            // bt_version
             // 
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "版本号：2017-2-28";
+            this.bt_version.Name = "bt_version";
+            this.bt_version.Text = "版本号：2017-2-28";
             // 
             // qatCustomizeItem1
             // 
@@ -988,7 +988,7 @@ namespace 甲状腺随访系统
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel2;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem1;
         private DevComponents.DotNetBar.RibbonTabItem rti_search;
-        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem bt_version;
         private DevComponents.DotNetBar.QatCustomizeItem qatCustomizeItem1;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.RibbonBar ribbonBar3;

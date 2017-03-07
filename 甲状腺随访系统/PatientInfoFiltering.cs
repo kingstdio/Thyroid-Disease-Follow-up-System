@@ -23,7 +23,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-        private GridPanel panel;
         public PatientInfoFiltering()
         {
             InitializeComponent();

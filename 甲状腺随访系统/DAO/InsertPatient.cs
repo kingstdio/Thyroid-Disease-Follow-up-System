@@ -66,14 +66,7 @@ namespace 甲状腺随访系统.DAO
                             {
                                 Conf.currentPatient.id = 0;
                             }
-                         
-                            
-                                                        //string msg="";
-                            //foreach (DataRow dr in dt.Rows) {
-                            //    msg += dr[0] + "\t\t" + dr[1]+"\r\n";
-                            //}
-                            //MessageBox.Show("发现同名情况\r\n" + msg,"系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            //return false;
+                        
                         }
 
                         //患者基本信息

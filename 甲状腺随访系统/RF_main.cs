@@ -22,12 +22,13 @@ namespace 甲状腺随访系统
         PatientInfoFiltering demoExtendedFiltering = new PatientInfoFiltering();
         
 
-
         #region 初始化
         public RF_main()
         {
             InitializeComponent();
 
+            //设置程序版本
+            bt_version.Text = Conf.appVersion;
             
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
             Control.RefreshPatient.newPaitentAction += new EventHandler(newPaitentAction);
@@ -69,9 +70,6 @@ namespace 甲状腺随访系统
             
         }
         #endregion 
- 
-
-
 
         #region 更新功能面板事件
         /// <summary>
@@ -125,7 +123,6 @@ namespace 甲状腺随访系统
         private void bt_SH_Click(object sender, EventArgs e)
         {
             changeUI("uC_surgeryHistory");
-     
         }
 
         private void bt_new_Click(object sender, EventArgs e)
@@ -167,8 +164,29 @@ namespace 甲状腺随访系统
             panel_patientInfo.Visible = false;
             //cp_wait.Visible = true;
         }
+
+        /// <summary>
+        /// 删除按钮操作
+        /// </summary>
+        private void bt_delete_Click(object sender, EventArgs e)
+        {
+            DialogResult diaResult = MessageBox.Show("确定要删除该患者吗？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+
+            if (diaResult == DialogResult.Yes)
+            {
+                Console.WriteLine("删除执行");
+                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
+                {
+                    ToastNotification.Show(this, "删除成功");
+                }
+                Conf.currentPatient = new model.Patient();
+                Conf.currentPatient.id = 0;
+                Control.RefreshPatient.refresh(0);
+            }
+        }
         #endregion
 
+        #region 根据名称改变控件的可见性
         /// <summary>
         /// 根据名称改变控件的可见性
         /// </summary>
@@ -183,13 +201,16 @@ namespace 甲状腺随访系统
             uC_recurrencecs.Visible = false;
             panel_patientInfo.Visible = true;
             demoExtendedFiltering.Visible = false;
-
-
             panEX_main.Controls.Find(controlName, false)[0].Visible = true;
-
         }
+        #endregion
 
-
+        #region 关闭程序时保存数据
+        /// <summary>
+        /// 关闭程序时保存数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RF_main_FormClosing(object sender, FormClosingEventArgs e)
         {
             uC_followUp.Validate();
@@ -199,11 +220,9 @@ namespace 甲状腺随访系统
                 ToastNotification.Show(this, "系统数据保存成功");
             }
         }
+        #endregion
 
-
-
-
-
+        #region 新建用户时跳转界面
         /// <summary>
         /// 新建用户时跳转界面
         /// </summary>
@@ -215,11 +234,12 @@ namespace 甲状腺随访系统
             changeUI("uC_patientInfo");
             Control.RefreshPatient.refresh(0);
         }
+        #endregion
 
-
-
-
-
+        #region 改变窗口大小同步事件
+        /// <summary>
+        /// 改变窗口大小同步事件
+        /// </summary>
         private void RF_main_SizeChanged(object sender, EventArgs e)
         {
             if (demoExtendedFiltering.Visible)
@@ -228,32 +248,8 @@ namespace 甲状腺随访系统
                 demoExtendedFiltering.WindowState = FormWindowState.Maximized;
             }
         }
+        #endregion
 
-
-
-        private void bt_delete_Click(object sender, EventArgs e)
-        {
-            DialogResult r1 = MessageBox.Show("确定要删除该患者吗？", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            int result = (int)r1;
-
-            if (result == 1)
-            {
-                Console.WriteLine("删除执行");
-                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
-                {
-                    ToastNotification.Show(this, "删除成功");
-
-                }
-                Conf.currentPatient = new model.Patient();
-                Conf.currentPatient.id = 0;
-                Control.RefreshPatient.refresh(0);
-
-            }
-        }
-
-
-     
 
     }
 }
