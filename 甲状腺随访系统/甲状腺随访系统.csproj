@@ -78,11 +78,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conf.cs" />
+    <Compile Include="CONTROL\Login.cs" />
     <Compile Include="CONTROL\RefreshPatient.cs" />
+    <Compile Include="CONTROL\UserManage.cs" />
     <Compile Include="DAO\DeletePatient.cs" />
     <Compile Include="DAO\InsertPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
+    <Compile Include="DAO\UserInfo.cs" />
+    <Compile Include="F_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_login.Designer.cs">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\User.cs" />
     <Compile Include="PatientInfoFiltering.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +185,15 @@
     <Compile Include="UC_surgeryHistory.Designer.cs">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_userManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_userManagement.Designer.cs">
+      <DependentUpon>UC_userManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="F_login.resx">
+      <DependentUpon>F_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PatientInfoFiltering.resx">
       <DependentUpon>PatientInfoFiltering.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_surgeryHistory.resx">
       <DependentUpon>UC_surgeryHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_userManagement.resx">
+      <DependentUpon>UC_userManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />

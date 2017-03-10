@@ -31,9 +31,22 @@ namespace 甲状腺随访系统
 
         private void bt_submit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("haha");
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
+            if (!Control.Login.LoginIn(tb_username.Text, tb_pwd.Text))
+            {
+                if (Conf.currentUser.username!=null)
+                    ToastNotification.Show(this, "用户名或密码不正确！");
+                else
+                    ToastNotification.Show(this, "该用户不存在！");
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Dispose();
+            }
+          
+           
+            //this.DialogResult = DialogResult.OK;
+            
         }
     }
 }

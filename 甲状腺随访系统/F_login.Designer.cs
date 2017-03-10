@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_login));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.lb_version = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.bt_submit = new DevComponents.DotNetBar.ButtonX();
+            this.tb_pwd = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_username = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.tb_pwd = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.bt_submit = new DevComponents.DotNetBar.ButtonX();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.lb_version = new DevComponents.DotNetBar.LabelX();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,65 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
             // 
+            // lb_version
+            // 
+            // 
+            // 
+            // 
+            this.lb_version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_version.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lb_version.Location = new System.Drawing.Point(0, 252);
+            this.lb_version.Name = "lb_version";
+            this.lb_version.Size = new System.Drawing.Size(550, 23);
+            this.lb_version.TabIndex = 5;
+            this.lb_version.Text = "labelX4";
+            this.lb_version.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelX3.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelX3.Location = new System.Drawing.Point(3, 33);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(547, 23);
+            this.labelX3.TabIndex = 4;
+            this.labelX3.Text = "吉林大学白求恩第一附属医院甲状腺疾病随访系统";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // bt_submit
+            // 
+            this.bt_submit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_submit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_submit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bt_submit.Location = new System.Drawing.Point(90, 186);
+            this.bt_submit.Name = "bt_submit";
+            this.bt_submit.Size = new System.Drawing.Size(370, 47);
+            this.bt_submit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_submit.TabIndex = 3;
+            this.bt_submit.Text = "登录";
+            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
+            // 
+            // tb_pwd
+            // 
+            // 
+            // 
+            // 
+            this.tb_pwd.Border.Class = "TextBoxBorder";
+            this.tb_pwd.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_pwd.DisabledBackColor = System.Drawing.Color.White;
+            this.tb_pwd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_pwd.Location = new System.Drawing.Point(160, 133);
+            this.tb_pwd.Name = "tb_pwd";
+            this.tb_pwd.PasswordChar = '.';
+            this.tb_pwd.PreventEnterBeep = true;
+            this.tb_pwd.Size = new System.Drawing.Size(300, 26);
+            this.tb_pwd.TabIndex = 2;
+            this.tb_pwd.Text = "admin";
+            // 
             // tb_username
             // 
             // 
@@ -80,6 +139,7 @@
             this.tb_username.PreventEnterBeep = true;
             this.tb_username.Size = new System.Drawing.Size(300, 26);
             this.tb_username.TabIndex = 1;
+            this.tb_username.Text = "admin";
             // 
             // labelX2
             // 
@@ -107,68 +167,10 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "用户名：";
             // 
-            // tb_pwd
-            // 
-            // 
-            // 
-            // 
-            this.tb_pwd.Border.Class = "TextBoxBorder";
-            this.tb_pwd.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_pwd.DisabledBackColor = System.Drawing.Color.White;
-            this.tb_pwd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tb_pwd.Location = new System.Drawing.Point(160, 133);
-            this.tb_pwd.Name = "tb_pwd";
-            this.tb_pwd.PasswordChar = '.';
-            this.tb_pwd.PreventEnterBeep = true;
-            this.tb_pwd.Size = new System.Drawing.Size(300, 26);
-            this.tb_pwd.TabIndex = 2;
-            // 
-            // bt_submit
-            // 
-            this.bt_submit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_submit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_submit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_submit.Location = new System.Drawing.Point(90, 186);
-            this.bt_submit.Name = "bt_submit";
-            this.bt_submit.Size = new System.Drawing.Size(370, 47);
-            this.bt_submit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_submit.TabIndex = 3;
-            this.bt_submit.Text = "登录";
-            this.bt_submit.Click += new System.EventHandler(this.bt_submit_Click);
-            // 
             // styleManager1
             // 
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelX3.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelX3.Location = new System.Drawing.Point(3, 33);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(547, 23);
-            this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "吉林大学白求恩第一附属医院甲状腺疾病随访系统";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lb_version
-            // 
-            // 
-            // 
-            // 
-            this.lb_version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lb_version.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_version.Location = new System.Drawing.Point(0, 252);
-            this.lb_version.Name = "lb_version";
-            this.lb_version.Size = new System.Drawing.Size(550, 23);
-            this.lb_version.TabIndex = 5;
-            this.lb_version.Text = "labelX4";
-            this.lb_version.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // F_login
             // 

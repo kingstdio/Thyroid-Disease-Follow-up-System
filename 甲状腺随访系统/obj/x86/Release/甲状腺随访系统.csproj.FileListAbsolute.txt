@@ -50,9 +50,6 @@ E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csproj.Gen
 E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
 E:\GIT-Th\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
 D:\GIT\甲状腺随访系统\bin\Release\System.Data.SQLite.dll
-D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.Uc_view.resources
-D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.DemoExtendedFiltering.resources
-D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.DemoGridBasics0.resources
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\bin\Release\甲状腺随访系统.exe.config
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.exe
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.pdb
@@ -79,3 +76,4 @@ D:\GIT\甲状腺随访系统\bin\Release\甲状腺随访系统.exe.config
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.csprojResolveAssemblyReference.cache
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.PatientInfoFiltering.resources
 D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.GridBasics0.resources
+D:\GIT\甲状腺随访系统\obj\x86\Release\甲状腺随访系统.F_login.resources

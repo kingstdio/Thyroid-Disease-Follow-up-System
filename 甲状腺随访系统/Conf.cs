@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using 甲状腺随访系统.model;
 using System.Configuration;
+using 甲状腺随访系统.MODEL;
 
 namespace 甲状腺随访系统
 {
@@ -22,7 +23,17 @@ namespace 甲状腺随访系统
         public static string sqliteConn = @"Data Source=./data/dbs/his.db;Pooling=true;FailIfMissing=false";
 
         /// <summary>
-        /// 当前操作用户
+        /// 当前登录用户
+        /// </summary>
+        public static User currentUser = new User();
+
+        /// <summary>
+        /// 当前管理用户
+        /// </summary>
+        public static User manageUser = new User(); 
+
+        /// <summary>
+        /// 当前操作患者
         /// </summary>
         public static Patient currentPatient = new Patient();
 
