@@ -19,6 +19,7 @@ namespace 甲状腺随访系统
         UC_postOperative uC_postOperative = new UC_postOperative();
         UC_followUp uC_followUp = new UC_followUp();
         UC_recurrencecs uC_recurrencecs = new UC_recurrencecs();
+        UC_userManagement uC_userManagement = new UC_userManagement();
         PatientInfoFiltering demoExtendedFiltering = new PatientInfoFiltering();
         
 
@@ -29,6 +30,9 @@ namespace 甲状腺随访系统
 
             //设置程序版本
             bt_version.Text = Conf.appVersion;
+
+            //设置当前用户名
+            bt_user.Text = "当前用户："+Conf.currentUser.username;
             
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
             Control.RefreshPatient.newPaitentAction += new EventHandler(newPaitentAction);
@@ -41,6 +45,7 @@ namespace 甲状腺随访系统
             panEX_main.Controls.Add(uC_postOperative);
             panEX_main.Controls.Add(uC_followUp);
             panEX_main.Controls.Add(uC_recurrencecs);
+            panEX_main.Controls.Add(uC_userManagement);
 
             demoExtendedFiltering.TopLevel = false;
             demoExtendedFiltering.Parent = this;
@@ -53,7 +58,7 @@ namespace 甲状腺随访系统
             uC_postOperative.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_followUp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             uC_recurrencecs.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-           
+            uC_userManagement.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
 
 
             //设置功能面板的可见性
@@ -62,6 +67,7 @@ namespace 甲状腺随访系统
             uC_postOperative.Visible = false;
             uC_followUp.Visible = false;
             uC_recurrencecs.Visible = false;
+            uC_userManagement.Visible = false;
             demoExtendedFiltering.Visible = false;
 
 
@@ -155,6 +161,13 @@ namespace 甲状腺随访系统
         {
             changeUI("uC_recurrencecs");            
         }
+        //系统管理
+        private void bt_UserMa_Click(object sender, EventArgs e)
+        {
+            changeUI("uC_userManagement");
+            panel_patientInfo.Visible = false;
+        }
+
         //查询界面
         private void buttonItem2_Click(object sender, EventArgs e)
         {
@@ -170,18 +183,27 @@ namespace 甲状腺随访系统
         /// </summary>
         private void bt_delete_Click(object sender, EventArgs e)
         {
-            DialogResult diaResult = MessageBox.Show("确定要删除该患者吗？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
-
-            if (diaResult == DialogResult.Yes)
+            if (Conf.currentPatient.id == 0)
             {
-                Console.WriteLine("删除执行");
-                if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
+                MessageBox.Show("没有可删除病患！", "系统提示",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+            else
+            {
+                DialogResult diaResult = MessageBox.Show("确定要删除该患者吗？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+
+                if (diaResult == DialogResult.Yes)
                 {
-                    ToastNotification.Show(this, "删除成功");
+
+                    if (DAO.DeletePatient.DelPatient(Conf.currentPatient.id))
+                    {
+                        ToastNotification.Show(this, "删除成功");
+                    }
+                    Conf.currentPatient = new model.Patient();
+                    Conf.currentPatient.id = 0;
+                    Control.RefreshPatient.refresh(0);
+
                 }
-                Conf.currentPatient = new model.Patient();
-                Conf.currentPatient.id = 0;
-                Control.RefreshPatient.refresh(0);
             }
         }
         #endregion
@@ -249,6 +271,9 @@ namespace 甲状腺随访系统
             }
         }
         #endregion
+
+      
+
 
 
     }

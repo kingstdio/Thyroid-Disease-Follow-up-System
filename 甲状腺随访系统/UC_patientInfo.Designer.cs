@@ -214,9 +214,9 @@
             // 
             this.snav_patientInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel1);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel5);
-            this.snav_patientInfo.Controls.Add(this.sideNavPanel3);
             this.snav_patientInfo.Controls.Add(this.sideNavPanel4);
             this.snav_patientInfo.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sni_menu,
@@ -232,7 +232,7 @@
             this.snav_patientInfo.Location = new System.Drawing.Point(0, 0);
             this.snav_patientInfo.Name = "snav_patientInfo";
             this.snav_patientInfo.Padding = new System.Windows.Forms.Padding(1);
-            this.snav_patientInfo.Size = new System.Drawing.Size(1413, 568);
+            this.snav_patientInfo.Size = new System.Drawing.Size(1413, 565);
             this.snav_patientInfo.TabIndex = 6;
             this.snav_patientInfo.Text = "snav_patientInfo";
             // 
@@ -271,8 +271,9 @@
             this.sideNavPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideNavPanel1.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel1.Name = "sideNavPanel1";
-            this.sideNavPanel1.Size = new System.Drawing.Size(1276, 531);
+            this.sideNavPanel1.Size = new System.Drawing.Size(1276, 528);
             this.sideNavPanel1.TabIndex = 47;
+            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -1126,9 +1127,8 @@
             this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideNavPanel3.Location = new System.Drawing.Point(132, 36);
             this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1276, 531);
+            this.sideNavPanel3.Size = new System.Drawing.Size(1276, 528);
             this.sideNavPanel3.TabIndex = 13;
-            this.sideNavPanel3.Visible = false;
             this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -2271,7 +2271,6 @@
             // 
             // sideNavItem5
             // 
-            this.sideNavItem5.Checked = true;
             this.sideNavItem5.Name = "sideNavItem5";
             this.sideNavItem5.Panel = this.sideNavPanel1;
             this.sideNavItem5.Symbol = "";
@@ -2289,6 +2288,7 @@
             // 
             // sideNavItem1
             // 
+            this.sideNavItem1.Checked = true;
             this.sideNavItem1.Name = "sideNavItem1";
             this.sideNavItem1.Panel = this.sideNavPanel3;
             this.sideNavItem1.Symbol = "57344";

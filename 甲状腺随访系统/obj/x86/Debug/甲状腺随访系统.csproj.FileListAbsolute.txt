@@ -159,3 +159,6 @@ E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\�
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.csproj.GenerateResource.Cache
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.exe
 E:\GIT-Th\Thyroid-Disease-Follow-up-System\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.pdb
+D:\GIT\甲状腺随访系统\bin\Debug\甲状腺随访系统.exe.config
+D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.F_login.resources
+D:\GIT\甲状腺随访系统\obj\x86\Debug\甲状腺随访系统.UC_UserManagement.resources
