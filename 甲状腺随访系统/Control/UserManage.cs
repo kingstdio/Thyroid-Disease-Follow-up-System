@@ -29,6 +29,12 @@ namespace 甲状腺随访系统.Control
             return DAO.UserInfo.DeleteUser();
                         
         }
+        //检查重名
+        public static bool CheckSameName(string username)
+        {
+            return DAO.UserInfo.checkSameName(username);
+
+        }
 
 
     }

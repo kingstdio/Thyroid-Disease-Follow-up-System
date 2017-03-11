@@ -321,9 +321,11 @@
             this.tb_passag.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_passag.Location = new System.Drawing.Point(148, 167);
             this.tb_passag.Name = "tb_passag";
+            this.tb_passag.PasswordChar = '.';
             this.tb_passag.PreventEnterBeep = true;
             this.tb_passag.Size = new System.Drawing.Size(205, 26);
             this.tb_passag.TabIndex = 117;
+            this.tb_passag.Leave += new System.EventHandler(this.tb_passag_Leave);
             // 
             // lb_passag
             // 
@@ -351,6 +353,7 @@
             this.tb_pass.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_pass.Location = new System.Drawing.Point(148, 115);
             this.tb_pass.Name = "tb_pass";
+            this.tb_pass.PasswordChar = '.';
             this.tb_pass.PreventEnterBeep = true;
             this.tb_pass.Size = new System.Drawing.Size(205, 26);
             this.tb_pass.TabIndex = 115;

@@ -30,6 +30,7 @@ namespace 甲状腺随访系统
 
             tb_name.Text = Conf.manageUser.username;
             tb_pass.Text = Conf.manageUser.password;
+            tb_passag.Text = Conf.manageUser.password;
             cbe_privilege.SelectedIndex = cbe_privilege.FindString(Conf.manageUser.privilege);
             switch_forbidden.Value = Conf.manageUser.forbidden;
             tb_phone.Text = Conf.manageUser.phone;
@@ -47,13 +48,28 @@ namespace 甲状腺随访系统
         }
         private void bt_newuser_Click(object sender, EventArgs e)
         {
-            getInfo();
+            if (tb_pass.Text != tb_passag.Text)
+            {
+                MessageBox.Show("两次输入密码不一致", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if (Control.UserManage.CheckSameName(tb_name.Text))
+            {
+                MessageBox.Show("该用户已存在！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if (string.IsNullOrEmpty(tb_name.Text) ||string.IsNullOrWhiteSpace(tb_name.Text) ||string.IsNullOrWhiteSpace(tb_pass.Text)||string.IsNullOrEmpty(tb_pass.Text))
+            {
+                MessageBox.Show("用户名或密码为空！", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                getInfo();
 
-            Control.UserManage.InsertUser();
-            ToastNotification.Show(this,"用户添加成功！");
-            ListUser();
-            Conf.manageUser = new MODEL.User();
-            fillInfo();
+                Control.UserManage.InsertUser();
+                ToastNotification.Show(this, "用户添加成功！");
+                ListUser();
+                Conf.manageUser = new MODEL.User();
+                fillInfo();
+            }
         }
         //获取用户信息
         private void sgc_UserInfo_RowDoubleClick(object sender, DevComponents.DotNetBar.SuperGrid.GridRowDoubleClickEventArgs e)
@@ -80,14 +96,22 @@ namespace 甲状腺随访系统
 
         private void bt_updateuser_Click(object sender, EventArgs e)
         {
-            getInfo();
-            if (Control.UserManage.UpdateUser())
+            
+            if (tb_pass.Text != tb_passag.Text)
             {
-                ToastNotification.Show(this, "更新成功！");
-                ListUser();
-                Conf.manageUser = new MODEL.User();
-                fillInfo();
+                MessageBox.Show("两次输入密码不一致", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                getInfo();
+                if (Control.UserManage.UpdateUser())
+                {
+                    ToastNotification.Show(this, "更新成功！");
+                    ListUser();
+                    Conf.manageUser = new MODEL.User();
+                    fillInfo();
 
+                }
             }
             
         }
@@ -102,6 +126,14 @@ namespace 甲状腺随访系统
                 Conf.manageUser = new MODEL.User();
                 fillInfo();
                 //refreshPboard();
+            }
+        }
+
+        private void tb_passag_Leave(object sender, EventArgs e)
+        {
+            if (tb_pass.Text != tb_passag.Text)
+            {
+                MessageBox.Show("两次输入密码不一致", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
