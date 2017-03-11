@@ -629,6 +629,7 @@
             this.tb_patientName.PreventEnterBeep = true;
             this.tb_patientName.Size = new System.Drawing.Size(290, 26);
             this.tb_patientName.TabIndex = 1;
+            this.tb_patientName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_patientName_KeyDown);
             // 
             // lb_patientName
             // 

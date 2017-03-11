@@ -321,6 +321,13 @@ namespace 甲状腺随访系统
             }
         }
 
+        private void tb_patientName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                SendKeys.Send("{Tab}");
+            }
+        }
+
 
 
 
