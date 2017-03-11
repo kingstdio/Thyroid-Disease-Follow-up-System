@@ -278,13 +278,15 @@ CREATE TABLE [dbo].[tb_visit](
 	GO
 
 CREATE TABLE [dbo].[tb_user](
-	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
+	[id] [int] IDENTITY(1,1) NOT NULL,primary key,	--编号自增
 	[username] [varchar](50) NULL,					--用户名
 	[password] [varchar](50) NULL,					--密码
-	[privilege] [int] NULL,							--权限
-	[forbidden] [int] NULL,							--是否禁用
-	[lastlogintime] [datetime] NULL					--最后登录时间
-) ON [PRIMARY]
+	[privilege] [varchar](50) NULL,					--权限	
+	[forbidden] [bit] NULL,							--是否禁止
+	[lastlogintime] [datetime] NULL,				--最后登录时间
+	[phone] [varchar](50) NULL,						--手机号
+	[email] [varchar](50) NULL						--邮件
+    ) 
 
 GO
 
