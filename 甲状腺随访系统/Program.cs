@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using 甲状腺随访系统.CONTROL;
 
 namespace 甲状腺随访系统
 {
@@ -15,11 +16,16 @@ namespace 甲状腺随访系统
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            F_login loginForm = new F_login();
-            DialogResult diaresult = loginForm.ShowDialog();
-            if(diaresult==DialogResult.OK)
+
+
+            if (!VersionControl.updateSoft())
             {
-                Application.Run(Conf.mainForm = new RF_main());
+                F_login loginForm = new F_login();
+                DialogResult diaresult = loginForm.ShowDialog();
+                if (diaresult == DialogResult.OK)
+                {
+                    Application.Run(Conf.mainForm = new RF_main());
+                }
             }
             
         }

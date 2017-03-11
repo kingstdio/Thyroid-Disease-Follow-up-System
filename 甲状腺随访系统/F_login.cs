@@ -31,7 +31,7 @@ namespace 甲状腺随访系统
 
         private void bt_submit_Click(object sender, EventArgs e)
         {
-            if (!Control.Login.LoginIn(tb_username.Text, tb_pwd.Text))
+            if (!Control.Login.LoginIn(tb_username.Text.Trim(), tb_pwd.Text.Trim()))
             {
                 if (Conf.currentUser.username!=null)
                     ToastNotification.Show(this, "用户名或密码不正确！");
@@ -44,8 +44,6 @@ namespace 甲状腺随访系统
                 this.Dispose();
             }
           
-           
-            //this.DialogResult = DialogResult.OK;
             
         }
     }

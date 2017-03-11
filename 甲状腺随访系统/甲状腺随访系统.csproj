@@ -9,24 +9,28 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>甲状腺随访系统</RootNamespace>
-    <AssemblyName>甲状腺随访系统</AssemblyName>
+    <AssemblyName>thyroidSoft</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://auth.xxeasy.net/public_html/softbase/thyroid/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <InstallUrl>http://auth.xxeasy.net/softbase/thyroid/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -53,6 +57,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>甲状腺随访系统.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>91B401F49393C8ABADCE91D07BCB7B52B68A9AF8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>甲状腺随访系统_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
@@ -81,6 +97,7 @@
     <Compile Include="CONTROL\Login.cs" />
     <Compile Include="CONTROL\RefreshPatient.cs" />
     <Compile Include="CONTROL\UserManage.cs" />
+    <Compile Include="CONTROL\VersionControl.cs" />
     <Compile Include="DAO\DeletePatient.cs" />
     <Compile Include="DAO\InsertPatient.cs" />
     <Compile Include="DAO\PatientChoose.cs" />
@@ -93,6 +110,7 @@
       <DependentUpon>F_login.cs</DependentUpon>
     </Compile>
     <Compile Include="MODEL\User.cs" />
+    <Compile Include="NETHELPER.cs" />
     <Compile Include="PatientInfoFiltering.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,7 +308,8 @@
     <Content Include="data\ui\tips.png" />
     <Content Include="data\ui\trace.png" />
     <Content Include="icon.ico" />
-    <Content Include="System.Data.SQLite.dll">
+    <Content Include="System.Data.SQLite.dll" />
+    <Content Include="update.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

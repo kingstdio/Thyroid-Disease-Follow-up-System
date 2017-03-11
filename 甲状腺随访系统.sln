@@ -3,16 +3,67 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "甲状腺随访系统", "甲状腺随访系统\甲状腺随访系统.csproj", "{388E6ACC-2184-4CC0-9732-485B484914EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "更新程序", "更新程序\更新程序.csproj", "{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "auth.xxeasy.net", "ftp://auth.xxeasy.net", "{F9487241-BE50-4018-8B72-C5BDAFE5EA14}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/auth.xxeasy.net"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Users\shandian\AppData\Local\Temp\VWDWebCache\ftp_auth.xxeasy.net\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\auth.xxeasy.net\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/auth.xxeasy.net"
+		Release.AspNetCompiler.PhysicalPath = "C:\Users\shandian\AppData\Local\Temp\VWDWebCache\ftp_auth.xxeasy.net\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\auth.xxeasy.net\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{388E6ACC-2184-4CC0-9732-485B484914EC}.Debug|x86.ActiveCfg = Debug|x86
 		{388E6ACC-2184-4CC0-9732-485B484914EC}.Debug|x86.Build.0 = Debug|x86
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Release|Any CPU.ActiveCfg = Release|x86
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{388E6ACC-2184-4CC0-9732-485B484914EC}.Release|Mixed Platforms.Build.0 = Release|x86
 		{388E6ACC-2184-4CC0-9732-485B484914EC}.Release|x86.ActiveCfg = Release|x86
 		{388E6ACC-2184-4CC0-9732-485B484914EC}.Release|x86.Build.0 = Release|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Debug|x86.ActiveCfg = Debug|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Debug|x86.Build.0 = Debug|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Release|Any CPU.ActiveCfg = Release|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Release|Mixed Platforms.Build.0 = Release|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Release|x86.ActiveCfg = Release|x86
+		{70D790C5-667C-4DA4-A1F0-6A6AB12D2107}.Release|x86.Build.0 = Release|x86
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F9487241-BE50-4018-8B72-C5BDAFE5EA14}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,11 +21,9 @@ namespace 甲状腺随访系统
             tb_fht.Visible = tb_othertt.Visible = tb_otherptt.Visible = false;
         }
 
+        #region 界面语言设置
         private void UC_patientInfo_Load(object sender, EventArgs e)
         {
-
-
-
             string[] langItems = INIHelper.INIGetAllItems(Conf.langpath, "patientsInfo");
             for (int i = 0; i < langItems.Length; i++)
             {
@@ -35,22 +33,11 @@ namespace 甲状腺随访系统
                     this.Controls.Find(strArray[0], true)[0].Text = strArray[1];
                 }
             }
-
         }
+        #endregion
 
-        private void warningBox1_CloseClick(object sender, EventArgs e)
-        {
-            
-            //wbox_tips.Visible = false;
-        }
 
-        private void bt_saveBasic_Click(object sender, EventArgs e)
-        {
-            //wbox_tips.Text = "<b >系统提示</b>  <i>用户基本信息保存成功</i>";
-            //wbox_tips.ForeColor = Color.Red;
-            //wbox_tips.Visible = true;
-        }
-
+        #region 填充界面
         void fillUI(object obj, EventArgs args)
         {
             //患者基本信息
@@ -140,11 +127,10 @@ namespace 甲状腺随访系统
             //家族史
             if (Conf.currentPatient.familyHistory.familyhistory)
             { switch_familyhistory.Value = true; tb_fht.Visible = true; tb_fht.Text = Conf.currentPatient.familyHistory.familyhistorytext; } else { tb_fht.Visible = false; }
-            
- 
-            
 
         }
+        #endregion
+
 
         void InsertData(object sender, EventArgs e)
         {
@@ -204,9 +190,6 @@ namespace 甲状腺随访系统
             Conf.currentPatient.familyHistory.familyhistory = switch_familyhistory.Value;
             Conf.currentPatient.familyHistory.familyhistorytext = tb_fht.Text;
          
-            
-
-
         }
 
 
@@ -321,16 +304,22 @@ namespace 甲状腺随访系统
             }
         }
 
+        #region 将回车键绑定TAB键
+        /// <summary>
+        /// 将回车键绑定TAB键
+        /// </summary>
         private void tb_patientName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) {
                 SendKeys.Send("{Tab}");
             }
         }
+        #endregion
 
 
 
 
-         
+
+
     }
 }

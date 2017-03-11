@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using 甲状腺随访系统.model;
 using System.Configuration;
 using 甲状腺随访系统.MODEL;
@@ -47,6 +44,11 @@ namespace 甲状腺随访系统
         /// 获得程序版本
         /// </summary>
         public static string appVersion = ConfigurationManager.AppSettings.GetValues(0)[0].ToString();
+
+        /// <summary>
+        /// 程序服务器地址
+        /// </summary>
+        public static string appServerUir = @"http://auth.xxeasy.net/softInfo.php";
 
 
     }
