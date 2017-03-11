@@ -34,6 +34,17 @@ namespace 甲状腺随访系统.DAO
                 
         }
 
+        public static bool checkSameName(string username)
+        {
+            sql = @"select username from tb_user where username=@username";
+            SqlParameter[] param = { new SqlParameter("@username", username) };
+            DataTable dt = SQLHELPER.ExecuteDataTable(sql,param);
+            if (dt.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
+
         #endregion
 
         #region 增加新用户
