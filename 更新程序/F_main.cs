@@ -82,9 +82,10 @@ namespace 更新程序
                 string newFile = downloadFolder + downloadlist[i];
                 File.Copy(newFile, oldFile,true);
             }
-
+            labelX1.Text = "更新成功";
             string appName = Environment.CurrentDirectory + @"\thyroidSoft.exe";
             Process.Start(appName);
+            Directory.Delete(downloadFolder, true);
             Application.Exit();
         }
 
