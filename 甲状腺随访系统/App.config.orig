@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <add name="connStr" connectionString="Data Source=127.0.0.1;Initial Catalog=follw_up_DB;User ID=sa;Password =saadmin" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings >
+<<<<<<< HEAD
+    <add  key="version" value="2017-03-12" />
+=======
+    <add  key="version" value="2017-03-15" />
+>>>>>>> 89d9217f4de0368c7c80222ef19f6d0f637c0bbb
+  </appSettings>
+</configuration>
