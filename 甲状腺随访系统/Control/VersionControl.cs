@@ -38,8 +38,8 @@ namespace 甲状腺随访系统.CONTROL
         public static bool updateSoft()
         {
             //判断是否联网
-            int n = 0;
-            if (NETHELPER.InternetGetConnectedState(out n, 0))
+
+            if (NETHELPER.isConnectToWWW())
             {
                 //检查系统更新
                 string responsString = NETHELPER.HttpPost(Conf.appServerUir, "", null);

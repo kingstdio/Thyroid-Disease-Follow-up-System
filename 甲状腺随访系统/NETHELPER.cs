@@ -14,6 +14,15 @@ namespace 甲状腺随访系统
         [DllImport("wininet.dll", EntryPoint = "InternetGetConnectedState")]
         //判断网络状况的方法,返回值true为连接，false为未连接  
         public extern static bool InternetGetConnectedState(out int conState, int reder);
+
+        /// <summary>
+        /// 判断是否联网
+        /// </summary>
+        public static bool isConnectToWWW() 
+        {
+            int n = 0;
+            if (InternetGetConnectedState(out n, 0)) { return true; } else { return false; }
+        }
         #endregion
 
         #region 发送请求

@@ -2,12 +2,30 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Runtime.InteropServices;
 
 namespace 更新程序
 {
     public static class NETHELPER
     {
 
+        #region 判断是否连接网络
+        //导入判断网络是否连接的 .dll  
+        [DllImport("wininet.dll", EntryPoint = "InternetGetConnectedState")]
+        //判断网络状况的方法,返回值true为连接，false为未连接  
+        public extern static bool InternetGetConnectedState(out int conState, int reder);
+
+        /// <summary>
+        /// 判断是否联网
+        /// </summary>
+        public static bool isConnectToWWW() 
+        {
+            int n = 0;
+            if (InternetGetConnectedState(out n, 0)) { return true; } else { return false; }
+        }
+        #endregion
+
+        #region 发送请求
         /// <summary>
         /// 发送post请求
         /// </summary>
@@ -28,8 +46,10 @@ namespace 更新程序
             myStreamWriter.Close();
 
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            response.Cookies = cookie.GetCookies(response.ResponseUri);
+            if (cookie != null)
+            {
+                response.Cookies = cookie.GetCookies(response.ResponseUri);
+            }
             Stream myResponseStream = response.GetResponseStream();
             StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.Default);
             string retString = myStreamReader.ReadToEnd();
@@ -70,5 +90,6 @@ namespace 更新程序
                 return "";
             }
         }
+        #endregion
     }
 }
