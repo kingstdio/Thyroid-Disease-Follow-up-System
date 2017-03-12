@@ -118,6 +118,10 @@ namespace 甲状腺随访系统
 
         private void bt_deleteuser_Click(object sender, EventArgs e)
         {
+
+            DialogResult diaResult = MessageBox.Show("确定要删除吗？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (diaResult == DialogResult.No)
+                return;
             getInfo();
             if (Control.UserManage.DeleteUser())
             {

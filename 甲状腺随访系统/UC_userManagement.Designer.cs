@@ -41,9 +41,9 @@
             this.switch_forbidden = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.lb_forbidden = new DevComponents.DotNetBar.LabelX();
             this.cbe_privilege = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.pri_1 = new DevComponents.Editors.ComboItem();
-            this.pri_2 = new DevComponents.Editors.ComboItem();
-            this.pri_3 = new DevComponents.Editors.ComboItem();
+            this.pri1 = new DevComponents.Editors.ComboItem();
+            this.pri2 = new DevComponents.Editors.ComboItem();
+            this.pri3 = new DevComponents.Editors.ComboItem();
             this.lb_privilege = new DevComponents.DotNetBar.LabelX();
             this.tb_passag = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_passag = new DevComponents.DotNetBar.LabelX();
@@ -51,16 +51,25 @@
             this.lb_pass = new DevComponents.DotNetBar.LabelX();
             this.tb_name = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_name = new DevComponents.DotNetBar.LabelX();
+            this.pri_3 = new DevComponents.Editors.ComboItem();
+            this.pri_2 = new DevComponents.Editors.ComboItem();
+            this.pri_1 = new DevComponents.Editors.ComboItem();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sgc_UserInfo
             // 
+            this.sgc_UserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.sgc_UserInfo.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgc_UserInfo.Location = new System.Drawing.Point(0, 0);
+            this.sgc_UserInfo.Location = new System.Drawing.Point(4, 21);
             this.sgc_UserInfo.Name = "sgc_UserInfo";
-            this.sgc_UserInfo.Size = new System.Drawing.Size(833, 671);
+            // 
+            // 
+            // 
+            this.sgc_UserInfo.PrimaryGrid.AllowEdit = false;
+            this.sgc_UserInfo.Size = new System.Drawing.Size(853, 643);
             this.sgc_UserInfo.TabIndex = 0;
             this.sgc_UserInfo.Text = "superGridControl1";
             this.sgc_UserInfo.RowDoubleClick += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDoubleClickEventArgs>(this.sgc_UserInfo_RowDoubleClick);
@@ -98,9 +107,9 @@
             this.groupPanel1.Controls.Add(this.tb_name);
             this.groupPanel1.Controls.Add(this.lb_name);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Location = new System.Drawing.Point(913, 66);
+            this.groupPanel1.Location = new System.Drawing.Point(883, 11);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(431, 562);
+            this.groupPanel1.Size = new System.Drawing.Size(482, 653);
             // 
             // 
             // 
@@ -137,9 +146,9 @@
             this.bt_deleteuser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_deleteuser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_deleteuser.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_deleteuser.Location = new System.Drawing.Point(303, 444);
+            this.bt_deleteuser.Location = new System.Drawing.Point(49, 556);
             this.bt_deleteuser.Name = "bt_deleteuser";
-            this.bt_deleteuser.Size = new System.Drawing.Size(91, 32);
+            this.bt_deleteuser.Size = new System.Drawing.Size(384, 44);
             this.bt_deleteuser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_deleteuser.TabIndex = 129;
             this.bt_deleteuser.Text = "删除";
@@ -150,9 +159,9 @@
             this.bt_updateuser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_updateuser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_updateuser.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_updateuser.Location = new System.Drawing.Point(174, 443);
+            this.bt_updateuser.Location = new System.Drawing.Point(49, 502);
             this.bt_updateuser.Name = "bt_updateuser";
-            this.bt_updateuser.Size = new System.Drawing.Size(91, 32);
+            this.bt_updateuser.Size = new System.Drawing.Size(384, 44);
             this.bt_updateuser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_updateuser.TabIndex = 128;
             this.bt_updateuser.Text = "更改";
@@ -163,9 +172,9 @@
             this.bt_newuser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.bt_newuser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.bt_newuser.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bt_newuser.Location = new System.Drawing.Point(45, 444);
+            this.bt_newuser.Location = new System.Drawing.Point(49, 444);
             this.bt_newuser.Name = "bt_newuser";
-            this.bt_newuser.Size = new System.Drawing.Size(91, 32);
+            this.bt_newuser.Size = new System.Drawing.Size(384, 44);
             this.bt_newuser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bt_newuser.TabIndex = 127;
             this.bt_newuser.Text = "添加";
@@ -183,7 +192,7 @@
             this.tb_email.Location = new System.Drawing.Point(148, 375);
             this.tb_email.Name = "tb_email";
             this.tb_email.PreventEnterBeep = true;
-            this.tb_email.Size = new System.Drawing.Size(205, 26);
+            this.tb_email.Size = new System.Drawing.Size(281, 26);
             this.tb_email.TabIndex = 125;
             // 
             // lb_email
@@ -194,7 +203,7 @@
             // 
             this.lb_email.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_email.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_email.Location = new System.Drawing.Point(45, 378);
+            this.lb_email.Location = new System.Drawing.Point(35, 378);
             this.lb_email.Name = "lb_email";
             this.lb_email.Size = new System.Drawing.Size(97, 23);
             this.lb_email.TabIndex = 126;
@@ -213,7 +222,7 @@
             this.tb_phone.Location = new System.Drawing.Point(148, 323);
             this.tb_phone.Name = "tb_phone";
             this.tb_phone.PreventEnterBeep = true;
-            this.tb_phone.Size = new System.Drawing.Size(205, 26);
+            this.tb_phone.Size = new System.Drawing.Size(281, 26);
             this.tb_phone.TabIndex = 123;
             // 
             // lb_phone
@@ -224,7 +233,7 @@
             // 
             this.lb_phone.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_phone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_phone.Location = new System.Drawing.Point(45, 326);
+            this.lb_phone.Location = new System.Drawing.Point(35, 326);
             this.lb_phone.Name = "lb_phone";
             this.lb_phone.Size = new System.Drawing.Size(97, 23);
             this.lb_phone.TabIndex = 124;
@@ -241,7 +250,7 @@
             this.switch_forbidden.Name = "switch_forbidden";
             this.switch_forbidden.OffText = "否";
             this.switch_forbidden.OnText = "是";
-            this.switch_forbidden.Size = new System.Drawing.Size(205, 26);
+            this.switch_forbidden.Size = new System.Drawing.Size(281, 26);
             this.switch_forbidden.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switch_forbidden.SwitchWidth = 110;
             this.switch_forbidden.TabIndex = 121;
@@ -254,7 +263,7 @@
             // 
             this.lb_forbidden.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_forbidden.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_forbidden.Location = new System.Drawing.Point(45, 274);
+            this.lb_forbidden.Location = new System.Drawing.Point(35, 274);
             this.lb_forbidden.Name = "lb_forbidden";
             this.lb_forbidden.Size = new System.Drawing.Size(97, 23);
             this.lb_forbidden.TabIndex = 122;
@@ -270,29 +279,26 @@
             this.cbe_privilege.FormattingEnabled = true;
             this.cbe_privilege.ItemHeight = 20;
             this.cbe_privilege.Items.AddRange(new object[] {
-            this.pri_1,
-            this.pri_2,
-            this.pri_3});
+            this.pri1,
+            this.pri2,
+            this.pri3});
             this.cbe_privilege.Location = new System.Drawing.Point(148, 219);
             this.cbe_privilege.Name = "cbe_privilege";
-            this.cbe_privilege.Size = new System.Drawing.Size(205, 26);
+            this.cbe_privilege.Size = new System.Drawing.Size(281, 26);
             this.cbe_privilege.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbe_privilege.TabIndex = 120;
             // 
-            // pri_1
+            // pri1
             // 
-            this.pri_1.Text = "第一等级";
-            this.pri_1.Value = "1";
+            this.pri1.Text = "超级管理员";
             // 
-            // pri_2
+            // pri2
             // 
-            this.pri_2.Text = "第二等级";
-            this.pri_2.Value = "2";
+            this.pri2.Text = "管理员";
             // 
-            // pri_3
+            // pri3
             // 
-            this.pri_3.Text = "第三等级";
-            this.pri_3.Value = "3";
+            this.pri3.Text = "普通用户";
             // 
             // lb_privilege
             // 
@@ -302,7 +308,7 @@
             // 
             this.lb_privilege.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_privilege.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_privilege.Location = new System.Drawing.Point(45, 222);
+            this.lb_privilege.Location = new System.Drawing.Point(35, 222);
             this.lb_privilege.Name = "lb_privilege";
             this.lb_privilege.Size = new System.Drawing.Size(97, 23);
             this.lb_privilege.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
@@ -323,7 +329,7 @@
             this.tb_passag.Name = "tb_passag";
             this.tb_passag.PasswordChar = '.';
             this.tb_passag.PreventEnterBeep = true;
-            this.tb_passag.Size = new System.Drawing.Size(205, 26);
+            this.tb_passag.Size = new System.Drawing.Size(281, 26);
             this.tb_passag.TabIndex = 117;
             this.tb_passag.Leave += new System.EventHandler(this.tb_passag_Leave);
             // 
@@ -335,7 +341,7 @@
             // 
             this.lb_passag.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_passag.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_passag.Location = new System.Drawing.Point(45, 170);
+            this.lb_passag.Location = new System.Drawing.Point(35, 170);
             this.lb_passag.Name = "lb_passag";
             this.lb_passag.Size = new System.Drawing.Size(97, 23);
             this.lb_passag.TabIndex = 118;
@@ -355,7 +361,7 @@
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '.';
             this.tb_pass.PreventEnterBeep = true;
-            this.tb_pass.Size = new System.Drawing.Size(205, 26);
+            this.tb_pass.Size = new System.Drawing.Size(281, 26);
             this.tb_pass.TabIndex = 115;
             // 
             // lb_pass
@@ -366,7 +372,7 @@
             // 
             this.lb_pass.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_pass.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_pass.Location = new System.Drawing.Point(45, 118);
+            this.lb_pass.Location = new System.Drawing.Point(35, 118);
             this.lb_pass.Name = "lb_pass";
             this.lb_pass.Size = new System.Drawing.Size(97, 23);
             this.lb_pass.TabIndex = 116;
@@ -385,7 +391,7 @@
             this.tb_name.Location = new System.Drawing.Point(148, 63);
             this.tb_name.Name = "tb_name";
             this.tb_name.PreventEnterBeep = true;
-            this.tb_name.Size = new System.Drawing.Size(205, 26);
+            this.tb_name.Size = new System.Drawing.Size(281, 26);
             this.tb_name.TabIndex = 113;
             // 
             // lb_name
@@ -396,12 +402,27 @@
             // 
             this.lb_name.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_name.Location = new System.Drawing.Point(45, 66);
+            this.lb_name.Location = new System.Drawing.Point(35, 66);
             this.lb_name.Name = "lb_name";
             this.lb_name.Size = new System.Drawing.Size(97, 23);
             this.lb_name.TabIndex = 114;
             this.lb_name.Text = "登录名：";
             this.lb_name.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // pri_3
+            // 
+            this.pri_3.Text = "第三等级";
+            this.pri_3.Value = "3";
+            // 
+            // pri_2
+            // 
+            this.pri_2.Text = "第二等级";
+            this.pri_2.Value = "2";
+            // 
+            // pri_1
+            // 
+            this.pri_1.Text = "第一等级";
+            this.pri_1.Value = "1";
             // 
             // UC_userManagement
             // 
@@ -421,26 +442,29 @@
         private DevComponents.DotNetBar.SuperGrid.SuperGridControl sgc_UserInfo;
         private System.Windows.Forms.Panel panel1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private DevComponents.DotNetBar.ButtonX bt_deleteuser;
+        private DevComponents.DotNetBar.ButtonX bt_updateuser;
+        private DevComponents.DotNetBar.ButtonX bt_newuser;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_email;
+        private DevComponents.DotNetBar.LabelX lb_email;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_phone;
+        private DevComponents.DotNetBar.LabelX lb_phone;
+        private DevComponents.DotNetBar.Controls.SwitchButton switch_forbidden;
+        private DevComponents.DotNetBar.LabelX lb_forbidden;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbe_privilege;
+        private DevComponents.DotNetBar.LabelX lb_privilege;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_passag;
         private DevComponents.DotNetBar.LabelX lb_passag;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_pass;
         private DevComponents.DotNetBar.LabelX lb_pass;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_name;
         private DevComponents.DotNetBar.LabelX lb_name;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbe_privilege;
-        private DevComponents.Editors.ComboItem pri_1;
-        private DevComponents.Editors.ComboItem pri_2;
         private DevComponents.Editors.ComboItem pri_3;
-        private DevComponents.DotNetBar.LabelX lb_privilege;
-        private DevComponents.DotNetBar.Controls.SwitchButton switch_forbidden;
-        private DevComponents.DotNetBar.LabelX lb_forbidden;
-        private DevComponents.DotNetBar.Controls.TextBoxX tb_email;
-        private DevComponents.DotNetBar.LabelX lb_email;
-        private DevComponents.DotNetBar.Controls.TextBoxX tb_phone;
-        private DevComponents.DotNetBar.LabelX lb_phone;
-        private DevComponents.DotNetBar.ButtonX bt_deleteuser;
-        private DevComponents.DotNetBar.ButtonX bt_updateuser;
-        private DevComponents.DotNetBar.ButtonX bt_newuser;
+        private DevComponents.Editors.ComboItem pri_2;
+        private DevComponents.Editors.ComboItem pri_1;
+        private DevComponents.Editors.ComboItem pri1;
+        private DevComponents.Editors.ComboItem pri2;
+        private DevComponents.Editors.ComboItem pri3;
 
     }
 }

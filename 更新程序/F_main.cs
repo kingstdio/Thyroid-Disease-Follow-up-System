@@ -12,6 +12,7 @@ using DevComponents.DotNetBar.Controls;
 using System.Threading;
 using Microsoft.VisualBasic.Devices;
 using System.Diagnostics;
+using System.Configuration;
 
 namespace 更新程序
 {
@@ -38,6 +39,7 @@ namespace 更新程序
             {
                 string reponsData = NETHELPER.HttpPost(infoUrl, "", null);
                 downloadlist = reponsData.Split('#');
+
             }
             else
             {
@@ -88,6 +90,28 @@ namespace 更新程序
             Application.Exit();
         }
 
+        #region 检查是否有新版本
+        /// <summary>
+        /// 检查是否有新版本
+        /// </summary>
+        /// <param name="localVersion">本地版本</param>
+        /// <param name="remoteVersion">远程版本</param>
+        /// <returns></returns>
+        public static bool isNewVersionAvailable(string localVersion, string remoteVersion)
+        {
+            DateTime local = Convert.ToDateTime(localVersion);
+            DateTime remote = Convert.ToDateTime(remoteVersion);
+            if (local.CompareTo(remote) < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        #endregion
 
 
         #region 下载文件
