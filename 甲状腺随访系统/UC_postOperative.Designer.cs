@@ -32,6 +32,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
+            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.sgc_radio = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.dtb_eut = new DevComponents.Editors.DoubleInput();
+            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.line8 = new DevComponents.DotNetBar.Controls.Line();
+            this.line7 = new DevComponents.DotNetBar.Controls.Line();
+            this.line6 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.line5 = new DevComponents.DotNetBar.Controls.Line();
+            this.line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.cbe_PLhypomotility = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem13 = new DevComponents.Editors.ComboItem();
@@ -111,32 +137,6 @@
             this.labelX27 = new DevComponents.DotNetBar.LabelX();
             this.labelX28 = new DevComponents.DotNetBar.LabelX();
             this.labelX29 = new DevComponents.DotNetBar.LabelX();
-            this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
-            this.sgc_radio = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn6 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn7 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn9 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.gridColumn10 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            this.dtb_eut = new DevComponents.Editors.DoubleInput();
-            this.rtbe_radiotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.rtbe_chemotherapy = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.line8 = new DevComponents.DotNetBar.Controls.Line();
-            this.line7 = new DevComponents.DotNetBar.Controls.Line();
-            this.line6 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
-            this.line3 = new DevComponents.DotNetBar.Controls.Line();
-            this.line5 = new DevComponents.DotNetBar.Controls.Line();
-            this.line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavItem1 = new DevComponents.DotNetBar.Controls.SideNavItem();
             this.separator1 = new DevComponents.DotNetBar.Separator();
             this.sideNavItem2 = new DevComponents.DotNetBar.Controls.SideNavItem();
@@ -220,9 +220,9 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.sideNav1.SuspendLayout();
-            this.sideNavPanel3.SuspendLayout();
             this.sideNavPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).BeginInit();
+            this.sideNavPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -231,8 +231,8 @@
             this.sideNav1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Controls.Add(this.sideNavPanel3);
+            this.sideNav1.Controls.Add(this.sideNavPanel1);
             this.sideNav1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideNavItem1,
             this.separator1,
@@ -246,782 +246,6 @@
             this.sideNav1.Size = new System.Drawing.Size(1413, 568);
             this.sideNav1.TabIndex = 0;
             this.sideNav1.Text = "sideNav1";
-            // 
-            // sideNavPanel3
-            // 
-            this.sideNavPanel3.Controls.Add(this.cbe_PLhypomotility);
-            this.sideNavPanel3.Controls.Add(this.sgc_inspect);
-            this.sideNavPanel3.Controls.Add(this.cbe_Bhypomotility);
-            this.sideNavPanel3.Controls.Add(this.line17);
-            this.sideNavPanel3.Controls.Add(this.line18);
-            this.sideNavPanel3.Controls.Add(this.line19);
-            this.sideNavPanel3.Controls.Add(this.line20);
-            this.sideNavPanel3.Controls.Add(this.line21);
-            this.sideNavPanel3.Controls.Add(this.line22);
-            this.sideNavPanel3.Controls.Add(this.line23);
-            this.sideNavPanel3.Controls.Add(this.line24);
-            this.sideNavPanel3.Controls.Add(this.switch_bleed);
-            this.sideNavPanel3.Controls.Add(this.switch_infection);
-            this.sideNavPanel3.Controls.Add(this.switch_galactorrhea);
-            this.sideNavPanel3.Controls.Add(this.cbe_PLparalysis);
-            this.sideNavPanel3.Controls.Add(this.cbe_Bparalysis);
-            this.sideNavPanel3.Controls.Add(this.labelX13);
-            this.sideNavPanel3.Controls.Add(this.labelX15);
-            this.sideNavPanel3.Controls.Add(this.labelX16);
-            this.sideNavPanel3.Controls.Add(this.cbe_hoarseness);
-            this.sideNavPanel3.Controls.Add(this.labelX17);
-            this.sideNavPanel3.Controls.Add(this.labelX18);
-            this.sideNavPanel3.Controls.Add(this.cbe_hyperspasmia);
-            this.sideNavPanel3.Controls.Add(this.labelX19);
-            this.sideNavPanel3.Controls.Add(this.cbe_drinkchok);
-            this.sideNavPanel3.Controls.Add(this.labelX20);
-            this.sideNavPanel3.Controls.Add(this.cbe_VocalChange);
-            this.sideNavPanel3.Controls.Add(this.labelX21);
-            this.sideNavPanel3.Controls.Add(this.cbe_dyspnea);
-            this.sideNavPanel3.Controls.Add(this.labelX22);
-            this.sideNavPanel3.Controls.Add(this.labelX23);
-            this.sideNavPanel3.Controls.Add(this.labelX24);
-            this.sideNavPanel3.Controls.Add(this.labelX25);
-            this.sideNavPanel3.Controls.Add(this.labelX26);
-            this.sideNavPanel3.Controls.Add(this.labelX27);
-            this.sideNavPanel3.Controls.Add(this.labelX28);
-            this.sideNavPanel3.Controls.Add(this.labelX29);
-            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideNavPanel3.Location = new System.Drawing.Point(108, 36);
-            this.sideNavPanel3.Name = "sideNavPanel3";
-            this.sideNavPanel3.Size = new System.Drawing.Size(1300, 531);
-            this.sideNavPanel3.TabIndex = 13;
-            this.sideNavPanel3.Visible = false;
-            this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
-            this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
-            // 
-            // cbe_PLhypomotility
-            // 
-            this.cbe_PLhypomotility.DisplayMember = "Text";
-            this.cbe_PLhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_PLhypomotility.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_PLhypomotility.FormattingEnabled = true;
-            this.cbe_PLhypomotility.ItemHeight = 20;
-            this.cbe_PLhypomotility.Items.AddRange(new object[] {
-            this.comboItem13,
-            this.comboItem14,
-            this.comboItem15,
-            this.comboItem16});
-            this.cbe_PLhypomotility.Location = new System.Drawing.Point(629, 277);
-            this.cbe_PLhypomotility.Name = "cbe_PLhypomotility";
-            this.cbe_PLhypomotility.Size = new System.Drawing.Size(121, 26);
-            this.cbe_PLhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PLhypomotility.TabIndex = 141;
-            // 
-            // comboItem14
-            // 
-            this.comboItem14.Text = "否";
-            this.comboItem14.Value = "否";
-            // 
-            // comboItem15
-            // 
-            this.comboItem15.Text = "单侧";
-            this.comboItem15.Value = "单侧";
-            // 
-            // comboItem16
-            // 
-            this.comboItem16.Text = "两侧";
-            this.comboItem16.Value = "两侧";
-            // 
-            // sgc_inspect
-            // 
-            this.sgc_inspect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sgc_inspect.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.sgc_inspect.Location = new System.Drawing.Point(206, 322);
-            this.sgc_inspect.Name = "sgc_inspect";
-            // 
-            // 
-            // 
-            this.sgc_inspect.PrimaryGrid.AllowRowDelete = true;
-            this.sgc_inspect.PrimaryGrid.AllowRowInsert = true;
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.day);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn11);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn15);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn16);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn12);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.TPO);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn13);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn14);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn17);
-            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn18);
-            this.sgc_inspect.PrimaryGrid.ShowInsertRow = true;
-            this.sgc_inspect.PrimaryGrid.UseAlternateColumnStyle = true;
-            this.sgc_inspect.PrimaryGrid.UseAlternateRowStyle = true;
-            this.sgc_inspect.Size = new System.Drawing.Size(1042, 176);
-            this.sgc_inspect.TabIndex = 139;
-            this.sgc_inspect.Text = "superGridControl1";
-            this.sgc_inspect.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_inspect_RowDeleted);
-            this.sgc_inspect.Click += new System.EventHandler(this.sgc_inspect_Click);
-            // 
-            // day
-            // 
-            this.day.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl);
-            this.day.HeaderText = "天数";
-            this.day.Name = "days";
-            this.day.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn11.HeaderText = "PTH(pg/ml)";
-            this.gridColumn11.Name = "PTH";
-            // 
-            // gridColumn15
-            // 
-            this.gridColumn15.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn15.HeaderText = "Ca(mmol/l)";
-            this.gridColumn15.Name = "Ca";
-            // 
-            // gridColumn16
-            // 
-            this.gridColumn16.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn16.HeaderText = "P(mmol/l)";
-            this.gridColumn16.Name = "P";
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn12.HeaderText = "碱性磷酸酶";
-            this.gridColumn12.Name = "AP";
-            // 
-            // TPO
-            // 
-            this.TPO.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.TPO.HeaderText = "25-羟基维生素D";
-            this.TPO.Name = "D";
-            // 
-            // gridColumn13
-            // 
-            this.gridColumn13.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn13.HeaderText = "D2";
-            this.gridColumn13.Name = "D2";
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
-            this.gridColumn14.HeaderText = "D3";
-            this.gridColumn14.Name = "D3";
-            // 
-            // gridColumn17
-            // 
-            this.gridColumn17.Name = "id";
-            this.gridColumn17.Visible = false;
-            // 
-            // gridColumn18
-            // 
-            this.gridColumn18.Name = "pid";
-            this.gridColumn18.Visible = false;
-            // 
-            // cbe_Bhypomotility
-            // 
-            this.cbe_Bhypomotility.DisplayMember = "Text";
-            this.cbe_Bhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_Bhypomotility.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_Bhypomotility.FormattingEnabled = true;
-            this.cbe_Bhypomotility.ItemHeight = 20;
-            this.cbe_Bhypomotility.Items.AddRange(new object[] {
-            this.comboItem9,
-            this.comboItem10,
-            this.comboItem11,
-            this.comboItem12});
-            this.cbe_Bhypomotility.Location = new System.Drawing.Point(629, 210);
-            this.cbe_Bhypomotility.Name = "cbe_Bhypomotility";
-            this.cbe_Bhypomotility.Size = new System.Drawing.Size(121, 26);
-            this.cbe_Bhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_Bhypomotility.TabIndex = 10;
-            // 
-            // comboItem10
-            // 
-            this.comboItem10.Text = "否";
-            this.comboItem10.Value = "否";
-            // 
-            // comboItem11
-            // 
-            this.comboItem11.Text = "单侧";
-            this.comboItem11.Value = "单侧";
-            // 
-            // comboItem12
-            // 
-            this.comboItem12.Text = "两侧";
-            this.comboItem12.Value = "两侧";
-            // 
-            // line17
-            // 
-            this.line17.BackColor = System.Drawing.Color.Transparent;
-            this.line17.ForeColor = System.Drawing.Color.White;
-            this.line17.Location = new System.Drawing.Point(1248, 28);
-            this.line17.Name = "line17";
-            this.line17.Size = new System.Drawing.Size(1, 470);
-            this.line17.TabIndex = 134;
-            this.line17.Text = "line1";
-            this.line17.VerticalLine = true;
-            // 
-            // line18
-            // 
-            this.line18.BackColor = System.Drawing.Color.Transparent;
-            this.line18.ForeColor = System.Drawing.Color.White;
-            this.line18.Location = new System.Drawing.Point(206, 28);
-            this.line18.Name = "line18";
-            this.line18.Size = new System.Drawing.Size(1, 382);
-            this.line18.TabIndex = 135;
-            this.line18.Text = "line1";
-            this.line18.VerticalLine = true;
-            // 
-            // line19
-            // 
-            this.line19.BackColor = System.Drawing.Color.Transparent;
-            this.line19.ForeColor = System.Drawing.Color.White;
-            this.line19.Location = new System.Drawing.Point(39, 28);
-            this.line19.Name = "line19";
-            this.line19.Size = new System.Drawing.Size(1, 470);
-            this.line19.TabIndex = 133;
-            this.line19.Text = "line1";
-            this.line19.VerticalLine = true;
-            // 
-            // line20
-            // 
-            this.line20.BackColor = System.Drawing.Color.Transparent;
-            this.line20.ForeColor = System.Drawing.Color.White;
-            this.line20.Location = new System.Drawing.Point(39, 492);
-            this.line20.Name = "line20";
-            this.line20.Size = new System.Drawing.Size(1208, 10);
-            this.line20.TabIndex = 132;
-            this.line20.Text = "line20";
-            // 
-            // line21
-            // 
-            this.line21.BackColor = System.Drawing.Color.Transparent;
-            this.line21.ForeColor = System.Drawing.Color.White;
-            this.line21.Location = new System.Drawing.Point(40, 28);
-            this.line21.Name = "line21";
-            this.line21.Size = new System.Drawing.Size(1208, 1);
-            this.line21.TabIndex = 130;
-            this.line21.Text = "line11";
-            // 
-            // line22
-            // 
-            this.line22.BackColor = System.Drawing.Color.Transparent;
-            this.line22.ForeColor = System.Drawing.Color.White;
-            this.line22.Location = new System.Drawing.Point(40, 188);
-            this.line22.Name = "line22";
-            this.line22.Size = new System.Drawing.Size(1208, 1);
-            this.line22.TabIndex = 131;
-            this.line22.Text = "line22";
-            // 
-            // line23
-            // 
-            this.line23.BackColor = System.Drawing.Color.Transparent;
-            this.line23.ForeColor = System.Drawing.Color.White;
-            this.line23.Location = new System.Drawing.Point(40, 255);
-            this.line23.Name = "line23";
-            this.line23.Size = new System.Drawing.Size(1208, 1);
-            this.line23.TabIndex = 129;
-            this.line23.Text = "line23";
-            // 
-            // line24
-            // 
-            this.line24.BackColor = System.Drawing.Color.Transparent;
-            this.line24.ForeColor = System.Drawing.Color.White;
-            this.line24.Location = new System.Drawing.Point(39, 322);
-            this.line24.Name = "line24";
-            this.line24.Size = new System.Drawing.Size(1208, 1);
-            this.line24.TabIndex = 128;
-            this.line24.Text = "line24";
-            // 
-            // switch_bleed
-            // 
-            // 
-            // 
-            // 
-            this.switch_bleed.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switch_bleed.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switch_bleed.Location = new System.Drawing.Point(891, 102);
-            this.switch_bleed.Name = "switch_bleed";
-            this.switch_bleed.OffText = "否";
-            this.switch_bleed.OnText = "是";
-            this.switch_bleed.Size = new System.Drawing.Size(121, 26);
-            this.switch_bleed.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switch_bleed.SwitchWidth = 58;
-            this.switch_bleed.TabIndex = 8;
-            // 
-            // switch_infection
-            // 
-            // 
-            // 
-            // 
-            this.switch_infection.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switch_infection.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switch_infection.Location = new System.Drawing.Point(629, 149);
-            this.switch_infection.Name = "switch_infection";
-            this.switch_infection.OffText = "否";
-            this.switch_infection.OnText = "是";
-            this.switch_infection.Size = new System.Drawing.Size(121, 26);
-            this.switch_infection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switch_infection.SwitchWidth = 58;
-            this.switch_infection.TabIndex = 6;
-            // 
-            // switch_galactorrhea
-            // 
-            // 
-            // 
-            // 
-            this.switch_galactorrhea.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switch_galactorrhea.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switch_galactorrhea.Location = new System.Drawing.Point(358, 149);
-            this.switch_galactorrhea.Name = "switch_galactorrhea";
-            this.switch_galactorrhea.OffText = "否";
-            this.switch_galactorrhea.OnText = "是";
-            this.switch_galactorrhea.Size = new System.Drawing.Size(121, 26);
-            this.switch_galactorrhea.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switch_galactorrhea.SwitchWidth = 58;
-            this.switch_galactorrhea.TabIndex = 3;
-            // 
-            // cbe_PLparalysis
-            // 
-            this.cbe_PLparalysis.DisplayMember = "Text";
-            this.cbe_PLparalysis.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_PLparalysis.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_PLparalysis.FormattingEnabled = true;
-            this.cbe_PLparalysis.ItemHeight = 20;
-            this.cbe_PLparalysis.Items.AddRange(new object[] {
-            this.comboItem17,
-            this.comboItem18,
-            this.comboItem19,
-            this.comboItem20});
-            this.cbe_PLparalysis.Location = new System.Drawing.Point(358, 278);
-            this.cbe_PLparalysis.Name = "cbe_PLparalysis";
-            this.cbe_PLparalysis.Size = new System.Drawing.Size(125, 26);
-            this.cbe_PLparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PLparalysis.TabIndex = 11;
-            // 
-            // comboItem18
-            // 
-            this.comboItem18.Text = "否";
-            this.comboItem18.Value = "否";
-            // 
-            // comboItem19
-            // 
-            this.comboItem19.Text = "单侧";
-            this.comboItem19.Value = "单侧";
-            // 
-            // comboItem20
-            // 
-            this.comboItem20.Text = "两侧";
-            this.comboItem20.Value = "两侧";
-            // 
-            // cbe_Bparalysis
-            // 
-            this.cbe_Bparalysis.DisplayMember = "Text";
-            this.cbe_Bparalysis.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_Bparalysis.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_Bparalysis.FormattingEnabled = true;
-            this.cbe_Bparalysis.ItemHeight = 20;
-            this.cbe_Bparalysis.Items.AddRange(new object[] {
-            this.comboItem21,
-            this.comboItem22,
-            this.comboItem23,
-            this.comboItem24});
-            this.cbe_Bparalysis.Location = new System.Drawing.Point(358, 211);
-            this.cbe_Bparalysis.Name = "cbe_Bparalysis";
-            this.cbe_Bparalysis.Size = new System.Drawing.Size(125, 26);
-            this.cbe_Bparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_Bparalysis.TabIndex = 9;
-            // 
-            // comboItem22
-            // 
-            this.comboItem22.Text = "否";
-            this.comboItem22.Value = "否";
-            // 
-            // comboItem23
-            // 
-            this.comboItem23.Text = "单侧";
-            this.comboItem23.Value = "单侧";
-            // 
-            // comboItem24
-            // 
-            this.comboItem24.Text = "两侧";
-            this.comboItem24.Value = "两侧";
-            // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX13.Location = new System.Drawing.Point(525, 280);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(93, 23);
-            this.labelX13.TabIndex = 120;
-            this.labelX13.Text = "运动减弱：";
-            this.labelX13.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX15
-            // 
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX15.Location = new System.Drawing.Point(525, 213);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(93, 23);
-            this.labelX15.TabIndex = 121;
-            this.labelX15.Text = "运动减弱：";
-            this.labelX15.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX16
-            // 
-            this.labelX16.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX16.Location = new System.Drawing.Point(256, 280);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(93, 23);
-            this.labelX16.TabIndex = 119;
-            this.labelX16.Text = "麻痹：";
-            this.labelX16.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // cbe_hoarseness
-            // 
-            this.cbe_hoarseness.DisplayMember = "Text";
-            this.cbe_hoarseness.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_hoarseness.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_hoarseness.FormattingEnabled = true;
-            this.cbe_hoarseness.ItemHeight = 20;
-            this.cbe_hoarseness.Items.AddRange(new object[] {
-            this.comboItem25,
-            this.comboItem26,
-            this.comboItem27});
-            this.cbe_hoarseness.Location = new System.Drawing.Point(358, 51);
-            this.cbe_hoarseness.Name = "cbe_hoarseness";
-            this.cbe_hoarseness.Size = new System.Drawing.Size(121, 26);
-            this.cbe_hoarseness.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_hoarseness.TabIndex = 1;
-            // 
-            // comboItem26
-            // 
-            this.comboItem26.Text = "是";
-            this.comboItem26.Value = "是";
-            // 
-            // comboItem27
-            // 
-            this.comboItem27.Text = "否";
-            this.comboItem27.Value = "否";
-            // 
-            // labelX17
-            // 
-            this.labelX17.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX17.Location = new System.Drawing.Point(256, 213);
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(93, 23);
-            this.labelX17.TabIndex = 118;
-            this.labelX17.Text = "麻痹：";
-            this.labelX17.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX18
-            // 
-            this.labelX18.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX18.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX18.Location = new System.Drawing.Point(256, 53);
-            this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(93, 23);
-            this.labelX18.TabIndex = 101;
-            this.labelX18.Text = "声音嘶哑：";
-            this.labelX18.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // cbe_hyperspasmia
-            // 
-            this.cbe_hyperspasmia.DisplayMember = "Text";
-            this.cbe_hyperspasmia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_hyperspasmia.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_hyperspasmia.FormattingEnabled = true;
-            this.cbe_hyperspasmia.ItemHeight = 20;
-            this.cbe_hyperspasmia.Items.AddRange(new object[] {
-            this.comboItem28,
-            this.comboItem29,
-            this.comboItem30});
-            this.cbe_hyperspasmia.Location = new System.Drawing.Point(629, 100);
-            this.cbe_hyperspasmia.Name = "cbe_hyperspasmia";
-            this.cbe_hyperspasmia.Size = new System.Drawing.Size(121, 26);
-            this.cbe_hyperspasmia.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_hyperspasmia.TabIndex = 5;
-            // 
-            // comboItem29
-            // 
-            this.comboItem29.Text = "是";
-            this.comboItem29.Value = "是";
-            // 
-            // comboItem30
-            // 
-            this.comboItem30.Text = "否";
-            this.comboItem30.Value = "否";
-            // 
-            // labelX19
-            // 
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX19.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX19.Location = new System.Drawing.Point(525, 53);
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(93, 23);
-            this.labelX19.TabIndex = 102;
-            this.labelX19.Text = "呼吸困难:";
-            this.labelX19.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // cbe_drinkchok
-            // 
-            this.cbe_drinkchok.DisplayMember = "Text";
-            this.cbe_drinkchok.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_drinkchok.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_drinkchok.FormattingEnabled = true;
-            this.cbe_drinkchok.ItemHeight = 20;
-            this.cbe_drinkchok.Items.AddRange(new object[] {
-            this.comboItem31,
-            this.comboItem32,
-            this.comboItem33});
-            this.cbe_drinkchok.Location = new System.Drawing.Point(358, 100);
-            this.cbe_drinkchok.Name = "cbe_drinkchok";
-            this.cbe_drinkchok.Size = new System.Drawing.Size(121, 26);
-            this.cbe_drinkchok.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_drinkchok.TabIndex = 2;
-            // 
-            // comboItem32
-            // 
-            this.comboItem32.Text = "是";
-            this.comboItem32.Value = "是";
-            // 
-            // comboItem33
-            // 
-            this.comboItem33.Text = "否";
-            this.comboItem33.Value = "否";
-            // 
-            // labelX20
-            // 
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX20.Location = new System.Drawing.Point(787, 53);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(93, 23);
-            this.labelX20.TabIndex = 103;
-            this.labelX20.Text = "语调变化：";
-            this.labelX20.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // cbe_VocalChange
-            // 
-            this.cbe_VocalChange.DisplayMember = "Text";
-            this.cbe_VocalChange.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_VocalChange.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_VocalChange.FormattingEnabled = true;
-            this.cbe_VocalChange.ItemHeight = 20;
-            this.cbe_VocalChange.Items.AddRange(new object[] {
-            this.comboItem34,
-            this.comboItem35,
-            this.comboItem36});
-            this.cbe_VocalChange.Location = new System.Drawing.Point(891, 51);
-            this.cbe_VocalChange.Name = "cbe_VocalChange";
-            this.cbe_VocalChange.Size = new System.Drawing.Size(121, 26);
-            this.cbe_VocalChange.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_VocalChange.TabIndex = 7;
-            // 
-            // comboItem35
-            // 
-            this.comboItem35.Text = "是";
-            this.comboItem35.Value = "是";
-            // 
-            // comboItem36
-            // 
-            this.comboItem36.Text = "否";
-            this.comboItem36.Value = "否";
-            // 
-            // labelX21
-            // 
-            this.labelX21.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX21.Location = new System.Drawing.Point(256, 102);
-            this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(93, 23);
-            this.labelX21.TabIndex = 104;
-            this.labelX21.Text = "饮水呛咳：";
-            this.labelX21.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // cbe_dyspnea
-            // 
-            this.cbe_dyspnea.DisplayMember = "Text";
-            this.cbe_dyspnea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbe_dyspnea.Font = new System.Drawing.Font("宋体", 12F);
-            this.cbe_dyspnea.FormattingEnabled = true;
-            this.cbe_dyspnea.ItemHeight = 20;
-            this.cbe_dyspnea.Items.AddRange(new object[] {
-            this.comboItem37,
-            this.comboItem38,
-            this.comboItem39});
-            this.cbe_dyspnea.Location = new System.Drawing.Point(629, 51);
-            this.cbe_dyspnea.Name = "cbe_dyspnea";
-            this.cbe_dyspnea.Size = new System.Drawing.Size(121, 26);
-            this.cbe_dyspnea.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_dyspnea.TabIndex = 4;
-            // 
-            // comboItem38
-            // 
-            this.comboItem38.Text = "是";
-            this.comboItem38.Value = "是";
-            // 
-            // comboItem39
-            // 
-            this.comboItem39.Text = "否";
-            this.comboItem39.Value = "否";
-            // 
-            // labelX22
-            // 
-            this.labelX22.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX22.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX22.Location = new System.Drawing.Point(525, 151);
-            this.labelX22.Name = "labelX22";
-            this.labelX22.Size = new System.Drawing.Size(93, 23);
-            this.labelX22.TabIndex = 106;
-            this.labelX22.Text = "感染：";
-            this.labelX22.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX23
-            // 
-            this.labelX23.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX23.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX23.Location = new System.Drawing.Point(227, 151);
-            this.labelX23.Name = "labelX23";
-            this.labelX23.Size = new System.Drawing.Size(122, 23);
-            this.labelX23.TabIndex = 105;
-            this.labelX23.Text = "淋巴漏或乳漏：";
-            this.labelX23.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX24
-            // 
-            this.labelX24.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX24.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX24.Location = new System.Drawing.Point(787, 104);
-            this.labelX24.Name = "labelX24";
-            this.labelX24.Size = new System.Drawing.Size(93, 23);
-            this.labelX24.TabIndex = 108;
-            this.labelX24.Text = "出血：";
-            this.labelX24.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX25
-            // 
-            this.labelX25.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX25.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX25.Location = new System.Drawing.Point(525, 102);
-            this.labelX25.Name = "labelX25";
-            this.labelX25.Size = new System.Drawing.Size(93, 23);
-            this.labelX25.TabIndex = 107;
-            this.labelX25.Text = "抽搐：";
-            this.labelX25.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX26
-            // 
-            this.labelX26.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX26.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX26.Location = new System.Drawing.Point(46, 281);
-            this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(154, 23);
-            this.labelX26.TabIndex = 111;
-            this.labelX26.Text = "术后喉镜";
-            this.labelX26.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX27
-            // 
-            this.labelX27.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX27.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX27.Location = new System.Drawing.Point(46, 105);
-            this.labelX27.Name = "labelX27";
-            this.labelX27.Size = new System.Drawing.Size(154, 23);
-            this.labelX27.TabIndex = 112;
-            this.labelX27.Text = "常规项";
-            this.labelX27.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX28
-            // 
-            this.labelX28.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX28.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX28.Location = new System.Drawing.Point(46, 214);
-            this.labelX28.Name = "labelX28";
-            this.labelX28.Size = new System.Drawing.Size(154, 23);
-            this.labelX28.TabIndex = 109;
-            this.labelX28.Text = "术后声带B超";
-            this.labelX28.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX29
-            // 
-            this.labelX29.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX29.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX29.Location = new System.Drawing.Point(46, 404);
-            this.labelX29.Name = "labelX29";
-            this.labelX29.Size = new System.Drawing.Size(154, 23);
-            this.labelX29.TabIndex = 110;
-            this.labelX29.Text = "术后检查";
-            this.labelX29.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // sideNavPanel1
             // 
@@ -1047,6 +271,7 @@
             this.sideNavPanel1.Name = "sideNavPanel1";
             this.sideNavPanel1.Size = new System.Drawing.Size(1300, 531);
             this.sideNavPanel1.TabIndex = 2;
+            this.sideNavPanel1.Visible = false;
             this.sideNavPanel1.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel1.MouseLeave += new System.EventHandler(this.InsertData);
             // 
@@ -1077,6 +302,7 @@
             this.sgc_radio.Text = "superGridControl1";
             this.sgc_radio.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_radio_RowDeleted);
             this.sgc_radio.Click += new System.EventHandler(this.sgc_radio_Click);
+            this.sgc_radio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // gridColumn2
             // 
@@ -1141,6 +367,7 @@
             this.dtb_eut.ShowUpDown = true;
             this.dtb_eut.Size = new System.Drawing.Size(202, 26);
             this.dtb_eut.TabIndex = 93;
+            this.dtb_eut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // rtbe_radiotherapy
             // 
@@ -1155,6 +382,7 @@
     "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
             this.rtbe_radiotherapy.Size = new System.Drawing.Size(984, 98);
             this.rtbe_radiotherapy.TabIndex = 4;
+            this.rtbe_radiotherapy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // rtbe_chemotherapy
             // 
@@ -1169,6 +397,7 @@
     "134 \\\'cb\\\'ce\\\'cc\\\'e5;}}\r\n\\viewkind4\\uc1\\pard\\lang2052\\f0\\fs18\\par\r\n}\r\n";
             this.rtbe_chemotherapy.Size = new System.Drawing.Size(984, 98);
             this.rtbe_chemotherapy.TabIndex = 3;
+            this.rtbe_chemotherapy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // line8
             // 
@@ -1328,6 +557,794 @@
             this.lb_eut.TabIndex = 9;
             this.lb_eut.Text = "优甲乐（ug）：";
             // 
+            // sideNavPanel3
+            // 
+            this.sideNavPanel3.Controls.Add(this.cbe_PLhypomotility);
+            this.sideNavPanel3.Controls.Add(this.sgc_inspect);
+            this.sideNavPanel3.Controls.Add(this.cbe_Bhypomotility);
+            this.sideNavPanel3.Controls.Add(this.line17);
+            this.sideNavPanel3.Controls.Add(this.line18);
+            this.sideNavPanel3.Controls.Add(this.line19);
+            this.sideNavPanel3.Controls.Add(this.line20);
+            this.sideNavPanel3.Controls.Add(this.line21);
+            this.sideNavPanel3.Controls.Add(this.line22);
+            this.sideNavPanel3.Controls.Add(this.line23);
+            this.sideNavPanel3.Controls.Add(this.line24);
+            this.sideNavPanel3.Controls.Add(this.switch_bleed);
+            this.sideNavPanel3.Controls.Add(this.switch_infection);
+            this.sideNavPanel3.Controls.Add(this.switch_galactorrhea);
+            this.sideNavPanel3.Controls.Add(this.cbe_PLparalysis);
+            this.sideNavPanel3.Controls.Add(this.cbe_Bparalysis);
+            this.sideNavPanel3.Controls.Add(this.labelX13);
+            this.sideNavPanel3.Controls.Add(this.labelX15);
+            this.sideNavPanel3.Controls.Add(this.labelX16);
+            this.sideNavPanel3.Controls.Add(this.cbe_hoarseness);
+            this.sideNavPanel3.Controls.Add(this.labelX17);
+            this.sideNavPanel3.Controls.Add(this.labelX18);
+            this.sideNavPanel3.Controls.Add(this.cbe_hyperspasmia);
+            this.sideNavPanel3.Controls.Add(this.labelX19);
+            this.sideNavPanel3.Controls.Add(this.cbe_drinkchok);
+            this.sideNavPanel3.Controls.Add(this.labelX20);
+            this.sideNavPanel3.Controls.Add(this.cbe_VocalChange);
+            this.sideNavPanel3.Controls.Add(this.labelX21);
+            this.sideNavPanel3.Controls.Add(this.cbe_dyspnea);
+            this.sideNavPanel3.Controls.Add(this.labelX22);
+            this.sideNavPanel3.Controls.Add(this.labelX23);
+            this.sideNavPanel3.Controls.Add(this.labelX24);
+            this.sideNavPanel3.Controls.Add(this.labelX25);
+            this.sideNavPanel3.Controls.Add(this.labelX26);
+            this.sideNavPanel3.Controls.Add(this.labelX27);
+            this.sideNavPanel3.Controls.Add(this.labelX28);
+            this.sideNavPanel3.Controls.Add(this.labelX29);
+            this.sideNavPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideNavPanel3.Location = new System.Drawing.Point(108, 36);
+            this.sideNavPanel3.Name = "sideNavPanel3";
+            this.sideNavPanel3.Size = new System.Drawing.Size(1300, 531);
+            this.sideNavPanel3.TabIndex = 13;
+            this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
+            this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
+            // 
+            // cbe_PLhypomotility
+            // 
+            this.cbe_PLhypomotility.DisplayMember = "Text";
+            this.cbe_PLhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_PLhypomotility.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_PLhypomotility.FormattingEnabled = true;
+            this.cbe_PLhypomotility.ItemHeight = 20;
+            this.cbe_PLhypomotility.Items.AddRange(new object[] {
+            this.comboItem13,
+            this.comboItem14,
+            this.comboItem15,
+            this.comboItem16});
+            this.cbe_PLhypomotility.Location = new System.Drawing.Point(629, 277);
+            this.cbe_PLhypomotility.Name = "cbe_PLhypomotility";
+            this.cbe_PLhypomotility.Size = new System.Drawing.Size(121, 26);
+            this.cbe_PLhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_PLhypomotility.TabIndex = 141;
+            this.cbe_PLhypomotility.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem14
+            // 
+            this.comboItem14.Text = "否";
+            this.comboItem14.Value = "否";
+            // 
+            // comboItem15
+            // 
+            this.comboItem15.Text = "单侧";
+            this.comboItem15.Value = "单侧";
+            // 
+            // comboItem16
+            // 
+            this.comboItem16.Text = "两侧";
+            this.comboItem16.Value = "两侧";
+            // 
+            // sgc_inspect
+            // 
+            this.sgc_inspect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sgc_inspect.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.sgc_inspect.Location = new System.Drawing.Point(206, 322);
+            this.sgc_inspect.Name = "sgc_inspect";
+            // 
+            // 
+            // 
+            this.sgc_inspect.PrimaryGrid.AllowRowDelete = true;
+            this.sgc_inspect.PrimaryGrid.AllowRowInsert = true;
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.day);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn11);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn15);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn16);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn12);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.TPO);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn13);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn14);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn17);
+            this.sgc_inspect.PrimaryGrid.Columns.Add(this.gridColumn18);
+            this.sgc_inspect.PrimaryGrid.ShowInsertRow = true;
+            this.sgc_inspect.PrimaryGrid.UseAlternateColumnStyle = true;
+            this.sgc_inspect.PrimaryGrid.UseAlternateRowStyle = true;
+            this.sgc_inspect.Size = new System.Drawing.Size(1042, 176);
+            this.sgc_inspect.TabIndex = 139;
+            this.sgc_inspect.Text = "superGridControl1";
+            this.sgc_inspect.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_inspect_RowDeleted);
+            this.sgc_inspect.Click += new System.EventHandler(this.sgc_inspect_Click);
+            this.sgc_inspect.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // day
+            // 
+            this.day.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl);
+            this.day.HeaderText = "天数";
+            this.day.Name = "days";
+            this.day.SortIndicator = DevComponents.DotNetBar.SuperGrid.SortIndicator.None;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn11.HeaderText = "PTH(pg/ml)";
+            this.gridColumn11.Name = "PTH";
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn15.HeaderText = "Ca(mmol/l)";
+            this.gridColumn15.Name = "Ca";
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn16.HeaderText = "P(mmol/l)";
+            this.gridColumn16.Name = "P";
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn12.HeaderText = "碱性磷酸酶";
+            this.gridColumn12.Name = "AP";
+            // 
+            // TPO
+            // 
+            this.TPO.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.TPO.HeaderText = "25-羟基维生素D";
+            this.TPO.Name = "D";
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn13.HeaderText = "D2";
+            this.gridColumn13.Name = "D2";
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl);
+            this.gridColumn14.HeaderText = "D3";
+            this.gridColumn14.Name = "D3";
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Name = "id";
+            this.gridColumn17.Visible = false;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Name = "pid";
+            this.gridColumn18.Visible = false;
+            // 
+            // cbe_Bhypomotility
+            // 
+            this.cbe_Bhypomotility.DisplayMember = "Text";
+            this.cbe_Bhypomotility.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_Bhypomotility.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_Bhypomotility.FormattingEnabled = true;
+            this.cbe_Bhypomotility.ItemHeight = 20;
+            this.cbe_Bhypomotility.Items.AddRange(new object[] {
+            this.comboItem9,
+            this.comboItem10,
+            this.comboItem11,
+            this.comboItem12});
+            this.cbe_Bhypomotility.Location = new System.Drawing.Point(629, 210);
+            this.cbe_Bhypomotility.Name = "cbe_Bhypomotility";
+            this.cbe_Bhypomotility.Size = new System.Drawing.Size(121, 26);
+            this.cbe_Bhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_Bhypomotility.TabIndex = 10;
+            this.cbe_Bhypomotility.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem10
+            // 
+            this.comboItem10.Text = "否";
+            this.comboItem10.Value = "否";
+            // 
+            // comboItem11
+            // 
+            this.comboItem11.Text = "单侧";
+            this.comboItem11.Value = "单侧";
+            // 
+            // comboItem12
+            // 
+            this.comboItem12.Text = "两侧";
+            this.comboItem12.Value = "两侧";
+            // 
+            // line17
+            // 
+            this.line17.BackColor = System.Drawing.Color.Transparent;
+            this.line17.ForeColor = System.Drawing.Color.White;
+            this.line17.Location = new System.Drawing.Point(1248, 28);
+            this.line17.Name = "line17";
+            this.line17.Size = new System.Drawing.Size(1, 470);
+            this.line17.TabIndex = 134;
+            this.line17.Text = "line1";
+            this.line17.VerticalLine = true;
+            // 
+            // line18
+            // 
+            this.line18.BackColor = System.Drawing.Color.Transparent;
+            this.line18.ForeColor = System.Drawing.Color.White;
+            this.line18.Location = new System.Drawing.Point(206, 28);
+            this.line18.Name = "line18";
+            this.line18.Size = new System.Drawing.Size(1, 382);
+            this.line18.TabIndex = 135;
+            this.line18.Text = "line1";
+            this.line18.VerticalLine = true;
+            // 
+            // line19
+            // 
+            this.line19.BackColor = System.Drawing.Color.Transparent;
+            this.line19.ForeColor = System.Drawing.Color.White;
+            this.line19.Location = new System.Drawing.Point(39, 28);
+            this.line19.Name = "line19";
+            this.line19.Size = new System.Drawing.Size(1, 470);
+            this.line19.TabIndex = 133;
+            this.line19.Text = "line1";
+            this.line19.VerticalLine = true;
+            // 
+            // line20
+            // 
+            this.line20.BackColor = System.Drawing.Color.Transparent;
+            this.line20.ForeColor = System.Drawing.Color.White;
+            this.line20.Location = new System.Drawing.Point(39, 492);
+            this.line20.Name = "line20";
+            this.line20.Size = new System.Drawing.Size(1208, 10);
+            this.line20.TabIndex = 132;
+            this.line20.Text = "line20";
+            // 
+            // line21
+            // 
+            this.line21.BackColor = System.Drawing.Color.Transparent;
+            this.line21.ForeColor = System.Drawing.Color.White;
+            this.line21.Location = new System.Drawing.Point(40, 28);
+            this.line21.Name = "line21";
+            this.line21.Size = new System.Drawing.Size(1208, 1);
+            this.line21.TabIndex = 130;
+            this.line21.Text = "line11";
+            // 
+            // line22
+            // 
+            this.line22.BackColor = System.Drawing.Color.Transparent;
+            this.line22.ForeColor = System.Drawing.Color.White;
+            this.line22.Location = new System.Drawing.Point(40, 188);
+            this.line22.Name = "line22";
+            this.line22.Size = new System.Drawing.Size(1208, 1);
+            this.line22.TabIndex = 131;
+            this.line22.Text = "line22";
+            // 
+            // line23
+            // 
+            this.line23.BackColor = System.Drawing.Color.Transparent;
+            this.line23.ForeColor = System.Drawing.Color.White;
+            this.line23.Location = new System.Drawing.Point(40, 255);
+            this.line23.Name = "line23";
+            this.line23.Size = new System.Drawing.Size(1208, 1);
+            this.line23.TabIndex = 129;
+            this.line23.Text = "line23";
+            // 
+            // line24
+            // 
+            this.line24.BackColor = System.Drawing.Color.Transparent;
+            this.line24.ForeColor = System.Drawing.Color.White;
+            this.line24.Location = new System.Drawing.Point(39, 322);
+            this.line24.Name = "line24";
+            this.line24.Size = new System.Drawing.Size(1208, 1);
+            this.line24.TabIndex = 128;
+            this.line24.Text = "line24";
+            // 
+            // switch_bleed
+            // 
+            // 
+            // 
+            // 
+            this.switch_bleed.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switch_bleed.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switch_bleed.Location = new System.Drawing.Point(891, 102);
+            this.switch_bleed.Name = "switch_bleed";
+            this.switch_bleed.OffText = "否";
+            this.switch_bleed.OnText = "是";
+            this.switch_bleed.Size = new System.Drawing.Size(121, 26);
+            this.switch_bleed.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switch_bleed.SwitchWidth = 58;
+            this.switch_bleed.TabIndex = 8;
+            this.switch_bleed.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // switch_infection
+            // 
+            // 
+            // 
+            // 
+            this.switch_infection.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switch_infection.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switch_infection.Location = new System.Drawing.Point(629, 149);
+            this.switch_infection.Name = "switch_infection";
+            this.switch_infection.OffText = "否";
+            this.switch_infection.OnText = "是";
+            this.switch_infection.Size = new System.Drawing.Size(121, 26);
+            this.switch_infection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switch_infection.SwitchWidth = 58;
+            this.switch_infection.TabIndex = 6;
+            this.switch_infection.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // switch_galactorrhea
+            // 
+            // 
+            // 
+            // 
+            this.switch_galactorrhea.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switch_galactorrhea.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switch_galactorrhea.Location = new System.Drawing.Point(358, 149);
+            this.switch_galactorrhea.Name = "switch_galactorrhea";
+            this.switch_galactorrhea.OffText = "否";
+            this.switch_galactorrhea.OnText = "是";
+            this.switch_galactorrhea.Size = new System.Drawing.Size(121, 26);
+            this.switch_galactorrhea.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switch_galactorrhea.SwitchWidth = 58;
+            this.switch_galactorrhea.TabIndex = 3;
+            this.switch_galactorrhea.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // cbe_PLparalysis
+            // 
+            this.cbe_PLparalysis.DisplayMember = "Text";
+            this.cbe_PLparalysis.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_PLparalysis.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_PLparalysis.FormattingEnabled = true;
+            this.cbe_PLparalysis.ItemHeight = 20;
+            this.cbe_PLparalysis.Items.AddRange(new object[] {
+            this.comboItem17,
+            this.comboItem18,
+            this.comboItem19,
+            this.comboItem20});
+            this.cbe_PLparalysis.Location = new System.Drawing.Point(358, 278);
+            this.cbe_PLparalysis.Name = "cbe_PLparalysis";
+            this.cbe_PLparalysis.Size = new System.Drawing.Size(125, 26);
+            this.cbe_PLparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_PLparalysis.TabIndex = 11;
+            this.cbe_PLparalysis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem18
+            // 
+            this.comboItem18.Text = "否";
+            this.comboItem18.Value = "否";
+            // 
+            // comboItem19
+            // 
+            this.comboItem19.Text = "单侧";
+            this.comboItem19.Value = "单侧";
+            // 
+            // comboItem20
+            // 
+            this.comboItem20.Text = "两侧";
+            this.comboItem20.Value = "两侧";
+            // 
+            // cbe_Bparalysis
+            // 
+            this.cbe_Bparalysis.DisplayMember = "Text";
+            this.cbe_Bparalysis.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_Bparalysis.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_Bparalysis.FormattingEnabled = true;
+            this.cbe_Bparalysis.ItemHeight = 20;
+            this.cbe_Bparalysis.Items.AddRange(new object[] {
+            this.comboItem21,
+            this.comboItem22,
+            this.comboItem23,
+            this.comboItem24});
+            this.cbe_Bparalysis.Location = new System.Drawing.Point(358, 211);
+            this.cbe_Bparalysis.Name = "cbe_Bparalysis";
+            this.cbe_Bparalysis.Size = new System.Drawing.Size(125, 26);
+            this.cbe_Bparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_Bparalysis.TabIndex = 9;
+            this.cbe_Bparalysis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem22
+            // 
+            this.comboItem22.Text = "否";
+            this.comboItem22.Value = "否";
+            // 
+            // comboItem23
+            // 
+            this.comboItem23.Text = "单侧";
+            this.comboItem23.Value = "单侧";
+            // 
+            // comboItem24
+            // 
+            this.comboItem24.Text = "两侧";
+            this.comboItem24.Value = "两侧";
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX13.Location = new System.Drawing.Point(525, 280);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(93, 23);
+            this.labelX13.TabIndex = 120;
+            this.labelX13.Text = "运动减弱：";
+            this.labelX13.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX15
+            // 
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX15.Location = new System.Drawing.Point(525, 213);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(93, 23);
+            this.labelX15.TabIndex = 121;
+            this.labelX15.Text = "运动减弱：";
+            this.labelX15.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX16
+            // 
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX16.Location = new System.Drawing.Point(256, 280);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(93, 23);
+            this.labelX16.TabIndex = 119;
+            this.labelX16.Text = "麻痹：";
+            this.labelX16.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // cbe_hoarseness
+            // 
+            this.cbe_hoarseness.DisplayMember = "Text";
+            this.cbe_hoarseness.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_hoarseness.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_hoarseness.FormattingEnabled = true;
+            this.cbe_hoarseness.ItemHeight = 20;
+            this.cbe_hoarseness.Items.AddRange(new object[] {
+            this.comboItem25,
+            this.comboItem26,
+            this.comboItem27});
+            this.cbe_hoarseness.Location = new System.Drawing.Point(358, 51);
+            this.cbe_hoarseness.Name = "cbe_hoarseness";
+            this.cbe_hoarseness.Size = new System.Drawing.Size(121, 26);
+            this.cbe_hoarseness.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_hoarseness.TabIndex = 1;
+            this.cbe_hoarseness.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem26
+            // 
+            this.comboItem26.Text = "是";
+            this.comboItem26.Value = "是";
+            // 
+            // comboItem27
+            // 
+            this.comboItem27.Text = "否";
+            this.comboItem27.Value = "否";
+            // 
+            // labelX17
+            // 
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX17.Location = new System.Drawing.Point(256, 213);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(93, 23);
+            this.labelX17.TabIndex = 118;
+            this.labelX17.Text = "麻痹：";
+            this.labelX17.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX18
+            // 
+            this.labelX18.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX18.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX18.Location = new System.Drawing.Point(256, 53);
+            this.labelX18.Name = "labelX18";
+            this.labelX18.Size = new System.Drawing.Size(93, 23);
+            this.labelX18.TabIndex = 101;
+            this.labelX18.Text = "声音嘶哑：";
+            this.labelX18.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // cbe_hyperspasmia
+            // 
+            this.cbe_hyperspasmia.DisplayMember = "Text";
+            this.cbe_hyperspasmia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_hyperspasmia.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_hyperspasmia.FormattingEnabled = true;
+            this.cbe_hyperspasmia.ItemHeight = 20;
+            this.cbe_hyperspasmia.Items.AddRange(new object[] {
+            this.comboItem28,
+            this.comboItem29,
+            this.comboItem30});
+            this.cbe_hyperspasmia.Location = new System.Drawing.Point(629, 100);
+            this.cbe_hyperspasmia.Name = "cbe_hyperspasmia";
+            this.cbe_hyperspasmia.Size = new System.Drawing.Size(121, 26);
+            this.cbe_hyperspasmia.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_hyperspasmia.TabIndex = 5;
+            this.cbe_hyperspasmia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem29
+            // 
+            this.comboItem29.Text = "是";
+            this.comboItem29.Value = "是";
+            // 
+            // comboItem30
+            // 
+            this.comboItem30.Text = "否";
+            this.comboItem30.Value = "否";
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX19.Location = new System.Drawing.Point(525, 53);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(93, 23);
+            this.labelX19.TabIndex = 102;
+            this.labelX19.Text = "呼吸困难:";
+            this.labelX19.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // cbe_drinkchok
+            // 
+            this.cbe_drinkchok.DisplayMember = "Text";
+            this.cbe_drinkchok.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_drinkchok.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_drinkchok.FormattingEnabled = true;
+            this.cbe_drinkchok.ItemHeight = 20;
+            this.cbe_drinkchok.Items.AddRange(new object[] {
+            this.comboItem31,
+            this.comboItem32,
+            this.comboItem33});
+            this.cbe_drinkchok.Location = new System.Drawing.Point(358, 100);
+            this.cbe_drinkchok.Name = "cbe_drinkchok";
+            this.cbe_drinkchok.Size = new System.Drawing.Size(121, 26);
+            this.cbe_drinkchok.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_drinkchok.TabIndex = 2;
+            this.cbe_drinkchok.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem32
+            // 
+            this.comboItem32.Text = "是";
+            this.comboItem32.Value = "是";
+            // 
+            // comboItem33
+            // 
+            this.comboItem33.Text = "否";
+            this.comboItem33.Value = "否";
+            // 
+            // labelX20
+            // 
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX20.Location = new System.Drawing.Point(787, 53);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(93, 23);
+            this.labelX20.TabIndex = 103;
+            this.labelX20.Text = "语调变化：";
+            this.labelX20.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // cbe_VocalChange
+            // 
+            this.cbe_VocalChange.DisplayMember = "Text";
+            this.cbe_VocalChange.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_VocalChange.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_VocalChange.FormattingEnabled = true;
+            this.cbe_VocalChange.ItemHeight = 20;
+            this.cbe_VocalChange.Items.AddRange(new object[] {
+            this.comboItem34,
+            this.comboItem35,
+            this.comboItem36});
+            this.cbe_VocalChange.Location = new System.Drawing.Point(891, 51);
+            this.cbe_VocalChange.Name = "cbe_VocalChange";
+            this.cbe_VocalChange.Size = new System.Drawing.Size(121, 26);
+            this.cbe_VocalChange.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_VocalChange.TabIndex = 7;
+            this.cbe_VocalChange.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem35
+            // 
+            this.comboItem35.Text = "是";
+            this.comboItem35.Value = "是";
+            // 
+            // comboItem36
+            // 
+            this.comboItem36.Text = "否";
+            this.comboItem36.Value = "否";
+            // 
+            // labelX21
+            // 
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX21.Location = new System.Drawing.Point(256, 102);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(93, 23);
+            this.labelX21.TabIndex = 104;
+            this.labelX21.Text = "饮水呛咳：";
+            this.labelX21.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // cbe_dyspnea
+            // 
+            this.cbe_dyspnea.DisplayMember = "Text";
+            this.cbe_dyspnea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbe_dyspnea.Font = new System.Drawing.Font("宋体", 12F);
+            this.cbe_dyspnea.FormattingEnabled = true;
+            this.cbe_dyspnea.ItemHeight = 20;
+            this.cbe_dyspnea.Items.AddRange(new object[] {
+            this.comboItem37,
+            this.comboItem38,
+            this.comboItem39});
+            this.cbe_dyspnea.Location = new System.Drawing.Point(629, 51);
+            this.cbe_dyspnea.Name = "cbe_dyspnea";
+            this.cbe_dyspnea.Size = new System.Drawing.Size(121, 26);
+            this.cbe_dyspnea.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbe_dyspnea.TabIndex = 4;
+            this.cbe_dyspnea.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // comboItem38
+            // 
+            this.comboItem38.Text = "是";
+            this.comboItem38.Value = "是";
+            // 
+            // comboItem39
+            // 
+            this.comboItem39.Text = "否";
+            this.comboItem39.Value = "否";
+            // 
+            // labelX22
+            // 
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX22.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX22.Location = new System.Drawing.Point(525, 151);
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Size = new System.Drawing.Size(93, 23);
+            this.labelX22.TabIndex = 106;
+            this.labelX22.Text = "感染：";
+            this.labelX22.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX23
+            // 
+            this.labelX23.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX23.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX23.Location = new System.Drawing.Point(227, 151);
+            this.labelX23.Name = "labelX23";
+            this.labelX23.Size = new System.Drawing.Size(122, 23);
+            this.labelX23.TabIndex = 105;
+            this.labelX23.Text = "淋巴漏或乳漏：";
+            this.labelX23.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX24
+            // 
+            this.labelX24.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX24.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX24.Location = new System.Drawing.Point(787, 104);
+            this.labelX24.Name = "labelX24";
+            this.labelX24.Size = new System.Drawing.Size(93, 23);
+            this.labelX24.TabIndex = 108;
+            this.labelX24.Text = "出血：";
+            this.labelX24.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX25
+            // 
+            this.labelX25.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX25.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX25.Location = new System.Drawing.Point(525, 102);
+            this.labelX25.Name = "labelX25";
+            this.labelX25.Size = new System.Drawing.Size(93, 23);
+            this.labelX25.TabIndex = 107;
+            this.labelX25.Text = "抽搐：";
+            this.labelX25.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX26
+            // 
+            this.labelX26.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX26.Location = new System.Drawing.Point(46, 281);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(154, 23);
+            this.labelX26.TabIndex = 111;
+            this.labelX26.Text = "术后喉镜";
+            this.labelX26.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX27
+            // 
+            this.labelX27.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX27.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX27.Location = new System.Drawing.Point(46, 105);
+            this.labelX27.Name = "labelX27";
+            this.labelX27.Size = new System.Drawing.Size(154, 23);
+            this.labelX27.TabIndex = 112;
+            this.labelX27.Text = "常规项";
+            this.labelX27.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX28
+            // 
+            this.labelX28.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX28.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX28.Location = new System.Drawing.Point(46, 214);
+            this.labelX28.Name = "labelX28";
+            this.labelX28.Size = new System.Drawing.Size(154, 23);
+            this.labelX28.TabIndex = 109;
+            this.labelX28.Text = "术后声带B超";
+            this.labelX28.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX29
+            // 
+            this.labelX29.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX29.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelX29.Location = new System.Drawing.Point(46, 404);
+            this.labelX29.Name = "labelX29";
+            this.labelX29.Size = new System.Drawing.Size(154, 23);
+            this.labelX29.TabIndex = 110;
+            this.labelX29.Text = "术后检查";
+            this.labelX29.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // sideNavItem1
             // 
             this.sideNavItem1.IsSystemMenu = true;
@@ -1347,7 +1364,6 @@
             // 
             // sideNavItem2
             // 
-            this.sideNavItem2.Checked = true;
             this.sideNavItem2.Name = "sideNavItem2";
             this.sideNavItem2.Panel = this.sideNavPanel1;
             this.sideNavItem2.Symbol = "";
@@ -1365,6 +1381,7 @@
             // 
             // sideNavItem4
             // 
+            this.sideNavItem4.Checked = true;
             this.sideNavItem4.Name = "sideNavItem4";
             this.sideNavItem4.Panel = this.sideNavPanel3;
             this.sideNavItem4.Symbol = "";
@@ -2124,9 +2141,9 @@
             this.Validated += new System.EventHandler(this.UC_postOperative_Validated);
             this.sideNav1.ResumeLayout(false);
             this.sideNav1.PerformLayout();
-            this.sideNavPanel3.ResumeLayout(false);
             this.sideNavPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtb_eut)).EndInit();
+            this.sideNavPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
             this.ResumeLayout(false);
 

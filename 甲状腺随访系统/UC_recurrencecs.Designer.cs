@@ -169,6 +169,7 @@
             this.switch_braf.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switch_braf.SwitchWidth = 60;
             this.switch_braf.TabIndex = 10;
+            this.switch_braf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_lymphadenSize
             // 
@@ -183,6 +184,7 @@
             this.tb_lymphadenSize.PreventEnterBeep = true;
             this.tb_lymphadenSize.Size = new System.Drawing.Size(121, 26);
             this.tb_lymphadenSize.TabIndex = 15;
+            this.tb_lymphadenSize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_lymphadenLoc
             // 
@@ -197,6 +199,7 @@
             this.tb_lymphadenLoc.PreventEnterBeep = true;
             this.tb_lymphadenLoc.Size = new System.Drawing.Size(121, 26);
             this.tb_lymphadenLoc.TabIndex = 14;
+            this.tb_lymphadenLoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // lb_lymphadenLoc
             // 
@@ -256,6 +259,7 @@
             this.tb_size.PreventEnterBeep = true;
             this.tb_size.Size = new System.Drawing.Size(121, 26);
             this.tb_size.TabIndex = 13;
+            this.tb_size.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_location
             // 
@@ -270,6 +274,7 @@
             this.tb_location.PreventEnterBeep = true;
             this.tb_location.Size = new System.Drawing.Size(121, 26);
             this.tb_location.TabIndex = 12;
+            this.tb_location.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // lb_location
             // 
@@ -324,6 +329,7 @@
             this.tb_TGEluant.PreventEnterBeep = true;
             this.tb_TGEluant.Size = new System.Drawing.Size(121, 26);
             this.tb_TGEluant.TabIndex = 11;
+            this.tb_TGEluant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // lb_TGEluant
             // 
@@ -353,6 +359,7 @@
             this.tb_FNA.PreventEnterBeep = true;
             this.tb_FNA.Size = new System.Drawing.Size(121, 26);
             this.tb_FNA.TabIndex = 9;
+            this.tb_FNA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // lb_FNA
             // 
@@ -397,6 +404,7 @@
             this.tb_PET.PreventEnterBeep = true;
             this.tb_PET.Size = new System.Drawing.Size(121, 26);
             this.tb_PET.TabIndex = 8;
+            this.tb_PET.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_I131
             // 
@@ -411,6 +419,7 @@
             this.tb_I131.PreventEnterBeep = true;
             this.tb_I131.Size = new System.Drawing.Size(121, 26);
             this.tb_I131.TabIndex = 6;
+            this.tb_I131.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_MRI
             // 
@@ -425,6 +434,7 @@
             this.tb_MRI.PreventEnterBeep = true;
             this.tb_MRI.Size = new System.Drawing.Size(121, 26);
             this.tb_MRI.TabIndex = 7;
+            this.tb_MRI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_CT
             // 
@@ -439,6 +449,7 @@
             this.tb_CT.PreventEnterBeep = true;
             this.tb_CT.Size = new System.Drawing.Size(121, 26);
             this.tb_CT.TabIndex = 5;
+            this.tb_CT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // lb_CT
             // 
@@ -514,6 +525,7 @@
             this.tb_calcitonin.PreventEnterBeep = true;
             this.tb_calcitonin.Size = new System.Drawing.Size(121, 26);
             this.tb_calcitonin.TabIndex = 4;
+            this.tb_calcitonin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_CEA
             // 
@@ -528,6 +540,7 @@
             this.tb_CEA.PreventEnterBeep = true;
             this.tb_CEA.Size = new System.Drawing.Size(121, 26);
             this.tb_CEA.TabIndex = 2;
+            this.tb_CEA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_TGAB
             // 
@@ -542,6 +555,7 @@
             this.tb_TGAB.PreventEnterBeep = true;
             this.tb_TGAB.Size = new System.Drawing.Size(121, 26);
             this.tb_TGAB.TabIndex = 3;
+            this.tb_TGAB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // tb_TG
             // 
@@ -556,6 +570,7 @@
             this.tb_TG.PreventEnterBeep = true;
             this.tb_TG.Size = new System.Drawing.Size(121, 26);
             this.tb_TG.TabIndex = 1;
+            this.tb_TG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_TG_KeyDown);
             // 
             // line16
             // 

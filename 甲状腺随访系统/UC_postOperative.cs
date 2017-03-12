@@ -345,7 +345,18 @@ namespace 甲状腺随访系统
         {
 
         }
-
+        #region 将回车键绑定TAB键
+        /// <summary>
+        /// 将回车键绑定TAB键
+        /// </summary>
+        private void dtb_eut_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{Tab}");
+            }
+        }
+        #endregion
 
 
     }
