@@ -363,6 +363,7 @@
             this.tb_pass.PreventEnterBeep = true;
             this.tb_pass.Size = new System.Drawing.Size(281, 26);
             this.tb_pass.TabIndex = 115;
+            this.tb_pass.TextChanged += new System.EventHandler(this.tb_pass_TextChanged);
             // 
             // lb_pass
             // 

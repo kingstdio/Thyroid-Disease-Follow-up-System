@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using 甲状腺随访系统.MODEL;
-
+using System.Security.Cryptography;
 namespace 甲状腺随访系统.Control
 { 
    public class Login
@@ -15,8 +15,10 @@ namespace 甲状腺随访系统.Control
             if (dtUser.Rows.Count > 0)
             {
                 Control.RefreshPatient.TableToModel<User>(Conf.currentUser, dtUser);
-                if (Conf.currentUser.password == password)
+        
+                if (DAO.UserInfo.authUser(password))
                 {
+                    
                     Conf.currentUser.lastlogintime = System.DateTime.Now;
                     Console.WriteLine(Conf.currentUser.lastlogintime);
                     Console.WriteLine(Conf.currentUser.id);

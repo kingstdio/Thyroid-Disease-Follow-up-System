@@ -89,7 +89,7 @@ namespace 甲状腺随访系统
                 Conf.manageUser.email = row.Cells[7].Value.ToString();
                 
                 fillInfo();
-
+                getInfo();
             } 
         }
       
@@ -138,6 +138,20 @@ namespace 甲状腺随访系统
             if (tb_pass.Text != tb_passag.Text)
             {
                 MessageBox.Show("两次输入密码不一致", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+        }
+
+
+        private void tb_pass_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_pass.Text.Trim() == Conf.manageUser.password)
+            {
+                Conf.manageUser.psChanged = false;
+
+            }
+            else
+            {
+                Conf.manageUser.psChanged = true;
             }
         }
 

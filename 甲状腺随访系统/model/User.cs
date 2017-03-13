@@ -46,6 +46,11 @@ namespace 甲状腺随访系统.MODEL
         /// <summary>
         /// 电子邮件
         /// </summary>
-        public string email { get; set; } 
+        public string email { get; set; }
+
+        /// <summary>
+        /// 密码是否更改
+        /// </summary>
+        public bool psChanged { get; set; } 
     }
 }
