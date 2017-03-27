@@ -96,6 +96,33 @@ namespace 甲状腺随访系统.DAO
             return num;
         }
 
+        public static DataTable getVisit()
+        {
+            //string sql = @"select * from tb_visit";
+            string sql = @"select id as '编号自增',
+                    pid as '患者编号',
+                    Vdate as '随访日期',
+                    TSH as 'TSH',
+                    FT3 as 'FT3',
+                    FT4 as 'FT4',
+                    TPO as 'TPO',
+                    PTH as 'PTH',
+                    ATG as 'A-TG',
+                    TG as 'TG',
+                    TGAb as 'TG-Ab',
+                    Ca as 'Ca',
+                    P as 'P',
+                    euthyrox as '优甲乐剂量',
+                    Cadosage as '钙剂量',
+                    sideeffect as '副作用',
+                    others as '其它'
+                    from tb_visit";
+            return SQLHELPER.ExecuteDataTable(sql);
+        }
+
+ 
+
+
         public static DataTable getInfo()
         {
             string sql = @"select t.id   as '编号自增',

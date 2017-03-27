@@ -9,6 +9,8 @@ using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar.SuperGrid.Style;
 using ¼××´ÏÙËæ·ÃÏµÍ³;
 using System.Threading;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
@@ -65,9 +67,27 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
 
         public void getPatientInfoTable() {
+
+            DataSet ds = new DataSet();
+            DataTable dt1 = DAO.PatientInfo.getInfo();
+            DataTable dt2 = DAO.PatientInfo.getVisit();
+            dt1.TableName = "tb_patientInfo";
+            dt2.TableName = "tb_visit";
+            ds.Tables.Add(dt1.Copy());
+            ds.Tables.Add(dt2.Copy());
+            DataRelation dr = new DataRelation("´Ó±í", ds.Tables["tb_patientInfo"].Columns["±àºÅ×ÔÔö"], ds.Tables["tb_visit"].Columns["»¼Õß±àºÅ"], false);
+            ds.Relations.Add(dr);
             GridPanel panel = superGridControl1.PrimaryGrid;
-            panel.DataSource = DAO.PatientInfo.getInfo();
+
+            panel.DataSource = ds;
+  
+
         }
+
+     
+
+
+
 
         #region InitializeGrid
 
@@ -102,7 +122,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
                 e.FormattedValue = e.GridPanel.NullString;
         }
 
-        #endregion
+        #endregion    
 
         #region FilterPopup support
 
@@ -771,6 +791,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         #endregion
 
 
+
         #region CbxShowPanelExprCheckedChanged
 
         /// <summary>
@@ -882,6 +903,18 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         }
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportToExcel.DataToExcel(superGridControl1);
+        }
+
+
+
+
+
+
+
 
 
 

@@ -36,7 +36,7 @@ namespace 甲状腺随访系统
             cbe_LDM.SelectedIndex = cbe_LDM.FindString(Conf.currentPatient.followUp.distantmetastasislocation);
             dti_DD.Value = Conf.currentPatient.followUp.deathdate;
             cbe_CD.SelectedIndex = cbe_CD.FindString(Conf.currentPatient.followUp.deathcause);
-           
+
             conn.Open();
 
             SqlCommand com = conn.CreateCommand();
@@ -49,8 +49,16 @@ namespace 甲状腺随访系统
 
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             da.Update(ds);
-            //this.sgc_visit.PrimaryGrid.Rows.Clear(); 
+        
+
+
+
+
+
+            
             this.sgc_visit.PrimaryGrid.DataSource = ds.Tables[0];
+
+
 
 
             conn.Close();

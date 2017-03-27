@@ -107,6 +107,7 @@
     <Compile Include="DAO\PatientChoose.cs" />
     <Compile Include="DAO\PatientInfo.cs" />
     <Compile Include="DAO\UserInfo.cs" />
+    <Compile Include="ExportToExcel.cs" />
     <Compile Include="F_login.cs">
       <SubType>Form</SubType>
     </Compile>
