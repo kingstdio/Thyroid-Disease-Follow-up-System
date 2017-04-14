@@ -41,13 +41,15 @@ namespace 甲状腺随访系统
             cbe_RVI.SelectedIndex = cbe_RVI.FindString(Conf.currentPatient.basicOperInfo.rightVI);
             cbe_LN.SelectedIndex = cbe_LN.FindString(Conf.currentPatient.basicOperInfo.rightneck);
             cbe_RN.SelectedIndex = cbe_RN.FindString(Conf.currentPatient.basicOperInfo.rightneck);
+            tb_basicOther.Text = Conf.currentPatient.basicOperInfo.ROTCOthers;
 
-            //分化型甲状腺癌
+            //常见甲状腺癌
             di_PCmax.Value = Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter;
             di_PCall.Value = Conf.currentPatient.differeThyrCarc.PCalltumordiameter;
             di_PCallrange.Value = Conf.currentPatient.differeThyrCarc.PCalltumorrange;
+            di_PCallrange2.Value = Conf.currentPatient.differeThyrCarc.PCall2;
             switch_PCmuli.Value = Conf.currentPatient.differeThyrCarc.PCmulifocality;
-            switch_PCbilcancer.Value = Conf.currentPatient.differeThyrCarc.PCbilateralcancer;
+            switch_PCbilcancer.Text = Conf.currentPatient.differeThyrCarc.PCbilateralcancer;
             cbe_PCCI.SelectedIndex = cbe_PCCI.FindString(Conf.currentPatient.differeThyrCarc.PCcapsuleinvasion);
             switch_PClymmeta.Value = Conf.currentPatient.differeThyrCarc.PClymphaticmetastasis;
             switch_PClymthy.Value = Conf.currentPatient.differeThyrCarc.PClymphocyticthyroiditis;
@@ -56,11 +58,24 @@ namespace 甲状腺随访系统
             di_FCmax.Value = Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter;
             di_FCall.Value = Conf.currentPatient.differeThyrCarc.FCalltumordiameter;
             di_FCallrange.Value = Conf.currentPatient.differeThyrCarc.FCalltumorrange;
+            di_FCallrange2.Value = Conf.currentPatient.differeThyrCarc.FCall2;
             switch_FCmuli.Value = Conf.currentPatient.differeThyrCarc.FCmulifocality;
-            switch_FCbilcancer.Value = Conf.currentPatient.differeThyrCarc.FCbilateralcancer;
+            switch_FCbilcancer.Text = Conf.currentPatient.differeThyrCarc.FCbilateralcancer;
             cbe_FCCI.SelectedIndex = cbe_FCCI.FindString(Conf.currentPatient.differeThyrCarc.FCcapsuleinvasion);
             switch_FClymmeta.Value = Conf.currentPatient.differeThyrCarc.FClymphaticmetastasis;
             switch_FClymthy.Value = Conf.currentPatient.differeThyrCarc.FClymphocyticthyroiditis;
+
+            di_MCmax.Value = Conf.currentPatient.differeThyrCarc.MCmaxtumordiameter;
+            di_MCall.Value = Conf.currentPatient.differeThyrCarc.MCalltumordiameter;
+            di_MCallrange.Value = Conf.currentPatient.differeThyrCarc.MCalltumorrange;
+            di_MCallrange2.Value = Conf.currentPatient.differeThyrCarc.MCall2;
+            switch_MCmuli.Value = Conf.currentPatient.differeThyrCarc.MCmulifocality;
+            switch_MCbilcancer.Text = Conf.currentPatient.differeThyrCarc.MCbilateralcancer;
+            cbe_MCCI.SelectedIndex = cbe_PCCI.FindString(Conf.currentPatient.differeThyrCarc.MCcapsuleinvasion);
+            switch_MClymmeta.Value = Conf.currentPatient.differeThyrCarc.MClymphaticmetastasis;
+            switch_MClymthy.Value = Conf.currentPatient.differeThyrCarc.MClymphocyticthyroiditis;
+            //cbe_MCsubtype.SelectedIndex = cbe_subtype.FindString(Conf.currentPatient.differeThyrCarc.MChypotype);
+            cbe_sub.SelectedIndex = cbe_sub.FindString(Conf.currentPatient.differeThyrCarc.MChypotype);
             //淋巴结转移
             tb_Iregion1.Text = Convert.ToString(Conf.currentPatient.lympMeta.Ileftn);
             tb_Iregion2.Text = Convert.ToString(Conf.currentPatient.lympMeta.Ileftd);
@@ -106,6 +121,10 @@ namespace 甲状腺随访系统
             cbe_NI.SelectedIndex = cbe_NI.FindString(Conf.currentPatient.lympMeta.RLNM);
             cbe_DM.SelectedIndex = cbe_DM.FindString(Conf.currentPatient.lympMeta.distantmetastasis);
             cbe_pStage.SelectedIndex = cbe_pStage.FindString(Conf.currentPatient.lympMeta.PTNM);
+            di_V1.Value = Conf.currentPatient.lympMeta.V1;
+            di_V2.Value = Conf.currentPatient.lympMeta.V2;
+            di_R1.Value = Conf.currentPatient.lympMeta.R1;
+            di_R2.Value = Conf.currentPatient.lympMeta.R2;
 
             //其它甲状腺癌及免疫组化
 
@@ -140,13 +159,15 @@ namespace 甲状腺随访系统
             Conf.currentPatient.basicOperInfo.rightVI = cbe_RVI.Text;
             Conf.currentPatient.basicOperInfo.rightneck = cbe_LN.Text;
             Conf.currentPatient.basicOperInfo.rightneck = cbe_RN.Text;
+            Conf.currentPatient.basicOperInfo.ROTCOthers = tb_basicOther.Text;
 
-            //分化型甲状腺癌
+            //常见甲状腺癌
             Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter = di_PCmax.Value;
             Conf.currentPatient.differeThyrCarc.PCalltumordiameter = di_PCall.Value;
             Conf.currentPatient.differeThyrCarc.PCalltumorrange = di_PCallrange.Value;
+            Conf.currentPatient.differeThyrCarc.PCall2 = di_PCallrange2.Value;
             Conf.currentPatient.differeThyrCarc.PCmulifocality = switch_PCmuli.Value;
-            Conf.currentPatient.differeThyrCarc.PCbilateralcancer = switch_PCbilcancer.Value;
+            Conf.currentPatient.differeThyrCarc.PCbilateralcancer = switch_PCbilcancer.Text;
             Conf.currentPatient.differeThyrCarc.PCcapsuleinvasion = cbe_PCCI.Text;
             Conf.currentPatient.differeThyrCarc.PClymphaticmetastasis = switch_PClymmeta.Value;
             Conf.currentPatient.differeThyrCarc.PClymphocyticthyroiditis = switch_PClymthy.Value;
@@ -155,11 +176,24 @@ namespace 甲状腺随访系统
             Conf.currentPatient.differeThyrCarc.FCmaxtumordiameter = di_FCmax.Value;
             Conf.currentPatient.differeThyrCarc.FCalltumordiameter = di_FCall.Value;
             Conf.currentPatient.differeThyrCarc.FCalltumorrange = di_FCallrange.Value;
+            Conf.currentPatient.differeThyrCarc.FCall2 = di_FCallrange2.Value;
             Conf.currentPatient.differeThyrCarc.FCmulifocality = switch_FCmuli.Value;
-            Conf.currentPatient.differeThyrCarc.FCbilateralcancer = switch_FCbilcancer.Value;
+            Conf.currentPatient.differeThyrCarc.FCbilateralcancer = switch_FCbilcancer.Text;
             Conf.currentPatient.differeThyrCarc.FCcapsuleinvasion = cbe_FCCI.Text;
             Conf.currentPatient.differeThyrCarc.FClymphaticmetastasis = switch_FClymmeta.Value;
             Conf.currentPatient.differeThyrCarc.FClymphocyticthyroiditis = switch_FClymthy.Value;
+
+            Conf.currentPatient.differeThyrCarc.MCmaxtumordiameter = di_MCmax.Value;
+            Conf.currentPatient.differeThyrCarc.MCalltumordiameter = di_MCall.Value;
+            Conf.currentPatient.differeThyrCarc.MCalltumorrange = di_MCallrange.Value;
+            Conf.currentPatient.differeThyrCarc.MCall2 = di_MCallrange2.Value;
+            Conf.currentPatient.differeThyrCarc.MCmulifocality = switch_MCmuli.Value;
+            Conf.currentPatient.differeThyrCarc.MCbilateralcancer = switch_MCbilcancer.Text;
+            Conf.currentPatient.differeThyrCarc.MCcapsuleinvasion = cbe_MCCI.Text;
+            Conf.currentPatient.differeThyrCarc.MClymphaticmetastasis = switch_MClymmeta.Value;
+            Conf.currentPatient.differeThyrCarc.MClymphocyticthyroiditis = switch_MClymthy.Value;
+            //Conf.currentPatient.differeThyrCarc.MChypotype = cbe_MCsubtype.Text;
+            Conf.currentPatient.differeThyrCarc.MChypotype = cbe_sub.Text;
 
             //淋巴结转移
             Console.WriteLine(tb_Iregion1.Text);
@@ -207,6 +241,11 @@ namespace 甲状腺随访系统
             Conf.currentPatient.lympMeta.RLNM = cbe_NI.Text;
             Conf.currentPatient.lympMeta.distantmetastasis = cbe_DM.Text;
             Conf.currentPatient.lympMeta.PTNM = cbe_pStage.Text;
+            Conf.currentPatient.lympMeta.nerveMonitor = switch__nerveMonitor.Value;
+            Conf.currentPatient.lympMeta.V1 = di_V1.Value;
+            Conf.currentPatient.lympMeta.V2 = di_V2.Value;
+            Conf.currentPatient.lympMeta.R1 = di_R1.Value;
+            Conf.currentPatient.lympMeta.R2 = di_R2.Value;
 
             //其它甲状腺癌及免疫组化
 
@@ -249,6 +288,16 @@ namespace 甲状腺随访系统
             }
         }
         #endregion
+
+        private void sideNavPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelX33_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 

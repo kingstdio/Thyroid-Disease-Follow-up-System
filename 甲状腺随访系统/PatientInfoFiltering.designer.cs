@@ -47,7 +47,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.circularProgressItem6 = new DevComponents.DotNetBar.CircularProgressItem();
             this.cbxUseAgeSlider = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelX4
@@ -277,16 +276,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.cbxUseAgeSlider.Text = "Use Slider for Age Filter";
             this.cbxUseAgeSlider.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(244, 458);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // PatientInfoFiltering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -294,7 +283,6 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(784, 519);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbxUseAgeSlider);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
@@ -339,6 +327,5 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.CircularProgressItem circularProgressItem6;
         private CheckBoxX cbxUseAgeSlider;
-        private System.Windows.Forms.Button button1;
     }
 }

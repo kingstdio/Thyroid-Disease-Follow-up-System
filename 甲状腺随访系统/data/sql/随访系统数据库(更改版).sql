@@ -3,11 +3,13 @@ USE follw_up_DB
 CREATE TABLE [dbo].[tb_patientInfo](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[name] [varchar](50) NULL,						--患者姓名
-	[idcard] [varchar](18) NULL,						--身份证号
+	[idcard] [varchar](18) NULL,					--身份证号
 	[address] [varchar](128) NULL,					-- 居住地址
-	[mobile] [varchar](11) NULL,						--移动电话
+	[mobile] [varchar](11) NULL,					--移动电话
 	[phone] [varchar](11) NULL,						--备用电话
-	[hosnumber] [varchar](8) NULL,					-- 住院号
+	[email] [varchar](50) NULL,						--电子邮件
+	[wechat] [varchar](50) NULL,					--微信号
+	[hosnumber] [varchar](8) NULL,					--住院号
 	[sex] [bit] NULL,								--性别
 	[birthday] [date] NULL,							--出生日期
 	[hosage] [int] NULL,							--住院年龄
@@ -20,6 +22,7 @@ CREATE TABLE [dbo].[tb_patientInfo](
 	[abortiontimes] [int] NULL,						--流产次数
 	[deliverytimes] [int] NULL,						--正常分娩次数
 	[menopause] [bit] NULL,							--是否绝经
+	[lastmenstr] [date] NULL,						--末次月经日期
 	[smoke] [bit] NULL,								--是否吸烟
 	[drink] [bit] NULL,								--是否饮酒
 	[occupation] [varchar](50) NULL,				--职业
@@ -87,6 +90,7 @@ CREATE TABLE [dbo].[tb_diagnosis](
 	[Na] [float] NULL,								--Na
 	[P] [float] NULL,								--P
 	[Cl] [float] NULL,								--Cl
+	[uI] [float] NULL,								--uI
 	)
 	GO
 
@@ -103,23 +107,36 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[rightVI] [varchar](10) NULL,					--右VI区
 	[leftneck] [varchar](10) NULL,					--左侧颈
 	[rightneck] [varchar](10) NULL,					--右侧颈
+	[ROTCOthers] [varchar](256) NULL,				--其它
 	[PCmaxtumordiameter] [float] NULL,				--（乳头状癌）最大肿瘤直径
 	[PCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[PCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[PCall2] [float] NULL,					        --所有肿瘤直径范围2
 	[PCmulifocality] [bit] NULL,					--多灶性
 	[PCbilateralcancer] [bit] NULL,					--双侧癌
 	[PCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
 	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
-	[PClymphocytic。thyroiditis] [bit] NULL,		--伴淋巴细胞甲状腺炎
+	[PClymphocyticthyroiditis] [bit] NULL,		    --伴淋巴细胞甲状腺炎
 	[PChypotype] [varchar](20) NULL,				--亚型
 	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
 	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[FCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[FCall2] [float] NULL,					        --所有肿瘤直径范围2
 	[FCmulifocality] [bit] NULL,					--多灶性
 	[FCbilateralcancer] [bit] NULL,					--双侧癌
 	[FCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
 	[FClymphaticmetastasis] [bit] NULL,				--淋巴结转移
 	[FClymphocyticthyroiditis] [bit] NULL,			--伴淋巴细胞甲状腺炎
+	[MCmaxtumordiameter] [float] NULL,				--（髓样癌）最大肿瘤直径
+	[MCalltumordiameter] [float] NULL,				--所有肿瘤直径和
+	[MCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[MCall2] [float] NULL,					        --所有肿瘤直径范围2
+	[MCmulifocality] [bit] NULL,					--多灶性
+	[MCbilateralcancer] [bit] NULL,					--双侧癌
+	[MCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
+	[MClymphaticmetastasis] [bit] NULL,				--淋巴结转移
+	[MClymphocyticthyroiditis] [bit] NULL,		    --伴淋巴细胞甲状腺炎
+	[MChypotype] [varchar](20) NULL,				--亚型
 	[Ileftn] [int] NULL,							--I区左
 	[Ileftd] [int] NULL,							
 	[Irightn] [int] NULL,							--I区右
@@ -156,6 +173,11 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[RLNM] [varchar](10) NULL,						--区域淋巴转移N
 	[distantmetastasis] [varchar](10) NULL,			--远处转移M
 	[PTNM] [varchar](10) NULL,						--PTNM分期
+	[nerveMonitor] [bit] NULL,						--是否使用神经监测
+	[V1] [float] NULL,					            --V1
+	[V2] [float] NULL,					            --V2
+	[R1] [float] NULL,					            --R1
+	[R2] [float] NULL,					            --R2
 	[otherthyroidcancer] [varchar](50) NULL,		--其它甲状腺癌
 	[melecularneuropathology] [bit] NULL,			--分子病理
 	[TGT] [varchar](10) NULL,						--（免疫组化）TGT/TG
@@ -247,12 +269,13 @@ CREATE TABLE [dbo].[tb_inspectionAfterSurgery](
 CREATE TABLE [dbo].[tb_radioactiveIodine](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
-	[TS] [float] NULL,								--TS
+	[Rdate] [date] NULL,							    --日期
+	[TSH] [float] NULL,								--TS
 	[FT3] [float] NULL,								--FT3
 	[FT4] [float] NULL,								--FT4
 	[sTG] [float] NULL,								--sTG
 	[ATG] [float] NULL,								--A-TG
-	[iodrate] [float] NULL,				--吸碘率（%）
+	[iodrate] [float] NULL,				            --吸碘率（%）
 	)
 	GO
 
@@ -276,7 +299,6 @@ CREATE TABLE [dbo].[tb_visit](
 	[others] [varchar](256) NULL,
 	)
 	GO
-
 CREATE TABLE [dbo].[tb_user](
 	[id] [int] IDENTITY(1,1) NOT NULL,primary key,	--编号自增
 	[username] [varchar](50) NULL,					--用户名
@@ -289,6 +311,7 @@ CREATE TABLE [dbo].[tb_user](
     ) 
 
 GO
+
 
 
 

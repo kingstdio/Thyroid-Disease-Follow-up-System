@@ -85,6 +85,7 @@ namespace 甲状腺随访系统
             di_Cl.Value = Conf.currentPatient.hematologicalExamination.Cl;
             di_Ca.Value = Conf.currentPatient.hematologicalExamination.Ca;
             di_P.Value = Conf.currentPatient.hematologicalExamination.P;
+            di_ui.Value = Conf.currentPatient.hematologicalExamination.uI;
 
         }
 
@@ -136,6 +137,7 @@ namespace 甲状腺随访系统
             Conf.currentPatient.hematologicalExamination.Cl = di_Cl.Value;
             Conf.currentPatient.hematologicalExamination.Ca = di_Ca.Value;
             Conf.currentPatient.hematologicalExamination.P = di_P.Value;
+            Conf.currentPatient.hematologicalExamination.uI = di_ui.Value;
 
             //DAO.InsertPatient.InsertBasicInfo(Conf.currentPatient.id);
 

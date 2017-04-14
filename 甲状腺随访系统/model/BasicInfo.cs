@@ -33,6 +33,16 @@ namespace 甲状腺随访系统.MODEL
         public string phone { get; set; }
 
         /// <summary>
+        /// 电子邮件
+        /// </summary>
+        public string email { get; set; }
+
+        /// <summary>
+        /// 微信号
+        /// </summary>
+        public string wechat { get; set; }
+
+        /// <summary>
         /// 住院号
         /// </summary>
         public string hosnumber { get; set; }

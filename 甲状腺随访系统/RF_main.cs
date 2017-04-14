@@ -171,12 +171,19 @@ namespace 甲状腺随访系统
         //查询界面
         private void buttonItem2_Click(object sender, EventArgs e)
         {
+           // new System.Threading.Thread(new System.Threading.ThreadStart(LoadImg)).Start();
             changeUI("PatientInfoFiltering");
-          
-           
             panel_patientInfo.Visible = false;
             //cp_wait.Visible = true;
         }
+        //    private void LoadImg()
+        //{
+        //    Image img = Image.FromFile(@".\甲状腺随访系统\data\ui\PatientAdd.png");
+        //    PictureBox pb_load = new PictureBox();
+        //   // pb_load.Load(@".\Resources\timg.gif");
+        //    pb_load.Image = img;                
+        //}
+
 
         /// <summary>
         /// 删除按钮操作
@@ -272,7 +279,14 @@ namespace 甲状腺随访系统
         }
         #endregion
 
-      
+        #region 导出excel
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            demoExtendedFiltering.ExportExcel();
+        }
+        #endregion
+
+  
 
 
 

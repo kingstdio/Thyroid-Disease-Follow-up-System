@@ -46,6 +46,8 @@ namespace 甲状腺随访系统
             tb_patientAddress.Text = Conf.currentPatient.basicInfo.address;
             tb_patientPhone2.Text = Conf.currentPatient.basicInfo.mobile;
             tb_patientPhone3.Text = Conf.currentPatient.basicInfo.phone;
+            tb_email.Text = Conf.currentPatient.basicInfo.email;
+            tb_wechat.Text = Conf.currentPatient.basicInfo.wechat;
 
             tb_hospitalNo.Text = Conf.currentPatient.basicInfo.hosnumber;
             switch_gender.Value = Conf.currentPatient.basicInfo.sex;
@@ -62,6 +64,20 @@ namespace 甲状腺随访系统
             ii_TIA.Value = Conf.currentPatient.normalRiskFactors.abortiontimes;
             ii_eutociaT.Value = Conf.currentPatient.normalRiskFactors.deliverytimes;
             switch_menopause.Value = Conf.currentPatient.normalRiskFactors.menopause;
+            if (Conf.currentPatient.normalRiskFactors.menopause)
+            {
+                switch_menopause.Value = true;
+                dti_lastM.Visible = true;
+                lb_lastM.Visible = true;
+
+                dti_lastM.Value = Conf.currentPatient.normalRiskFactors.lastmenstr;
+            }
+            else
+            {
+                dti_lastM.Visible = false;
+                lb_lastM.Visible = false;
+            }
+            
 
             switch_smoke.Value = Conf.currentPatient.normalRiskFactors.smoke;
             switch_drink.Value = Conf.currentPatient.normalRiskFactors.drink;
@@ -140,6 +156,8 @@ namespace 甲状腺随访系统
             Conf.currentPatient.basicInfo.address = tb_patientAddress.Text;
             Conf.currentPatient.basicInfo.mobile = tb_patientPhone2.Text;
             Conf.currentPatient.basicInfo.phone = tb_patientPhone3.Text;
+            Conf.currentPatient.basicInfo.email = tb_email.Text;
+            Conf.currentPatient.basicInfo.wechat = tb_wechat.Text;
 
             Conf.currentPatient.basicInfo.hosnumber = tb_hospitalNo.Text;
             Conf.currentPatient.basicInfo.sex = switch_gender.Value;
@@ -156,6 +174,7 @@ namespace 甲状腺随访系统
             Conf.currentPatient.normalRiskFactors.abortiontimes = ii_TIA.Value;
             Conf.currentPatient.normalRiskFactors.deliverytimes = ii_eutociaT.Value;
             Conf.currentPatient.normalRiskFactors.menopause = switch_menopause.Value;
+            Conf.currentPatient.normalRiskFactors.lastmenstr = dti_lastM.Value;
 
             Conf.currentPatient.normalRiskFactors.smoke = switch_smoke.Value;
             Conf.currentPatient.normalRiskFactors.drink = switch_drink.Value;
@@ -285,6 +304,8 @@ namespace 甲状腺随访系统
             }
         }
 
+      
+
         private void switch_otherptumour_ValueChanged(object sender, EventArgs e)
         {
             if (switch_otherptumour.Value) { tb_otherptt.Visible = true; } else { tb_otherptt.Visible = false; }
@@ -304,6 +325,11 @@ namespace 甲状腺随访系统
             }
         }
 
+        private void switch_menopause_ValueChanged(object sender, EventArgs e)
+        {
+            if (switch_menopause.Value) { dti_lastM.Visible = true; lb_lastM.Visible = true; } else { dti_lastM.Visible = false; lb_lastM.Visible = false; }
+        }
+
         #region 将回车键绑定TAB键
         /// <summary>
         /// 将回车键绑定TAB键
@@ -315,6 +341,8 @@ namespace 甲状腺随访系统
             }
         }
         #endregion
+
+     
 
 
 

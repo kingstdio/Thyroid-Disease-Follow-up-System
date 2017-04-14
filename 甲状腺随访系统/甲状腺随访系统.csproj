@@ -308,13 +308,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\sql\随访系统数据库.sql" />
+    <Content Include="data\sql\随访系统数据库%28更改版%29.sql" />
     <Content Include="data\ui\icon.ico" />
     <Content Include="data\ui\patientAdd.png" />
     <Content Include="data\ui\riskFactor.png" />
     <Content Include="data\ui\tips.png" />
     <Content Include="data\ui\trace.png" />
     <Content Include="icon.ico" />
+    <None Include="Resources\timg.gif" />
     <Content Include="System.Data.SQLite.dll" />
     <Content Include="update.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -78,5 +78,10 @@ namespace 甲状腺随访系统.MODEL
         /// </summary>
         public Double Cl { get; set; }
 
+        /// <summary>
+        /// uI
+        /// </summary>
+        public Double uI { get; set; }
+
     }
 }

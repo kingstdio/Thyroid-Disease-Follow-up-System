@@ -106,15 +106,17 @@ CREATE TABLE [dbo].[tb_surgeryHistory](
 	[PCmaxtumordiameter] [float] NULL,				--（乳头状癌）最大肿瘤直径
 	[PCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[PCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[PCall2] [float] NULL,					        --所有肿瘤直径范围2
 	[PCmulifocality] [bit] NULL,					--多灶性
 	[PCbilateralcancer] [bit] NULL,					--双侧癌
 	[PCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
 	[PClymphaticmetastasis] [bit] NULL,				--淋巴结转移
-	[PClymphocyticthyroiditis] [bit] NULL,		--伴淋巴细胞甲状腺炎
+	[PClymphocyticthyroiditis] [bit] NULL,		    --伴淋巴细胞甲状腺炎
 	[PChypotype] [varchar](20) NULL,				--亚型
 	[FCmaxtumordiameter] [float] NULL,				--（滤泡性癌）最大肿瘤直径
 	[FCalltumordiameter] [float] NULL,				--所有肿瘤直径和
 	[FCalltumorrange] [float] NULL,					--所有肿瘤直径范围
+	[FCall2] [float] NULL,					        --所有肿瘤直径范围2
 	[FCmulifocality] [bit] NULL,					--多灶性
 	[FCbilateralcancer] [bit] NULL,					--双侧癌
 	[FCcapsuleinvasion] [varchar](10) NULL,			--被膜侵犯
@@ -247,7 +249,7 @@ CREATE TABLE [dbo].[tb_inspectionAfterSurgery](
 CREATE TABLE [dbo].[tb_radioactiveIodine](
 	[id] [int] IDENTITY(1,1) NOT NULL primary key,	--编号自增
 	[pid] [int] NOT NULL,							--患者编号
-	[TS] [float] NULL,								--TS
+	[TSH] [float] NULL,								--TS
 	[FT3] [float] NULL,								--FT3
 	[FT4] [float] NULL,								--FT4
 	[sTG] [float] NULL,								--sTG
@@ -276,7 +278,18 @@ CREATE TABLE [dbo].[tb_visit](
 	[others] [varchar](256) NULL,
 	)
 	GO
+CREATE TABLE [dbo].[tb_user](
+	[id] [int] IDENTITY(1,1) NOT NULL,primary key,	--编号自增
+	[username] [varchar](50) NULL,					--用户名
+	[password] [varchar](50) NULL,					--密码
+	[privilege] [varchar](50) NULL,					--权限	
+	[forbidden] [bit] NULL,							--是否禁止
+	[lastlogintime] [datetime] NULL,				--最后登录时间
+	[phone] [varchar](50) NULL,						--手机号
+	[email] [varchar](50) NULL						--邮件
+    ) 
 
+GO
 
 
 

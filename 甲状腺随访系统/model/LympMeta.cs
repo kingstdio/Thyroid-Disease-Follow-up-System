@@ -186,5 +186,30 @@ namespace 甲状腺随访系统.MODEL
         /// PTNM分期
         /// </summary>
         public string PTNM { get; set; }
+
+        /// <summary>
+        /// 是否使用神经监测
+        /// </summary>
+        public bool nerveMonitor { get; set; }
+
+        /// <summary>
+        /// V1
+        /// </summary>
+        public Double V1 { get; set; }
+
+        /// <summary>
+        /// V2
+        /// </summary>
+        public Double V2 { get; set; }
+
+        /// <summary>
+        /// R1
+        /// </summary>
+        public Double R1 { get; set; }
+
+        /// <summary>
+        /// R2
+        /// </summary>
+        public Double R2 { get; set; }
     }
 }

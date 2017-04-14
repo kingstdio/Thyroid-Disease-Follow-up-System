@@ -44,6 +44,11 @@ namespace 甲状腺随访系统.MODEL
         public bool menopause { get; set; }
 
         /// <summary>
+        /// 末次月经
+        /// </summary>
+        public DateTime lastmenstr { get; set; }
+
+        /// <summary>
         /// 是否吸烟
         /// </summary>
         public bool smoke { get; set; }

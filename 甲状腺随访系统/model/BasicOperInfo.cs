@@ -57,6 +57,11 @@ namespace 甲状腺随访系统.MODEL
         /// </summary>
         public string rightneck { get; set; }
 
+        /// <summary>
+        /// 其它
+        /// </summary>
+        public string ROTCOthers { get; set; }
+
        
 
 
