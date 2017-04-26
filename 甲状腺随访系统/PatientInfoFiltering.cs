@@ -71,12 +71,22 @@ namespace 甲状腺随访系统
             DataSet ds = new DataSet();
             DataTable dt1 = DAO.PatientInfo.getInfo();
             DataTable dt2 = DAO.PatientInfo.getVisit();
+            DataTable dt3 = DAO.PatientInfo.getRadio();
+            DataTable dt4 = DAO.PatientInfo.getInspect();
             dt1.TableName = "tb_patientInfo";
             dt2.TableName = "tb_visit";
+            dt3.TableName = "tb_radioactiveIodine";
+            dt4.TableName = "tb_inspectionAfterSurgery";
             ds.Tables.Add(dt1.Copy());
             ds.Tables.Add(dt2.Copy());
-            DataRelation dr = new DataRelation("从表", ds.Tables["tb_patientInfo"].Columns["编号自增"], ds.Tables["tb_visit"].Columns["患者编号"], false);
+            ds.Tables.Add(dt3.Copy());
+            ds.Tables.Add(dt4.Copy());
+            DataRelation dr = new DataRelation("随访", ds.Tables["tb_patientInfo"].Columns["编号自增"], ds.Tables["tb_visit"].Columns["患者编号"], false);
+            DataRelation dr2 = new DataRelation("碘治疗", ds.Tables["tb_patientInfo"].Columns["编号自增"], ds.Tables["tb_radioactiveIodine"].Columns["患者编号"], false);
+            DataRelation dr3 = new DataRelation("术后检查", ds.Tables["tb_patientInfo"].Columns["编号自增"], ds.Tables["tb_inspectionAfterSurgery"].Columns["患者编号"], false);
             ds.Relations.Add(dr);
+            ds.Relations.Add(dr2);
+            ds.Relations.Add(dr3);
             GridPanel panel = superGridControl1.PrimaryGrid;
 
             panel.DataSource = ds;

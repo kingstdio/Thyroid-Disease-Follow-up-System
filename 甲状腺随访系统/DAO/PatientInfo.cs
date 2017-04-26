@@ -120,8 +120,36 @@ namespace 甲状腺随访系统.DAO
             return SQLHELPER.ExecuteDataTable(sql);
         }
 
- 
+        public static DataTable getRadio()
+        {
+            string sql = @"select id as '编号自增',
+                    pid as '患者编号',
+                    Rdate as '随访日期',
+                    TSH as 'TSH',
+                    FT3 as 'FT3',
+                    FT4 as 'FT4',
+                    sTG as 'sTG',
+                    ATG as 'A-TG',
+                    iodrate as '吸碘率（%）'
+                    from tb_radioactiveIodine";
+            return SQLHELPER.ExecuteDataTable(sql);
+        }
 
+        public static DataTable getInspect()
+        {
+            string sql = @"select id as '编号自增',
+                    pid as '患者编号',
+                    days as '天数',
+                    PTH as 'PTH',
+                    Ca as 'Ca',
+                    AP as '碱性磷酸酶',
+                    D as '25-羟基维生素D',
+                    D2 as 'D2',
+                    D3 as 'D4'
+                    from tb_inspectionAfterSurgery";
+            return SQLHELPER.ExecuteDataTable(sql);
+                    
+        }
 
         public static DataTable getInfo()
         {
