@@ -8,6 +8,11 @@ namespace 甲状腺随访系统.MODEL
     public class Recurrencecs
     {
         /// <summary>
+        /// 是否考虑复发
+        /// </summary>
+        public bool recurrent { get; set; }
+
+        /// <summary>
         /// （血清学指标）TG
         /// </summary>
         public string TG { get; set; }

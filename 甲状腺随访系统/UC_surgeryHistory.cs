@@ -106,6 +106,8 @@ namespace 甲状腺随访系统
             tb_VIregion2.Text = Convert.ToString(Conf.currentPatient.lympMeta.VIleftd);
             tb_VIregion3.Text = Convert.ToString(Conf.currentPatient.lympMeta.VIrightn);
             tb_VIregion4.Text = Convert.ToString(Conf.currentPatient.lympMeta.VIrightd);
+            tb_VIsum1.Text = Convert.ToString(Conf.currentPatient.lympMeta.VIsumn);
+            tb_VIsum2.Text = Convert.ToString(Conf.currentPatient.lympMeta.VIsumd);
 
             tb_region.Text = Conf.currentPatient.lympMeta.region;
             tb_region1.Text = Convert.ToString(Conf.currentPatient.lympMeta.regionleftn);
@@ -226,6 +228,8 @@ namespace 甲状腺随访系统
             Conf.currentPatient.lympMeta.VIleftd = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion2.Text) ? "0" : tb_VIregion2.Text);
             Conf.currentPatient.lympMeta.VIrightn = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion3.Text) ? "0" : tb_VIregion3.Text);
             Conf.currentPatient.lympMeta.VIrightd = Convert.ToInt32(string.IsNullOrEmpty(tb_VIregion4.Text) ? "0" : tb_VIregion4.Text);
+            Conf.currentPatient.lympMeta.VIsumn = Convert.ToInt32(string.IsNullOrEmpty(tb_VIsum1.Text) ? "0" : tb_VIsum1.Text);
+            Conf.currentPatient.lympMeta.VIsumd = Convert.ToInt32(string.IsNullOrEmpty(tb_VIsum2.Text) ? "0" : tb_VIsum2.Text);
 
             Conf.currentPatient.lympMeta.region = tb_region.Text;
             Conf.currentPatient.lympMeta.regionleftn = Convert.ToInt32(string.IsNullOrEmpty(tb_region1.Text) ? "0" : tb_region1.Text);

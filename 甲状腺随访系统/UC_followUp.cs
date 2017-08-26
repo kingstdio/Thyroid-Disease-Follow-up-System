@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar.SuperGrid;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.SuperGrid.Style;
 
 namespace 甲状腺随访系统
 {
@@ -21,26 +22,32 @@ namespace 甲状腺随访系统
         public UC_followUp()
         {
             InitializeComponent();
+            GridPanel panel = sgc_visit.PrimaryGrid;
+            GridColumn column = panel.Columns["TSH"];
+            column.EditorType = typeof(GGG);
+            column.RenderType = typeof(GGG);
+            panel.Columns["Vdate"].DefaultNewRowCellValue = System.DateTime.Today;
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
+            
         }
 
         void fillUI(object obj, EventArgs args)
         {
-           
-           
+
+        
             //追踪
-            dti_DLC.Value = Conf.currentPatient.followUp.lastconnect;
+            dti_DLC.Value = Conf.currentPatient.lastFollowDate;
             cbe_VS.SelectedIndex = cbe_VS.FindString(Conf.currentPatient.followUp.vitalstatus);
             cbe_DM.SelectedIndex = cbe_DM.FindString(Conf.currentPatient.followUp.distantmetastasis);
             dti_dismetadate.Value = Conf.currentPatient.followUp.diatantmetasisdate;
             cbe_LDM.SelectedIndex = cbe_LDM.FindString(Conf.currentPatient.followUp.distantmetastasislocation);
             dti_DD.Value = Conf.currentPatient.followUp.deathdate;
             cbe_CD.SelectedIndex = cbe_CD.FindString(Conf.currentPatient.followUp.deathcause);
-
+            
             conn.Open();
 
             SqlCommand com = conn.CreateCommand();
-            com.CommandText = "select t.id,t.pid,t.Vdate,t.TSH,t.FT3,t.FT4,t.TPO,t.PTH,t.ATG,t.TG,t.TGAb,t.Ca,t.P,t.euthyrox,t.Cadosage,t.sideeffect,t.others from tb_visit t where pid=@id";
+            com.CommandText = "select t.id,t.pid,t.Vdate,t.TSH,t.FT3,t.FT4,t.TPO,t.PTH,t.ATG,t.TG,t.TGAb,t.Ca,t.P,t.euthyrox,t.adjustEuthyrox,t.Cadosage,t.sideeffect,t.others from tb_visit t where pid=@id";
             com.Parameters.Add(new SqlParameter("@id", Conf.currentPatient.id));
             da = new SqlDataAdapter(com);
             ds = new DataSet();
@@ -50,16 +57,8 @@ namespace 甲状腺随访系统
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             da.Update(ds);
         
-
-
-
-
-
             
             this.sgc_visit.PrimaryGrid.DataSource = ds.Tables[0];
-
-
-
 
             conn.Close();
          
@@ -71,7 +70,7 @@ namespace 甲状腺随访系统
              conn.Open();
 
             SqlCommand com = conn.CreateCommand();
-            com.CommandText = "select t.id,t.pid,t.Vdate,t.TSH,t.FT3,t.FT4,t.TPO,t.PTH,t.ATG,t.TG,t.TGAb,t.Ca,t.P,t.euthyrox,t.Cadosage,t.sideeffect,t.others from tb_visit t where pid=@id";
+            com.CommandText = "select t.id,t.pid,t.Vdate,t.TSH,t.FT3,t.FT4,t.TPO,t.PTH,t.ATG,t.TG,t.TGAb,t.Ca,t.P,t.euthyrox,t.adjustEuthyrox,t.Cadosage,t.sideeffect,t.others from tb_visit t where pid=@id";
             com.Parameters.Add(new SqlParameter("@id", Conf.currentPatient.id));
             da = new SqlDataAdapter(com);
             ds = new DataSet();
@@ -139,6 +138,11 @@ namespace 甲状腺随访系统
         #region 离开当前页时更新数据库
         void RefreshDatabase(object sender, EventArgs e)
         {
+            //更新最后随访
+            Conf.currentPatient.lastFollowDate = DAO.PatientInfo.getLastFollowDate(Conf.currentPatient.id);
+            dti_DLC.Value = Conf.currentPatient.lastFollowDate;
+            Control.RefreshPatient.refreshlastFoDate();
+            
             if (ds == null)
                 return;
             //离开时更新supergridcontrol
@@ -156,6 +160,10 @@ namespace 甲状腺随访系统
                     da.Update(ds.Tables[0]);//以数据集的表更新数据库
                     ds.Tables[0].AcceptChanges();//接受对数据的修改
                     ToastNotification.Show(Parent, "系统数据保存成功");
+                    
+                    
+
+
                 }
                 catch (Exception ex)
                 {
@@ -198,6 +206,7 @@ namespace 甲状腺随访系统
                     ds.Tables[0].AcceptChanges();//接受对数据的修改
                     ToastNotification.Show(Parent, "系统数据保存成功");
                     fillSGC();
+                   
                 }
                 catch (Exception ex)
                 {
@@ -220,6 +229,22 @@ namespace 甲状腺随访系统
         }
         #endregion
 
+        #region
+        /// <summary>
+        /// 重写DoubleInput类
+        /// </summary>
+
+        public class GGG : GridDoubleInputEditControl
+        {
+            public override void InitializeContext(GridCell cell, CellVisualStyle style)
+            {
+                base.InitializeContext(cell, style);
+
+                DisplayFormat = "0.000";
+            }
+        }
+
+        #endregion
 
 
 
@@ -233,3 +258,4 @@ namespace 甲状腺随访系统
 
     }
 }
+     

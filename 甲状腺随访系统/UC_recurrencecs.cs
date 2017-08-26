@@ -65,6 +65,8 @@ namespace 甲状腺随访系统
         void fillUI(object obj, EventArgs args)
         {
             //复发检查
+            switch_recurrent.Value = Conf.currentPatient.recurrencecs.recurrent;
+
             tb_TG.Text = Conf.currentPatient.recurrencecs.TG;
             tb_TGAB.Text = Conf.currentPatient.recurrencecs.TGAB;
             tb_CEA.Text = Conf.currentPatient.recurrencecs.CEA;
@@ -88,6 +90,8 @@ namespace 甲状腺随访系统
         void InsertData(object obj, EventArgs args)
         {
             //复发检查
+            Conf.currentPatient.recurrencecs.recurrent = switch_recurrent.Value;
+
             Conf.currentPatient.recurrencecs.TG = tb_TG.Text;
             Conf.currentPatient.recurrencecs.TGAB = tb_TGAB.Text;
             Conf.currentPatient.recurrencecs.CEA = tb_CEA.Text;
@@ -133,6 +137,11 @@ namespace 甲状腺随访系统
             }
         }
         #endregion
+
+        private void sideNavPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
 
     }
 }

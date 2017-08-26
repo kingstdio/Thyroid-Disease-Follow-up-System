@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Runtime.InteropServices;
+using System.Net.NetworkInformation;
 
 namespace 甲状腺随访系统
 {
@@ -13,15 +14,34 @@ namespace 甲状腺随访系统
         //导入判断网络是否连接的 .dll  
         [DllImport("wininet.dll", EntryPoint = "InternetGetConnectedState")]
         //判断网络状况的方法,返回值true为连接，false为未连接  
-        public extern static bool InternetGetConnectedState(out int conState, int reder);
+        public extern static bool InternetGetConnectedState(ref int dwFlag, int reder);
 
         /// <summary>
         /// 判断是否联网
         /// </summary>
         public static bool isConnectToWWW() 
         {
-            int n = 0;
-            if (InternetGetConnectedState(out n, 0)) { return true; } else { return false; }
+            System.Int32 dwFlag = new Int32();
+            if (InternetGetConnectedState(ref dwFlag, 0)) 
+            {
+                Ping ping = new Ping();
+                try
+                {
+                    PingReply pr = ping.Send(Conf.appServerUir);
+                    if (pr.Status != IPStatus.Success)
+                    {
+                        return false;
+                    }
+                }catch (Exception ex){
+                    
+                    return false;
+                }
+                return true; 
+            } 
+            else 
+            { 
+                return false;
+            }
         }
         #endregion
 

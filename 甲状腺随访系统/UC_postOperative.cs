@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevComponents.DotNetBar.SuperGrid;
 using DevComponents.DotNetBar;
+using DevComponents.DotNetBar.SuperGrid.Style;
 
 namespace 甲状腺随访系统
 {
@@ -21,6 +22,11 @@ namespace 甲状腺随访系统
         public UC_postOperative()
         {
             InitializeComponent();
+            GridPanel panel = sgc_radio.PrimaryGrid;
+            GridColumn column = panel.Columns["TSH"];
+            column.EditorType = typeof(GGG);
+            column.RenderType = typeof(GGG);
+            panel.Columns["Rdate"].DefaultNewRowCellValue = System.DateTime.Today;
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillUI);
         }
 
@@ -50,6 +56,7 @@ namespace 甲状腺随访系统
             cbe_PLhypomotility.SelectedIndex = cbe_PLhypomotility.FindString(Conf.currentPatient.complication.PLhypomotility);
             cbe_VocalChange.SelectedIndex = cbe_VocalChange.FindString(Conf.currentPatient.complication.VocalChange);
             switch_bleed.Value = Conf.currentPatient.complication.bleed;
+            switch_numb.Value = Conf.currentPatient.complication.numb;
             
             //dgv_radio.DataSource = DAO.PatientInfo.getRadioactiveIodine(Conf.currentPatient.id);
 
@@ -142,6 +149,7 @@ namespace 甲状腺随访系统
             Conf.currentPatient.complication.PLhypomotility = cbe_PLhypomotility.Text;
             Conf.currentPatient.complication.VocalChange = cbe_VocalChange.Text;
             Conf.currentPatient.complication.bleed = switch_bleed.Value;
+            Conf.currentPatient.complication.numb = switch_numb.Value;
         }
 
      
@@ -342,6 +350,23 @@ namespace 甲状腺随访系统
                 SendKeys.Send("{Tab}");
             }
         }
+        #endregion
+
+        #region
+        /// <summary>
+        /// 重写DoubleInput类
+        /// </summary>
+
+        public class GGG : GridDoubleInputEditControl
+        {
+            public override void InitializeContext(GridCell cell, CellVisualStyle style)
+            {
+                base.InitializeContext(cell, style);
+
+                DisplayFormat = "0.000";
+            }
+        }
+
         #endregion
 
 

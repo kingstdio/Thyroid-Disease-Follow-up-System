@@ -123,6 +123,7 @@
             this.tb_pwd.PreventEnterBeep = true;
             this.tb_pwd.Size = new System.Drawing.Size(300, 26);
             this.tb_pwd.TabIndex = 2;
+            this.tb_pwd.Text = "admin";
             // 
             // tb_username
             // 
@@ -138,6 +139,7 @@
             this.tb_username.PreventEnterBeep = true;
             this.tb_username.Size = new System.Drawing.Size(300, 26);
             this.tb_username.TabIndex = 1;
+            this.tb_username.Text = "admin";
             // 
             // labelX2
             // 

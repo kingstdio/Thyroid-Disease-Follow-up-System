@@ -11,6 +11,7 @@ using ¼××´ÏÙËæ·ÃÏµÍ³;
 using System.Threading;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace ¼××´ÏÙËæ·ÃÏµÍ³
 {
@@ -87,7 +88,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             ds.Relations.Add(dr);
             ds.Relations.Add(dr2);
             ds.Relations.Add(dr3);
-            GridPanel panel = superGridControl1.PrimaryGrid;
+            GridPanel panel = spc_plist.PrimaryGrid;
 
             panel.DataSource = ds;
   
@@ -110,20 +111,20 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
             
 
-            superGridControl1.FilterBeginEdit += SuperGridControl1FilterBeginEdit;
-            superGridControl1.FilterLoadItems += SuperGridControl1FilterLoadItems;
-            superGridControl1.FilterEditValueChanged += SuperGridControl1FilterEditValueChanged;
+            spc_plist.FilterBeginEdit += SuperGridControl1FilterBeginEdit;
+            spc_plist.FilterLoadItems += SuperGridControl1FilterLoadItems;
+            spc_plist.FilterEditValueChanged += SuperGridControl1FilterEditValueChanged;
 
-            superGridControl1.FilterPopupOpening += SuperGridControl1FilterPopupOpening;
-            superGridControl1.FilterPopupClosing += SuperGridControl1FilterPopupClosing;
+            spc_plist.FilterPopupOpening += SuperGridControl1FilterPopupOpening;
+            spc_plist.FilterPopupClosing += SuperGridControl1FilterPopupClosing;
 
-            superGridControl1.PreRenderFilterPopupGripBar += PreRenderFilterPopupGripBar;
-            superGridControl1.FilterPopupValueChanged += SuperGridControl1FilterPopupValueChanged;
+            spc_plist.PreRenderFilterPopupGripBar += PreRenderFilterPopupGripBar;
+            spc_plist.FilterPopupValueChanged += SuperGridControl1FilterPopupValueChanged;
 
-            superGridControl1.FilterUserFunction += SuperGridControl1FilterUserFunction;
-            superGridControl1.FilterPopupLoaded += SuperGridControl1FilterPopupLoaded;
+            spc_plist.FilterUserFunction += SuperGridControl1FilterUserFunction;
+            spc_plist.FilterPopupLoaded += SuperGridControl1FilterPopupLoaded;
 
-            superGridControl1.GetCellFormattedValue += SuperGridControl1GetCellFormattedValue;
+            spc_plist.GetCellFormattedValue += SuperGridControl1GetCellFormattedValue;
         }
 
         void SuperGridControl1GetCellFormattedValue(object sender, GridGetCellFormattedValueEventArgs e)
@@ -777,7 +778,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         /// <param name="e"></param>
         private void BtnResetPanelFilterClick(object sender, EventArgs e)
         {
-            superGridControl1.PrimaryGrid.FilterExpr = null;
+            spc_plist.PrimaryGrid.FilterExpr = null;
         }
 
         #endregion
@@ -792,7 +793,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         /// <param name="e"></param>
         private void BtnResetColumnFiltersClick(object sender, EventArgs e)
         {
-            GridPanel panel = superGridControl1.PrimaryGrid;
+            GridPanel panel = spc_plist.PrimaryGrid;
 
             foreach (GridColumn column in panel.Columns)
                 column.FilterExpr = null;
@@ -813,7 +814,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         /// <param name="e"></param>
         private void CbxShowPanelExprCheckedChanged(object sender, EventArgs e)
         {
-            superGridControl1.PrimaryGrid.Filter.ShowPanelFilterExpr =
+            spc_plist.PrimaryGrid.Filter.ShowPanelFilterExpr =
                 cbxShowPanelExpr.Checked;
         }
 
@@ -834,7 +835,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             // underlying Control, we want to reset this so the popup will
             // be more correctly sized for the changed control.
 
-            GridColumn column = superGridControl1.PrimaryGrid.Columns["Age"];
+            GridColumn column = spc_plist.PrimaryGrid.Columns["Age"];
 
             if (column != null)
                 column.FilterPopupSize = Size.Empty;
@@ -855,7 +856,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             Alignment align = (Alignment)Enum.Parse(typeof(Alignment),
                 (string)cbFilterAlignment.SelectedItem);
 
-            superGridControl1.PrimaryGrid.ColumnHeader.FilterImageAlignment = align;
+            spc_plist.PrimaryGrid.ColumnHeader.FilterImageAlignment = align;
         }
 
         #endregion
@@ -873,7 +874,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             ImageVisibility vis = (ImageVisibility)Enum.Parse(typeof(ImageVisibility),
                 (string)cbFilterImageVisibility.SelectedItem);
 
-            superGridControl1.PrimaryGrid.ColumnHeader.FilterImageVisibility = vis;
+            spc_plist.PrimaryGrid.ColumnHeader.FilterImageVisibility = vis;
         }
 
         #endregion
@@ -891,7 +892,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             FilterMatchType fms = (FilterMatchType)Enum.Parse(
                 typeof(FilterMatchType), cbMatchType.Text);
 
-            superGridControl1.PrimaryGrid.FilterMatchType = fms;
+            spc_plist.PrimaryGrid.FilterMatchType = fms;
         }
 
         #endregion
@@ -907,17 +908,25 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
         {
             if (cbFilterLevel.SelectedIndex >= 0)
             {
-                superGridControl1.PrimaryGrid.FilterLevel =
+                spc_plist.PrimaryGrid.FilterLevel =
                     (FilterLevel)Enum.Parse(typeof(FilterLevel), (string)cbFilterLevel.SelectedItem);
             }
         }
 
         #endregion
 
+
+
+
+
+        
+        
         public void ExportExcel()
         {
-            ExportToExcel.DataToExcel(superGridControl1);
+            ExportToExcel.DataToExcel(spc_plist);
         }
+
+
 
 
 

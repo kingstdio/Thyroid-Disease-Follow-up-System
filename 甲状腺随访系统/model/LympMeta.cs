@@ -128,6 +128,16 @@ namespace 甲状腺随访系统.MODEL
         public int VIrightd { get; set; }
 
         /// <summary>
+        /// VI区总
+        /// </summary>
+        public int VIsumn { get; set; }
+
+        /// <summary>
+        /// VI区总
+        /// </summary>
+        public int VIsumd { get; set; }
+
+        /// <summary>
         /// 喉前
         /// </summary>
         public int prelaryngealn { get; set; }

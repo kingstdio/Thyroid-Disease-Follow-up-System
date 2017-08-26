@@ -1,4 +1,5 @@
 ﻿using System;
+using DevComponents.DotNetBar.SuperGrid;
 namespace 甲状腺随访系统
 {
     partial class UC_postOperative
@@ -29,9 +30,9 @@ namespace 甲状腺随访系统
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sideNav1 = new DevComponents.DotNetBar.Controls.SideNav();
             this.sideNavPanel1 = new DevComponents.DotNetBar.Controls.SideNavPanel();
             this.sgc_radio = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
@@ -61,6 +62,8 @@ namespace 甲状腺随访系统
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.lb_eut = new DevComponents.DotNetBar.LabelX();
             this.sideNavPanel3 = new DevComponents.DotNetBar.Controls.SideNavPanel();
+            this.switch_numb = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.lb_numb = new DevComponents.DotNetBar.LabelX();
             this.cbe_PLhypomotility = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem13 = new DevComponents.Editors.ComboItem();
             this.comboItem14 = new DevComponents.Editors.ComboItem();
@@ -308,7 +311,7 @@ namespace 甲状腺随访系统
             // 
             // gridColumn1
             // 
-            this.gridColumn1.DefaultNewRowCellValue = DateTime.Now.ToString();
+            this.gridColumn1.DefaultNewRowCellValue = new System.DateTime(2017, 8, 26, 0, 0, 0, 0);
             this.gridColumn1.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridDateTimePickerEditControl);
             this.gridColumn1.HeaderText = "日期";
             this.gridColumn1.Name = "Rdate";
@@ -567,6 +570,8 @@ namespace 甲状腺随访系统
             // 
             // sideNavPanel3
             // 
+            this.sideNavPanel3.Controls.Add(this.switch_numb);
+            this.sideNavPanel3.Controls.Add(this.lb_numb);
             this.sideNavPanel3.Controls.Add(this.cbe_PLhypomotility);
             this.sideNavPanel3.Controls.Add(this.sgc_inspect);
             this.sideNavPanel3.Controls.Add(this.cbe_Bhypomotility);
@@ -613,6 +618,38 @@ namespace 甲状腺随访系统
             this.sideNavPanel3.Leave += new System.EventHandler(this.RefreshDatabase);
             this.sideNavPanel3.MouseLeave += new System.EventHandler(this.InsertData);
             // 
+            // switch_numb
+            // 
+            // 
+            // 
+            // 
+            this.switch_numb.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switch_numb.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.switch_numb.Location = new System.Drawing.Point(891, 98);
+            this.switch_numb.Name = "switch_numb";
+            this.switch_numb.OffText = "否";
+            this.switch_numb.OnText = "是";
+            this.switch_numb.Size = new System.Drawing.Size(121, 26);
+            this.switch_numb.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switch_numb.SwitchWidth = 58;
+            this.switch_numb.TabIndex = 8;
+            this.switch_numb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
+            // 
+            // lb_numb
+            // 
+            this.lb_numb.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lb_numb.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_numb.Font = new System.Drawing.Font("宋体", 12F);
+            this.lb_numb.Location = new System.Drawing.Point(787, 100);
+            this.lb_numb.Name = "lb_numb";
+            this.lb_numb.Size = new System.Drawing.Size(93, 23);
+            this.lb_numb.TabIndex = 137;
+            this.lb_numb.Text = "麻木：";
+            this.lb_numb.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // cbe_PLhypomotility
             // 
             this.cbe_PLhypomotility.DisplayMember = "Text";
@@ -629,7 +666,7 @@ namespace 甲状腺随访系统
             this.cbe_PLhypomotility.Name = "cbe_PLhypomotility";
             this.cbe_PLhypomotility.Size = new System.Drawing.Size(121, 26);
             this.cbe_PLhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PLhypomotility.TabIndex = 12;
+            this.cbe_PLhypomotility.TabIndex = 13;
             this.cbe_PLhypomotility.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // comboItem14
@@ -673,7 +710,7 @@ namespace 甲状腺随访系统
             this.sgc_inspect.PrimaryGrid.UseAlternateColumnStyle = true;
             this.sgc_inspect.PrimaryGrid.UseAlternateRowStyle = true;
             this.sgc_inspect.Size = new System.Drawing.Size(1042, 176);
-            this.sgc_inspect.TabIndex = 13;
+            this.sgc_inspect.TabIndex = 14;
             this.sgc_inspect.Text = "superGridControl1";
             this.sgc_inspect.RowDeleted += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs>(this.sgc_inspect_RowDeleted);
             this.sgc_inspect.Click += new System.EventHandler(this.sgc_inspect_Click);
@@ -754,7 +791,7 @@ namespace 甲状腺随访系统
             this.cbe_Bhypomotility.Name = "cbe_Bhypomotility";
             this.cbe_Bhypomotility.Size = new System.Drawing.Size(121, 26);
             this.cbe_Bhypomotility.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_Bhypomotility.TabIndex = 10;
+            this.cbe_Bhypomotility.TabIndex = 11;
             this.cbe_Bhypomotility.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // comboItem10
@@ -862,14 +899,14 @@ namespace 甲状腺随访系统
             // 
             this.switch_bleed.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.switch_bleed.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.switch_bleed.Location = new System.Drawing.Point(891, 102);
+            this.switch_bleed.Location = new System.Drawing.Point(891, 147);
             this.switch_bleed.Name = "switch_bleed";
             this.switch_bleed.OffText = "否";
             this.switch_bleed.OnText = "是";
             this.switch_bleed.Size = new System.Drawing.Size(121, 26);
             this.switch_bleed.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.switch_bleed.SwitchWidth = 58;
-            this.switch_bleed.TabIndex = 8;
+            this.switch_bleed.TabIndex = 9;
             this.switch_bleed.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // switch_infection
@@ -922,7 +959,7 @@ namespace 甲状腺随访系统
             this.cbe_PLparalysis.Name = "cbe_PLparalysis";
             this.cbe_PLparalysis.Size = new System.Drawing.Size(125, 26);
             this.cbe_PLparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_PLparalysis.TabIndex = 11;
+            this.cbe_PLparalysis.TabIndex = 12;
             this.cbe_PLparalysis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // comboItem18
@@ -956,7 +993,7 @@ namespace 甲状腺随访系统
             this.cbe_Bparalysis.Name = "cbe_Bparalysis";
             this.cbe_Bparalysis.Size = new System.Drawing.Size(125, 26);
             this.cbe_Bparalysis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbe_Bparalysis.TabIndex = 9;
+            this.cbe_Bparalysis.TabIndex = 10;
             this.cbe_Bparalysis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtb_eut_KeyDown);
             // 
             // comboItem22
@@ -1272,7 +1309,7 @@ namespace 甲状腺随访系统
             // 
             this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX24.Font = new System.Drawing.Font("宋体", 12F);
-            this.labelX24.Location = new System.Drawing.Point(787, 104);
+            this.labelX24.Location = new System.Drawing.Point(787, 149);
             this.labelX24.Name = "labelX24";
             this.labelX24.Size = new System.Drawing.Size(93, 23);
             this.labelX24.TabIndex = 108;
@@ -1408,14 +1445,14 @@ namespace 甲状腺随访系统
             // 
             // dataGridViewX2
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.days,
@@ -1426,26 +1463,26 @@ namespace 甲状腺随访系统
             this.D,
             this.D2,
             this.D3});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewX2.EnableHeadersVisualStyles = false;
-            this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX2.Location = new System.Drawing.Point(204, 331);
             this.dataGridViewX2.Name = "dataGridViewX2";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX2.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewX2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewX2.RowTemplate.Height = 23;
             this.dataGridViewX2.Size = new System.Drawing.Size(1041, 176);
@@ -2350,5 +2387,7 @@ namespace 甲状腺随访系统
         private DevComponents.Editors.ComboItem comboItem15;
         private DevComponents.Editors.ComboItem comboItem16;
         private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1;
+        private DevComponents.DotNetBar.Controls.SwitchButton switch_numb;
+        private DevComponents.DotNetBar.LabelX lb_numb;
     }
 }

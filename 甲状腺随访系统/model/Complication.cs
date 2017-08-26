@@ -33,6 +33,11 @@ namespace 甲状腺随访系统.MODEL
         public string hyperspasmia { get; set; }
 
         /// <summary>
+        /// 麻木
+        /// </summary>
+        public bool numb { get; set; }
+
+        /// <summary>
         /// 出血
         /// </summary>
         public bool bleed { get; set; }

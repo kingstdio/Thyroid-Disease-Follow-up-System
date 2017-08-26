@@ -43,6 +43,7 @@ namespace 甲状腺随访系统
             //患者基本信息
             tb_patientName.Text = Conf.currentPatient.basicInfo.name;
             tb_idNumber.Text = Conf.currentPatient.basicInfo.idcard;
+            tb_study.Text = Conf.currentPatient.basicInfo.studynum;
             tb_patientAddress.Text = Conf.currentPatient.basicInfo.address;
             tb_patientPhone2.Text = Conf.currentPatient.basicInfo.mobile;
             tb_patientPhone3.Text = Conf.currentPatient.basicInfo.phone;
@@ -153,6 +154,7 @@ namespace 甲状腺随访系统
             //患者基本信息
             Conf.currentPatient.basicInfo.name = tb_patientName.Text;
             Conf.currentPatient.basicInfo.idcard = tb_idNumber.Text;
+            Conf.currentPatient.basicInfo.studynum = tb_study.Text;
             Conf.currentPatient.basicInfo.address = tb_patientAddress.Text;
             Conf.currentPatient.basicInfo.mobile = tb_patientPhone2.Text;
             Conf.currentPatient.basicInfo.phone = tb_patientPhone3.Text;
@@ -341,6 +343,8 @@ namespace 甲状腺随访系统
             }
         }
         #endregion
+
+    
 
      
 

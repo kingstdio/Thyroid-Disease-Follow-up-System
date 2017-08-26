@@ -44,7 +44,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.btnResetColumnFilters = new DevComponents.DotNetBar.ButtonX();
             this.btnResetPanelFilter = new DevComponents.DotNetBar.ButtonX();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.spc_plist = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.circularProgressItem6 = new DevComponents.DotNetBar.CircularProgressItem();
             this.cbxUseAgeSlider = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.SuspendLayout();
@@ -211,49 +211,49 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
             // 
-            // superGridControl1
+            // spc_plist
             // 
-            this.superGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.spc_plist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.superGridControl1.BackColor = System.Drawing.Color.White;
-            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.superGridControl1.FilterUseExtendedCustomDialog = true;
-            this.superGridControl1.ForeColor = System.Drawing.Color.Black;
-            this.superGridControl1.Location = new System.Drawing.Point(0, 0);
-            this.superGridControl1.Name = "superGridControl1";
+            this.spc_plist.BackColor = System.Drawing.Color.White;
+            this.spc_plist.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.spc_plist.FilterUseExtendedCustomDialog = true;
+            this.spc_plist.ForeColor = System.Drawing.Color.Black;
+            this.spc_plist.Location = new System.Drawing.Point(0, 0);
+            this.spc_plist.Name = "spc_plist";
             // 
             // 
             // 
-            this.superGridControl1.PrimaryGrid.AllowEdit = false;
-            this.superGridControl1.PrimaryGrid.AllowRowHeaderResize = true;
-            this.superGridControl1.PrimaryGrid.AllowRowResize = true;
+            this.spc_plist.PrimaryGrid.AllowEdit = false;
+            this.spc_plist.PrimaryGrid.AllowRowHeaderResize = true;
+            this.spc_plist.PrimaryGrid.AllowRowResize = true;
             // 
             // 
             // 
-            this.superGridControl1.PrimaryGrid.ColumnHeader.RowHeight = 30;
-            this.superGridControl1.PrimaryGrid.DefaultRowHeight = 24;
-            this.superGridControl1.PrimaryGrid.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            this.superGridControl1.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            this.superGridControl1.PrimaryGrid.EnableColumnFiltering = true;
-            this.superGridControl1.PrimaryGrid.EnableFiltering = true;
-            this.superGridControl1.PrimaryGrid.EnableRowFiltering = true;
+            this.spc_plist.PrimaryGrid.ColumnHeader.RowHeight = 30;
+            this.spc_plist.PrimaryGrid.DefaultRowHeight = 24;
+            this.spc_plist.PrimaryGrid.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            this.spc_plist.PrimaryGrid.DefaultVisualStyles.FilterColumnHeaderStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            this.spc_plist.PrimaryGrid.EnableColumnFiltering = true;
+            this.spc_plist.PrimaryGrid.EnableFiltering = true;
+            this.spc_plist.PrimaryGrid.EnableRowFiltering = true;
             // 
             // 
             // 
-            this.superGridControl1.PrimaryGrid.Filter.Visible = true;
-            this.superGridControl1.PrimaryGrid.NullString = "<<null>>";
-            this.superGridControl1.PrimaryGrid.RowHeaderWidth = 45;
-            this.superGridControl1.PrimaryGrid.ShowRowGridIndex = true;
-            this.superGridControl1.PrimaryGrid.ShowTreeButtons = true;
-            this.superGridControl1.PrimaryGrid.ShowTreeLines = true;
+            this.spc_plist.PrimaryGrid.Filter.Visible = true;
+            this.spc_plist.PrimaryGrid.NullString = "<<null>>";
+            this.spc_plist.PrimaryGrid.RowHeaderWidth = 45;
+            this.spc_plist.PrimaryGrid.ShowRowGridIndex = true;
+            this.spc_plist.PrimaryGrid.ShowTreeButtons = true;
+            this.spc_plist.PrimaryGrid.ShowTreeLines = true;
             // 
             // 
             // 
-            this.superGridControl1.PrimaryGrid.Title.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.PanelControlled;
-            this.superGridControl1.Size = new System.Drawing.Size(784, 449);
-            this.superGridControl1.TabIndex = 0;
-            this.superGridControl1.Text = "superGridControl1";
+            this.spc_plist.PrimaryGrid.Title.RowHeaderVisibility = DevComponents.DotNetBar.SuperGrid.RowHeaderVisibility.PanelControlled;
+            this.spc_plist.Size = new System.Drawing.Size(784, 449);
+            this.spc_plist.TabIndex = 0;
+            this.spc_plist.Text = "superGridControl1";
             // 
             // circularProgressItem6
             // 
@@ -295,7 +295,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
             this.Controls.Add(this.cbMatchType);
             this.Controls.Add(this.btnResetColumnFilters);
             this.Controls.Add(this.btnResetPanelFilter);
-            this.Controls.Add(this.superGridControl1);
+            this.Controls.Add(this.spc_plist);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -312,7 +312,7 @@ namespace ¼××´ÏÙËæ·ÃÏµÍ³
 
         #endregion
 
-        private DevComponents.DotNetBar.SuperGrid.SuperGridControl superGridControl1;
+        private DevComponents.DotNetBar.SuperGrid.SuperGridControl spc_plist;
         private DevComponents.DotNetBar.ButtonX btnResetPanelFilter;
         private DevComponents.DotNetBar.ButtonX btnResetColumnFilters;
         private DevComponents.DotNetBar.StyleManager styleManager1;

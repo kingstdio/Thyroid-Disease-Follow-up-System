@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Threading;
+using System.Diagnostics;
 
 namespace 甲状腺随访系统
 {
@@ -36,7 +37,7 @@ namespace 甲状腺随访系统
             
             Control.RefreshPatient.refreshPaitentBoard += new EventHandler(fillPaitentBoard); //注册更新病人信息面板事件
             Control.RefreshPatient.newPaitentAction += new EventHandler(newPaitentAction);
-            
+            Control.RefreshPatient.refreshlastFDate += new EventHandler(lastFollowDate);//更新最后随访日期
             
             //添加功能面板
             panEX_main.Controls.Add(uC_patientInfo);
@@ -73,7 +74,11 @@ namespace 甲状腺随访系统
 
             fillPaitentBoard(null, null);
 
-            
+            //备份文件的扩展名
+            dia_save.Filter = "数据库备份文件（*.bak）|*.bak|数据文件（*.mdf）|*.mdf|日志文件（*.ldf）|*.ldf";
+            dia_save.FileName = "dbbackup" + DateTime.Now.ToBinary();
+
+            dia_open.Filter = "数据库备份文件（*.bak）|*.bak|数据文件（*.mdf）|*.mdf|日志文件（*.ldf）|*.ldf";
         }
         #endregion 
 
@@ -99,20 +104,23 @@ namespace 甲状腺随访系统
             }
             else
             {
+                
                 tb_sex.Text = Conf.currentPatient.basicInfo.sex ? "男" : "女";
                 tb_birthday.Text = Conf.currentPatient.basicInfo.birthday.ToShortDateString();
                 tb_hosoutdate.Text = Conf.currentPatient.basicInfo.hosoutdate.ToShortDateString();
                 tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
                 tb_FUTimes.Text = Conf.currentPatient.followTimes.ToString();
                 tb_hosindate.Text = Conf.currentPatient.basicInfo.hosindate.ToShortDateString();
-            }
-           
-            
-           
-
-           
-           
+            }  
         }
+        //更新最后随访日期
+        void lastFollowDate(object obj, EventArgs args)
+        {
+            tb_FUNear.Text = Conf.currentPatient.lastFollowDate.ToShortDateString();
+        }
+
+
+
         #endregion
 
         #region 界面按钮操作
@@ -286,7 +294,52 @@ namespace 甲状腺随访系统
         }
         #endregion
 
-  
+        #region 数据库备份与恢复
+        private void bt_backupDB_Click(object sender, EventArgs e)
+        {
+            string savePath = string.Empty;
+         
+          
+            if (dia_save.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    savePath = dia_save.FileName;
+                    String sql = @"backup database follw_up_DB to disk='" + savePath + "'";
+                    SQLHELPER.ExecuteNoneQuery(sql);
+                    MessageBox.Show("操作成功", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+        }
+
+        private void 数据库恢复_Click(object sender, EventArgs e)
+        {
+            string openPath = string.Empty;
+            //dia_open.ShowDialog();
+            openPath = dia_open.FileName;
+            if (dia_open.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    String sql = "use master Exec dbo.KillSpByDbName 'follw_up_DB' restore database follw_up_DB  from disk='" + openPath + "'  with replace use follw_up_DB";
+                    SQLHELPER.ExecuteNoneQuery(sql);
+                    MessageBox.Show("恢复成功", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        #endregion
+
+
 
 
 

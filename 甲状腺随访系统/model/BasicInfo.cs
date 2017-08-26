@@ -18,6 +18,11 @@ namespace 甲状腺随访系统.MODEL
         public string idcard { get; set; }
 
         /// <summary>
+        /// 患者研究号
+        /// </summary>
+        public string studynum { get; set; }
+
+        /// <summary>
         /// 居住地址
         /// </summary>
         public string address { get; set; }

@@ -21,6 +21,15 @@ namespace 甲状腺随访系统.Control
             return true;
         }
 
+
+        public static event EventHandler refreshlastFDate = null;
+        public static bool refreshlastFoDate()
+        {
+            refreshlastFDate(null, EventArgs.Empty);
+            return true;
+        }
+
+
         /// <summary>
         /// 更新病人信息
         /// </summary>
@@ -89,29 +98,6 @@ namespace 甲状腺随访系统.Control
                 TableToModel<Recurrencecs>(Conf.currentPatient.recurrencecs, dtrecurrencecs);
             }
 
-
-          
-
-           // dr.Table.Columns.Contains("列名");
-           // dr[1].Equals
-            
-           /* Conf.currentPatient.basicInfo.name =  dr["name"].ToString();
-            Conf.currentPatient.basicInfo.hosnumber = dr["hosnumber"].ToString();
-            Conf.currentPatient.basicInfo.mobile = dr["mobile"].ToString();
-            Conf.currentPatient.basicInfo.phone = dr["phone"].ToString();
-            Conf.currentPatient.basicInfo.hosindate = Convert.ToDateTime(dr["hosindate"]);
-            Conf.currentPatient.basicInfo.sex = Convert.ToBoolean(dr["sex"]);
-            Conf.currentPatient.basicInfo.address = dr["address"].ToString();
-            Conf.currentPatient.basicInfo.idcard = dr["idcard"].ToString();
-            Conf.currentPatient.basicInfo.birthday = Convert.ToDateTime(dr["birthday"]);
-            Conf.currentPatient.basicInfo.hosoutdate = Convert.ToDateTime(dr["hosoutdate"]);*/
-           // Conf.currentPatient.normalRiskFactors.weight = Convert.ToDouble(dtPatientInfo.Rows[0]["weight"]);
-            
-            
-
-
-
-
             Conf.currentPatient.lastFollowDate = DAO.PatientInfo.getLastFollowDate(pid);
             Conf.currentPatient.followTimes = DAO.PatientInfo.getFollowTimes(pid);
 
@@ -120,8 +106,6 @@ namespace 甲状腺随访系统.Control
         }
 
   
-
-
         /// <summary>
         /// 将DataTable中的每一列赋值给model中的同名属性
         /// DataTable中只有一行数据
@@ -219,6 +203,9 @@ namespace 甲状腺随访系统.Control
             }
         }
         #endregion
+
+
+
 
 
         #region 新建用户时跳转界面
